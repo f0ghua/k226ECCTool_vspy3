@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <VSpy3>
-<!--Created on: 12/13/2016 10:21:31 pm-->
+<!--Created on: 12/14/2016 6:33:47 pm-->
 <VersionCreatedWith>3.8.0.76</VersionCreatedWith>
-<SimulationEnabled>True</SimulationEnabled>
-<SimulationPath></SimulationPath>
+<SimulationEnabled>False</SimulationEnabled>
 <NumberJ1850HeaderBytes>3</NumberJ1850HeaderBytes>
 <AutoDetectHardwareSupport>True</AutoDetectHardwareSupport>
 <DatabasePlatform>k226</DatabasePlatform>
@@ -971,7 +970,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1043,6 +1042,33 @@
 		<InitValue>2</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
+	<Signal>
+		<Description>appSig_step15_isPassed</Description>
+		<Key>sig27</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_step15_currValue</Description>
+		<Key>sig28</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_step15_targetValue</Description>
+		<Key>sig29</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
 </AppSignals>
 <DAQSetups>
 	<DAQSetup>
@@ -1053,6 +1079,7 @@
 			<Collection>
 				<ColKey>1</ColKey>
 				<Filename>Collection 1</Filename>
+				<StoreInPersistantMemory>True</StoreInPersistantMemory>
 			</Collection>
 			<neoMoteBuzzerIndex>0</neoMoteBuzzerIndex>
 			<SleepType>3</SleepType>
@@ -1079,7 +1106,6 @@
 </DAQSetups>
 <Monitors>
 	<Monitor>
-		<UseFilters>True</UseFilters>
 		<NumberOfMessagesHistory>50000</NumberOfMessagesHistory>
 		<BackColor>16777215</BackColor>
 		<FontBold>True</FontBold>
@@ -1087,8 +1113,6 @@
 		<FontName>Courier New</FontName>
 		<Key>0</Key>
 		<FormObjectKey>1</FormObjectKey>
-		<InScrollMode>True</InScrollMode>
-		<SpeedCustomIn0>True</SpeedCustomIn0>
 		<MonitorColumnSets>
 			<MonitorColumnSet>
 				<Description>(default)</Description>
@@ -1986,6 +2010,8 @@
 				<Key>in11</Key>
 				<Key>out7</Key>
 				<Key>out9</Key>
+				<Key>out17</Key>
+				<Key>out15</Key>
 			</Included>
 			<Excluded>
 				<Key>out3</Key>
@@ -2280,6 +2306,9 @@
 		<VisibilityType>2</VisibilityType>
 		<EnableOSEKNM>False</EnableOSEKNM>
 		<IgnoreForVSSALLogger>False</IgnoreForVSSALLogger>
+		<FlexRayCluster>
+			<CAS_RX_LOW_MIN>2000000</CAS_RX_LOW_MIN>
+		</FlexRayCluster>
 	</Network>
 	<Network>
 		<Description>FlexRay1B (VNET A)</Description>
@@ -2290,6 +2319,9 @@
 		<VisibilityType>2</VisibilityType>
 		<EnableOSEKNM>False</EnableOSEKNM>
 		<IgnoreForVSSALLogger>False</IgnoreForVSSALLogger>
+		<FlexRayCluster>
+			<CAS_RX_LOW_MIN>2000000</CAS_RX_LOW_MIN>
+		</FlexRayCluster>
 	</Network>
 	<Network>
 		<Description>FlexRay2A (VNET A)</Description>
@@ -2300,6 +2332,9 @@
 		<VisibilityType>2</VisibilityType>
 		<EnableOSEKNM>False</EnableOSEKNM>
 		<IgnoreForVSSALLogger>False</IgnoreForVSSALLogger>
+		<FlexRayCluster>
+			<CAS_RX_LOW_MIN>2000000</CAS_RX_LOW_MIN>
+		</FlexRayCluster>
 	</Network>
 	<Network>
 		<Description>FlexRay2B (VNET A)</Description>
@@ -2507,7 +2542,127 @@
 </JavaCore>
 <MsgSigs>
 	<MsgSig>
-		<Description>Front_Seat_Heat_Cool_Switches</Description>
+		<Description>step8-14_Climate_Control_General_Status</Description>
+		<Key>in5</Key>
+		<ByteString0>39A</ByteString0>
+		<NetworkKey>net0</NetworkKey>
+		<DisplayColor>16711808</DisplayColor>
+		<NodeKey>gme1</NodeKey>
+		<ExpectedLength>4</ExpectedLength>
+		<DefaultPeriodicRate>500</DefaultPeriodicRate>
+		<MsgSignals>
+			<Signal>
+				<Description>ACCmpsrFldOn</Description>
+				<Key>sig0</Key>
+				<ValueType>3</ValueType>
+				<Equation>~0,1,4,1</Equation>
+				<StateTable>
+					<NumStates>2</NumStates>
+					<State>
+						<Text>False</Text>
+						<Value>0</Value>
+					</State>
+					<State>
+						<Text>True</Text>
+						<Value>1</Value>
+					</State>
+				</StateTable>
+				<UpperRange>1</UpperRange>
+				<LowerRange>0</LowerRange>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</Signal>
+			<Signal>
+				<Description>ACCompModReq</Description>
+				<Key>sig1</Key>
+				<ValueType>3</ValueType>
+				<Equation>~0,1,2,2</Equation>
+				<StateTable>
+					<NumStates>4</NumStates>
+					<State>
+						<Text>Disengage Immediately</Text>
+						<Value>0</Value>
+					</State>
+					<State>
+						<Text>Disengage</Text>
+						<Value>1</Value>
+					</State>
+					<State>
+						<Text>Engage</Text>
+						<Value>2</Value>
+					</State>
+					<State>
+						<Text>No Action</Text>
+						<Value>3</Value>
+					</State>
+				</StateTable>
+				<UpperRange>3</UpperRange>
+				<LowerRange>0</LowerRange>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</Signal>
+			<Signal>
+				<Description>ACCompNormLd</Description>
+				<Key>sig2</Key>
+				<ValueType>1</ValueType>
+				<Equation>{Raw Value}*0.1|0,1,8,8</Equation>
+				<Format>0.00</Format>
+				<UpperRange>25.5</UpperRange>
+				<LowerRange>0</LowerRange>
+				<UnitString>l/min</UnitString>
+			</Signal>
+			<Signal>
+				<Description>ACCompNormLdV</Description>
+				<Key>sig3</Key>
+				<ValueType>3</ValueType>
+				<Equation>~0,1,7,1</Equation>
+				<StateTable>
+					<NumStates>2</NumStates>
+					<State>
+						<Text>Valid</Text>
+						<Value>0</Value>
+					</State>
+					<State>
+						<Text>Invalid</Text>
+						<Value>1</Value>
+					</State>
+				</StateTable>
+				<UpperRange>1</UpperRange>
+				<LowerRange>0</LowerRange>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</Signal>
+			<Signal>
+				<Description>ACCmEngRunReq</Description>
+				<Key>sig4</Key>
+				<ValueType>3</ValueType>
+				<Equation>~0,1,5,1</Equation>
+				<StateTable>
+					<NumStates>2</NumStates>
+					<State>
+						<Text>No Action</Text>
+						<Value>0</Value>
+					</State>
+					<State>
+						<Text>Engine Run Requested</Text>
+						<Value>1</Value>
+					</State>
+				</StateTable>
+				<UpperRange>1</UpperRange>
+				<LowerRange>0</LowerRange>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</Signal>
+			<Signal>
+				<Description>ClmtCtrlTrgtTemp</Description>
+				<Key>sig5</Key>
+				<ValueType>1</ValueType>
+				<Equation>{Raw Value}*0.1-10|0,1,22,10</Equation>
+				<Format>0.00</Format>
+				<UpperRange>92.3</UpperRange>
+				<LowerRange>-10</LowerRange>
+				<UnitString>degC</UnitString>
+			</Signal>
+		</MsgSignals>
+	</MsgSig>
+	<MsgSig>
+		<Description>step11_Front_Seat_Heat_Cool_Switches</Description>
 		<Key>in4</Key>
 		<ByteString0>392</ByteString0>
 		<NetworkKey>net0</NetworkKey>
@@ -2638,78 +2793,61 @@
 		</MsgSignals>
 	</MsgSig>
 	<MsgSig>
-		<Description>step8_Climate_Control_General_Status</Description>
-		<Key>in5</Key>
-		<ByteString0>39A</ByteString0>
+		<Description>step12_Auxiliary_Heater_Status</Description>
+		<Key>in9</Key>
+		<ByteString0>36A</ByteString0>
 		<NetworkKey>net0</NetworkKey>
-		<DisplayColor>16711808</DisplayColor>
 		<NodeKey>gme1</NodeKey>
-		<ExpectedLength>4</ExpectedLength>
-		<DefaultPeriodicRate>500</DefaultPeriodicRate>
+		<ExpectedLength>3</ExpectedLength>
+		<DefaultPeriodicRate>1000</DefaultPeriodicRate>
 		<MsgSignals>
 			<Signal>
-				<Description>ACCmpsrFldOn</Description>
+				<Description>AuxHtrAtv</Description>
 				<Key>sig0</Key>
 				<ValueType>3</ValueType>
-				<Equation>~0,1,4,1</Equation>
+				<Equation>~0,1,7,1</Equation>
 				<StateTable>
 					<NumStates>2</NumStates>
 					<State>
-						<Text>False</Text>
-						<Value>0</Value>
-					</State>
-					<State>
 						<Text>True</Text>
 						<Value>1</Value>
+					</State>
+					<State>
+						<Text>False</Text>
+						<Value>0</Value>
 					</State>
 				</StateTable>
 				<UpperRange>1</UpperRange>
 				<LowerRange>0</LowerRange>
 				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+				<RxEcus>CGM_PB</RxEcus>
 			</Signal>
 			<Signal>
-				<Description>ACCompModReq</Description>
+				<Description>CCClntCrcFlwRtReq</Description>
 				<Key>sig1</Key>
-				<ValueType>3</ValueType>
-				<Equation>~0,1,2,2</Equation>
-				<StateTable>
-					<NumStates>4</NumStates>
-					<State>
-						<Text>Disengage Immediately</Text>
-						<Value>0</Value>
-					</State>
-					<State>
-						<Text>Disengage</Text>
-						<Value>1</Value>
-					</State>
-					<State>
-						<Text>Engage</Text>
-						<Value>2</Value>
-					</State>
-					<State>
-						<Text>No Action</Text>
-						<Value>3</Value>
-					</State>
-				</StateTable>
-				<UpperRange>3</UpperRange>
+				<ValueType>1</ValueType>
+				<Equation>{Raw Value}*0.392157|0,1,8,8</Equation>
+				<Format>0.0</Format>
+				<UpperRange>100.000035</UpperRange>
 				<LowerRange>0</LowerRange>
-				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+				<UnitString>%</UnitString>
+				<RxEcus>CGM_PB</RxEcus>
 			</Signal>
 			<Signal>
-				<Description>ACCompNormLd</Description>
+				<Description>HtrCoreInltClntTmpCalc</Description>
 				<Key>sig2</Key>
 				<ValueType>1</ValueType>
-				<Equation>{Raw Value}*0.1|0,1,8,8</Equation>
-				<Format>0.00</Format>
-				<UpperRange>25.5</UpperRange>
-				<LowerRange>0</LowerRange>
-				<UnitString>l/min</UnitString>
+				<Equation>{Raw Value}-40|0,1,16,8</Equation>
+				<UpperRange>215</UpperRange>
+				<LowerRange>-40</LowerRange>
+				<UnitString>degC</UnitString>
+				<RxEcus>CGM_PB</RxEcus>
 			</Signal>
 			<Signal>
-				<Description>ACCompNormLdV</Description>
+				<Description>HtrCoreInltClntTmpCalcV</Description>
 				<Key>sig3</Key>
 				<ValueType>3</ValueType>
-				<Equation>~0,1,7,1</Equation>
+				<Equation>~0,1,3,1</Equation>
 				<StateTable>
 					<NumStates>2</NumStates>
 					<State>
@@ -2724,36 +2862,7 @@
 				<UpperRange>1</UpperRange>
 				<LowerRange>0</LowerRange>
 				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
-			</Signal>
-			<Signal>
-				<Description>ACCmEngRunReq</Description>
-				<Key>sig4</Key>
-				<ValueType>3</ValueType>
-				<Equation>~0,1,5,1</Equation>
-				<StateTable>
-					<NumStates>2</NumStates>
-					<State>
-						<Text>No Action</Text>
-						<Value>0</Value>
-					</State>
-					<State>
-						<Text>Engine Run Requested</Text>
-						<Value>1</Value>
-					</State>
-				</StateTable>
-				<UpperRange>1</UpperRange>
-				<LowerRange>0</LowerRange>
-				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
-			</Signal>
-			<Signal>
-				<Description>ClmtCtrlTrgtTemp</Description>
-				<Key>sig5</Key>
-				<ValueType>1</ValueType>
-				<Equation>{Raw Value}*0.1-10|0,1,22,10</Equation>
-				<Format>0.00</Format>
-				<UpperRange>92.3</UpperRange>
-				<LowerRange>-10</LowerRange>
-				<UnitString>degC</UnitString>
+				<RxEcus>CGM_PB</RxEcus>
 			</Signal>
 		</MsgSignals>
 	</MsgSig>
@@ -2776,26 +2885,58 @@
 		<LINEnhancedChecksum>True</LINEnhancedChecksum>
 	</MsgSig>
 	<MsgSig>
-		<Description>stepX_diagResponse1</Description>
-		<Key>in9</Key>
+		<Description>stepX_diagResponse</Description>
+		<Key>in11</Key>
 		<ByteString0>14DAF199</ByteString0>
-		<ByteString1>06</ByteString1>
+		<XtdFrame>True</XtdFrame>
+		<NetworkKey>net0</NetworkKey>
+	</MsgSig>
+	<MsgSig>
+		<Description>C_diag_response1Data</Description>
+		<Key>in6</Key>
+		<ByteString1>00</ByteString1>
 		<ByteString2>50</ByteString2>
 		<ByteString3>01</ByteString3>
 		<ByteString4>00</ByteString4>
 		<ByteString5>32</ByteString5>
 		<ByteString6>01</ByteString6>
-		<ByteString7>F4</ByteString7>
+		<ByteString7>F5</ByteString7>
 		<XtdFrame>True</XtdFrame>
 		<NetworkKey>net0</NetworkKey>
 		<ExpectedLength>7</ExpectedLength>
+		<EnableTCPConnections>False</EnableTCPConnections>
 	</MsgSig>
 	<MsgSig>
-		<Description>stepX_diagResponse2</Description>
-		<Key>in11</Key>
-		<ByteString0>14DAF199</ByteString0>
-		<XtdFrame>True</XtdFrame>
+		<Description>step13_Rear_Window_Defog_Status</Description>
+		<Key>in10</Key>
+		<ByteString0>1C0</ByteString0>
 		<NetworkKey>net0</NetworkKey>
+		<NodeKey>gme1</NodeKey>
+		<ExpectedLength>1</ExpectedLength>
+		<DefaultPeriodicRate>1000</DefaultPeriodicRate>
+		<MsgSignals>
+			<Signal>
+				<Description>RrWndDfgOn</Description>
+				<Key>sig0</Key>
+				<ValueType>3</ValueType>
+				<Equation>~0,1,7,1</Equation>
+				<StateTable>
+					<NumStates>2</NumStates>
+					<State>
+						<Text>False</Text>
+						<Value>0</Value>
+					</State>
+					<State>
+						<Text>True</Text>
+						<Value>1</Value>
+					</State>
+				</StateTable>
+				<UpperRange>1</UpperRange>
+				<LowerRange>0</LowerRange>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+				<RxEcus>BCM_PB,Firewall_PB,IPC_PB</RxEcus>
+			</Signal>
+		</MsgSignals>
 	</MsgSig>
 </MsgSigs>
 <TxMsgs>
@@ -4834,6 +4975,26 @@
 		</TxMsgProperties>
 	</TxMsg>
 	<TxMsg>
+		<Key>out18</Key>
+		<Xtd>True</Xtd>
+		<AutoTxType>2</AutoTxType>
+		<TxMsgProperties>
+			<MsgSig>
+				<Description>step15_diagRequest2</Description>
+				<Key>out18</Key>
+				<ByteString0>14DA99F1</ByteString0>
+				<ByteString1>03</ByteString1>
+				<ByteString2>22</ByteString2>
+				<ByteString3>01</ByteString3>
+				<ByteString4>4D</ByteString4>
+				<XtdFrame>True</XtdFrame>
+				<NetworkKey>net0</NetworkKey>
+				<ExpectedLength>4</ExpectedLength>
+				<EnableTCPConnections>False</EnableTCPConnections>
+			</MsgSig>
+		</TxMsgProperties>
+	</TxMsg>
+	<TxMsg>
 		<Key>out9</Key>
 		<Xtd>True</Xtd>
 		<AutoTxType>2</AutoTxType>
@@ -4920,6 +5081,7 @@
 		<Key>tst5</Key>
 		<TestType>8</TestType>
 		<FilePath>Capture File Function Block 4</FilePath>
+		<StartMode>1</StartMode>
 		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
 		<LogRate>1</LogRate>
 		<AfterStopTime>5000</AfterStopTime>
@@ -5015,16 +5177,16 @@
 				</SignalSpec>
 			</Step>
 			<Step>
-				<Key>stp14</Key>
-				<StepType>8</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
 				<Key>stp12</Key>
 				<StepType>4</StepType>
 				<StepLongValue>4</StepLongValue>
 				<StepStringValue>tst1</StepStringValue>
 				<StepStringValue2>fs_periodicSteps32-38</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp22</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp2</Key>
@@ -5093,7 +5255,7 @@
 			<Step>
 				<Key>stp1</Key>
 				<StepType>2</StepType>
-				<StepLongValue>0</StepLongValue>
+				<StepLongValue>10</StepLongValue>
 				<StepDoubleValue>1000</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
@@ -5111,7 +5273,7 @@
 			<Step>
 				<Key>stp1</Key>
 				<StepType>2</StepType>
-				<StepLongValue>0</StepLongValue>
+				<StepLongValue>10</StepLongValue>
 				<StepDoubleValue>1000</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
@@ -5133,7 +5295,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_isCANCommOK</Description>
-					<Equation> not {appSig_isCANCommOK :sig3-index(0)} or not {appSig_isLIN-CHCMCommOk :sig5-index(0)} or not {appSig_isLIN-IONIZERCommOk :sig6-index(0)}</Equation>
+					<Equation> not {appSig_isCANCommOK :sig3-index(0)}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5149,7 +5311,7 @@
 			<Step>
 				<Key>stp1</Key>
 				<StepType>2</StepType>
-				<StepLongValue>0</StepLongValue>
+				<StepLongValue>10</StepLongValue>
 				<StepDoubleValue>1000</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
@@ -5167,7 +5329,7 @@
 			<Step>
 				<Key>stp1</Key>
 				<StepType>2</StepType>
-				<StepLongValue>0</StepLongValue>
+				<StepLongValue>10</StepLongValue>
 				<StepDoubleValue>1000</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
@@ -5312,7 +5474,7 @@
 			</Step>
 			<Step>
 				<Key>stp3</Key>
-				<StepType>14</StepType>
+				<StepType>8</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -5373,7 +5535,7 @@
 			<Step>
 				<Key>stp0</Key>
 				<StepType>2</StepType>
-				<StepLongValue>0</StepLongValue>
+				<StepLongValue>100</StepLongValue>
 				<StepDoubleValue>1000</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
@@ -5392,7 +5554,7 @@
 			<Step>
 				<Key>stp0</Key>
 				<StepType>2</StepType>
-				<StepLongValue>0</StepLongValue>
+				<StepLongValue>100</StepLongValue>
 				<StepDoubleValue>1000</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
@@ -5484,7 +5646,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>Climate_Control_General_Status (Present)</Description>
-					<Equation>{step8_Climate_Control_General_Status (Present) :in5-0}</Equation>
+					<Equation>{step8-14_Climate_Control_General_Status (Present) :in5-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5494,7 +5656,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>Climate_Control_General_Status (Present)</Description>
-					<Equation>{step8_Climate_Control_General_Status (Present) :in5-0}</Equation>
+					<Equation>{step8-14_Climate_Control_General_Status (Present) :in5-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5733,7 +5895,7 @@
 			<Step>
 				<Key>stp13</Key>
 				<StepType>7</StepType>
-				<StepStringValue>in9</StepStringValue>
+				<StepStringValue>in11</StepStringValue>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -5746,12 +5908,12 @@
 				<Key>stp16</Key>
 				<StepType>3</StepType>
 				<StepLongValue>100</StepLongValue>
-				<StepComment>// wait read data reply, timeout 50ms</StepComment>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
 				<StepDoubleValue>1</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5760,8 +5922,8 @@
 				<StepLongValue>15</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Message Data)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=06 and {stepX_diagResponse (Message B2) :in11-19}=80 and {stepX_diagResponse (Message B3) :in11-20}=01 and {stepX_diagResponse (Message B4) :in11-21}=00 and  {stepX_diagResponse (Message B5) :in11-22}=50  and {stepX_diagResponse (Message B6) :in11-23}=01 and {stepX_diagResponse (Message B7) :in11-24}=244</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5777,15 +5939,15 @@
 				<StepStringValue2>step18_diagRequest2</StepStringValue2>
 			</Step>
 			<Step>
-				<Key>stp16</Key>
+				<Key>stp18</Key>
 				<StepType>3</StepType>
 				<StepLongValue>100</StepLongValue>
-				<StepComment>// wait read data reply, timeout 50ms</StepComment>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
 				<StepDoubleValue>1</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5795,7 +5957,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5804,7 +5966,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_step18_currValue :sig8-index(0)}</Description>
-					<Equation>{stepX_diagResponse2 (Message B5) :in11-22}/10+3</Equation>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}/10+3</Equation>
 					<SetValueDescription>{appSig_step18_currValue :sig8-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_step18_currValue :sig8-index(0)}</SetValueKey>
 				</SignalSpec>
@@ -5886,7 +6048,7 @@
 			<Step>
 				<Key>stp13</Key>
 				<StepType>7</StepType>
-				<StepStringValue>in9</StepStringValue>
+				<StepStringValue>in11</StepStringValue>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -5899,22 +6061,22 @@
 				<Key>stp16</Key>
 				<StepType>3</StepType>
 				<StepLongValue>100</StepLongValue>
-				<StepComment>// wait read data reply, timeout 50ms</StepComment>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
 				<StepDoubleValue>1</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
 				<Key>stp5</Key>
 				<StepType>15</StepType>
-				<StepLongValue>15</StepLongValue>
+				<StepLongValue>14</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Message Data)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=06 and {stepX_diagResponse (Message B2) :in11-19}=80 and {stepX_diagResponse (Message B3) :in11-20}=01 and {stepX_diagResponse (Message B4) :in11-21}=00 and  {stepX_diagResponse (Message B5) :in11-22}=50  and {stepX_diagResponse (Message B6) :in11-23}=01 and {stepX_diagResponse (Message B7) :in11-24}=244</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -5930,42 +6092,31 @@
 				<StepStringValue2>step19_diagRequest2</StepStringValue2>
 			</Step>
 			<Step>
-				<Key>stp16</Key>
+				<Key>stp18</Key>
 				<StepType>3</StepType>
 				<StepLongValue>100</StepLongValue>
-				<StepComment>// wait read data reply, timeout 50ms</StepComment>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
 				<StepDoubleValue>1</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
 				<Key>stp10</Key>
 				<StepType>15</StepType>
-				<StepLongValue>14</StepLongValue>
+				<StepLongValue>13</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
-				</SignalSpec>
-			</Step>
-			<Step>
-				<Key>stp11</Key>
-				<StepType>6</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-				<SignalSpec>
-					<Description>{appSig_step19_currValue :sig16-index(0)}</Description>
-					<Equation>{stepX_diagResponse2 (Message B5) :in11-22}*7058/100000</Equation>
-					<SetValueDescription>{appSig_step19_currValue :sig16-index(0)}</SetValueDescription>
-					<SetValueKey>{appSig_step19_currValue :sig16-index(0)}</SetValueKey>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
 				<Key>stp22</Key>
 				<StepType>15</StepType>
-				<StepLongValue>13</StepLongValue>
+				<StepLongValue>12</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step19_currValue</Description>
@@ -6028,7 +6179,7 @@
 			<Step>
 				<Key>stp13</Key>
 				<StepType>7</StepType>
-				<StepStringValue>in9</StepStringValue>
+				<StepStringValue>in11</StepStringValue>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -6045,8 +6196,8 @@
 				<StepDoubleValue>1</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6055,8 +6206,8 @@
 				<StepLongValue>11</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Message Data)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=06 and {stepX_diagResponse (Message B2) :in11-19}=80 and {stepX_diagResponse (Message B3) :in11-20}=01 and {stepX_diagResponse (Message B4) :in11-21}=00 and  {stepX_diagResponse (Message B5) :in11-22}=50  and {stepX_diagResponse (Message B6) :in11-23}=01 and {stepX_diagResponse (Message B7) :in11-24}=244</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6080,7 +6231,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6090,7 +6241,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6099,7 +6250,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_step32_currValue :sig7-index(0)}</Description>
-					<Equation>{stepX_diagResponse2 (Message B5) :in11-22}*100/255</Equation>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}*100/255</Equation>
 					<SetValueDescription>{appSig_step32_currValue :sig7-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_step32_currValue :sig7-index(0)}</SetValueKey>
 				</SignalSpec>
@@ -6139,7 +6290,7 @@
 			<Step>
 				<Key>stp13</Key>
 				<StepType>7</StepType>
-				<StepStringValue>in9</StepStringValue>
+				<StepStringValue>in11</StepStringValue>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -6156,8 +6307,8 @@
 				<StepDoubleValue>1</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6166,8 +6317,8 @@
 				<StepLongValue>11</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>stepX_diagResponse1 (Present)</Description>
-					<Equation>{stepX_diagResponse1 (Present) :in9-0}</Equation>
+					<Description>stepX_diagResponse (Message Data)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=06 and {stepX_diagResponse (Message B2) :in11-19}=80 and {stepX_diagResponse (Message B3) :in11-20}=01 and {stepX_diagResponse (Message B4) :in11-21}=00 and  {stepX_diagResponse (Message B5) :in11-22}=50  and {stepX_diagResponse (Message B6) :in11-23}=01 and {stepX_diagResponse (Message B7) :in11-24}=244</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6179,8 +6330,8 @@
 			<Step>
 				<Key>stp6</Key>
 				<StepType>1</StepType>
-				<StepStringValue>out1</StepStringValue>
-				<StepStringValue2>step32_diagRequest2</StepStringValue2>
+				<StepStringValue>out15</StepStringValue>
+				<StepStringValue2>step33_diagRequest2</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp18</Key>
@@ -6191,7 +6342,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6201,7 +6352,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse2 (Present) :in11-0}</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -6210,7 +6361,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_step33_currValue :sig13-index(0)}</Description>
-					<Equation>{stepX_diagResponse2 (Message B5) :in11-22}*100/255</Equation>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}*100/255</Equation>
 					<SetValueDescription>{appSig_step33_currValue :sig13-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_step33_currValue :sig13-index(0)}</SetValueKey>
 				</SignalSpec>
@@ -6223,6 +6374,247 @@
 			<Step>
 				<Key>stp9</Key>
 				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
+		<Description>test</Description>
+		<Key>tst12</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 13</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst11</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>fsMain_initialize</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp11</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{step1_Network_Management_BCM (Tx Msg Periodic On-Off) :out6-30}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{step1_Network_Management_BCM (Tx Msg Periodic On-Off) :out6-30}</SetValueDescription>
+					<SetValueKey>{step1_Network_Management_BCM (Tx Msg Periodic On-Off) :out6-30}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>14</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp1</Key>
+				<StepType>8</StepType>
+				<StepLongValue>0</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp2</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
+		<Description>fs_step15_sendOnce</Description>
+		<Key>tst13</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 1</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>False</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_step15_isPassed :sig27-index(0)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_step15_isPassed :sig27-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_step15_isPassed :sig27-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp13</Key>
+				<StepType>7</StepType>
+				<StepStringValue>in11</StepStringValue>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>1</StepType>
+				<StepStringValue>out7</StepStringValue>
+				<StepStringValue2>stepX_diagRequest1</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp16</Key>
+				<StepType>3</StepType>
+				<StepLongValue>100</StepLongValue>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
+				<StepDoubleValue>1</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>15</StepType>
+				<StepLongValue>15</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse (Message Data)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=06 and {stepX_diagResponse (Message B2) :in11-19}=80 and {stepX_diagResponse (Message B3) :in11-20}=01 and {stepX_diagResponse (Message B4) :in11-21}=00 and  {stepX_diagResponse (Message B5) :in11-22}=50  and {stepX_diagResponse (Message B6) :in11-23}=01 and {stepX_diagResponse (Message B7) :in11-24}=244</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp13</Key>
+				<StepType>7</StepType>
+				<StepStringValue>in11</StepStringValue>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>1</StepType>
+				<StepStringValue>out18</StepStringValue>
+				<StepStringValue2>step15_diagRequest2</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp18</Key>
+				<StepType>3</StepType>
+				<StepLongValue>100</StepLongValue>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
+				<StepDoubleValue>1</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse2 (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp10</Key>
+				<StepType>15</StepType>
+				<StepLongValue>14</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse2 (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp11</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_step15_currValue :sig28-index(0)}</Description>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}&lt;&lt;16+{stepX_diagResponse (Message B6) :in11-23}&lt;&lt;8+{stepX_diagResponse (Message B7) :in11-24}</Equation>
+					<SetValueDescription>{appSig_step15_currValue :sig28-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_step15_currValue :sig28-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp22</Key>
+				<StepType>15</StepType>
+				<StepLongValue>13</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_step15_currValue</Description>
+					<Equation>{appSig_step15_currValue :sig28-index(0)}={appSig_step15_targetValue :sig29-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_step15_isPassed :sig27-index(0)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_step15_isPassed :sig27-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_step15_isPassed :sig27-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp23</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp12</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp18</Key>
+				<StepType>14</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -6259,7 +6651,7 @@
 </SignalGroups>
 <Dialogs>
 	<Dialog>
-		<Caption>CoreProcess</Caption>
+		<Caption>CoreProcess1</Caption>
 		<Key>dia1</Key>
 		<TextDisplay>
 			<Key>txt3</Key>
@@ -6417,8 +6809,8 @@
 		</OnOffButton>
 		<TextDisplay>
 			<Key>txt6</Key>
-			<Width>474</Width>
-			<Height>90</Height>
+			<Width>469</Width>
+			<Height>120</Height>
 			<Top>250</Top>
 			<Left>61</Left>
 			<BackColor>12632256</BackColor>
@@ -6432,8 +6824,8 @@
 			<Key>txt2</Key>
 			<Width>195</Width>
 			<Height>31</Height>
-			<Top>282</Top>
-			<Left>107</Left>
+			<Top>275</Top>
+			<Left>101</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6469,8 +6861,8 @@
 			<Key>txt8</Key>
 			<Width>474</Width>
 			<Height>90</Height>
-			<Top>359</Top>
-			<Left>61</Left>
+			<Top>360</Top>
+			<Left>590</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>5</BorderStyle>
@@ -6482,8 +6874,8 @@
 			<Key>txt9</Key>
 			<Width>131</Width>
 			<Height>31</Height>
-			<Top>381</Top>
-			<Left>106</Left>
+			<Top>380</Top>
+			<Left>630</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6496,8 +6888,8 @@
 			<Key>txt10</Key>
 			<Width>100</Width>
 			<Height>31</Height>
-			<Top>378</Top>
-			<Left>402</Left>
+			<Top>380</Top>
+			<Left>930</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
@@ -6514,7 +6906,7 @@
 			<Width>120</Width>
 			<Height>20</Height>
 			<Top>470</Top>
-			<Left>64</Left>
+			<Left>620</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6534,7 +6926,7 @@
 			<Width>120</Width>
 			<Height>20</Height>
 			<Top>470</Top>
-			<Left>210</Left>
+			<Left>760</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6554,8 +6946,8 @@
 			<Key>rdb4</Key>
 			<Width>120</Width>
 			<Height>20</Height>
-			<Top>469</Top>
-			<Left>350</Left>
+			<Top>470</Top>
+			<Left>900</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6571,6 +6963,261 @@
 				<SetValueKey>{appSig_targetValueType :sig21-index(0)}</SetValueKey>
 			</SignalSpec>
 		</RadioButton>
+		<TextDisplay>
+			<Key>txt11</Key>
+			<Width>470</Width>
+			<Height>79</Height>
+			<Top>391</Top>
+			<Left>60</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Step 12</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt12</Key>
+			<Width>195</Width>
+			<Height>31</Height>
+			<Top>421</Top>
+			<Left>110</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>False</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>AuxHtrAtv (Value)</Description>
+				<Equation>{AuxHtrAtv (Value) :in9-sig0-0}</Equation>
+				<Format>False=0/True=1!1</Format>
+				<Min>0</Min>
+				<Max>1</Max>
+				<IsDiscreteValue>True</IsDiscreteValue>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt13</Key>
+			<Width>98</Width>
+			<Height>30</Height>
+			<Top>421</Top>
+			<Left>400</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>False</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>AuxHtrAtv (Value)</Description>
+				<Equation>{AuxHtrAtv (Value) :in9-sig0-0}</Equation>
+				<Format>False=0/True=1!1</Format>
+				<Min>0</Min>
+				<Max>1</Max>
+				<IsDiscreteValue>True</IsDiscreteValue>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt14</Key>
+			<Width>195</Width>
+			<Height>31</Height>
+			<Top>321</Top>
+			<Left>100</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Passenger Heated/Cooled Seat Switch #1 Active</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt15</Key>
+			<Width>98</Width>
+			<Height>30</Height>
+			<Top>320</Top>
+			<Left>400</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>False</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>PassHCSeatSw1Act (Value)</Description>
+				<Equation>{PassHCSeatSw1Act (Value) :in4-sig3-0}</Equation>
+				<Format>False=0/True=1!1</Format>
+				<Min>0</Min>
+				<Max>1</Max>
+				<IsDiscreteValue>True</IsDiscreteValue>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt16</Key>
+			<Width>470</Width>
+			<Height>79</Height>
+			<Top>30</Top>
+			<Left>576</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Step 13</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt17</Key>
+			<Width>195</Width>
+			<Height>31</Height>
+			<Top>60</Top>
+			<Left>626</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>False</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>AuxHtrAtv (Value)</Description>
+				<Equation>{AuxHtrAtv (Value) :in9-sig0-0}</Equation>
+				<Format>False=0/True=1!1</Format>
+				<Min>0</Min>
+				<Max>1</Max>
+				<IsDiscreteValue>True</IsDiscreteValue>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt18</Key>
+			<Width>98</Width>
+			<Height>30</Height>
+			<Top>60</Top>
+			<Left>916</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>False</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>RrWndDfgOn (Value)</Description>
+				<Equation>{RrWndDfgOn (Value) :in10-sig0-0}</Equation>
+				<Format>False=0/True=1!1</Format>
+				<Min>0</Min>
+				<Max>1</Max>
+				<IsDiscreteValue>True</IsDiscreteValue>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt19</Key>
+			<Width>470</Width>
+			<Height>79</Height>
+			<Top>120</Top>
+			<Left>577</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Step 14</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt20</Key>
+			<Width>195</Width>
+			<Height>31</Height>
+			<Top>150</Top>
+			<Left>627</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>False</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>AuxHtrAtv (Value)</Description>
+				<Equation>{AuxHtrAtv (Value) :in9-sig0-0}</Equation>
+				<Format>False=0/True=1!1</Format>
+				<Min>0</Min>
+				<Max>1</Max>
+				<IsDiscreteValue>True</IsDiscreteValue>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt21</Key>
+			<Width>98</Width>
+			<Height>30</Height>
+			<Top>150</Top>
+			<Left>917</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Disengage Immediately</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>ACCompModReq (Value)</Description>
+				<Equation>{ACCompModReq (Value) :in5-sig1-0}</Equation>
+				<Format>Disengage Immediately=0/Disengage=1/Engage=2/No Action=3!1</Format>
+				<Min>0</Min>
+				<Max>3</Max>
+				<IsDiscreteValue>True</IsDiscreteValue>
+				<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
+			</SignalSpec>
+		</TextDisplay>
+	</Dialog>
+	<Dialog>
+		<Caption>CoreProcesss2</Caption>
+		<Key>dia3</Key>
+		<TextDisplay>
+			<Key>txt8</Key>
+			<Width>474</Width>
+			<Height>90</Height>
+			<Top>40</Top>
+			<Left>60</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Step 32</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt9</Key>
+			<Width>131</Width>
+			<Height>31</Height>
+			<Top>60</Top>
+			<Left>100</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Front Blower PWM Duty Cycle Actual</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt10</Key>
+			<Width>100</Width>
+			<Height>31</Height>
+			<Top>60</Top>
+			<Left>400</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_step32_currValue</Description>
+				<Equation>{appSig_step32_currValue :sig7-index(0)}</Equation>
+			</SignalSpec>
+		</TextDisplay>
 	</Dialog>
 	<Dialog>
 		<Caption>AutoTestCases</Caption>
@@ -6592,10 +7239,10 @@
 			<Key>fbb0</Key>
 			<Width>99</Width>
 			<Height>40</Height>
-			<Top>37</Top>
-			<Left>526</Left>
+			<Top>40</Top>
+			<Left>970</Left>
 			<BackColor>12632256</BackColor>
-			<DataKey>tst2</DataKey>
+			<DataKey>tst7</DataKey>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontName>Arial</FontName>
@@ -6707,8 +7354,8 @@
 			<Key>txt10</Key>
 			<Width>433</Width>
 			<Height>184</Height>
-			<Top>230</Top>
-			<Left>53</Left>
+			<Top>35</Top>
+			<Left>512</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>5</BorderStyle>
@@ -6720,8 +7367,8 @@
 			<Key>txt11</Key>
 			<Width>117</Width>
 			<Height>38</Height>
-			<Top>262</Top>
-			<Left>73</Left>
+			<Top>65</Top>
+			<Left>532</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6734,8 +7381,8 @@
 			<Key>txt5</Key>
 			<Width>74</Width>
 			<Height>19</Height>
-			<Top>270</Top>
-			<Left>200</Left>
+			<Top>75</Top>
+			<Left>662</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
@@ -6752,8 +7399,8 @@
 			<Key>txt12</Key>
 			<Width>74</Width>
 			<Height>19</Height>
-			<Top>270</Top>
-			<Left>300</Left>
+			<Top>75</Top>
+			<Left>762</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
@@ -6770,8 +7417,8 @@
 			<Key>led3</Key>
 			<Width>55</Width>
 			<Height>40</Height>
-			<Top>258</Top>
-			<Left>408</Left>
+			<Top>65</Top>
+			<Left>872</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6789,8 +7436,8 @@
 			<Key>txt13</Key>
 			<Width>52</Width>
 			<Height>10</Height>
-			<Top>244</Top>
-			<Left>211</Left>
+			<Top>55</Top>
+			<Left>672</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6802,8 +7449,8 @@
 			<Key>txt14</Key>
 			<Width>52</Width>
 			<Height>10</Height>
-			<Top>243</Top>
-			<Left>308</Left>
+			<Top>55</Top>
+			<Left>772</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6815,8 +7462,8 @@
 			<Key>txt15</Key>
 			<Width>120</Width>
 			<Height>37</Height>
-			<Top>313</Top>
-			<Left>70</Left>
+			<Top>125</Top>
+			<Left>532</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6829,8 +7476,8 @@
 			<Key>txt16</Key>
 			<Width>74</Width>
 			<Height>19</Height>
-			<Top>323</Top>
-			<Left>200</Left>
+			<Top>135</Top>
+			<Left>662</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
@@ -6847,8 +7494,8 @@
 			<Key>txt17</Key>
 			<Width>74</Width>
 			<Height>19</Height>
-			<Top>323</Top>
-			<Left>300</Left>
+			<Top>135</Top>
+			<Left>762</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
@@ -6864,8 +7511,184 @@
 			<Key>led4</Key>
 			<Width>55</Width>
 			<Height>40</Height>
-			<Top>313</Top>
-			<Left>409</Left>
+			<Top>125</Top>
+			<Left>872</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>appSig_step19_isPassed</Description>
+				<Equation>{appSig_step19_isPassed :sig15-index(0)}</Equation>
+			</SignalSpec>
+		</LED>
+		<TextDisplay>
+			<Key>txt18</Key>
+			<Width>433</Width>
+			<Height>184</Height>
+			<Top>240</Top>
+			<Left>50</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Step 15,16,17</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt19</Key>
+			<Width>117</Width>
+			<Height>38</Height>
+			<Top>270</Top>
+			<Left>71</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>15. Software Version</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt20</Key>
+			<Width>74</Width>
+			<Height>19</Height>
+			<Top>280</Top>
+			<Left>201</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_step18_currValue</Description>
+				<Equation>{appSig_step18_currValue :sig8-index(0)}</Equation>
+				<UseCustomFormatting>True</UseCustomFormatting>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt21</Key>
+			<Width>74</Width>
+			<Height>19</Height>
+			<Top>280</Top>
+			<Left>301</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>12</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_C_step18_targetValue</Description>
+				<Equation>{appSig_C_step18_targetValue :sig9-index(0)}</Equation>
+				<UseCustomFormatting>True</UseCustomFormatting>
+			</SignalSpec>
+		</TextDisplay>
+		<LED>
+			<Key>led5</Key>
+			<Width>55</Width>
+			<Height>40</Height>
+			<Top>270</Top>
+			<Left>411</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>appSig_step18_isPassed</Description>
+				<Equation>{appSig_step18_isPassed :sig14-index(0)}</Equation>
+			</SignalSpec>
+		</LED>
+		<TextDisplay>
+			<Key>txt22</Key>
+			<Width>52</Width>
+			<Height>10</Height>
+			<Top>260</Top>
+			<Left>211</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>CV</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt23</Key>
+			<Width>52</Width>
+			<Height>10</Height>
+			<Top>260</Top>
+			<Left>311</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>TV</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt24</Key>
+			<Width>120</Width>
+			<Height>37</Height>
+			<Top>330</Top>
+			<Left>71</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>19.  Ignition Voltage</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt25</Key>
+			<Width>74</Width>
+			<Height>19</Height>
+			<Top>340</Top>
+			<Left>201</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_step19_currValue</Description>
+				<Equation>{appSig_step19_currValue :sig16-index(0)}</Equation>
+				<UseCustomFormatting>True</UseCustomFormatting>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt26</Key>
+			<Width>74</Width>
+			<Height>19</Height>
+			<Top>340</Top>
+			<Left>301</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>9</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_step19_targetValue</Description>
+				<Equation>{appSig_step19_targetValue :sig20-index(0)}</Equation>
+			</SignalSpec>
+		</TextDisplay>
+		<LED>
+			<Key>led6</Key>
+			<Width>55</Width>
+			<Height>40</Height>
+			<Top>330</Top>
+			<Left>411</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -6881,8 +7704,2318 @@
 		</LED>
 	</Dialog>
 	<Dialog>
-		<Caption>Panel 3</Caption>
-		<Key>dia3</Key>
+		<Caption>Panel 2</Caption>
+		<Key>dia4</Key>
+		<BackColor>12439216</BackColor>
+		<TextDisplay>
+			<Key>txt1</Key>
+			<Width>560</Width>
+			<Height>752</Height>
+			<Top>50</Top>
+			<Left>426</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt6</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>140</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>LIN-CHCM</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt174</Key>
+			<Width>580</Width>
+			<Height>680</Height>
+			<Top>51</Top>
+			<Left>1026</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt135</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>300</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt141</Key>
+			<Width>580</Width>
+			<Height>70</Height>
+			<Top>731</Top>
+			<Left>1026</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Seat Heating</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt7</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>210</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>LIN-Ionizer</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt8</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>270</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Software Version</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt9</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>350</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>End Model Part Number</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt10</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>430</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Base Model Part Number</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt11</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>510</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Battery Voltage Low Resolution</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt12</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>590</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Igntion Voltage</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt25</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>660</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>LH Upper </Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt26</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>728</Top>
+			<Left>443</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>LH Lower</Caption>
+			<Alignment>1</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led8</Key>
+			<Width>20</Width>
+			<Height>20</Height>
+			<Top>770</Top>
+			<Left>1660</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>128</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led9</Key>
+			<Width>20</Width>
+			<Height>20</Height>
+			<Top>840</Top>
+			<Left>1660</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>128</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led10</Key>
+			<Width>20</Width>
+			<Height>20</Height>
+			<Top>910</Top>
+			<Left>1660</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>128</LEDOffColor>
+		</LED>
+		<RadioButton>
+			<Key>rdb0</Key>
+			<Width>80</Width>
+			<Height>20</Height>
+			<Top>20</Top>
+			<Left>145</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711808</ForeColor>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Normal</OnText>
+		</RadioButton>
+		<RadioButton>
+			<Key>rdb1</Key>
+			<Width>80</Width>
+			<Height>20</Height>
+			<Top>20</Top>
+			<Left>25</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711808</ForeColor>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Min</OnText>
+		</RadioButton>
+		<RadioButton>
+			<Key>rdb2</Key>
+			<Width>80</Width>
+			<Height>20</Height>
+			<Top>20</Top>
+			<Left>255</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711808</ForeColor>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Max</OnText>
+		</RadioButton>
+		<TextDisplay>
+			<Key>txt81</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>80</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>present</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt84</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>290</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>130</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt85</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>380</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>0 0 0 0</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt88</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>750</Top>
+			<Left>633</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt89</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>680</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt90</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>610</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>9 12 16</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt91</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>540</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>12</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt92</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>450</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>0 0 0 0</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt100</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>80</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>123</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led19</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>80</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<TxButton>
+			<Key>txb0</Key>
+			<Width>140</Width>
+			<Height>80</Height>
+			<Top>720</Top>
+			<Left>15</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Auto Test</OnText>
+			<OffText>Auto Test</OffText>
+			<Value>1</Value>
+		</TxButton>
+		<OnOffButton>
+			<Key>ofb0</Key>
+			<Width>110</Width>
+			<Height>40</Height>
+			<Top>756</Top>
+			<Left>1156</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Left (1)</OnText>
+			<OffText>Left (0)</OffText>
+			<Value>1</Value>
+		</OnOffButton>
+		<OnOffButton>
+			<Key>ofb1</Key>
+			<Width>110</Width>
+			<Height>40</Height>
+			<Top>756</Top>
+			<Left>1356</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Right (1)</OnText>
+			<OffText>Right (0)</OffText>
+			<Value>1</Value>
+		</OnOffButton>
+		<TextDisplay>
+			<Key>txt140</Key>
+			<Width>360</Width>
+			<Height>100</Height>
+			<Top>230</Top>
+			<Left>25</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>backlight</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<RadioButton>
+			<Key>rdb4</Key>
+			<Width>75</Width>
+			<Height>24</Height>
+			<Top>270</Top>
+			<Left>305</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Alignment>0</Alignment>
+			<ShowCaption>0</ShowCaption>
+			<OnText> Day</OnText>
+		</RadioButton>
+		<RadioButton>
+			<Key>rdb5</Key>
+			<Width>76</Width>
+			<Height>20</Height>
+			<Top>300</Top>
+			<Left>305</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Alignment>1</Alignment>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Night</OnText>
+		</RadioButton>
+		<PanelButton>
+			<Key>pnb0</Key>
+			<Width>10</Width>
+			<Height>809</Height>
+			<Top>1</Top>
+			<Left>400</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<Value>1</Value>
+		</PanelButton>
+		<TextDisplay>
+			<Key>txt146</Key>
+			<Width>360</Width>
+			<Height>92</Height>
+			<Top>340</Top>
+			<Left>25</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt147</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>380</Top>
+			<Left>65</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt148</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>380</Top>
+			<Left>165</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt149</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>380</Top>
+			<Left>275</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt150</Key>
+			<Width>82</Width>
+			<Height>60</Height>
+			<Top>360</Top>
+			<Left>55</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>PTC</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt151</Key>
+			<Width>80</Width>
+			<Height>60</Height>
+			<Top>360</Top>
+			<Left>155</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>RDF</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt152</Key>
+			<Width>100</Width>
+			<Height>60</Height>
+			<Top>360</Top>
+			<Left>255</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Compressor</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt153</Key>
+			<Width>360</Width>
+			<Height>264</Height>
+			<Top>440</Top>
+			<Left>25</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<PanelButton>
+			<Key>pnb1</Key>
+			<Width>10</Width>
+			<Height>809</Height>
+			<Top>1</Top>
+			<Left>1002</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<Value>1</Value>
+		</PanelButton>
+		<TextDisplay>
+			<Key>txt155</Key>
+			<Width>140</Width>
+			<Height>55</Height>
+			<Top>450</Top>
+			<Left>55</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>FB PWM Duty</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt161</Key>
+			<Width>220</Width>
+			<Height>80</Height>
+			<Top>720</Top>
+			<Left>165</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Result</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt163</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>160</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt173</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>160</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>present</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<BarGraph>
+			<Key>bgr0</Key>
+			<Width>140</Width>
+			<Height>20</Height>
+			<Top>270</Top>
+			<Left>65</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+			<BarColor>7368704</BarColor>
+			<IsSlider>1</IsSlider>
+		</BarGraph>
+		<BarGraph>
+			<Key>bgr1</Key>
+			<Width>140</Width>
+			<Height>20</Height>
+			<Top>300</Top>
+			<Left>65</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+			<BarColor>7368704</BarColor>
+			<IsSlider>1</IsSlider>
+		</BarGraph>
+		<TextDisplay>
+			<Key>txt27</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>61</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Front In Vehicle</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt28</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>141</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Heater Coolant</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt29</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>211</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Evaporator Temp</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt30</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>281</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Humidity Sensor</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt31</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>351</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Temperature Value Humidity</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt32</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>421</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Windshield Temperature</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt33</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>491</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Air Quality</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt34</Key>
+			<Width>518</Width>
+			<Height>66</Height>
+			<Top>551</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Heater Coolant Pump Feedback Frequency</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt35</Key>
+			<Width>520</Width>
+			<Height>69</Height>
+			<Top>631</Top>
+			<Left>1046</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Heater Coolant Pump Feedback Duty Cycle</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt175</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>81</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt176</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>161</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt177</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>371</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt178</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>441</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt179</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>511</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt180</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>581</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt181</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>661</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt182</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>301</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt183</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>231</Top>
+			<Left>1076</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt184</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>81</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt185</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>161</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt186</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>231</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt187</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>301</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt188</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>371</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt189</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>441</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt190</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>511</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt191</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>581</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt192</Key>
+			<Width>110</Width>
+			<Height>30</Height>
+			<Top>661</Top>
+			<Left>1246</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt206</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>160</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt209</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>240</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt210</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>620</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt211</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>690</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt212</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>758</Top>
+			<Left>823</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt213</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>81</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt214</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>230</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt215</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>300</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt216</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>380</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt217</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>460</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt218</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>530</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt219</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>610</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt220</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>680</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt221</Key>
+			<Width>100</Width>
+			<Height>25</Height>
+			<Top>748</Top>
+			<Left>476</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt222</Key>
+			<Width>110</Width>
+			<Height>25</Height>
+			<Top>230</Top>
+			<Left>626</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>present</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led50</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>160</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led51</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>230</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led52</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>290</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led53</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>370</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led54</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>450</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led55</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>530</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led56</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>610</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led57</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>680</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led58</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>748</Top>
+			<Left>787</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<TextDisplay>
+			<Key>txt5</Key>
+			<Width>520</Width>
+			<Height>56</Height>
+			<Top>60</Top>
+			<Left>436</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>CAN Communication</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt223</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>540</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt224</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>460</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt225</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>380</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led59</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>81</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<TextDisplay>
+			<Key>txt226</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>80</Top>
+			<Left>816</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led60</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>161</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led61</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>231</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led62</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>301</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led63</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>371</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led64</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>441</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led65</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>511</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led66</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>571</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<LED>
+			<Key>led67</Key>
+			<Width>30</Width>
+			<Height>30</Height>
+			<Top>661</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<TextDisplay>
+			<Key>txt227</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>161</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt228</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>231</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt229</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>311</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt230</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>381</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt231</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>451</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt232</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>511</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt233</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>581</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt234</Key>
+			<Width>60</Width>
+			<Height>20</Height>
+			<Top>661</Top>
+			<Left>1446</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt235</Key>
+			<Width>140</Width>
+			<Height>55</Height>
+			<Top>450</Top>
+			<Left>215</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>HC Pump Duty</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt236</Key>
+			<Width>140</Width>
+			<Height>55</Height>
+			<Top>520</Top>
+			<Left>55</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>-Rear Defog</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt237</Key>
+			<Width>140</Width>
+			<Height>52</Height>
+			<Top>520</Top>
+			<Left>215</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Water Pump</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt238</Key>
+			<Width>300</Width>
+			<Height>54</Height>
+			<Top>580</Top>
+			<Left>55</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Incar Motor </Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt239</Key>
+			<Width>140</Width>
+			<Height>53</Height>
+			<Top>640</Top>
+			<Left>55</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>DPWM DPWM</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt240</Key>
+			<Width>140</Width>
+			<Height>53</Height>
+			<Top>640</Top>
+			<Left>215</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>DPWM DDisplay</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt241</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>480</Top>
+			<Left>85</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt242</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>470</Top>
+			<Left>255</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt243</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>540</Top>
+			<Left>85</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt244</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>540</Top>
+			<Left>255</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt245</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>600</Top>
+			<Left>175</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt246</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>660</Top>
+			<Left>85</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt247</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>660</Top>
+			<Left>255</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led68</Key>
+			<Width>70</Width>
+			<Height>60</Height>
+			<Top>740</Top>
+			<Left>185</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>65280</LEDOffColor>
+		</LED>
+		<TextDisplay>
+			<Key>txt248</Key>
+			<Width>118</Width>
+			<Height>21</Height>
+			<Top>20</Top>
+			<Left>476</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711680</ForeColor>
+			<Caption>Test Value</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt249</Key>
+			<Width>118</Width>
+			<Height>21</Height>
+			<Top>20</Top>
+			<Left>626</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711680</ForeColor>
+			<Caption>Target Value</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt250</Key>
+			<Width>118</Width>
+			<Height>21</Height>
+			<Top>20</Top>
+			<Left>786</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711680</ForeColor>
+			<Caption>Test Result</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt251</Key>
+			<Width>118</Width>
+			<Height>21</Height>
+			<Top>21</Top>
+			<Left>1076</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711680</ForeColor>
+			<Caption>Test Value</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt252</Key>
+			<Width>118</Width>
+			<Height>21</Height>
+			<Top>21</Top>
+			<Left>1246</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711680</ForeColor>
+			<Caption>Target Value</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt253</Key>
+			<Width>118</Width>
+			<Height>21</Height>
+			<Top>21</Top>
+			<Left>1406</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<ForeColor>16711680</ForeColor>
+			<Caption>Test Result</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt254</Key>
+			<Width>120</Width>
+			<Height>70</Height>
+			<Top>730</Top>
+			<Left>265</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>18</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>N/A</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt255</Key>
+			<Width>33</Width>
+			<Height>26</Height>
+			<Top>270</Top>
+			<Left>33</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>L</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt256</Key>
+			<Width>33</Width>
+			<Height>20</Height>
+			<Top>300</Top>
+			<Left>31</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>R</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<NumEdit>
+			<Key>ned0</Key>
+			<Width>70</Width>
+			<Height>20</Height>
+			<Top>268</Top>
+			<Left>216</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Style>Float</Style>
+		</NumEdit>
+		<NumEdit>
+			<Key>ned1</Key>
+			<Width>70</Width>
+			<Height>20</Height>
+			<Top>300</Top>
+			<Left>215</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Style>Float</Style>
+		</NumEdit>
+		<TextDisplay>
+			<Key>txt257</Key>
+			<Width>360</Width>
+			<Height>170</Height>
+			<Top>50</Top>
+			<Left>25</Left>
+			<BackColor>10395294</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>MPI</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt258</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>170</Top>
+			<Left>65</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt259</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>170</Top>
+			<Left>168</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt260</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>170</Top>
+			<Left>275</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt261</Key>
+			<Width>82</Width>
+			<Height>60</Height>
+			<Top>150</Top>
+			<Left>55</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>SN</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt262</Key>
+			<Width>80</Width>
+			<Height>60</Height>
+			<Top>150</Top>
+			<Left>157</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Value</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt263</Key>
+			<Width>100</Width>
+			<Height>60</Height>
+			<Top>150</Top>
+			<Left>255</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Value2</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt264</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>100</Top>
+			<Left>95</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt265</Key>
+			<Width>60</Width>
+			<Height>25</Height>
+			<Top>100</Top>
+			<Left>255</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt266</Key>
+			<Width>140</Width>
+			<Height>60</Height>
+			<Top>80</Top>
+			<Left>55</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>HW Version</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt267</Key>
+			<Width>140</Width>
+			<Height>60</Height>
+			<Top>80</Top>
+			<Left>215</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>12</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>SW Version</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
 	</Dialog>
 </Dialogs>
 <J1939AddressManager>
@@ -6902,8 +10035,8 @@
 		<Description>Desktop 1</Description>
 		<Key>0</Key>
 		<ICONIndex>51</ICONIndex>
-		<LayoutString>QVFET0NLCAAAAAAMAAAAKgAAAAwEAAC1AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAUAAAAAAACA1Hq4Ru70SIM1fakJBnUaASMFAAADAAAAV8KLDLae80qZv5fVMTlbaBAAAAByAAAA7wMAAJkCAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AARAAAACLAAAA7wMAAJkCAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADEAAAAIsAAADvAwAAmQIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEEAAAAIsAAADvAwAAmQIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAcQAAAAiwAAAO8DAACZAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAClAAAAAAAAAGWIXlh1autLtl7HwvSvAAIQAAAAiwAAAO8DAACZAgAAAAAAAAAAAAAAEAAAAEdyYXBoaWNhbCBQYW5lbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAABliF5YdWrrS7Zex8L0rwAIEAAAAIsAAADvAwAAmQIAAAAAAAAAAAAAABMAAABBcHBsaWNhdGlvbiBTaWduYWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA//////////9YAgAALAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKQAAAAAAAAAZYheWHVq60u2XsfC9K8ABRAAAACLAAAA7wMAAJkCAAAAAAAAAAAAAAAPAAAARnVuY3Rpb24gQmxvY2tzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXQAAAOcDAABfAgAAvAAAAKUAAACtAgAAcQEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
-		<LayoutStringChecksum>2051941107</LayoutStringChecksum>
+		<LayoutString>QVFET0NLCAAAAAAAAAAAAAAAAAAEAADYAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAQAAAAAAACA1Hq4Ru70SIM1fakJBnUaAXcEAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAcAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAClAAAAAAAAAGWIXlh1autLtl7HwvSvAAIAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEAAAAEdyYXBoaWNhbCBQYW5lbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</LayoutString>
+		<LayoutStringChecksum>-314367140</LayoutStringChecksum>
 		<DesktopForms>
 			<DesktopForm>
 				<FormKey>1</FormKey>
@@ -6913,17 +10046,17 @@
 			<DesktopForm>
 				<FormKey>3</FormKey>
 				<Key>1</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRWaWV3PjA8L0N1cnJlbnRWaWV3Pg0KPEN1cnJlbnROZXR3b3JrPjE1PC9DdXJyZW50TmV0d29yaz4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRWaWV3PjE8L0N1cnJlbnRWaWV3Pg0KPEN1cnJlbnROZXR3b3JrPjA8L0N1cnJlbnROZXR3b3JrPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>4</FormKey>
 				<Key>2</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPFNpZ25hbHNQYW5lbFdpZHRoPjE4MTwvU2lnbmFsc1BhbmVsV2lkdGg+DQo8U2VsZWN0ZWRQcm90b2NvbD4xPC9TZWxlY3RlZFByb3RvY29sPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPFNpZ25hbHNQYW5lbFdpZHRoPjkwMzwvU2lnbmFsc1BhbmVsV2lkdGg+DQo8U2VsZWN0ZWRQcm90b2NvbD4xPC9TZWxlY3RlZFByb3RvY29sPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>5</FormKey>
 				<Key>3</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0NDwvQ3VycmVudEZCbG9ja0tleT4NCjxDdXJyZW50U3BsaXRTaXplPjI2NTwvQ3VycmVudFNwbGl0U2l6ZT4NCjxTY3JpcHRHcmlkPg0KCTxOdW1PZkNvbHM+NjwvTnVtT2ZDb2xzPg0KCTxOdW1PZlJvd3M+MTA8L051bU9mUm93cz4NCgk8Q29sU2VsPjQ8L0NvbFNlbD4NCgk8Um93U2VsPjQ8L1Jvd1NlbD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MDwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4xPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MjwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4zPC9Db2xJbmRleD4NCgkJPFdpZHRoPjMwMDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD40PC9Db2xJbmRleD4NCgkJPFdpZHRoPjQ1MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD41PC9Db2xJbmRleD4NCgkJPFdpZHRoPjMwMDA8L1dpZHRoPg0KCTwvQ09MPg0KPC9TY3JpcHRHcmlkPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0MTM8L0N1cnJlbnRGQmxvY2tLZXk+DQo8Q3VycmVudFNwbGl0U2l6ZT4zMjc8L0N1cnJlbnRTcGxpdFNpemU+DQo8U2NyaXB0R3JpZD4NCgk8TnVtT2ZDb2xzPjY8L051bU9mQ29scz4NCgk8TnVtT2ZSb3dzPjE4PC9OdW1PZlJvd3M+DQoJPENvbFNlbD40PC9Db2xTZWw+DQoJPFJvd1NlbD4xMjwvUm93U2VsPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4wPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjE8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4yPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjM8L0NvbEluZGV4Pg0KCQk8V2lkdGg+MzAwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjQ8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NDUwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjU8L0NvbEluZGV4Pg0KCQk8V2lkdGg+MzAwMDwvV2lkdGg+DQoJPC9DT0w+DQo8L1NjcmlwdEdyaWQ+DQo8L0Rlc2t0b3BEYXRhPg0K</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>7</FormKey>
@@ -6934,11 +10067,6 @@
 				<FormKey>2</FormKey>
 				<Key>5</Key>
 				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRWaWV3PjI8L0N1cnJlbnRWaWV3Pg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
-			</DesktopForm>
-			<DesktopForm>
-				<FormKey>8</FormKey>
-				<Key>6</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
 			</DesktopForm>
 		</DesktopForms>
 	</Desktop>
@@ -6979,12 +10107,6 @@
 		<Key>7</Key>
 		<WindowStyle>0</WindowStyle>
 		<Caption>Simulator</Caption>
-	</ICSForm>
-	<ICSForm>
-		<FormType>20</FormType>
-		<Key>8</Key>
-		<WindowStyle>0</WindowStyle>
-		<Caption>Application Signals</Caption>
 	</ICSForm>
 </ICSForms>
 </VSpy3>
