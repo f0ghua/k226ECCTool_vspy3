@@ -1,0 +1,438 @@
+VERSION ""
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+
+BS_:
+
+BU_: Firewall_PB ECC_PB CGM_PB BCM_PB 
+VAL_TABLE_ AdvFrntLghtSysEnbld 0 "False" 1 "True" ;
+VAL_TABLE_ AutLghtCtrl 0 "False" 1 "True" ;
+VAL_TABLE_ AutoBmSlctAllwd 0 "False" 1 "True" ;
+VAL_TABLE_ AutoLtsActIO 0 "False" 1 "True" ;
+VAL_TABLE_ AutoLtsInactIO 0 "False" 1 "True" ;
+VAL_TABLE_ BrkLtsAtv 0 "False" 1 "True" ;
+VAL_TABLE_ DRLAct 0 "False" 1 "True" ;
+VAL_TABLE_ DispNtSchmAtv 0 "False" 1 "True" ;
+VAL_TABLE_ FlToPsSwAtv 0 "False" 1 "True" ;
+VAL_TABLE_ FrFogLmpsAct 0 "False" 1 "True" ;
+VAL_TABLE_ FrFgLtIO 0 "False" 1 "True" ;
+VAL_TABLE_ HazSwAtv 0 "False" 1 "True" ;
+VAL_TABLE_ HdlmpBmSelectStat 0 "Unknown" 1 "Low Beams" 2 "High Beams" ;
+VAL_TABLE_ HighBmAct 0 "False" 1 "True" ;
+VAL_TABLE_ HiBmIO 0 "False" 1 "True" ;
+VAL_TABLE_ HiBmReqd 0 "False" 1 "True" ;
+VAL_TABLE_ IntDimNtPnlAtv 0 "False" 1 "True" ;
+VAL_TABLE_ LftTrnLmpAtv 0 "Off" 1 "On without telltale" 2 "On with telltale" ;
+VAL_TABLE_ LowBmAct 0 "False" 1 "True" ;
+VAL_TABLE_ MainLghtSw 0 "AUTO" 1 "OFF" 2 "PARKLAMP" 3 "HEADLAMP" ;
+VAL_TABLE_ OtsdAmbtLtLvlStat 0 "Unknown" 1 "Night" 2 "Day" ;
+VAL_TABLE_ OtsdAmbtLtLvlStatV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ PrkLtIO 0 "False" 1 "True" ;
+VAL_TABLE_ PrkLtLeftIO 0 "False" 1 "True" ;
+VAL_TABLE_ PrkLtRightIO 0 "False" 1 "True" ;
+VAL_TABLE_ RrFogLmpsAct 0 "False" 1 "True" ;
+VAL_TABLE_ RrFgLtIO 0 "False" 1 "True" ;
+VAL_TABLE_ RevLmpAtv 0 "False" 1 "True" ;
+VAL_TABLE_ RtTrnLmpAtv 0 "Off" 1 "On without telltale" 2 "On with telltale" ;
+VAL_TABLE_ TrnSwAct 0 "No Activation" 1 "Left" 2 "Right" ;
+VAL_TABLE_ DrvHCSMIndReq 0 "Off" 1 "Continuous Indication" 2 "Flash Rate #1 Indication" 3 "Flash Rate #2 Indication" ;
+VAL_TABLE_ DrvHCSMInd1 0 "False" 1 "True" ;
+VAL_TABLE_ DrvHCSMInd2 0 "False" 1 "True" ;
+VAL_TABLE_ DrvHCSMInd3 0 "False" 1 "True" ;
+VAL_TABLE_ PassHCSMIndReq 0 "Off" 1 "Continuous Indication" 2 "Flash Rate #1 Indication" 3 "Flash Rate #2 Indication" ;
+VAL_TABLE_ PassHCSMInd1 0 "False" 1 "True" ;
+VAL_TABLE_ PassHCSMInd2 0 "False" 1 "True" ;
+VAL_TABLE_ PassHCSMInd3 0 "False" 1 "True" ;
+VAL_TABLE_ OtsAirTmpCrValMsk 0 "Don't Use Data" 1 "Use Data" ;
+VAL_TABLE_ OtsAirTmpCrValV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ EngInltSpcfcHmdtyM 0 "Don't Use Data" 1 "Use Data" ;
+VAL_TABLE_ EngInltSpcfcHmdtyV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ OtsAirTmpV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ IPSnsrSolrAnglFltd 1 "True" 0 "False" ;
+VAL_TABLE_ IPSnsrRwSolrIntFltd 1 "True" 0 "False" ;
+VAL_TABLE_ DstRolCntAvgDrnRstOc 0 "False" 1 "True" ;
+VAL_TABLE_ DistRollCntAvgDrvnSrc 0 "Transmission Output Speed" 1 "Wheel Speed" ;
+VAL_TABLE_ DistRollCntAvgDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ DstRolCntAvNDrRstOc 0 "False" 1 "True" ;
+VAL_TABLE_ DstRolCntAvgNonDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ VehSpdAvgDrvnSrc 0 "Transmission Output Speed" 1 "Wheel Speed" ;
+VAL_TABLE_ VehSpdAvgDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ VehSpdAvgNDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ DrvHCSeatSw1Act 0 "False" 1 "True" ;
+VAL_TABLE_ DrvHCSeatSw2Act 0 "False" 1 "True" ;
+VAL_TABLE_ DrvHCSeatSw3Act 0 "False" 1 "True" ;
+VAL_TABLE_ PassHCSeatSw1Act 0 "False" 1 "True" ;
+VAL_TABLE_ PassHCSeatSw2Act 0 "False" 1 "True" ;
+VAL_TABLE_ PassHCSeatSw3Act 0 "False" 1 "True" ;
+VAL_TABLE_ AuxHtrAtv 1 "True" 0 "False" ;
+VAL_TABLE_ HtrCoreInltClntTmpCalcV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ RrWndDfgOn 0 "False" 1 "True" ;
+VAL_TABLE_ AccActPosV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ CrsCntAtv 0 "False" 1 "True" ;
+VAL_TABLE_ CrsCntEnbld 0 "False" 1 "True" ;
+VAL_TABLE_ Eng12vStrtrMtrCmmdOn 0 "False" 1 "True" ;
+VAL_TABLE_ EngCntrlRunCrnkTrmSt 0 "Inactive" 1 "Active" ;
+VAL_TABLE_ EngIdlAtv 0 "False" 1 "True" ;
+VAL_TABLE_ EngAirIntBstPrV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ EngRunAtv 0 "False" 1 "True" ;
+VAL_TABLE_ EngSpdStat 0 "Normal Operation" 1 "Degraded Operation" 3 "Invalid" ;
+VAL_TABLE_ PT_BrkPedDscrtInpStat 0 "Brake Not Applied" 1 "Brake Applied" ;
+VAL_TABLE_ PT_BrkPedDscrtInpStatV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ PTCrnkAbrted 0 "False" 1 "True" ;
+VAL_TABLE_ PT_CrnkAct 0 "False" 1 "True" ;
+VAL_TABLE_ PTRunAbrt 0 "False" 1 "True" ;
+VAL_TABLE_ RmVhStrtEngRng 0 "False" 1 "True" ;
+VAL_TABLE_ SpdLmtrSpdWrngEnbld 0 "False" 1 "True" ;
+VAL_TABLE_ ACCmpsrFldOn 0 "False" 1 "True" ;
+VAL_TABLE_ ACCompModReq 0 "Disengage Immediately" 1 "Disengage" 2 "Engage" 3 "No Action" ;
+VAL_TABLE_ ACCompNormLdV 0 "Valid" 1 "Invalid" ;
+VAL_TABLE_ ACCmEngRunReq 0 "No Action" 1 "Engine Run Requested" ;
+
+
+BO_ 321 Exterior_Lighting: 7 BCM_PB
+ SG_ AdvFrntLghtSysEnbld : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AutLghtCtrl : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AutoBmSlctAllwd : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AutoLtsActIO : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AutoLtsInactIO : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BrkLtsAtv : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DRLAct : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DispNtSchmAtv : 15|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ FlToPsSwAtv : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FrFogLmpsAct : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FrFgLtIO : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HazSwAtv : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HdlmpBmSelectStat : 10|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ HighBmAct : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HiBmIO : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HiBmReqd : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IntDimDspLvl : 39|7@0+ (0.787402,0) [0|127] "" ECC_PB
+ SG_ IntDimLvl : 47|7@0+ (0.787402,0) [0|127] "" ECC_PB
+ SG_ IntDimNtPnlAtv : 31|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ LftTrnLmpAtv : 25|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LowBmAct : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MainLghtSw : 12|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ OtsdAmbtLtLvlStat : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ OtsdAmbtLtLvlStatV : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PrkLtIO : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PrkLtLeftIO : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PrkLtRightIO : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RrFogLmpsAct : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RrFgLtIO : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RevLmpAtv : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RtTrnLmpAtv : 27|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ TrnSwAct : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 913 Front_Seat_Heat_Cool_Control: 2 BCM_PB
+ SG_ DrvHCSMIndReq : 4|2@0+ (1,0) [0|3] "" ECC_PB
+ SG_ DrvHCSMInd1 : 2|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ DrvHCSMInd2 : 1|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ DrvHCSMInd3 : 0|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ PassHCSMIndReq : 12|2@0+ (1,0) [0|3] "" ECC_PB
+ SG_ PassHCSMInd1 : 10|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ PassHCSMInd2 : 9|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ PassHCSMInd3 : 8|1@0+ (1,0) [0|1] "" ECC_PB
+
+BO_ 1020 PPEI_Engine_Environmental_Stat: 5 CGM_PB
+ SG_ OtsAirTmp : 31|8@0+ (0.5,-40) [-40|87.5] "degC" ECC_PB
+ SG_ OtsAirTmpCrVal : 39|8@0+ (0.5,-40) [-40|87.5] "degC" ECC_PB
+ SG_ OtsAirTmpCrValMsk : 3|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ OtsAirTmpCrValV : 4|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ EngInltSpcfcHmdty : 23|8@0+ (0.0196078,0) [0|4.999989] "%water" ECC_PB
+ SG_ EngInltSpcfcHmdtyM : 6|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ EngInltSpcfcHmdtyV : 7|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ OtsAirTmpV : 5|1@0+ (1,0) [0|1] "" ECC_PB
+
+BO_ 1808 Instrument_Panel_Sensor: 4 BCM_PB
+ SG_ IPSnsrSolrAnglFltd : 4|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ IPSnsrRwSolrIntFltd : 3|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ IPSnsrRwSolrInt : 15|8@0+ (3,0) [0|765] "W/m2" ECC_PB
+ SG_ IPSnsrSolrAzmthAngl : 23|8@0+ (2,-180) [-180|330] "deg" ECC_PB
+ SG_ IPSnsrSolrElvtnAngl : 31|8@0+ (1,0) [0|255] "deg" ECC_PB
+
+BO_ 1001 PPEI_Vehicle_Speed_and_Distanc: 8 CGM_PB
+ SG_ DistRollCntAvgDrvn : 20|13@0+ (0.125,0) [0|1023.875] "m" Vector__XXX
+ SG_ DstRolCntAvgDrnRstOc : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DistRollCntAvgDrvnSrc : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DistRollCntAvgDrvnV : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DstRolCntAvgNonDrvn : 52|13@0+ (0.125,0) [0|1023.875] "m" Vector__XXX
+ SG_ DstRolCntAvNDrRstOc : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DstRolCntAvgNonDrvnV : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VehSpdAvgDrvn : 6|15@0+ (0.015625,0) [0|511.984375] "km/h" ECC_PB
+ SG_ VehSpdAvgDrvnSrc : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VehSpdAvgDrvnV : 7|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ VehSpdAvgNDrvn : 38|15@0+ (0.015625,0) [0|511.984375] "km/h" Vector__XXX
+ SG_ VehSpdAvgNDrvnV : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2497354225 Phy_USDT_Req_to_ECC_F_TestTool: 8 Firewall_PB
+ SG_ DgnInf : 7|64@0+ (1,0) [0|1.84467440737096e+19] "" ECC_PB
+
+BO_ 2497376665 Phy_USDT_Resp_F_ECC_To_TestToo: 8 ECC_PB
+ SG_ DgnInf : 7|64@0+ (1,0) [0|1.84467440737096e+19] "" Firewall_PB
+
+BO_ 2497507737 Phy_UUDT_Resp_F_ECC_To_TestToo: 8 ECC_PB
+ SG_ DgnInf : 7|64@0+ (1,0) [0|1.84467440737096e+19] "" Firewall_PB
+
+BO_ 914 Front_Seat_Heat_Cool_Switches: 1 ECC_PB
+ SG_ DrvHCSeatSw1Act : 0|1@0+ (1,0) [0|1] "" BCM_PB
+ SG_ DrvHCSeatSw2Act : 1|1@0+ (1,0) [0|1] "" BCM_PB
+ SG_ DrvHCSeatSw3Act : 2|1@0+ (1,0) [0|1] "" BCM_PB
+ SG_ PassHCSeatSw1Act : 3|1@0+ (1,0) [0|1] "" BCM_PB
+ SG_ PassHCSeatSw2Act : 4|1@0+ (1,0) [0|1] "" BCM_PB
+ SG_ PassHCSeatSw3Act : 5|1@0+ (1,0) [0|1] "" BCM_PB
+
+BO_ 874 Auxiliary_Heater_Status: 3 ECC_PB
+ SG_ AuxHtrAtv : 0|1@0+ (1,0) [0|1] "" CGM_PB
+ SG_ CCClntCrcFlwRtReq : 15|8@0+ (0.392157,0) [0|100.000035] "%" CGM_PB
+ SG_ HtrCoreInltClntTmpCalc : 23|8@0+ (1,-40) [-40|215] "degC" CGM_PB
+ SG_ HtrCoreInltClntTmpCalcV : 4|1@0+ (1,0) [0|1] "" CGM_PB
+
+BO_ 448 Rear_Window_Defog_Status: 1 ECC_PB
+ SG_ RrWndDfgOn : 0|1@0+ (1,0) [0|1] "" BCM_PB,Firewall_PB,IPC_PB
+
+BO_ 201 PPEI_Engine_General_Status_1: 8 CGM_PB
+ SG_ AccActPos : 39|8@0+ (0.392157,0) [0|100.000035] "%" Vector__XXX
+ SG_ AccActPosV : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CrsCntAtv : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CrsCntEnbld : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Eng12vStrtrMtrCmmdOn : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngCntrlRunCrnkTrmSt : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngIdlAtv : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngAirIntBstPr : 63|8@0- (1,0) [-128|127] "kPaG" Vector__XXX
+ SG_ EngAirIntBstPrV : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngRunAtv : 7|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ EngSpd : 15|16@0+ (0.25,0) [0|16383.75] "rpm" ECC_PB
+ SG_ EngSpdStat : 1|2@0+ (1,0) [0|3] "" ECC_PB
+ SG_ PT_BrkPedDscrtInpStat : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PT_BrkPedDscrtInpStatV : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PTCrnkAbrted : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PT_CrnkAct : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PTRunAbrt : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RmVhStrtEngRng : 55|1@0+ (1,0) [0|1] "" ECC_PB
+ SG_ SpdLmtrSpdWrngEnbld : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 922 Climate_Control_General_Status: 4 ECC_PB
+ SG_ ACCmpsrFldOn : 3|1@0+ (1,0) [0|1] "" CGM_PB,ECM_PB,Firewall_PB
+ SG_ ACCompModReq : 5|2@0+ (1,0) [0|3] "" CGM_PB,ECM_PB,Firewall_PB
+ SG_ ACCompNormLd : 15|8@0+ (0.1,0) [0|25.5] "l/min" CGM_PB,ECM_PB,Firewall_PB
+ SG_ ACCompNormLdV : 0|1@0+ (1,0) [0|1] "" CGM_PB,ECM_PB,Firewall_PB
+ SG_ ACCmEngRunReq : 2|1@0+ (1,0) [0|1] "" ECM_PB,Firewall_PB
+ SG_ ClmtCtrlTrgtTemp : 17|10@0+ (0.1,-10) [-10|92.3] "degC" CGM_PB,Firewall_PB
+
+BO_ 1569 Network_Management_BCM: 8 BCM_PB
+ SG_ SrcNodeID : 7|8@0+ (1,0) [0|255] "" ECC_PB
+ SG_ UDat : 23|48@0+ (1,0) [0|281474976710655] "" ECC_PB
+
+
+BA_DEF_ SG_  "SignalType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "SignalType" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "GenMsgCycleTime" BO_ 321 1000;
+BA_ "GenMsgCycleTime" BO_ 913 1000;
+BA_ "GenMsgCycleTime" BO_ 1020 250;
+BA_ "GenMsgCycleTime" BO_ 1808 100;
+BA_ "GenMsgCycleTime" BO_ 1001 100;
+BA_ "VFrameFormat" BO_ 2497354225 15;
+BA_ "VFrameFormat" BO_ 2497376665 15;
+BA_ "VFrameFormat" BO_ 2497507737 15;
+BA_ "GenMsgCycleTime" BO_ 914 1000;
+BA_ "GenMsgCycleTime" BO_ 874 1000;
+BA_ "GenMsgCycleTime" BO_ 448 1000;
+BA_ "GenMsgCycleTime" BO_ 201 12;
+BA_ "GenMsgCycleTime" BO_ 922 500;
+BA_ "GenMsgCycleTime" BO_ 1569 640;
+BA_ "SignalType" SG_ 321 AdvFrntLghtSysEnbld "ENM";
+BA_ "SignalType" SG_ 321 AutLghtCtrl "ENM";
+BA_ "SignalType" SG_ 321 AutoBmSlctAllwd "ENM";
+BA_ "SignalType" SG_ 321 AutoLtsActIO "ENM";
+BA_ "SignalType" SG_ 321 AutoLtsInactIO "ENM";
+BA_ "SignalType" SG_ 321 BrkLtsAtv "ENM";
+BA_ "SignalType" SG_ 321 DRLAct "ENM";
+BA_ "SignalType" SG_ 321 DispNtSchmAtv "ENM";
+BA_ "SignalType" SG_ 321 FlToPsSwAtv "ENM";
+BA_ "SignalType" SG_ 321 FrFogLmpsAct "ENM";
+BA_ "SignalType" SG_ 321 FrFgLtIO "ENM";
+BA_ "SignalType" SG_ 321 HazSwAtv "ENM";
+BA_ "SignalType" SG_ 321 HdlmpBmSelectStat "ENM";
+BA_ "SignalType" SG_ 321 HighBmAct "ENM";
+BA_ "SignalType" SG_ 321 HiBmIO "ENM";
+BA_ "SignalType" SG_ 321 HiBmReqd "ENM";
+BA_ "SignalType" SG_ 321 IntDimNtPnlAtv "ENM";
+BA_ "SignalType" SG_ 321 LftTrnLmpAtv "ENM";
+BA_ "SignalType" SG_ 321 LowBmAct "ENM";
+BA_ "SignalType" SG_ 321 MainLghtSw "ENM";
+BA_ "SignalType" SG_ 321 OtsdAmbtLtLvlStat "ENM";
+BA_ "SignalType" SG_ 321 OtsdAmbtLtLvlStatV "ENM";
+BA_ "SignalType" SG_ 321 PrkLtIO "ENM";
+BA_ "SignalType" SG_ 321 PrkLtLeftIO "ENM";
+BA_ "SignalType" SG_ 321 PrkLtRightIO "ENM";
+BA_ "SignalType" SG_ 321 RrFogLmpsAct "ENM";
+BA_ "SignalType" SG_ 321 RrFgLtIO "ENM";
+BA_ "SignalType" SG_ 321 RevLmpAtv "ENM";
+BA_ "SignalType" SG_ 321 RtTrnLmpAtv "ENM";
+BA_ "SignalType" SG_ 321 TrnSwAct "ENM";
+BA_ "SignalType" SG_ 913 DrvHCSMIndReq "ENM";
+BA_ "SignalType" SG_ 913 DrvHCSMInd1 "ENM";
+BA_ "SignalType" SG_ 913 DrvHCSMInd2 "ENM";
+BA_ "SignalType" SG_ 913 DrvHCSMInd3 "ENM";
+BA_ "SignalType" SG_ 913 PassHCSMIndReq "ENM";
+BA_ "SignalType" SG_ 913 PassHCSMInd1 "ENM";
+BA_ "SignalType" SG_ 913 PassHCSMInd2 "ENM";
+BA_ "SignalType" SG_ 913 PassHCSMInd3 "ENM";
+BA_ "SignalType" SG_ 1020 OtsAirTmpCrValMsk "ENM";
+BA_ "SignalType" SG_ 1020 OtsAirTmpCrValV "ENM";
+BA_ "SignalType" SG_ 1020 EngInltSpcfcHmdtyM "ENM";
+BA_ "SignalType" SG_ 1020 EngInltSpcfcHmdtyV "ENM";
+BA_ "SignalType" SG_ 1020 OtsAirTmpV "ENM";
+BA_ "SignalType" SG_ 1808 IPSnsrSolrAnglFltd "ENM";
+BA_ "SignalType" SG_ 1808 IPSnsrRwSolrIntFltd "ENM";
+BA_ "SignalType" SG_ 1001 DstRolCntAvgDrnRstOc "ENM";
+BA_ "SignalType" SG_ 1001 DistRollCntAvgDrvnSrc "ENM";
+BA_ "SignalType" SG_ 1001 DistRollCntAvgDrvnV "ENM";
+BA_ "SignalType" SG_ 1001 DstRolCntAvNDrRstOc "ENM";
+BA_ "SignalType" SG_ 1001 DstRolCntAvgNonDrvnV "ENM";
+BA_ "SignalType" SG_ 1001 VehSpdAvgDrvnSrc "ENM";
+BA_ "SignalType" SG_ 1001 VehSpdAvgDrvnV "ENM";
+BA_ "SignalType" SG_ 1001 VehSpdAvgNDrvnV "ENM";
+BA_ "SignalType" SG_ 914 DrvHCSeatSw1Act "ENM";
+BA_ "SignalType" SG_ 914 DrvHCSeatSw2Act "ENM";
+BA_ "SignalType" SG_ 914 DrvHCSeatSw3Act "ENM";
+BA_ "SignalType" SG_ 914 PassHCSeatSw1Act "ENM";
+BA_ "SignalType" SG_ 914 PassHCSeatSw2Act "ENM";
+BA_ "SignalType" SG_ 914 PassHCSeatSw3Act "ENM";
+BA_ "SignalType" SG_ 874 AuxHtrAtv "ENM";
+BA_ "SignalType" SG_ 874 HtrCoreInltClntTmpCalcV "ENM";
+BA_ "SignalType" SG_ 448 RrWndDfgOn "ENM";
+BA_ "SignalType" SG_ 201 AccActPosV "ENM";
+BA_ "SignalType" SG_ 201 CrsCntAtv "ENM";
+BA_ "SignalType" SG_ 201 CrsCntEnbld "ENM";
+BA_ "SignalType" SG_ 201 Eng12vStrtrMtrCmmdOn "ENM";
+BA_ "SignalType" SG_ 201 EngCntrlRunCrnkTrmSt "ENM";
+BA_ "SignalType" SG_ 201 EngIdlAtv "ENM";
+BA_ "SignalType" SG_ 201 EngAirIntBstPrV "ENM";
+BA_ "SignalType" SG_ 201 EngRunAtv "ENM";
+BA_ "SignalType" SG_ 201 EngSpdStat "ENM";
+BA_ "SignalType" SG_ 201 PT_BrkPedDscrtInpStat "ENM";
+BA_ "SignalType" SG_ 201 PT_BrkPedDscrtInpStatV "ENM";
+BA_ "SignalType" SG_ 201 PTCrnkAbrted "ENM";
+BA_ "SignalType" SG_ 201 PT_CrnkAct "ENM";
+BA_ "SignalType" SG_ 201 PTRunAbrt "ENM";
+BA_ "SignalType" SG_ 201 RmVhStrtEngRng "ENM";
+BA_ "SignalType" SG_ 201 SpdLmtrSpdWrngEnbld "ENM";
+BA_ "SignalType" SG_ 922 ACCmpsrFldOn "ENM";
+BA_ "SignalType" SG_ 922 ACCompModReq "ENM";
+BA_ "SignalType" SG_ 922 ACCompNormLdV "ENM";
+BA_ "SignalType" SG_ 922 ACCmEngRunReq "ENM";
+VAL_ 321 AdvFrntLghtSysEnbld 0 "False" 1 "True" ;
+VAL_ 321 AutLghtCtrl 0 "False" 1 "True" ;
+VAL_ 321 AutoBmSlctAllwd 0 "False" 1 "True" ;
+VAL_ 321 AutoLtsActIO 0 "False" 1 "True" ;
+VAL_ 321 AutoLtsInactIO 0 "False" 1 "True" ;
+VAL_ 321 BrkLtsAtv 0 "False" 1 "True" ;
+VAL_ 321 DRLAct 0 "False" 1 "True" ;
+VAL_ 321 DispNtSchmAtv 0 "False" 1 "True" ;
+VAL_ 321 FlToPsSwAtv 0 "False" 1 "True" ;
+VAL_ 321 FrFogLmpsAct 0 "False" 1 "True" ;
+VAL_ 321 FrFgLtIO 0 "False" 1 "True" ;
+VAL_ 321 HazSwAtv 0 "False" 1 "True" ;
+VAL_ 321 HdlmpBmSelectStat 0 "Unknown" 1 "Low Beams" 2 "High Beams" ;
+VAL_ 321 HighBmAct 0 "False" 1 "True" ;
+VAL_ 321 HiBmIO 0 "False" 1 "True" ;
+VAL_ 321 HiBmReqd 0 "False" 1 "True" ;
+VAL_ 321 IntDimNtPnlAtv 0 "False" 1 "True" ;
+VAL_ 321 LftTrnLmpAtv 0 "Off" 1 "On without telltale" 2 "On with telltale" ;
+VAL_ 321 LowBmAct 0 "False" 1 "True" ;
+VAL_ 321 MainLghtSw 0 "AUTO" 1 "OFF" 2 "PARKLAMP" 3 "HEADLAMP" ;
+VAL_ 321 OtsdAmbtLtLvlStat 0 "Unknown" 1 "Night" 2 "Day" ;
+VAL_ 321 OtsdAmbtLtLvlStatV 0 "Valid" 1 "Invalid" ;
+VAL_ 321 PrkLtIO 0 "False" 1 "True" ;
+VAL_ 321 PrkLtLeftIO 0 "False" 1 "True" ;
+VAL_ 321 PrkLtRightIO 0 "False" 1 "True" ;
+VAL_ 321 RrFogLmpsAct 0 "False" 1 "True" ;
+VAL_ 321 RrFgLtIO 0 "False" 1 "True" ;
+VAL_ 321 RevLmpAtv 0 "False" 1 "True" ;
+VAL_ 321 RtTrnLmpAtv 0 "Off" 1 "On without telltale" 2 "On with telltale" ;
+VAL_ 321 TrnSwAct 0 "No Activation" 1 "Left" 2 "Right" ;
+VAL_ 913 DrvHCSMIndReq 0 "Off" 1 "Continuous Indication" 2 "Flash Rate #1 Indication" 3 "Flash Rate #2 Indication" ;
+VAL_ 913 DrvHCSMInd1 0 "False" 1 "True" ;
+VAL_ 913 DrvHCSMInd2 0 "False" 1 "True" ;
+VAL_ 913 DrvHCSMInd3 0 "False" 1 "True" ;
+VAL_ 913 PassHCSMIndReq 0 "Off" 1 "Continuous Indication" 2 "Flash Rate #1 Indication" 3 "Flash Rate #2 Indication" ;
+VAL_ 913 PassHCSMInd1 0 "False" 1 "True" ;
+VAL_ 913 PassHCSMInd2 0 "False" 1 "True" ;
+VAL_ 913 PassHCSMInd3 0 "False" 1 "True" ;
+VAL_ 1020 OtsAirTmpCrValMsk 0 "Don't Use Data" 1 "Use Data" ;
+VAL_ 1020 OtsAirTmpCrValV 0 "Valid" 1 "Invalid" ;
+VAL_ 1020 EngInltSpcfcHmdtyM 0 "Don't Use Data" 1 "Use Data" ;
+VAL_ 1020 EngInltSpcfcHmdtyV 0 "Valid" 1 "Invalid" ;
+VAL_ 1020 OtsAirTmpV 0 "Valid" 1 "Invalid" ;
+VAL_ 1808 IPSnsrSolrAnglFltd 1 "True" 0 "False" ;
+VAL_ 1808 IPSnsrRwSolrIntFltd 1 "True" 0 "False" ;
+VAL_ 1001 DstRolCntAvgDrnRstOc 0 "False" 1 "True" ;
+VAL_ 1001 DistRollCntAvgDrvnSrc 0 "Transmission Output Speed" 1 "Wheel Speed" ;
+VAL_ 1001 DistRollCntAvgDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_ 1001 DstRolCntAvNDrRstOc 0 "False" 1 "True" ;
+VAL_ 1001 DstRolCntAvgNonDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_ 1001 VehSpdAvgDrvnSrc 0 "Transmission Output Speed" 1 "Wheel Speed" ;
+VAL_ 1001 VehSpdAvgDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_ 1001 VehSpdAvgNDrvnV 0 "Valid" 1 "Invalid" ;
+VAL_ 914 DrvHCSeatSw1Act 0 "False" 1 "True" ;
+VAL_ 914 DrvHCSeatSw2Act 0 "False" 1 "True" ;
+VAL_ 914 DrvHCSeatSw3Act 0 "False" 1 "True" ;
+VAL_ 914 PassHCSeatSw1Act 0 "False" 1 "True" ;
+VAL_ 914 PassHCSeatSw2Act 0 "False" 1 "True" ;
+VAL_ 914 PassHCSeatSw3Act 0 "False" 1 "True" ;
+VAL_ 874 AuxHtrAtv 1 "True" 0 "False" ;
+VAL_ 874 HtrCoreInltClntTmpCalcV 0 "Valid" 1 "Invalid" ;
+VAL_ 448 RrWndDfgOn 0 "False" 1 "True" ;
+VAL_ 201 AccActPosV 0 "Valid" 1 "Invalid" ;
+VAL_ 201 CrsCntAtv 0 "False" 1 "True" ;
+VAL_ 201 CrsCntEnbld 0 "False" 1 "True" ;
+VAL_ 201 Eng12vStrtrMtrCmmdOn 0 "False" 1 "True" ;
+VAL_ 201 EngCntrlRunCrnkTrmSt 0 "Inactive" 1 "Active" ;
+VAL_ 201 EngIdlAtv 0 "False" 1 "True" ;
+VAL_ 201 EngAirIntBstPrV 0 "Valid" 1 "Invalid" ;
+VAL_ 201 EngRunAtv 0 "False" 1 "True" ;
+VAL_ 201 EngSpdStat 0 "Normal Operation" 1 "Degraded Operation" 3 "Invalid" ;
+VAL_ 201 PT_BrkPedDscrtInpStat 0 "Brake Not Applied" 1 "Brake Applied" ;
+VAL_ 201 PT_BrkPedDscrtInpStatV 0 "Valid" 1 "Invalid" ;
+VAL_ 201 PTCrnkAbrted 0 "False" 1 "True" ;
+VAL_ 201 PT_CrnkAct 0 "False" 1 "True" ;
+VAL_ 201 PTRunAbrt 0 "False" 1 "True" ;
+VAL_ 201 RmVhStrtEngRng 0 "False" 1 "True" ;
+VAL_ 201 SpdLmtrSpdWrngEnbld 0 "False" 1 "True" ;
+VAL_ 922 ACCmpsrFldOn 0 "False" 1 "True" ;
+VAL_ 922 ACCompModReq 0 "Disengage Immediately" 1 "Disengage" 2 "Engage" 3 "No Action" ;
+VAL_ 922 ACCompNormLdV 0 "Valid" 1 "Invalid" ;
+VAL_ 922 ACCmEngRunReq 0 "No Action" 1 "Engine Run Requested" ;
+
