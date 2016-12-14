@@ -43,6 +43,11 @@
 
 ## Items need to be clarified
 
+- What's the app signal value for min temperature -40 ?
+
+
+## Items need to be clarified [DONE]
+
 - case 3, left/right should change to backlight/indicator
 - case 8, 9, 10 don't need bar to present the current and target value
 - case 11, 2 can't share same button, since one is present send values, and other is received status
