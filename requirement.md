@@ -57,7 +57,7 @@ Step        Raw->Phy               	Phy->Raw            PhyTargetValue  	RawTarg
 30 			y = 10x             	x = y/10            20/100/700          2/10/70
 31          y = (100/255)x          x = y*255/100       50                  127
 
-32          y = (100/255)x          x = y*255/100       
+32          y = (100/255)x          x = y*255/100
 33          y = (100/255)x          x = y*255/100 
 34          y = x                   x = y               Active/Not Active
 35          y = x                   x = y               Active/Not Active
@@ -76,6 +76,8 @@ A: application signal doesn't support negative value, translate in text label.
 - step 16, 17 how to show current value?
 - step 19, What's the target value? 9,12,16 seems wrong.
 - step 27, value format?
+- need present current auto test status? (processing, start, finish)
+
 
 ## Items need to be clarified [DONE]
 
