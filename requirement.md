@@ -38,13 +38,44 @@
     case 16
     case 17
 
+## Phy(y)/Raw(x) alg
+
+Step        Raw->Phy               	Phy->Raw            PhyTargetValue  	RawTargetValue
+
+18 			y = (1/10)x + 3 		x = (y - 3)*10      12                  90
+?19         y = (7058/100000)x 		x = y*100000/7058
+20 			y = x                   x = y               1                   1
+21 			y = x - 40              x = y + 40          -40/25/80           0/65/120
+22 			y = x - 40              x = y + 40          -40/25/80           0/65/120
+23 			y = x - 40              x = y + 40          -40/25/80           0/65/120
+24 			y = x - 40              x = y + 40          -40/25/80           0/65/120
+25 			y = x - 40              x = y + 40          -40/25/80           0/65/120
+26 			y = (100/255)x          x = y*255/100       30/85/95            76/216/242
+27 			y = x - 40              x = y + 40          -40/25/80           0/65/120
+28 			y = x - 40              x = y + 40          -40/25/80           0/65/120
+29 			y = (1/10)x             x = y*10            15/50/70            150/500/700
+30 			y = 10x             	x = y/10            20/100/700          2/10/70
+31          y = (100/255)x          x = y*255/100       50                  127
+
+32          y = (100/255)x          x = y*255/100       
+33          y = (100/255)x          x = y*255/100 
+34          y = x                   x = y               Active/Not Active
+35          y = x                   x = y               Active/Not Active
+36          y = x                   x = y               Active/Not Active
+37          y = x%
+38          y = x%
+
 
 # TODO
 
 ## Items need to be clarified
 
-- What's the app signal value for min temperature -40 ?
+- What's the app signal value for min temperature -40 ? [DONE]
+A: application signal doesn't support negative value, translate in text label.
 
+- step 16, 17 how to show current value?
+- step 19, What's the target value? 9,12,16 seems wrong.
+- step 27, value format?
 
 ## Items need to be clarified [DONE]
 
