@@ -73,9 +73,10 @@ Step        Raw->Phy               	Phy->Raw            PhyTargetValue  	RawTarg
 - What's the app signal value for min temperature -40 ? [DONE]
 A: application signal doesn't support negative value, translate in text label.
 
+- step 11, after switch, where can I read the current cool/heat state?
 - step 16, 17 how to show current value?
 - step 19, What's the target value? 9,12,16 seems wrong.
-- step 27, value format?
+- step 27,28,29,37,38 value format?
 - need present current auto test status? (processing, start, finish)
 
 
