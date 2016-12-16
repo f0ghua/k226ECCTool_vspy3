@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <VSpy3>
-<!--Created on: 12/16/2016 11:20:03 am-->
+<!--Created on: 12/16/2016 4:56:53 pm-->
 <VersionCreatedWith>3.8.0.76</VersionCreatedWith>
 <SimulationEnabled>False</SimulationEnabled>
 <NumberJ1850HeaderBytes>3</NumberJ1850HeaderBytes>
@@ -924,30 +924,30 @@
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>130</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>90</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>50</SetValueDouble>
+		<SetValueDouble>242</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>76</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
+		<SetValueDouble>50</SetValueDouble>
+		<SetValueDouble>14</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
@@ -975,7 +975,6 @@
 		<SetValueDouble>0</SetValueDouble>
 		<ArraySizeDefault>64</ArraySizeDefault>
 		<IsArray>True</IsArray>
-		<EnableInitValue>True</EnableInitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1386,7 +1385,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1477,6 +1476,7 @@
 </DAQSetups>
 <Monitors>
 	<Monitor>
+		<UseFilters>True</UseFilters>
 		<NumberOfMessagesHistory>50000</NumberOfMessagesHistory>
 		<BackColor>16777215</BackColor>
 		<FontBold>True</FontBold>
@@ -1484,6 +1484,8 @@
 		<FontName>Courier New</FontName>
 		<Key>0</Key>
 		<FormObjectKey>1</FormObjectKey>
+		<InScrollMode>True</InScrollMode>
+		<SpeedCustomIn0>True</SpeedCustomIn0>
 		<MonitorColumnSets>
 			<MonitorColumnSet>
 				<Description>(default)</Description>
@@ -1516,13 +1518,13 @@
 						<Key>4</Key>
 						<ColType>7</ColType>
 						<Position>5</Position>
-						<Width>202</Width>
+						<Width>349</Width>
 					</MonitorColumn>
 					<MonitorColumn>
 						<Key>5</Key>
 						<ColType>8</ColType>
 						<Position>6</Position>
-						<Width>107</Width>
+						<Width>179</Width>
 					</MonitorColumn>
 					<MonitorColumn>
 						<Key>6</Key>
@@ -2376,6 +2378,26 @@
 				<Key>in11</Key>
 				<Key>out7</Key>
 				<Key>out40</Key>
+				<Key>out52</Key>
+				<Key>out54</Key>
+				<Key>out1</Key>
+				<Key>out15</Key>
+				<Key>out46</Key>
+				<Key>out48</Key>
+				<Key>out50</Key>
+				<Key>out18</Key>
+				<Key>out16</Key>
+				<Key>out9</Key>
+				<Key>out17</Key>
+				<Key>out22</Key>
+				<Key>out24</Key>
+				<Key>out26</Key>
+				<Key>out28</Key>
+				<Key>out30</Key>
+				<Key>out32</Key>
+				<Key>out34</Key>
+				<Key>out36</Key>
+				<Key>out38</Key>
 				<Key>out42</Key>
 				<Key>out44</Key>
 			</Included>
@@ -3582,8 +3604,8 @@
 				<ByteString2>80</ByteString2>
 				<ByteString3>00</ByteString3>
 				<ByteString4>00</ByteString4>
-				<ByteString5>00</ByteString5>
-				<ByteString6>D8</ByteString6>
+				<ByteString5>4A</ByteString5>
+				<ByteString6>7C</ByteString6>
 				<ByteString7>00</ByteString7>
 				<NetworkKey>net0</NetworkKey>
 				<NodeKey>gme3</NodeKey>
@@ -3956,7 +3978,7 @@
 						<Format>0.0</Format>
 						<UpperRange>127</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueDouble>37.88688624108143</SetValueDouble>
+						<SetValueDouble>60.51674584444717</SetValueDouble>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
 					<Signal>
@@ -3967,7 +3989,7 @@
 						<Format>0.0</Format>
 						<UpperRange>127</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueDouble>62.36543298933285</SetValueDouble>
+						<SetValueDouble>63.49996571001851</SetValueDouble>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
 					<Signal>
@@ -5838,6 +5860,26 @@
 			</MsgSig>
 		</TxMsgProperties>
 	</TxMsg>
+	<TxMsg>
+		<Key>out35</Key>
+		<Xtd>True</Xtd>
+		<AutoTxType>2</AutoTxType>
+		<TxMsgProperties>
+			<MsgSig>
+				<Description>step343536_diagRequest2</Description>
+				<Key>out35</Key>
+				<ByteString0>14DA99F1</ByteString0>
+				<ByteString1>03</ByteString1>
+				<ByteString2>22</ByteString2>
+				<ByteString3>81</ByteString3>
+				<ByteString4>AB</ByteString4>
+				<XtdFrame>True</XtdFrame>
+				<NetworkKey>net0</NetworkKey>
+				<ExpectedLength>4</ExpectedLength>
+				<EnableTCPConnections>False</EnableTCPConnections>
+			</MsgSig>
+		</TxMsgProperties>
+	</TxMsg>
 </TxMsgs>
 <FBlocks>
 	<FBlock>
@@ -5962,6 +6004,7 @@
 				<Key>stp24</Key>
 				<StepType>13</StepType>
 				<StepLongValue>-1</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Equation>apprestore</Equation>
 					<EvaluateAsText>True</EvaluateAsText>
@@ -7259,47 +7302,9 @@
 				<Key>stp1</Key>
 				<StepType>4</StepType>
 				<StepLongValue>4</StepLongValue>
-				<StepStringValue>tst31</StepStringValue>
+				<StepStringValue>tst38</StepStringValue>
 				<StepComment>TODO: Add step commands here</StepComment>
-				<StepStringValue2>fs_step34_sendOnce</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp0</Key>
-				<StepType>2</StepType>
-				<StepLongValue>100</StepLongValue>
-				<StepDoubleValue>1000</StepDoubleValue>
-				<StepStringValue2>txt</StepStringValue2>
-				<SignalSpec>
-					<Description>appSig_C_autoDiagStepsDelay</Description>
-					<Equation>{appSig_C_autoDiagStepsDelay :sig11-index(0)}</Equation>
-				</SignalSpec>
-			</Step>
-			<Step>
-				<Key>stp1</Key>
-				<StepType>4</StepType>
-				<StepLongValue>4</StepLongValue>
-				<StepStringValue>tst34</StepStringValue>
-				<StepComment>TODO: Add step commands here</StepComment>
-				<StepStringValue2>fs_step35_sendOnce</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp0</Key>
-				<StepType>2</StepType>
-				<StepLongValue>100</StepLongValue>
-				<StepDoubleValue>1000</StepDoubleValue>
-				<StepStringValue2>txt</StepStringValue2>
-				<SignalSpec>
-					<Description>appSig_C_autoDiagStepsDelay</Description>
-					<Equation>{appSig_C_autoDiagStepsDelay :sig11-index(0)}</Equation>
-				</SignalSpec>
-			</Step>
-			<Step>
-				<Key>stp1</Key>
-				<StepType>4</StepType>
-				<StepLongValue>4</StepLongValue>
-				<StepStringValue>tst35</StepStringValue>
-				<StepComment>TODO: Add step commands here</StepComment>
-				<StepStringValue2>fs_step36_sendOnce</StepStringValue2>
+				<StepStringValue2>fs_step343536_sendOnce</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp0</Key>
@@ -7420,8 +7425,9 @@
 			</Step>
 			<Step>
 				<Key>stp17</Key>
-				<StepType>14</StepType>
-				<StepComment>don&apos;t clear stats of the message here, so that we can process with fastest speed</StepComment>
+				<StepType>7</StepType>
+				<StepStringValue>in5</StepStringValue>
+				<StepComment>need clear before so that we can switch to another sample</StepComment>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -7639,11 +7645,6 @@
 		<ValueReplayOutKey>out1</ValueReplayOutKey>
 		<Steps>
 			<Step>
-				<Key>stp17</Key>
-				<StepType>8</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
 				<Key>stp19</Key>
 				<StepType>6</StepType>
 				<StepStringValue2>txt</StepStringValue2>
@@ -7655,7 +7656,7 @@
 				</SignalSpec>
 			</Step>
 			<Step>
-				<Key>stp6</Key>
+				<Key>stp21</Key>
 				<StepType>7</StepType>
 				<StepStringValue>in8</StepStringValue>
 				<StepStringValue2>txt</StepStringValue2>
@@ -7675,7 +7676,7 @@
 			<Step>
 				<Key>stp3</Key>
 				<StepType>15</StepType>
-				<StepLongValue>7</StepLongValue>
+				<StepLongValue>6</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>PCRM006 (Present)</Description>
@@ -7701,7 +7702,7 @@
 			<Step>
 				<Key>stp13</Key>
 				<StepType>15</StepType>
-				<StepLongValue>10</StepLongValue>
+				<StepLongValue>9</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_steps_isPassed</Description>
@@ -7841,7 +7842,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(15)}</Description>
-					<Equation>(({stepX_diagResponse (Message B5) :in11-22}-48)*100)+(({stepX_diagResponse (Message B6) :in11-23}-48)*10)+({stepX_diagResponse (Message B7) :in11-24}-48)</Equation>
+					<Equation>(({stepX_diagResponse (Message B5) :in11-22})*100)+(({stepX_diagResponse (Message B6) :in11-23})*10)+({stepX_diagResponse (Message B7) :in11-24})</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(15)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(15)}</SetValueKey>
 				</SignalSpec>
@@ -10118,7 +10119,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(27)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}</Equation>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}+({stepX_diagResponse (Message B6) :in11-23}&lt;&lt;8)</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(27)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(27)}</SetValueKey>
 				</SignalSpec>
@@ -10297,7 +10298,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(28)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}</Equation>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}+({stepX_diagResponse (Message B6) :in11-23}&lt;&lt;8)</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(28)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(28)}</SetValueKey>
 				</SignalSpec>
@@ -10476,7 +10477,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(29)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}</Equation>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}+({stepX_diagResponse (Message B6) :in11-23}&lt;&lt;8)</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(29)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(29)}</SetValueKey>
 				</SignalSpec>
@@ -11224,7 +11225,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(34)}</Description>
-					<Equation>{stepX_diagResponse (Message B6) :in11-23} mod 8</Equation>
+					<Equation>bit0({stepX_diagResponse (Message B6) :in11-23})</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(34)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(34)}</SetValueKey>
 				</SignalSpec>
@@ -11335,7 +11336,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(35)}</Description>
-					<Equation>{stepX_diagResponse (Message B6) :in11-23} mod 8</Equation>
+					<Equation>bit1({stepX_diagResponse (Message B6) :in11-23})</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(35)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(35)}</SetValueKey>
 				</SignalSpec>
@@ -11446,7 +11447,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(36)}</Description>
-					<Equation>{stepX_diagResponse (Message B6) :in11-23} mod 8</Equation>
+					<Equation>bit2({stepX_diagResponse (Message B6) :in11-23})</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(36)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(36)}</SetValueKey>
 				</SignalSpec>
@@ -11557,7 +11558,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(37)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}&lt;&lt;8+{stepX_diagResponse (Message B6) :in11-23}</Equation>
+					<Equation>{stepX_diagResponse (Message B5) :in11-22}</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(37)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(37)}</SetValueKey>
 				</SignalSpec>
@@ -11668,7 +11669,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currValue :sig30-index(38)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}&lt;&lt;8+{stepX_diagResponse (Message B6) :in11-23}</Equation>
+					<Equation>{stepX_diagResponse (Message B6) :in11-23}</Equation>
 					<SetValueDescription>{appSig_steps_currValue :sig30-index(38)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currValue :sig30-index(38)}</SetValueKey>
 				</SignalSpec>
@@ -11695,6 +11696,7 @@
 		<Key>tst33</Key>
 		<TestType>8</TestType>
 		<FilePath>Capture File Function Block 34</FilePath>
+		<StartMode>1</StartMode>
 		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
 		<LogRate>1</LogRate>
 		<AfterStopTime>5000</AfterStopTime>
@@ -11709,6 +11711,7 @@
 				<StepType>13</StepType>
 				<StepLongValue>-1</StepLongValue>
 				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Equation>appsave</Equation>
 					<EvaluateAsText>True</EvaluateAsText>
@@ -11757,6 +11760,139 @@
 			<Step>
 				<Key>stp9</Key>
 				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
+		<Description>fs_step343536_sendOnce</Description>
+		<Key>tst38</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 1</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>False</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp13</Key>
+				<StepType>7</StepType>
+				<StepStringValue>in11</StepStringValue>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>1</StepType>
+				<StepStringValue>out7</StepStringValue>
+				<StepStringValue2>stepX_diagRequest1</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp16</Key>
+				<StepType>3</StepType>
+				<StepLongValue>100</StepLongValue>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
+				<StepDoubleValue>1</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>15</StepType>
+				<StepLongValue>13</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse (Message Data)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=06 and {stepX_diagResponse (Message B2) :in11-19}=80 and {stepX_diagResponse (Message B3) :in11-20}=01 and {stepX_diagResponse (Message B4) :in11-21}=00 and  {stepX_diagResponse (Message B5) :in11-22}=50  and {stepX_diagResponse (Message B6) :in11-23}=01 and {stepX_diagResponse (Message B7) :in11-24}=244</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp13</Key>
+				<StepType>7</StepType>
+				<StepStringValue>in11</StepStringValue>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>1</StepType>
+				<StepStringValue>out50</StepStringValue>
+				<StepStringValue2>step36_diagRequest2</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp18</Key>
+				<StepType>3</StepType>
+				<StepLongValue>100</StepLongValue>
+				<StepComment>wait read data reply, timeout 100ms</StepComment>
+				<StepDoubleValue>1</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse2 (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp10</Key>
+				<StepType>15</StepType>
+				<StepLongValue>12</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>stepX_diagResponse2 (Present)</Description>
+					<Equation>{stepX_diagResponse (Present) :in11-0}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp11</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currValue :sig30-index(34)}</Description>
+					<Equation>bit0({stepX_diagResponse (Message B6) :in11-23})</Equation>
+					<SetValueDescription>{appSig_steps_currValue :sig30-index(34)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currValue :sig30-index(34)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp11</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currValue :sig30-index(35)}</Description>
+					<Equation>bit1({stepX_diagResponse (Message B6) :in11-23})</Equation>
+					<SetValueDescription>{appSig_steps_currValue :sig30-index(35)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currValue :sig30-index(35)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp11</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currValue :sig30-index(36)}</Description>
+					<Equation>bit2({stepX_diagResponse (Message B6) :in11-23})</Equation>
+					<SetValueDescription>{appSig_steps_currValue :sig30-index(36)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currValue :sig30-index(36)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp12</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>8</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 		</Steps>
@@ -11913,7 +12049,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>49.1</Caption>
+			<Caption>50.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>IntDimLvl (Value)</Description>
@@ -12242,7 +12378,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>76</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -12418,7 +12554,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>90</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -12592,7 +12728,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>130</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -12914,7 +13050,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>1</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -13316,7 +13452,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>242</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -15763,7 +15899,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>130</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -15977,7 +16113,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>3</Caption>
+			<Caption>12</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -16189,7 +16325,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>-40</Caption>
+			<Caption>-39</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -16287,7 +16423,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>-40</Caption>
+			<Caption>10</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -16357,12 +16493,12 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>94.9</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
 				<Equation>{appSig_steps_currValue :sig30-index(26)}*100/255</Equation>
-				<Format>0</Format>
+				<Format>0.0</Format>
 				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
@@ -16377,12 +16513,12 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>0.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetValue</Description>
 				<Equation>{appSig_steps_targetValue :sig31-index(26)}*100/255</Equation>
-				<Format>0</Format>
+				<Format>0.0</Format>
 				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
@@ -16571,11 +16707,13 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>0.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
 				<Equation>{appSig_steps_currValue :sig30-index(29)}/10</Equation>
+				<Format>0.0</Format>
+				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
 		<TextDisplay>
@@ -16589,11 +16727,13 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>0.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetValue</Description>
 				<Equation>{appSig_steps_targetValue :sig31-index(29)}/10</Equation>
+				<Format>0.0</Format>
+				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
 		<LED>
@@ -16627,7 +16767,7 @@
 			<BorderStyle>5</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>30. HCP Feedback Frequency</Caption>
+			<Caption>30. Water Pump Feedback Frequency</Caption>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
 		<TextDisplay>
@@ -16697,7 +16837,7 @@
 			<BorderStyle>5</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>31. HCP Feedback Duty Cycle</Caption>
+			<Caption>31. Water Pump Feedback Duty</Caption>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
 		<TextDisplay>
@@ -16711,12 +16851,12 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>0.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
 				<Equation>{appSig_steps_currValue :sig30-index(31)}*100/255</Equation>
-				<Format>0</Format>
+				<Format>0.0</Format>
 				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
@@ -16731,12 +16871,12 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>0.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetValue</Description>
 				<Equation>{appSig_steps_targetValue :sig31-index(31)}*100/255</Equation>
-				<Format>0</Format>
+				<Format>0.0</Format>
 				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
@@ -16925,7 +17065,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>1</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -16989,7 +17129,7 @@
 			<Width>80</Width>
 			<Height>25</Height>
 			<Top>53</Top>
-			<Left>127</Left>
+			<Left>119</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -17009,8 +17149,8 @@
 		</OnOffButton>
 		<TextDisplay>
 			<Key>txt339</Key>
-			<Width>52</Width>
-			<Height>17</Height>
+			<Width>66</Width>
+			<Height>22</Height>
 			<Top>58</Top>
 			<Left>54</Left>
 			<BackColor>12632256</BackColor>
@@ -17018,7 +17158,7 @@
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>Left</Caption>
+			<Caption>LeftLed</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -17027,7 +17167,7 @@
 			<Width>70</Width>
 			<Height>20</Height>
 			<Top>56</Top>
-			<Left>277</Left>
+			<Left>287</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>1</BorderStyle>
@@ -17049,7 +17189,7 @@
 			<Width>80</Width>
 			<Height>25</Height>
 			<Top>92</Top>
-			<Left>126</Left>
+			<Left>118</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -17073,8 +17213,8 @@
 		</OnOffButton>
 		<TextDisplay>
 			<Key>txt342</Key>
-			<Width>52</Width>
-			<Height>17</Height>
+			<Width>57</Width>
+			<Height>16</Height>
 			<Top>94</Top>
 			<Left>53</Left>
 			<BackColor>12632256</BackColor>
@@ -17082,7 +17222,7 @@
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>Right</Caption>
+			<Caption>RightLed</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -17091,7 +17231,7 @@
 			<Width>70</Width>
 			<Height>20</Height>
 			<Top>92</Top>
-			<Left>277</Left>
+			<Left>287</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>1</BorderStyle>
@@ -17175,13 +17315,15 @@
 			<FontName>Consolas</FontName>
 			<Caption></Caption>
 			<ShowCaption>1</ShowCaption>
-			<Maximum>127</Maximum>
 			<Minimum>0</Minimum>
 			<BarColor>7368704</BarColor>
 			<IsSlider>1</IsSlider>
 			<SignalSpec>
 				<Description>{IntDimLvl (Value) :out3-sig17-0}</Description>
 				<Equation>{IntDimLvl (Value) :out3-sig17-0}</Equation>
+				<Format>0.0</Format>
+				<Min>0</Min>
+				<Max>127</Max>
 				<SetValueDescription>{IntDimLvl (Value) :out3-sig17-0}</SetValueDescription>
 				<SetValueKey>{IntDimLvl (Value) :out3-sig17-0}</SetValueKey>
 			</SignalSpec>
@@ -17206,13 +17348,13 @@
 			<Width>60</Width>
 			<Height>20</Height>
 			<Top>190</Top>
-			<Left>287</Left>
+			<Left>297</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Maximum>127</Maximum>
+			<Maximum>100</Maximum>
 			<Style>Integer</Style>
 			<Interval>1</Interval>
 			<SignalSpec>
@@ -17237,7 +17379,6 @@
 			<FontName>Consolas</FontName>
 			<Caption></Caption>
 			<ShowCaption>1</ShowCaption>
-			<Maximum>127</Maximum>
 			<Minimum>0</Minimum>
 			<BarColor>7368704</BarColor>
 			<IsSlider>1</IsSlider>
@@ -17271,13 +17412,13 @@
 			<Width>60</Width>
 			<Height>20</Height>
 			<Top>221</Top>
-			<Left>287</Left>
+			<Left>297</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Maximum>127</Maximum>
+			<Maximum>100</Maximum>
 			<Style>Integer</Style>
 			<Interval>1</Interval>
 			<SignalSpec>
@@ -17346,7 +17487,7 @@
 			<Width>70</Width>
 			<Height>20</Height>
 			<Top>297</Top>
-			<Left>277</Left>
+			<Left>287</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>1</BorderStyle>
@@ -17383,7 +17524,7 @@
 			<Width>197</Width>
 			<Height>20</Height>
 			<Top>330</Top>
-			<Left>150</Left>
+			<Left>160</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>1</BorderStyle>
@@ -17440,11 +17581,13 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>29.8</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
 				<Equation>{appSig_steps_currValue :sig30-index(32)}*100/255</Equation>
+				<Format>0.0</Format>
+				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
 		<TextDisplay>
@@ -17467,31 +17610,33 @@
 			<Width>70</Width>
 			<Height>20</Height>
 			<Top>391</Top>
-			<Left>277</Left>
+			<Left>287</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>0.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
 				<Equation>{appSig_steps_currValue :sig30-index(33)}*100/255</Equation>
+				<Format>0.0</Format>
+				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
 		<TextDisplay>
 			<Key>txt357</Key>
-			<Width>30</Width>
-			<Height>20</Height>
-			<Top>390</Top>
-			<Left>233</Left>
+			<Width>72</Width>
+			<Height>18</Height>
+			<Top>394</Top>
+			<Left>208</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>PWM</Caption>
+			<Caption>WaterPCtrl</Caption>
 			<Alignment>1</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -17521,14 +17666,14 @@
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>WPECtrl</Caption>
+			<Caption>WaterEn</Caption>
 			<Alignment>1</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
 		<TextDisplay>
 			<Key>txt363</Key>
-			<Width>43</Width>
-			<Height>20</Height>
+			<Width>62</Width>
+			<Height>25</Height>
 			<Top>475</Top>
 			<Left>58</Left>
 			<BackColor>12632256</BackColor>
@@ -17536,22 +17681,22 @@
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>IMCtrl</Caption>
+			<Caption>IncarMot</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
 		<TextDisplay>
 			<Key>txt367</Key>
-			<Width>30</Width>
-			<Height>20</Height>
+			<Width>62</Width>
+			<Height>25</Height>
 			<Top>503</Top>
-			<Left>58</Left>
+			<Left>57</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>BLPWM</Caption>
+			<Caption>BackLPWM</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -17560,13 +17705,13 @@
 			<Width>70</Width>
 			<Height>20</Height>
 			<Top>503</Top>
-			<Left>277</Left>
+			<Left>287</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>14</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -17575,16 +17720,16 @@
 		</TextDisplay>
 		<TextDisplay>
 			<Key>txt369</Key>
-			<Width>41</Width>
-			<Height>23</Height>
-			<Top>503</Top>
-			<Left>222</Left>
+			<Width>60</Width>
+			<Height>17</Height>
+			<Top>505</Top>
+			<Left>209</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>IndPWM</Caption>
+			<Caption>IndiPWM</Caption>
 			<Alignment>1</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -17599,7 +17744,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0</Caption>
+			<Caption>50</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currValue</Description>
@@ -17623,9 +17768,9 @@
 		<TextDisplay>
 			<Key>txt371</Key>
 			<Width>220</Width>
-			<Height>230</Height>
-			<Top>300</Top>
-			<Left>1090</Left>
+			<Height>240</Height>
+			<Top>296</Top>
+			<Left>1091</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>5</BorderStyle>
@@ -17997,6 +18142,36 @@
 			<OffText>Save</OffText>
 			<Value>1</Value>
 		</FblockButton>
+		<TextDisplay>
+			<Key>txt383</Key>
+			<Width>54</Width>
+			<Height>22</Height>
+			<Top>58</Top>
+			<Left>208</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Lef_Key</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt384</Key>
+			<Width>69</Width>
+			<Height>16</Height>
+			<Top>94</Top>
+			<Left>208</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Right_Key</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
 	</Dialog>
 	<Dialog>
 		<Caption>Help</Caption>
@@ -18272,8 +18447,8 @@
 		<Description>Desktop 1</Description>
 		<Key>0</Key>
 		<ICONIndex>51</ICONIndex>
-		<LayoutString>QVFET0NLCAAAAABAAQAANwAAAEgFAADPAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAUAAAAAAACA1Hq4Ru70SIM1fakJBnUaASMFAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAcAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoAAAAAAAAAGWIXlh1autLtl7HwvSvAAgAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEwAAAEFwcGxpY2F0aW9uIFNpZ25hbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApQAAAAAAAABliF5YdWrrS7Zex8L0rwACAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAABAAAABHcmFwaGljYWwgUGFuZWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAD0FAABeAgAAvAEAAHwAAAA3AwAAswEAAAAAAAAAAAFliF5YdWrrS7Zex8L0rwAFAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
-		<LayoutStringChecksum>1711157027</LayoutStringChecksum>
+		<LayoutString>QVFET0NLCAAAAAAaAAAAGgAAACIEAACyAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAUAAAAAAACA1Hq4Ru70SIM1fakJBnUaASMFAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAcAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoAAAAAAAAAGWIXlh1autLtl7HwvSvAAgAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEwAAAEFwcGxpY2F0aW9uIFNpZ25hbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApQAAAAAAAABliF5YdWrrS7Zex8L0rwACAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAABAAAABHcmFwaGljYWwgUGFuZWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAD0FAABeAgAAvAEAAHwAAAA3AwAAswEAAAAAAAAAAAFliF5YdWrrS7Zex8L0rwAFAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
+		<LayoutStringChecksum>1871916699</LayoutStringChecksum>
 		<DesktopForms>
 			<DesktopForm>
 				<FormKey>1</FormKey>
@@ -18293,7 +18468,7 @@
 			<DesktopForm>
 				<FormKey>5</FormKey>
 				<Key>3</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0NTwvQ3VycmVudEZCbG9ja0tleT4NCjxDdXJyZW50U3BsaXRTaXplPjMyNzwvQ3VycmVudFNwbGl0U2l6ZT4NCjxTY3JpcHRHcmlkPg0KCTxOdW1PZkNvbHM+NjwvTnVtT2ZDb2xzPg0KCTxOdW1PZlJvd3M+MjE8L051bU9mUm93cz4NCgk8Q29sU2VsPjQ8L0NvbFNlbD4NCgk8Um93U2VsPjE8L1Jvd1NlbD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MDwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4xPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MjwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4zPC9Db2xJbmRleD4NCgkJPFdpZHRoPjMwMDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD40PC9Db2xJbmRleD4NCgkJPFdpZHRoPjQ1MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD41PC9Db2xJbmRleD4NCgkJPFdpZHRoPjMwMDA8L1dpZHRoPg0KCTwvQ09MPg0KPC9TY3JpcHRHcmlkPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0Mzc8L0N1cnJlbnRGQmxvY2tLZXk+DQo8Q3VycmVudFNwbGl0U2l6ZT4zMjc8L0N1cnJlbnRTcGxpdFNpemU+DQo8U2NyaXB0R3JpZD4NCgk8TnVtT2ZDb2xzPjY8L051bU9mQ29scz4NCgk8TnVtT2ZSb3dzPjEzPC9OdW1PZlJvd3M+DQoJPENvbFNlbD40PC9Db2xTZWw+DQoJPFJvd1NlbD45PC9Sb3dTZWw+DQoJPENPTD4NCgkJPENvbEluZGV4PjA8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MTwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjI8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MzwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NDwvQ29sSW5kZXg+DQoJCTxXaWR0aD40NTAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NTwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCjwvU2NyaXB0R3JpZD4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>7</FormKey>

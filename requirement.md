@@ -73,12 +73,28 @@ Step        Raw->Phy               	Phy->Raw            PhyTargetValue  	RawTarg
 - What's the app signal value for min temperature -40 ? [DONE]
 A: application signal doesn't support negative value, translate in text label.
 
-- step 11, after switch, where can I read the current cool/heat state?
-- step 16, 17 how to show current value?
-- step 19, What's the target value? 9,12,16 seems wrong.
-- step 27,28,29,37,38 value format?
-- need present current auto test status? (processing, start, finish)
+- step 16, 17 how to show current value? [DONE]
 
+- step 19, What's the target value? 9,12,16 seems wrong. [DONE]
+A: Not used, disable by now.
+
+- step 27,28,29,37,38 value format? [DONE]
+A: motorola format, high byte later.
+
+- need present current auto test status? (processing, start, finish)
+- step 11, after switch, where can I read the current cool/heat state?
+
+- step 3, what's the range of backlight and indicator range? it's raw or phy value?
+- step 37,38 value seems wrong, what's the right value?
+- abbrv need
+- autotest fail cases
+
+## TODO
+
+- auto detect can bus drop, then clear all variables (prevent from user didn't
+  do test, just read the prev result)
+  
+- better to set all current value to NULL
 
 ## Items need to be clarified [DONE]
 
