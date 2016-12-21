@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <VSpy3>
-<!--Created on: 12/19/2016 4:54:58 pm-->
+<!--Created on: 12/21/2016 6:50:03 pm-->
 <VersionCreatedWith>3.8.0.76</VersionCreatedWith>
-<SimulationEnabled>True</SimulationEnabled>
-<SimulationPath>C:\IntrepidCS\Vehicle Spy 3\Data Directory\Default\k226packetTrace 12-16-2016 3-38-59 pm.vsb</SimulationPath>
+<SimulationEnabled>False</SimulationEnabled>
 <NumberJ1850HeaderBytes>3</NumberJ1850HeaderBytes>
 <AutoDetectHardwareSupport>True</AutoDetectHardwareSupport>
 <DatabasePlatform>k226</DatabasePlatform>
@@ -925,30 +924,30 @@
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>4040</SetValueDouble>
+		<SetValueDouble>130</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>80</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>1</SetValueDouble>
+		<SetValueDouble>125</SetValueDouble>
+		<SetValueDouble>62</SetValueDouble>
+		<SetValueDouble>10</SetValueDouble>
+		<SetValueDouble>113</SetValueDouble>
+		<SetValueDouble>762</SetValueDouble>
+		<SetValueDouble>216</SetValueDouble>
+		<SetValueDouble>850</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>495</SetValueDouble>
+		<SetValueDouble>13</SetValueDouble>
+		<SetValueDouble>113</SetValueDouble>
+		<SetValueDouble>216</SetValueDouble>
 		<SetValueDouble>76</SetValueDouble>
-		<SetValueDouble>90</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>1</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>1</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>25272</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>25164</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>184</SetValueDouble>
-		<SetValueDouble>76</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>1</SetValueDouble>
-		<SetValueDouble>28</SetValueDouble>
-		<SetValueDouble>100</SetValueDouble>
+		<SetValueDouble>14</SetValueDouble>
+		<SetValueDouble>29</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
@@ -1314,14 +1313,13 @@
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
-		<Description>appSig_C_step29_targetRawValueNormal</Description>
+		<Description>appSig_C_step25_targetRawValueMin</Description>
 		<Key>sig44</Key>
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>500</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>500</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1525,7 +1523,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>3.1</SetValueDouble>
+		<SetValueDouble>11</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1545,7 +1543,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>76</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1555,7 +1553,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>50</SetValueDouble>
+		<SetValueDouble>85</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1565,7 +1563,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>-40</SetValueDouble>
+		<SetValueDouble>22</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1575,7 +1573,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>-39</SetValueDouble>
+		<SetValueDouble>-30</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1585,17 +1583,17 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>-40</SetValueDouble>
+		<SetValueDouble>73</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
 		<Description>appSig_step25_currPhyValue</Description>
 		<Key>sig72</Key>
 		<ValueType>1</ValueType>
-		<Format>0</Format>
+		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>-39</SetValueDouble>
+		<SetValueDouble>76.2</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1605,27 +1603,27 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>84.70588235294117</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
 		<Description>appSig_step27_currPhyValue</Description>
 		<Key>sig74</Key>
 		<ValueType>1</ValueType>
-		<Format>0</Format>
+		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>25232</SetValueDouble>
+		<SetValueDouble>85</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
 		<Description>appSig_step28_currPhyValue</Description>
 		<Key>sig75</Key>
 		<ValueType>1</ValueType>
-		<Format>0</Format>
+		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>-40</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1635,7 +1633,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>2516.4</SetValueDouble>
+		<SetValueDouble>49.5</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1645,7 +1643,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>130</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1655,7 +1653,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>44.31372549019608</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1665,7 +1663,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>72.15686274509804</SetValueDouble>
+		<SetValueDouble>84.70588235294117</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1715,7 +1713,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>28</SetValueDouble>
+		<SetValueDouble>14</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1725,7 +1723,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>100</SetValueDouble>
+		<SetValueDouble>29</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1736,6 +1734,141 @@
 		<SetValueString>N/A</SetValueString>
 		<InitValueString>N/A</InitValueString>
 		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_linkCanState</Description>
+		<Key>sig88</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_isAutoTestPassedGUI</Description>
+		<Key>sig89</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_isStep32to38QueryStart</Description>
+		<Key>sig90</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>1</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>1</InitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>App Signal 1</Description>
+		<Key>sig91</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step25_targetRawValueNormal</Description>
+		<Key>sig92</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>250</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>250</InitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step25_targetRawValueMax</Description>
+		<Key>sig93</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>800</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>800</InitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step29_targetRawValueNormal</Description>
+		<Key>sig94</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>500</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>500</InitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step27_targetRawValueNormal</Description>
+		<Key>sig95</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>250</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>250</InitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step27_targetRawValueMin</Description>
+		<Key>sig96</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step27_targetRawValueMax</Description>
+		<Key>sig97</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>800</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>800</InitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step28_targetRawValueNormal</Description>
+		<Key>sig98</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>250</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>250</InitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step28_targetRawValueMin</Description>
+		<Key>sig99</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_C_step28_targetRawValueMax</Description>
+		<Key>sig100</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>800</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<InitValue>800</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 </AppSignals>
@@ -1775,6 +1908,7 @@
 </DAQSetups>
 <Monitors>
 	<Monitor>
+		<UseFilters>True</UseFilters>
 		<NumberOfMessagesHistory>50000</NumberOfMessagesHistory>
 		<BackColor>16777215</BackColor>
 		<FontBold>True</FontBold>
@@ -1783,6 +1917,7 @@
 		<Key>0</Key>
 		<FormObjectKey>1</FormObjectKey>
 		<InScrollMode>True</InScrollMode>
+		<SpeedCustomIn0>True</SpeedCustomIn0>
 		<MonitorColumnSets>
 			<MonitorColumnSet>
 				<Description>(default)</Description>
@@ -2734,7 +2869,7 @@
 		<Key>net0</Key>
 		<NetworkName>HS CAN</NetworkName>
 		<BaudRate>500000</BaudRate>
-		<BaudRateSecondary>5000000</BaudRateSecondary>
+		<BaudRateSecondary>2000000</BaudRateSecondary>
 		<Protocol>1</Protocol>
 		<VisibilityType>2</VisibilityType>
 		<IsOBDNetwork>1</IsOBDNetwork>
@@ -2777,7 +2912,7 @@
 		<Description>ISO9141/KW2K</Description>
 		<Key>net4</Key>
 		<NetworkName>ISO9141/KW2K</NetworkName>
-		<BaudRate>0</BaudRate>
+		<BaudRate>10417</BaudRate>
 		<Protocol>6</Protocol>
 		<VisibilityType>2</VisibilityType>
 		<EnableOSEKNM>False</EnableOSEKNM>
@@ -2898,7 +3033,7 @@
 		<Description>ISO9141/KW2K 2</Description>
 		<Key>net16</Key>
 		<NetworkName>ISO9141/KW2K 2</NetworkName>
-		<BaudRate>0</BaudRate>
+		<BaudRate>10417</BaudRate>
 		<Protocol>6</Protocol>
 		<VisibilityType>2</VisibilityType>
 		<EnableOSEKNM>False</EnableOSEKNM>
@@ -2908,7 +3043,7 @@
 		<Description>ISO9141/KW2K 3</Description>
 		<Key>net17</Key>
 		<NetworkName>ISO9141/KW2K 3</NetworkName>
-		<BaudRate>0</BaudRate>
+		<BaudRate>10417</BaudRate>
 		<Protocol>6</Protocol>
 		<VisibilityType>2</VisibilityType>
 		<EnableOSEKNM>False</EnableOSEKNM>
@@ -2918,7 +3053,7 @@
 		<Description>ISO9141/KW2K 4</Description>
 		<Key>net18</Key>
 		<NetworkName>ISO9141/KW2K 4</NetworkName>
-		<BaudRate>0</BaudRate>
+		<BaudRate>10417</BaudRate>
 		<Protocol>6</Protocol>
 		<VisibilityType>2</VisibilityType>
 		<EnableOSEKNM>False</EnableOSEKNM>
@@ -4280,7 +4415,7 @@
 						<Format>0.0</Format>
 						<UpperRange>127</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueDouble>58.81204877840641</SetValueDouble>
+						<SetValueDouble>112.5100063586905</SetValueDouble>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
 					<Signal>
@@ -4291,7 +4426,7 @@
 						<Format>0.0</Format>
 						<UpperRange>127</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueDouble>92.28661683189358</SetValueDouble>
+						<SetValueDouble>18.6266566082721</SetValueDouble>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
 					<Signal>
@@ -5833,8 +5968,8 @@
 				<ByteString0>14DA99F1</ByteString0>
 				<ByteString1>03</ByteString1>
 				<ByteString2>22</ByteString2>
-				<ByteString3>C0</ByteString3>
-				<ByteString4>12</ByteString4>
+				<ByteString3>81</ByteString3>
+				<ByteString4>87</ByteString4>
 				<XtdFrame>True</XtdFrame>
 				<NetworkKey>net0</NetworkKey>
 				<ExpectedLength>4</ExpectedLength>
@@ -6280,6 +6415,11 @@
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
+				<Key>stp19</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
 				<Key>stp7</Key>
 				<StepType>14</StepType>
 				<StepStringValue2>txt</StepStringValue2>
@@ -6298,7 +6438,7 @@
 	</FBlock>
 	<FBlock>
 		<Description>fsMain_process</Description>
-		<Key>tst5</Key>
+		<Key>tst45</Key>
 		<TestType>8</TestType>
 		<FilePath>Capture File Function Block 4</FilePath>
 		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
@@ -6335,6 +6475,14 @@
 				<StepStringValue>tst11</StepStringValue>
 				<StepComment>Initialize variables and so on</StepComment>
 				<StepStringValue2>fs_resetTargetValues</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst42</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>fs_resetPassedFlags</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp13</Key>
@@ -6423,18 +6571,6 @@
 					<SetValueDescription>{step7_PPEI_Engine_General_Status_1 (Tx Msg Periodic On-Off) :out13-30}</SetValueDescription>
 					<SetValueKey>{step7_PPEI_Engine_General_Status_1 (Tx Msg Periodic On-Off) :out13-30}</SetValueKey>
 				</SignalSpec>
-			</Step>
-			<Step>
-				<Key>stp12</Key>
-				<StepType>4</StepType>
-				<StepLongValue>4</StepLongValue>
-				<StepStringValue>tst1</StepStringValue>
-				<StepStringValue2>fs_periodicSteps32-38</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp22</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp2</Key>
@@ -6559,6 +6695,534 @@
 		</Steps>
 	</FBlock>
 	<FBlock>
+		<Description>fsMain_loopStep32to38</Description>
+		<Key>tst46</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 47</FilePath>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp10</Key>
+				<StepType>15</StepType>
+				<StepLongValue>3</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_isStep32to38QueryStart</Description>
+					<Equation>{appSig_isStep32to38QueryStart :sig90-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst1</StepStringValue>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>fs_periodicSteps32-38</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp1</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp2</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
+		<Description>fsMain_saveSettings</Description>
+		<Key>tst33</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 34</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>13</StepType>
+				<StepLongValue>-1</StepLongValue>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Equation>appsave</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp1</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp2</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
+		<Description>fs_resetCurrValuesAutoTest</Description>
+		<Key>tst44</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 40</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(15)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(15)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(15)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(16)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(16)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(16)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(17)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(17)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(17)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(18)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(18)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(18)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(19)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(19)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(19)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(20)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(20)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(20)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(21)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(21)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(21)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(22)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(22)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(22)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(23)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(23)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(23)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(24)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(24)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(24)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(25)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(25)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(25)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(26)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(26)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(26)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(27)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(27)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(27)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(28)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(28)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(28)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(29)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(29)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(29)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(30)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(30)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(30)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>6</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(31)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(31)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(31)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp1</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp2</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
+		<Description>fs_linkDetect</Description>
+		<Key>tst41</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 42</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>15</StepType>
+				<StepLongValue>7</StepLongValue>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>HS CAN (Available)</Description>
+					<Equation>{HS CAN (Available) :net0-14}&lt;&gt;{appSig_linkCanState :sig88-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp1</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_linkCanState :sig88-index(0)}</Description>
+					<Equation>{HS CAN (Available) :net0-14}</Equation>
+					<SetValueDescription>{appSig_linkCanState :sig88-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_linkCanState :sig88-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp2</Key>
+				<StepType>15</StepType>
+				<StepLongValue>6</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_linkCanState</Description>
+					<Equation>{appSig_linkCanState :sig88-index(0)}=0</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst39</StepStringValue>
+				<StepStringValue2>fs_resetCurrValues</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst42</StepStringValue>
+				<StepStringValue2>fs_resetPassedFlags</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
 		<Description>fsMain_autoTest</Description>
 		<Key>tst7</Key>
 		<TestType>8</TestType>
@@ -6574,11 +7238,29 @@
 		<ValueReplayOutKey>out1</ValueReplayOutKey>
 		<Steps>
 			<Step>
+				<Key>stp62</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isStep32to38QueryStart :sig90-index(0)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
 				<Key>stp53</Key>
 				<StepType>4</StepType>
 				<StepLongValue>4</StepLongValue>
-				<StepStringValue>tst39</StepStringValue>
-				<StepStringValue2>fs_resetCurrValues</StepStringValue2>
+				<StepStringValue>tst44</StepStringValue>
+				<StepStringValue2>fs_resetCurrValuesAutoTest</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp53</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst42</StepStringValue>
+				<StepStringValue2>fs_resetPassedFlags</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp0</Key>
@@ -6626,7 +7308,7 @@
 			<Step>
 				<Key>stp13</Key>
 				<StepType>15</StepType>
-				<StepLongValue>9</StepLongValue>
+				<StepLongValue>11</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_isCANCommOK</Description>
@@ -6950,8 +7632,68 @@
 				<StepStringValue2>fs_step31_sendOnce</StepStringValue2>
 			</Step>
 			<Step>
+				<Key>stp56</Key>
+				<StepType>15</StepType>
+				<StepLongValue>48</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_isAutoTestPassed</Description>
+					<Equation>{appSig_isAutoTestPassed :sig52-index(0)}</Equation>
+					<Min>0</Min>
+					<Max>1</Max>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp59</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isAutoTestPassedGUI :sig89-index(0)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_isAutoTestPassedGUI :sig89-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isAutoTestPassedGUI :sig89-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp58</Key>
+				<StepType>17</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp59</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isAutoTestPassedGUI :sig89-index(0)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_isAutoTestPassedGUI :sig89-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isAutoTestPassedGUI :sig89-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp57</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp63</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isStep32to38QueryStart :sig90-index(0)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
 				<Key>stp2</Key>
 				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp55</Key>
+				<StepType>14</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -7152,7 +7894,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(25)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueMin :sig37-index(0)}</Equation>
+					<Equation>{appSig_C_step25_targetRawValueMin :sig44-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(25)}</SetValueDescription>
@@ -7178,7 +7920,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(27)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueMin :sig37-index(0)}</Equation>
+					<Equation>{appSig_C_step27_targetRawValueMin :sig96-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(27)}</SetValueDescription>
@@ -7191,7 +7933,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(28)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueMin :sig37-index(0)}</Equation>
+					<Equation>{appSig_C_step28_targetRawValueMin :sig99-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(28)}</SetValueDescription>
@@ -7304,7 +8046,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(25)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueNormal :sig38-index(0)}</Equation>
+					<Equation>{appSig_C_step25_targetRawValueNormal :sig92-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(25)}</SetValueDescription>
@@ -7330,7 +8072,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(27)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueNormal :sig38-index(0)}</Equation>
+					<Equation>{appSig_C_step27_targetRawValueNormal :sig95-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(27)}</SetValueDescription>
@@ -7343,7 +8085,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(28)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueNormal :sig38-index(0)}</Equation>
+					<Equation>{appSig_C_step28_targetRawValueNormal :sig98-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(28)}</SetValueDescription>
@@ -7356,7 +8098,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(29)}</Description>
-					<Equation>{appSig_C_step29_targetRawValueNormal :sig44-index(0)}</Equation>
+					<Equation>{appSig_C_step29_targetRawValueNormal :sig94-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(29)}</SetValueDescription>
@@ -7456,7 +8198,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(25)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueMax :sig39-index(0)}</Equation>
+					<Equation>{appSig_C_step25_targetRawValueMax :sig93-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(25)}</SetValueDescription>
@@ -7482,7 +8224,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(27)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueMax :sig39-index(0)}</Equation>
+					<Equation>{appSig_C_step27_targetRawValueMax :sig97-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(27)}</SetValueDescription>
@@ -7495,7 +8237,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_targetRawValue :sig31-index(28)}</Description>
-					<Equation>{appSig_C_temp_targetRawValueMax :sig39-index(0)}</Equation>
+					<Equation>{appSig_C_step28_targetRawValueMax :sig100-index(0)}</Equation>
 					<Min>0</Min>
 					<Max>1</Max>
 					<SetValueDescription>{appSig_steps_targetRawValue :sig31-index(28)}</SetValueDescription>
@@ -7945,6 +8687,284 @@
 		</Steps>
 	</FBlock>
 	<FBlock>
+		<Description>fs_resetPassedFlags</Description>
+		<Key>tst42</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 43</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp59</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isAutoTestPassedGUI :sig89-index(0)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_isAutoTestPassedGUI :sig89-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isAutoTestPassedGUI :sig89-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(8)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(8)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(8)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(9)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(9)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(9)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(10)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(10)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(10)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(15)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(15)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(15)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(16)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(16)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(16)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(17)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(17)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(17)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(18)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(18)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(18)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(19)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(19)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(19)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(20)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(20)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(20)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(21)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(21)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(21)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(22)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(22)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(22)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(23)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(23)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(23)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(24)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(24)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(24)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(25)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(25)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(25)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(26)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(26)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(26)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(27)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(27)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(27)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(28)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(28)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(28)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(29)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(29)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(29)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(30)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(30)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(30)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(31)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(31)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(31)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
 		<Description>fs_periodicSteps32-38</Description>
 		<Key>tst1</Key>
 		<TestType>8</TestType>
@@ -8037,7 +9057,7 @@
 			</Step>
 			<Step>
 				<Key>stp2</Key>
-				<StepType>14</StepType>
+				<StepType>8</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
@@ -8517,18 +9537,6 @@
 				</SignalSpec>
 			</Step>
 			<Step>
-				<Key>stp28</Key>
-				<StepType>6</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-				<SignalSpec>
-					<Description>{appSig_steps_currPhyValueStr :sig57-index(15)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}{stepX_diagResponse (Message B6) :in11-23}{stepX_diagResponse (Message B7) :in11-24}</Equation>
-					<EvaluateAsText>True</EvaluateAsText>
-					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(15)}</SetValueDescription>
-					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(15)}</SetValueKey>
-				</SignalSpec>
-			</Step>
-			<Step>
 				<Key>stp11</Key>
 				<StepType>6</StepType>
 				<StepStringValue2>txt</StepStringValue2>
@@ -8537,6 +9545,18 @@
 					<Equation>(({stepX_diagResponse (Message B5) :in11-22})*100)+(({stepX_diagResponse (Message B6) :in11-23})*10)+({stepX_diagResponse (Message B7) :in11-24})</Equation>
 					<SetValueDescription>{appSig_steps_currRawValue :sig30-index(15)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currRawValue :sig30-index(15)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp28</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(15)}</Description>
+					<Equation>{appSig_steps_currRawValue :sig30-index(15)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(15)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(15)}</SetValueKey>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -9235,7 +10255,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step18_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(18)}={appSig_C_step18_targetRawValue :sig9-index(0)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(18)}+5) &gt;= {appSig_C_step18_targetRawValue :sig9-index(0)}) and (({appSig_steps_currRawValue :sig30-index(18)}-5) &lt;= {appSig_C_step18_targetRawValue :sig9-index(0)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -10617,7 +11637,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
-					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=04 and {stepX_diagResponse (Message B2) :in11-19}=98 and {stepX_diagResponse (Message B3) :in11-20}=131 and {stepX_diagResponse (Message B4) :in11-21}=131</Equation>
+					<Equation>{stepX_diagResponse (Present) :in11-0} and {stepX_diagResponse (Message B1) :in11-18}=05 and {stepX_diagResponse (Message B2) :in11-19}=98 and {stepX_diagResponse (Message B3) :in11-20}=131 and {stepX_diagResponse (Message B4) :in11-21}=131</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -10626,7 +11646,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currRawValue :sig30-index(25)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}</Equation>
+					<Equation>({stepX_diagResponse (Message B5) :in11-22}&lt;&lt;8)+({stepX_diagResponse (Message B6) :in11-23})</Equation>
 					<SetValueDescription>{appSig_steps_currRawValue :sig30-index(25)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currRawValue :sig30-index(25)}</SetValueKey>
 				</SignalSpec>
@@ -10637,7 +11657,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_step25_currPhyValue :sig72-index(0)}</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(25)}-40</Equation>
+					<Equation>{appSig_steps_currRawValue :sig30-index(25)}/10</Equation>
 					<Format>0</Format>
 					<SetValueDescription>{appSig_step25_currPhyValue :sig72-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_step25_currPhyValue :sig72-index(0)}</SetValueKey>
@@ -10660,10 +11680,11 @@
 				<Key>stp22</Key>
 				<StepType>15</StepType>
 				<StepLongValue>15</StepLongValue>
+				<StepComment>add 0.5 for phy value adjust</StepComment>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(25)}={appSig_steps_targetRawValue :sig31-index(25)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(25)}+5) &gt;= {appSig_steps_targetRawValue :sig31-index(25)}) and (({appSig_steps_currRawValue :sig30-index(25)}-5) &lt;= {appSig_steps_targetRawValue :sig31-index(25)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -10830,7 +11851,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currRawValue :sig30-index(26)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}</Equation>
+					<Equation>({stepX_diagResponse (Message B5) :in11-22})</Equation>
 					<SetValueDescription>{appSig_steps_currRawValue :sig30-index(26)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currRawValue :sig30-index(26)}</SetValueKey>
 				</SignalSpec>
@@ -10867,7 +11888,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(26)}={appSig_steps_targetRawValue :sig31-index(26)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(26)}+5)&gt;={appSig_steps_targetRawValue :sig31-index(26)}) and (({appSig_steps_currRawValue :sig30-index(26)}-5)&lt;={appSig_steps_targetRawValue :sig31-index(26)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11034,7 +12055,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currRawValue :sig30-index(27)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}+({stepX_diagResponse (Message B6) :in11-23}&lt;&lt;8)</Equation>
+					<Equation>({stepX_diagResponse (Message B5) :in11-22}&lt;&lt;8)+({stepX_diagResponse (Message B6) :in11-23})</Equation>
 					<SetValueDescription>{appSig_steps_currRawValue :sig30-index(27)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currRawValue :sig30-index(27)}</SetValueKey>
 				</SignalSpec>
@@ -11045,7 +12066,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_step27_currPhyValue :sig74-index(0)}</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(27)}-40</Equation>
+					<Equation>{appSig_steps_currRawValue :sig30-index(27)}/10</Equation>
 					<Format>0</Format>
 					<SetValueDescription>{appSig_step27_currPhyValue :sig74-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_step27_currPhyValue :sig74-index(0)}</SetValueKey>
@@ -11071,7 +12092,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(27)}={appSig_steps_targetRawValue :sig31-index(27)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(27)}+5) &gt;= {appSig_steps_targetRawValue :sig31-index(27)}) and (({appSig_steps_currRawValue :sig30-index(27)}-5) &lt;= {appSig_steps_targetRawValue :sig31-index(27)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11238,7 +12259,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currRawValue :sig30-index(28)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}+({stepX_diagResponse (Message B6) :in11-23}&lt;&lt;8)</Equation>
+					<Equation>({stepX_diagResponse (Message B5) :in11-22}&lt;&lt;8)+({stepX_diagResponse (Message B6) :in11-23})</Equation>
 					<SetValueDescription>{appSig_steps_currRawValue :sig30-index(28)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currRawValue :sig30-index(28)}</SetValueKey>
 				</SignalSpec>
@@ -11249,7 +12270,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_step28_currPhyValue :sig75-index(0)}</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(28)}-40</Equation>
+					<Equation>{appSig_steps_currRawValue :sig30-index(28)}/10</Equation>
 					<Format>0</Format>
 					<SetValueDescription>{appSig_step28_currPhyValue :sig75-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_step28_currPhyValue :sig75-index(0)}</SetValueKey>
@@ -11275,7 +12296,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(28)}={appSig_steps_targetRawValue :sig31-index(28)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(28)}+5) &gt;= {appSig_steps_targetRawValue :sig31-index(28)}) and (({appSig_steps_currRawValue :sig30-index(28)}-5) &lt;= {appSig_steps_targetRawValue :sig31-index(28)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11442,7 +12463,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_steps_currRawValue :sig30-index(29)}</Description>
-					<Equation>{stepX_diagResponse (Message B5) :in11-22}+({stepX_diagResponse (Message B6) :in11-23}&lt;&lt;8)</Equation>
+					<Equation>({stepX_diagResponse (Message B5) :in11-22}&lt;&lt;8)+({stepX_diagResponse (Message B6) :in11-23})</Equation>
 					<SetValueDescription>{appSig_steps_currRawValue :sig30-index(29)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currRawValue :sig30-index(29)}</SetValueKey>
 				</SignalSpec>
@@ -11479,7 +12500,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(29)}={appSig_steps_targetRawValue :sig31-index(29)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(29)}+20) &gt;= {appSig_steps_targetRawValue :sig31-index(29)}) and (({appSig_steps_currRawValue :sig30-index(29)}-20) &lt;= {appSig_steps_targetRawValue :sig31-index(29)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11683,7 +12704,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(30)}={appSig_steps_targetRawValue :sig31-index(30)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(30)}+1) &gt;= {appSig_steps_targetRawValue :sig31-index(30)}) and (({appSig_steps_currRawValue :sig30-index(30)}-1) &lt;= {appSig_steps_targetRawValue :sig31-index(30)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11887,7 +12908,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(31)}={appSig_steps_targetRawValue :sig31-index(31)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(31)}+5) &gt;= {appSig_steps_targetRawValue :sig31-index(31)}) and (({appSig_steps_currRawValue :sig30-index(31)}-5) &lt;= {appSig_steps_targetRawValue :sig31-index(31)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -13307,79 +14328,6 @@
 		</Steps>
 	</FBlock>
 	<FBlock>
-		<Description>fsMain_saveSettings</Description>
-		<Key>tst33</Key>
-		<TestType>8</TestType>
-		<FilePath>Capture File Function Block 34</FilePath>
-		<StartMode>1</StartMode>
-		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
-		<LogRate>1</LogRate>
-		<AfterStopTime>5000</AfterStopTime>
-		<StopNumberOfMessages>1</StopNumberOfMessages>
-		<StopAfterTime>1</StopAfterTime>
-		<NumberOfGenerations>1</NumberOfGenerations>
-		<FileSaveAsBinary>True</FileSaveAsBinary>
-		<ValueReplayOutKey>out1</ValueReplayOutKey>
-		<Steps>
-			<Step>
-				<Key>stp0</Key>
-				<StepType>13</StepType>
-				<StepLongValue>-1</StepLongValue>
-				<StepComment>TODO: Add step commands here</StepComment>
-				<StepStringValue2>txt</StepStringValue2>
-				<SignalSpec>
-					<Equation>appsave</Equation>
-					<EvaluateAsText>True</EvaluateAsText>
-				</SignalSpec>
-			</Step>
-			<Step>
-				<Key>stp1</Key>
-				<StepType>8</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp2</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp3</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp4</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp5</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp6</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp7</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp8</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-			<Step>
-				<Key>stp9</Key>
-				<StepType>14</StepType>
-				<StepStringValue2>txt</StepStringValue2>
-			</Step>
-		</Steps>
-	</FBlock>
-	<FBlock>
 		<Description>fs_step343536_sendOnce</Description>
 		<Key>tst38</Key>
 		<TestType>8</TestType>
@@ -13394,6 +14342,39 @@
 		<FileSaveAsBinary>False</FileSaveAsBinary>
 		<ValueReplayOutKey>out1</ValueReplayOutKey>
 		<Steps>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(34)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(34)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(34)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(35)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(35)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(35)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(36)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(36)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(36)}</SetValueKey>
+				</SignalSpec>
+			</Step>
 			<Step>
 				<Key>stp13</Key>
 				<StepType>7</StepType>
@@ -13421,7 +14402,7 @@
 			<Step>
 				<Key>stp5</Key>
 				<StepType>15</StepType>
-				<StepLongValue>13</StepLongValue>
+				<StepLongValue>34</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse (Message Data)</Description>
@@ -13455,7 +14436,7 @@
 			<Step>
 				<Key>stp10</Key>
 				<StepType>15</StepType>
-				<StepLongValue>12</StepLongValue>
+				<StepLongValue>33</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>stepX_diagResponse2 (Present)</Description>
@@ -13474,6 +14455,50 @@
 				</SignalSpec>
 			</Step>
 			<Step>
+				<Key>stp22</Key>
+				<StepType>15</StepType>
+				<StepLongValue>15</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_steps_currRawValue</Description>
+					<Equation>{appSig_steps_currRawValue :sig30-index(34)}=0</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp25</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(34)}</Description>
+					<Equation>No Active</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(34)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(34)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp24</Key>
+				<StepType>17</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp25</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(34)}</Description>
+					<Equation>Active</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(34)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(34)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp23</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
 				<Key>stp11</Key>
 				<StepType>6</StepType>
 				<StepStringValue2>txt</StepStringValue2>
@@ -13483,6 +14508,50 @@
 					<SetValueDescription>{appSig_steps_currRawValue :sig30-index(35)}</SetValueDescription>
 					<SetValueKey>{appSig_steps_currRawValue :sig30-index(35)}</SetValueKey>
 				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp22</Key>
+				<StepType>15</StepType>
+				<StepLongValue>21</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_steps_currRawValue</Description>
+					<Equation>{appSig_steps_currRawValue :sig30-index(35)}=0</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp25</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(35)}</Description>
+					<Equation>No Active</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(35)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(35)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp24</Key>
+				<StepType>17</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp25</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(35)}</Description>
+					<Equation>Active</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(35)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(35)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp23</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp11</Key>
@@ -13496,12 +14565,140 @@
 				</SignalSpec>
 			</Step>
 			<Step>
+				<Key>stp22</Key>
+				<StepType>15</StepType>
+				<StepLongValue>27</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_steps_currRawValue</Description>
+					<Equation>{appSig_steps_currRawValue :sig30-index(36)}=0</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp25</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(36)}</Description>
+					<Equation>No Active</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(36)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(36)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp24</Key>
+				<StepType>17</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp25</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(36)}</Description>
+					<Equation>Active</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(36)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(36)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp23</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(34)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(34)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(34)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(35)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(35)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(35)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(36)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(36)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(36)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
 				<Key>stp12</Key>
 				<StepType>18</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
 				<Key>stp9</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp13</Key>
+				<StepType>15</StepType>
+				<StepLongValue>39</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_steps_isPassed</Description>
+					<Equation>{appSig_steps_isPassed :sig32-index(36)}=0</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp29</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(34)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(34)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(34)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp29</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(35)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(35)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(35)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp29</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_currPhyValueStr :sig57-index(36)}</Description>
+					<Equation>{appSig_C_invalidStr :sig87-index(0)}</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_steps_currPhyValueStr :sig57-index(36)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_currPhyValueStr :sig57-index(36)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp14</Key>
 				<StepType>18</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
@@ -13908,7 +15105,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>92.3</Caption>
+			<Caption>14.7</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>IntDimLvl (Value)</Description>
@@ -14184,7 +15381,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>Disengage Immediately</Caption>
+			<Caption>Disengage</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -14237,11 +15434,141 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>184</Caption>
+			<Caption>216</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
 				<Equation>{appSig_steps_currRawValue :sig30-index(32)}</Equation>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt11</Key>
+			<Width>470</Width>
+			<Height>140</Height>
+			<Top>160</Top>
+			<Left>60</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>Network Detection</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt12</Key>
+			<Width>70</Width>
+			<Height>20</Height>
+			<Top>193</Top>
+			<Left>101</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>CAN Link</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt13</Key>
+			<Width>70</Width>
+			<Height>20</Height>
+			<Top>247</Top>
+			<Left>102</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>LIN Link</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led2</Key>
+			<Width>55</Width>
+			<Height>40</Height>
+			<Top>170</Top>
+			<Left>590</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>HS CAN (Available)</Description>
+				<Equation>{HS CAN (CAN Tx Err Count) :net0-10}</Equation>
+			</SignalSpec>
+		</LED>
+		<LED>
+			<Key>led3</Key>
+			<Width>55</Width>
+			<Height>40</Height>
+			<Top>240</Top>
+			<Left>590</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>LIN (Available)</Description>
+				<Equation>{LIN (Available) :net15-14}</Equation>
+			</SignalSpec>
+		</LED>
+		<TextDisplay>
+			<Key>txt14</Key>
+			<Width>60</Width>
+			<Height>30</Height>
+			<Top>190</Top>
+			<Left>190</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>HS CAN (CAN Tx Err Count)</Description>
+				<Equation>{HS CAN (CAN Tx Err Count) :net0-10}</Equation>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt15</Key>
+			<Width>60</Width>
+			<Height>30</Height>
+			<Top>190</Top>
+			<Left>290</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>160</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>HS CAN (Error Count)</Description>
+				<Equation>{HS CAN (Error Count) :net0-5}</Equation>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt16</Key>
+			<Width>100</Width>
+			<Height>30</Height>
+			<Top>190</Top>
+			<Left>410</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontName>Arial</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>HS CAN (Bitrate)</Description>
+				<Equation>{HS CAN (Bitrate) :net0-16}</Equation>
 			</SignalSpec>
 		</TextDisplay>
 	</Dialog>
@@ -14413,7 +15740,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>1</Caption>
+			<Caption>80</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -14587,7 +15914,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>4040</Caption>
+			<Caption>130</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -14909,7 +16236,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>76</Caption>
+			<Caption>1</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -15311,7 +16638,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>216</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -18306,11 +19633,11 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>-40</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetRawValue</Description>
-				<Equation>{appSig_steps_targetRawValue :sig31-index(25)}-40</Equation>
+				<Equation>{appSig_steps_targetRawValue :sig31-index(25)}/10</Equation>
 			</SignalSpec>
 		</TextDisplay>
 		<LED>
@@ -18377,12 +19704,12 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0.0</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetRawValue</Description>
 				<Equation>{appSig_steps_targetRawValue :sig31-index(26)}*100/255</Equation>
-				<Format>0.0</Format>
+				<Format>0</Format>
 				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
@@ -18450,11 +19777,11 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>-40</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetRawValue</Description>
-				<Equation>{appSig_steps_targetRawValue :sig31-index(27)}-40</Equation>
+				<Equation>{appSig_steps_targetRawValue :sig31-index(27)}/10</Equation>
 			</SignalSpec>
 		</TextDisplay>
 		<LED>
@@ -18521,11 +19848,11 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>-40</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetRawValue</Description>
-				<Equation>{appSig_steps_targetRawValue :sig31-index(28)}-40</Equation>
+				<Equation>{appSig_steps_targetRawValue :sig31-index(28)}/10</Equation>
 			</SignalSpec>
 		</TextDisplay>
 		<LED>
@@ -18592,12 +19919,12 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0.0</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetRawValue</Description>
 				<Equation>{appSig_steps_targetRawValue :sig31-index(29)}/10</Equation>
-				<Format>0.0</Format>
+				<Format>0</Format>
 				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
@@ -18736,12 +20063,12 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>0.0</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_targetRawValue</Description>
 				<Equation>{appSig_steps_targetRawValue :sig31-index(31)}*100/255</Equation>
-				<Format>0.0</Format>
+				<Format>0</Format>
 				<UseCustomFormatting>True</UseCustomFormatting>
 			</SignalSpec>
 		</TextDisplay>
@@ -19398,7 +20725,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>Disengage Immediately</Caption>
+			<Caption>Disengage</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -19905,7 +21232,7 @@
 			<LEDOffColor>255</LEDOffColor>
 			<SignalSpec>
 				<Description>appSig_isAutoTestPassed</Description>
-				<Equation>{appSig_isAutoTestPassed :sig52-index(0)}</Equation>
+				<Equation>{appSig_isAutoTestPassedGUI :sig89-index(0)}</Equation>
 				<Min>0</Min>
 				<Max>1</Max>
 			</SignalSpec>
@@ -20012,6 +21339,134 @@
 				<Equation>{appSig_steps_currPhyValueStr :sig57-index(36)}</Equation>
 				<EvaluateAsText>True</EvaluateAsText>
 			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt103</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>209</Top>
+			<Left>981</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;0.5</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt388</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>259</Top>
+			<Left>982</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;2</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt389</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>310</Top>
+			<Left>980</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;0.5</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt390</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>359</Top>
+			<Left>980</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;0.5</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt391</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>510</Top>
+			<Left>981</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;2</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt392</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>460</Top>
+			<Left>980</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;10</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt393</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>410</Top>
+			<Left>980</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;2</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt394</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>260</Top>
+			<Left>635</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;0.5</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
 	</Dialog>
 	<Dialog>
@@ -20288,8 +21743,8 @@
 		<Description>Desktop 1</Description>
 		<Key>0</Key>
 		<ICONIndex>51</ICONIndex>
-		<LayoutString>QVFET0NLCAAAAAAcAAAACgAAACQEAACiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAUAAAAAAACA1Hq4Ru70SIM1fakJBnUaASMFAAADAAAAV8KLDLae80qZv5fVMTlbaCQAAABbAAAAAwQAAIICAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AASQAAAB0AAAAAwQAAIICAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADJAAAAHQAAAADBAAAggIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEJAAAAHQAAAADBAAAggIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAckAAAAdAAAAAMEAACCAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoAAAAAAAAAGWIXlh1autLtl7HwvSvAAgkAAAAdAAAAAMEAACCAgAAAAAAAAAAAAAAEwAAAEFwcGxpY2F0aW9uIFNpZ25hbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFJAAAAHQAAAADBAAAggIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApQAAAAAAAABliF5YdWrrS7Zex8L0rwACJAAAAHQAAAADBAAAggIAAAAAAAAAAAAAABAAAABHcmFwaGljYWwgUGFuZWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAD0FAABeAgAAvAEAAHwAAAA3AwAAswEAAAAAAAAAAAFliF5YdWrrS7Zex8L0rwAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
-		<LayoutStringChecksum>-1634522017</LayoutStringChecksum>
+		<LayoutString>QVFET0NLCAAAAACcAAAAQAAAAKQEAADYAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAUAAAAAAACA1Hq4Ru70SIM1fakJBnUaASMFAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAcAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoAAAAAAAAAGWIXlh1autLtl7HwvSvAAgAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEwAAAEFwcGxpY2F0aW9uIFNpZ25hbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApQAAAAAAAABliF5YdWrrS7Zex8L0rwACAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAABAAAABHcmFwaGljYWwgUGFuZWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAD0FAABeAgAAvAEAAHwAAAA3AwAAswEAAAAAAAAAAAFliF5YdWrrS7Zex8L0rwAFAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
+		<LayoutStringChecksum>-1749602837</LayoutStringChecksum>
 		<DesktopForms>
 			<DesktopForm>
 				<FormKey>1</FormKey>
@@ -20304,12 +21759,12 @@
 			<DesktopForm>
 				<FormKey>4</FormKey>
 				<Key>2</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPFNpZ25hbHNQYW5lbFdpZHRoPjE4MTwvU2lnbmFsc1BhbmVsV2lkdGg+DQo8U2VsZWN0ZWRQcm90b2NvbD4xPC9TZWxlY3RlZFByb3RvY29sPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPFNpZ25hbHNQYW5lbFdpZHRoPjUzMTwvU2lnbmFsc1BhbmVsV2lkdGg+DQo8U2VsZWN0ZWRQcm90b2NvbD4xPC9TZWxlY3RlZFByb3RvY29sPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>5</FormKey>
 				<Key>3</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0MTwvQ3VycmVudEZCbG9ja0tleT4NCjxDdXJyZW50U3BsaXRTaXplPjMyNzwvQ3VycmVudFNwbGl0U2l6ZT4NCjxTY3JpcHRHcmlkPg0KCTxOdW1PZkNvbHM+NjwvTnVtT2ZDb2xzPg0KCTxOdW1PZlJvd3M+MTc8L051bU9mUm93cz4NCgk8Q29sU2VsPjQ8L0NvbFNlbD4NCgk8Um93U2VsPjc8L1Jvd1NlbD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MDwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4xPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MjwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4zPC9Db2xJbmRleD4NCgkJPFdpZHRoPjMwMDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD40PC9Db2xJbmRleD4NCgkJPFdpZHRoPjQ1MDA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD41PC9Db2xJbmRleD4NCgkJPFdpZHRoPjMwMDA8L1dpZHRoPg0KCTwvQ09MPg0KPC9TY3JpcHRHcmlkPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0ODwvQ3VycmVudEZCbG9ja0tleT4NCjxDdXJyZW50U3BsaXRTaXplPjMyNzwvQ3VycmVudFNwbGl0U2l6ZT4NCjxTY3JpcHRHcmlkPg0KCTxOdW1PZkNvbHM+NjwvTnVtT2ZDb2xzPg0KCTxOdW1PZlJvd3M+MjM8L051bU9mUm93cz4NCgk8Q29sU2VsPjQ8L0NvbFNlbD4NCgk8Um93U2VsPjEzPC9Sb3dTZWw+DQoJPENPTD4NCgkJPENvbEluZGV4PjA8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MTwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjI8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MzwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NDwvQ29sSW5kZXg+DQoJCTxXaWR0aD40NTAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NTwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCjwvU2NyaXB0R3JpZD4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>7</FormKey>
