@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <VSpy3>
-<!--Created on: 12/21/2016 6:50:03 pm-->
+<!--Created on: 12/23/2016 9:56:49 am-->
 <VersionCreatedWith>3.8.0.76</VersionCreatedWith>
 <SimulationEnabled>False</SimulationEnabled>
 <NumberJ1850HeaderBytes>3</NumberJ1850HeaderBytes>
@@ -9299,10 +9299,11 @@
 			<Step>
 				<Key>stp15</Key>
 				<StepType>6</StepType>
+				<StepComment>disable the check for temporary</StepComment>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_isAutoTestPassed :sig52-index(0)}</Description>
-					<Equation>0</Equation>
+					<Equation>1</Equation>
 					<SetValueDescription>{appSig_isAutoTestPassed :sig52-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_isAutoTestPassed :sig52-index(0)}</SetValueKey>
 				</SignalSpec>
@@ -10501,10 +10502,11 @@
 			<Step>
 				<Key>stp15</Key>
 				<StepType>6</StepType>
+				<StepComment>this check is disabled for temporary</StepComment>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>{appSig_isAutoTestPassed :sig52-index(0)}</Description>
-					<Equation>0</Equation>
+					<Equation>1</Equation>
 					<SetValueDescription>{appSig_isAutoTestPassed :sig52-index(0)}</SetValueDescription>
 					<SetValueKey>{appSig_isAutoTestPassed :sig52-index(0)}</SetValueKey>
 				</SignalSpec>
@@ -10867,7 +10869,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(21)}={appSig_steps_targetRawValue :sig31-index(21)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(21)}+1) &gt;= {appSig_steps_targetRawValue :sig31-index(21)}) and (({appSig_steps_currRawValue :sig30-index(21)}-1) &lt;= {appSig_steps_targetRawValue :sig31-index(21)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11071,7 +11073,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(22)}={appSig_steps_targetRawValue :sig31-index(22)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(22)}+1) &gt;= {appSig_steps_targetRawValue :sig31-index(22)}) and (({appSig_steps_currRawValue :sig30-index(22)}-1) &lt;= {appSig_steps_targetRawValue :sig31-index(22)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11275,7 +11277,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(23)}={appSig_steps_targetRawValue :sig31-index(23)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(23)}+1) &gt;= {appSig_steps_targetRawValue :sig31-index(23)}) and (({appSig_steps_currRawValue :sig30-index(23)}-1) &lt;= {appSig_steps_targetRawValue :sig31-index(23)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -11479,7 +11481,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>{appSig_steps_currRawValue :sig30-index(24)}={appSig_steps_targetRawValue :sig31-index(24)}</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(24)}+1) &gt;= {appSig_steps_targetRawValue :sig31-index(24)}) and (({appSig_steps_currRawValue :sig30-index(24)}-1) &lt;= {appSig_steps_targetRawValue :sig31-index(24)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -15105,7 +15107,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>14.7</Caption>
+			<Caption>18.6</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>IntDimLvl (Value)</Description>
@@ -15381,7 +15383,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>Disengage</Caption>
+			<Caption>Disengage Immediately</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -15547,7 +15549,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>160</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>HS CAN (Error Count)</Description>
@@ -15564,7 +15566,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>1.701614486855914e-313</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>HS CAN (Bitrate)</Description>
@@ -20725,7 +20727,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>Disengage</Caption>
+			<Caption>Disengage Immediately</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -21468,6 +21470,70 @@
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
+		<TextDisplay>
+			<Key>txt395</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>408</Top>
+			<Left>635</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;1</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt396</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>457</Top>
+			<Left>634</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;1</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt397</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>509</Top>
+			<Left>633</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;1</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt398</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>157</Top>
+			<Left>978</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;1</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
 	</Dialog>
 	<Dialog>
 		<Caption>Help</Caption>
@@ -21743,8 +21809,8 @@
 		<Description>Desktop 1</Description>
 		<Key>0</Key>
 		<ICONIndex>51</ICONIndex>
-		<LayoutString>QVFET0NLCAAAAACcAAAAQAAAAKQEAADYAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAUAAAAAAACA1Hq4Ru70SIM1fakJBnUaASMFAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAcAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoAAAAAAAAAGWIXlh1autLtl7HwvSvAAgAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEwAAAEFwcGxpY2F0aW9uIFNpZ25hbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApQAAAAAAAABliF5YdWrrS7Zex8L0rwACAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAABAAAABHcmFwaGljYWwgUGFuZWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAD0FAABeAgAAvAEAAHwAAAA3AwAAswEAAAAAAAAAAAFliF5YdWrrS7Zex8L0rwAFAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
-		<LayoutStringChecksum>-1749602837</LayoutStringChecksum>
+		<LayoutString>QVFET0NLCAAAAADOAAAAIAAAANYEAAC4AgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAUAAAAAAACA1Hq4Ru70SIM1fakJBnUaASMFAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAEAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACeAAAAAAAAAGWIXlh1autLtl7HwvSvAAcAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAACQAAAFNpbXVsYXRvcgAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoAAAAAAAAAGWIXlh1autLtl7HwvSvAAgAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEwAAAEFwcGxpY2F0aW9uIFNpZ25hbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApQAAAAAAAABliF5YdWrrS7Zex8L0rwACAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAABAAAABHcmFwaGljYWwgUGFuZWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAD0FAABeAgAAvAEAAHwAAAA3AwAAswEAAAAAAAAAAAFliF5YdWrrS7Zex8L0rwAFAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
+		<LayoutStringChecksum>1636642318</LayoutStringChecksum>
 		<DesktopForms>
 			<DesktopForm>
 				<FormKey>1</FormKey>
@@ -21764,7 +21830,7 @@
 			<DesktopForm>
 				<FormKey>5</FormKey>
 				<Key>3</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0ODwvQ3VycmVudEZCbG9ja0tleT4NCjxDdXJyZW50U3BsaXRTaXplPjMyNzwvQ3VycmVudFNwbGl0U2l6ZT4NCjxTY3JpcHRHcmlkPg0KCTxOdW1PZkNvbHM+NjwvTnVtT2ZDb2xzPg0KCTxOdW1PZlJvd3M+MjM8L051bU9mUm93cz4NCgk8Q29sU2VsPjQ8L0NvbFNlbD4NCgk8Um93U2VsPjEzPC9Sb3dTZWw+DQoJPENPTD4NCgkJPENvbEluZGV4PjA8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MTwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjI8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MzwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NDwvQ29sSW5kZXg+DQoJCTxXaWR0aD40NTAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NTwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCjwvU2NyaXB0R3JpZD4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0NzwvQ3VycmVudEZCbG9ja0tleT4NCjxDdXJyZW50U3BsaXRTaXplPjMyNzwvQ3VycmVudFNwbGl0U2l6ZT4NCjxTY3JpcHRHcmlkPg0KCTxOdW1PZkNvbHM+NjwvTnVtT2ZDb2xzPg0KCTxOdW1PZlJvd3M+NjE8L051bU9mUm93cz4NCgk8Q29sU2VsPjQ8L0NvbFNlbD4NCgk8Um93U2VsPjUyPC9Sb3dTZWw+DQoJPENPTD4NCgkJPENvbEluZGV4PjA8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MTwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjI8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MzwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NDwvQ29sSW5kZXg+DQoJCTxXaWR0aD40NTAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NTwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCjwvU2NyaXB0R3JpZD4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>7</FormKey>
