@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <VSpy3>
-<!--Created on: 5/04/2017 9:54:53 am-->
+<!--Created on: 8/04/2017 2:40:19 pm-->
 <VersionCreatedWith>3.8.0.105</VersionCreatedWith>
 <SimulationEnabled>False</SimulationEnabled>
 <NumberJ1850HeaderBytes>3</NumberJ1850HeaderBytes>
@@ -2597,6 +2597,190 @@
 		<InitValue>10</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
+	<Signal>
+		<Description>appSig_sapaWrite_SeedKey</Description>
+		<Key>sig150</Key>
+		<ValueType>4</ValueType>
+		<SetValueEquation>A116354143380001</SetValueEquation>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>A116354143380001</SetValueString>
+		<AppSignalSave>True</AppSignalSave>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_sapaWrite_bytesSeedKey</Description>
+		<Key>sig151</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>00</SetValueString>
+		<ArraySizeDefault>32</ArraySizeDefault>
+		<IsArray>True</IsArray>
+		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_sapaWrite_Seed</Description>
+		<Key>sig152</Key>
+		<ValueType>4</ValueType>
+		<SetValueEquation>A116354143380001</SetValueEquation>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>A116354143380001</SetValueString>
+		<AppSignalSave>True</AppSignalSave>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_sapaWrite_bytesSeed</Description>
+		<Key>sig153</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>00</SetValueString>
+		<ArraySizeDefault>32</ArraySizeDefault>
+		<IsArray>True</IsArray>
+		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_sapaRead_Seed</Description>
+		<Key>sig154</Key>
+		<ValueType>4</ValueType>
+		<SetValueEquation>N/A</SetValueEquation>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>A117082143380050</SetValueString>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_sapaRead_bytesSeed</Description>
+		<Key>sig155</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>00</SetValueString>
+		<ArraySizeDefault>32</ArraySizeDefault>
+		<IsArray>True</IsArray>
+		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_sapaReadSteps_isPassed</Description>
+		<Key>sig156</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
+		<ArraySizeDefault>2</ArraySizeDefault>
+		<IsArray>True</IsArray>
+		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
+	<Signal>
+		<Description>appSig_sapaWrite_lock</Description>
+		<Key>sig157</Key>
+		<ValueType>1</ValueType>
+		<UpperRange>0</UpperRange>
+		<LowerRange>0</LowerRange>
+		<SetValueDouble>0</SetValueDouble>
+		<EnableInitValue>True</EnableInitValue>
+		<SaveLastValue>True</SaveLastValue>
+	</Signal>
 </AppSignals>
 <DAQSetups>
 	<DAQSetup>
@@ -2638,6 +2822,7 @@
 		<NumberOfMessagesHistory>50000</NumberOfMessagesHistory>
 		<BackColor>16777215</BackColor>
 		<FontBold>True</FontBold>
+		<FontItalic>True</FontItalic>
 		<FontSize>8</FontSize>
 		<FontName>Courier New</FontName>
 		<Key>0</Key>
@@ -22920,6 +23105,665 @@
 			</Step>
 		</Steps>
 	</FBlock>
+	<FBlock>
+		<Description>sapa_mainWrite</Description>
+		<Key>tst77</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 49</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>14</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp13</Key>
+				<StepType>15</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_mpiWrite_lock</Description>
+					<Equation>{appSig_mpiWrite_lock :sig109-index(0)}=0</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp14</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp15</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp38</Key>
+				<StepType>4</StepType>
+				<StepLongValue>3</StepLongValue>
+				<StepStringValue>tst46</StepStringValue>
+				<StepStringValue2>fsMain_loopStep32to38</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp38</Key>
+				<StepType>4</StepType>
+				<StepLongValue>3</StepLongValue>
+				<StepStringValue>tst14</StepStringValue>
+				<StepStringValue2>fsMain_daemon</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp62</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isStep32to38QueryStart :sig90-index(0)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepComment>wait to stable</StepComment>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>500</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp35</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_mpiWriteState :sig145-index(0)}</Description>
+					<Equation>WRITING</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_mpiWriteState :sig145-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_mpiWriteState :sig145-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst47</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step1</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst56</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step2</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst57</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step3</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst55</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step4</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst58</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step5</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst59</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step6</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst60</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step7</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst61</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiWrite_sub_step8</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp35</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_mpiWriteState :sig145-index(0)}</Description>
+					<Equation>IDLE</Equation>
+					<EvaluateAsText>True</EvaluateAsText>
+					<SetValueDescription>{appSig_mpiWriteState :sig145-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_mpiWriteState :sig145-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiWriteStepsDelay :sig125-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp63</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isStep32to38QueryStart :sig90-index(0)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp38</Key>
+				<StepType>4</StepType>
+				<StepLongValue>0</StepLongValue>
+				<StepStringValue>tst46</StepStringValue>
+				<StepStringValue2>fsMain_loopStep32to38</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp38</Key>
+				<StepType>4</StepType>
+				<StepLongValue>0</StepLongValue>
+				<StepStringValue>tst14</StepStringValue>
+				<StepStringValue2>fsMain_daemon</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp1</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp2</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
+	<FBlock>
+		<Description>sapa_mainRead</Description>
+		<Key>tst76</Key>
+		<TestType>8</TestType>
+		<FilePath>Capture File Function Block 49</FilePath>
+		<StartMode>1</StartMode>
+		<AppendFileValueTypeInput>True</AppendFileValueTypeInput>
+		<LogRate>1</LogRate>
+		<AfterStopTime>5000</AfterStopTime>
+		<StopNumberOfMessages>1</StopNumberOfMessages>
+		<StopAfterTime>1</StopAfterTime>
+		<NumberOfGenerations>1</NumberOfGenerations>
+		<FileSaveAsBinary>True</FileSaveAsBinary>
+		<ValueReplayOutKey>out1</ValueReplayOutKey>
+		<Steps>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>14</StepType>
+				<StepComment>TODO: Add step commands here</StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp62</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isStep32to38QueryStart :sig90-index(0)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>500</StepLongValue>
+				<StepComment>wait to stable</StepComment>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>500</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst50</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_resetValues</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst51</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_resetPassedFlags</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst63</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step1</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst64</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step2</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst65</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step3</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst66</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step4</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst67</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step5</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst68</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step6</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst69</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step7</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst70</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step8</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp17</Key>
+				<StepType>4</StepType>
+				<StepLongValue>4</StepLongValue>
+				<StepStringValue>tst72</StepStringValue>
+				<StepComment>Initialize variables and so on</StepComment>
+				<StepStringValue2>mpiRead_sub_step9</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp56</Key>
+				<StepType>15</StepType>
+				<StepLongValue>25</StepLongValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_mpiRead_isCheckPassed</Description>
+					<Equation>{appSig_mpiRead_isCheckPassed :sig112-index(0)}=1</Equation>
+					<Min>0</Min>
+					<Max>1</Max>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp59</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_mpiRead_isCheckPassedGUI :sig113-index(0)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_mpiRead_isCheckPassedGUI :sig113-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_mpiRead_isCheckPassedGUI :sig113-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp58</Key>
+				<StepType>17</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp59</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_mpiRead_isCheckPassedGUI :sig113-index(0)}</Description>
+					<Equation>0</Equation>
+					<SetValueDescription>{appSig_mpiRead_isCheckPassedGUI :sig113-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_mpiRead_isCheckPassedGUI :sig113-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp57</Key>
+				<StepType>18</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp0</Key>
+				<StepType>2</StepType>
+				<StepLongValue>10</StepLongValue>
+				<StepDoubleValue>1000</StepDoubleValue>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>appSig_C_autoDiagStepsDelay</Description>
+					<Equation>{appSig_C_mpiReadStepsDelay :sig146-index(0)}</Equation>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp63</Key>
+				<StepType>6</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_isStep32to38QueryStart :sig90-index(0)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueDescription>
+					<SetValueKey>{appSig_isStep32to38QueryStart :sig90-index(0)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
+				<Key>stp1</Key>
+				<StepType>8</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp2</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp3</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp4</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp5</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp6</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp7</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp8</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+			<Step>
+				<Key>stp9</Key>
+				<StepType>14</StepType>
+				<StepStringValue2>txt</StepStringValue2>
+			</Step>
+		</Steps>
+	</FBlock>
 </FBlocks>
 <DiagJobs>
 	<DiagJob>
@@ -23348,7 +24192,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>Engage</Caption>
+			<Caption>Disengage Immediately</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -23514,7 +24358,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>160</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>HS CAN (Error Count)</Description>
@@ -23531,7 +24375,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>1.701613441610633e-313</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>HS CAN (Bitrate)</Description>
@@ -25071,8 +25915,8 @@
 		<TextDisplay>
 			<Key>txt251</Key>
 			<Width>289</Width>
-			<Height>50</Height>
-			<Top>130</Top>
+			<Height>89</Height>
+			<Top>31</Top>
 			<Left>421</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25086,7 +25930,7 @@
 			<Key>led60</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>145</Top>
+			<Top>46</Top>
 			<Left>571</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25106,7 +25950,7 @@
 			<Key>txt252</Key>
 			<Width>25</Width>
 			<Height>15</Height>
-			<Top>155</Top>
+			<Top>56</Top>
 			<Left>430</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25121,7 +25965,7 @@
 			<Key>led59</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>145</Top>
+			<Top>46</Top>
 			<Left>461</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25141,7 +25985,7 @@
 			<Key>txt253</Key>
 			<Width>63</Width>
 			<Height>20</Height>
-			<Top>155</Top>
+			<Top>56</Top>
 			<Left>511</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25156,7 +26000,7 @@
 			<Key>led61</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>145</Top>
+			<Top>46</Top>
 			<Left>670</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25176,7 +26020,7 @@
 			<Key>txt254</Key>
 			<Width>56</Width>
 			<Height>22</Height>
-			<Top>155</Top>
+			<Top>56</Top>
 			<Left>620</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25190,7 +26034,7 @@
 			<Key>txt255</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>186</Top>
+			<Top>128</Top>
 			<Left>420</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25204,7 +26048,7 @@
 			<Key>txt256</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>205</Top>
+			<Top>147</Top>
 			<Left>430</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25223,7 +26067,7 @@
 			<Key>txt257</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>205</Top>
+			<Top>147</Top>
 			<Left>540</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25241,7 +26085,7 @@
 			<Key>led62</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>200</Top>
+			<Top>142</Top>
 			<Left>671</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25261,7 +26105,7 @@
 			<Key>txt264</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>238</Top>
+			<Top>180</Top>
 			<Left>421</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25275,7 +26119,7 @@
 			<Key>txt265</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>257</Top>
+			<Top>199</Top>
 			<Left>431</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25294,7 +26138,7 @@
 			<Key>txt266</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>257</Top>
+			<Top>199</Top>
 			<Left>541</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25314,7 +26158,7 @@
 			<Key>led65</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>252</Top>
+			<Top>194</Top>
 			<Left>671</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25334,7 +26178,7 @@
 			<Key>txt267</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>289</Top>
+			<Top>231</Top>
 			<Left>421</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25348,7 +26192,7 @@
 			<Key>txt268</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>307</Top>
+			<Top>249</Top>
 			<Left>431</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25367,7 +26211,7 @@
 			<Key>txt269</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>307</Top>
+			<Top>249</Top>
 			<Left>541</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25387,7 +26231,7 @@
 			<Key>led66</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>302</Top>
+			<Top>244</Top>
 			<Left>671</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25407,7 +26251,7 @@
 			<Key>txt270</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>388</Top>
+			<Top>330</Top>
 			<Left>421</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25421,7 +26265,7 @@
 			<Key>txt271</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>406</Top>
+			<Top>348</Top>
 			<Left>431</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25440,7 +26284,7 @@
 			<Key>txt272</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>406</Top>
+			<Top>348</Top>
 			<Left>541</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25458,7 +26302,7 @@
 			<Key>led67</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>401</Top>
+			<Top>343</Top>
 			<Left>671</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25478,7 +26322,7 @@
 			<Key>txt273</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>438</Top>
+			<Top>380</Top>
 			<Left>421</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25492,7 +26336,7 @@
 			<Key>txt274</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>455</Top>
+			<Top>397</Top>
 			<Left>431</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25511,7 +26355,7 @@
 			<Key>txt275</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>455</Top>
+			<Top>397</Top>
 			<Left>541</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25529,7 +26373,7 @@
 			<Key>led68</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>450</Top>
+			<Top>392</Top>
 			<Left>671</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25577,7 +26421,7 @@
 			<Key>txt308</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>187</Top>
+			<Top>28</Top>
 			<Left>767</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25591,7 +26435,7 @@
 			<Key>txt309</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>206</Top>
+			<Top>47</Top>
 			<Left>777</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25610,7 +26454,7 @@
 			<Key>txt310</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>206</Top>
+			<Top>47</Top>
 			<Left>887</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25628,7 +26472,7 @@
 			<Key>led72</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>201</Top>
+			<Top>42</Top>
 			<Left>1015</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25648,7 +26492,7 @@
 			<Key>txt311</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>237</Top>
+			<Top>78</Top>
 			<Left>767</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25662,7 +26506,7 @@
 			<Key>txt312</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>256</Top>
+			<Top>97</Top>
 			<Left>777</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25681,7 +26525,7 @@
 			<Key>txt313</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>256</Top>
+			<Top>97</Top>
 			<Left>887</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25701,7 +26545,7 @@
 			<Key>led73</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>251</Top>
+			<Top>92</Top>
 			<Left>1015</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25721,7 +26565,7 @@
 			<Key>txt314</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>287</Top>
+			<Top>128</Top>
 			<Left>767</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25735,7 +26579,7 @@
 			<Key>txt315</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>306</Top>
+			<Top>147</Top>
 			<Left>777</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25754,7 +26598,7 @@
 			<Key>txt316</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>306</Top>
+			<Top>147</Top>
 			<Left>887</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25772,7 +26616,7 @@
 			<Key>led74</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>301</Top>
+			<Top>142</Top>
 			<Left>1015</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25792,7 +26636,7 @@
 			<Key>txt317</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>337</Top>
+			<Top>178</Top>
 			<Left>767</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25806,7 +26650,7 @@
 			<Key>txt318</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>356</Top>
+			<Top>197</Top>
 			<Left>777</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25825,7 +26669,7 @@
 			<Key>txt319</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>356</Top>
+			<Top>197</Top>
 			<Left>887</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25843,7 +26687,7 @@
 			<Key>led75</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>351</Top>
+			<Top>192</Top>
 			<Left>1015</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25863,7 +26707,7 @@
 			<Key>txt320</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>387</Top>
+			<Top>228</Top>
 			<Left>767</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25877,7 +26721,7 @@
 			<Key>txt321</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>406</Top>
+			<Top>247</Top>
 			<Left>777</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25896,7 +26740,7 @@
 			<Key>txt322</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>406</Top>
+			<Top>247</Top>
 			<Left>887</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25916,7 +26760,7 @@
 			<Key>led76</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>401</Top>
+			<Top>242</Top>
 			<Left>1015</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -25936,7 +26780,7 @@
 			<Key>txt323</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>437</Top>
+			<Top>278</Top>
 			<Left>767</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -25950,7 +26794,7 @@
 			<Key>txt324</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>456</Top>
+			<Top>297</Top>
 			<Left>777</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -25969,7 +26813,7 @@
 			<Key>txt325</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>456</Top>
+			<Top>297</Top>
 			<Left>887</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -25987,7 +26831,7 @@
 			<Key>led77</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>451</Top>
+			<Top>292</Top>
 			<Left>1015</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -26007,7 +26851,7 @@
 			<Key>txt326</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>487</Top>
+			<Top>328</Top>
 			<Left>767</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -26021,7 +26865,7 @@
 			<Key>txt327</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>506</Top>
+			<Top>347</Top>
 			<Left>777</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -26040,7 +26884,7 @@
 			<Key>txt328</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>506</Top>
+			<Top>347</Top>
 			<Left>887</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -26060,7 +26904,7 @@
 			<Key>led78</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>501</Top>
+			<Top>342</Top>
 			<Left>1015</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -26080,7 +26924,7 @@
 			<Key>txt329</Key>
 			<Width>295</Width>
 			<Height>46</Height>
-			<Top>488</Top>
+			<Top>430</Top>
 			<Left>420</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -26094,7 +26938,7 @@
 			<Key>txt330</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>508</Top>
+			<Top>450</Top>
 			<Left>430</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -26113,7 +26957,7 @@
 			<Key>txt331</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>508</Top>
+			<Top>450</Top>
 			<Left>540</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -26131,7 +26975,7 @@
 			<Key>led79</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>501</Top>
+			<Top>443</Top>
 			<Left>670</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -26151,8 +26995,8 @@
 			<Key>txt332</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>134</Top>
-			<Left>765</Left>
+			<Top>481</Top>
+			<Left>421</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>5</BorderStyle>
@@ -26165,8 +27009,8 @@
 			<Key>txt333</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>154</Top>
-			<Left>775</Left>
+			<Top>501</Top>
+			<Left>431</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>1</BorderStyle>
@@ -26184,8 +27028,8 @@
 			<Key>txt334</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>154</Top>
-			<Left>885</Left>
+			<Top>501</Top>
+			<Left>541</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>6</BorderStyle>
@@ -26202,8 +27046,8 @@
 			<Key>led80</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>149</Top>
-			<Left>1015</Left>
+			<Top>494</Top>
+			<Left>671</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -26222,7 +27066,7 @@
 			<Key>txt335</Key>
 			<Width>292</Width>
 			<Height>46</Height>
-			<Top>339</Top>
+			<Top>281</Top>
 			<Left>420</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
@@ -26236,7 +27080,7 @@
 			<Key>txt336</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>357</Top>
+			<Top>299</Top>
 			<Left>430</Left>
 			<BackColor>16777215</BackColor>
 			<Transparent>0</Transparent>
@@ -26255,7 +27099,7 @@
 			<Key>txt337</Key>
 			<Width>90</Width>
 			<Height>20</Height>
-			<Top>357</Top>
+			<Top>299</Top>
 			<Left>540</Left>
 			<BackColor>11194325</BackColor>
 			<Transparent>0</Transparent>
@@ -26273,7 +27117,7 @@
 			<Key>led81</Key>
 			<Width>40</Width>
 			<Height>30</Height>
-			<Top>352</Top>
+			<Top>294</Top>
 			<Left>670</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -26709,7 +27553,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>Engage</Caption>
+			<Caption>Disengage Immediately</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -26932,10 +27776,10 @@
 		</TextDisplay>
 		<TextDisplay>
 			<Key>txt372</Key>
-			<Width>289</Width>
-			<Height>90</Height>
-			<Top>30</Top>
-			<Left>420</Left>
+			<Width>190</Width>
+			<Height>130</Height>
+			<Top>320</Top>
+			<Left>1100</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>0</Transparent>
 			<BorderStyle>5</BorderStyle>
@@ -26948,8 +27792,8 @@
 			<Key>rdb2</Key>
 			<Width>60</Width>
 			<Height>20</Height>
-			<Top>50</Top>
-			<Left>460</Left>
+			<Top>350</Top>
+			<Left>1119</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -26969,8 +27813,8 @@
 			<Key>rdb3</Key>
 			<Width>60</Width>
 			<Height>20</Height>
-			<Top>50</Top>
-			<Left>530</Left>
+			<Top>380</Top>
+			<Left>1119</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -26991,8 +27835,8 @@
 			<Key>rdb4</Key>
 			<Width>60</Width>
 			<Height>20</Height>
-			<Top>50</Top>
-			<Left>618</Left>
+			<Top>410</Top>
+			<Left>1119</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -27013,8 +27857,8 @@
 			<Key>fbb0</Key>
 			<Width>128</Width>
 			<Height>60</Height>
-			<Top>50</Top>
-			<Left>767</Left>
+			<Top>170</Top>
+			<Left>1130</Left>
 			<BackColor>12632256</BackColor>
 			<DataKey>tst7</DataKey>
 			<Transparent>1</Transparent>
@@ -27030,8 +27874,8 @@
 			<Key>led82</Key>
 			<Width>80</Width>
 			<Height>50</Height>
-			<Top>54</Top>
-			<Left>970</Left>
+			<Top>240</Top>
+			<Left>1150</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -27050,10 +27894,10 @@
 		</LED>
 		<FblockButton>
 			<Key>fbb1</Key>
-			<Width>90</Width>
-			<Height>30</Height>
-			<Top>80</Top>
-			<Left>520</Left>
+			<Width>60</Width>
+			<Height>40</Height>
+			<Top>370</Top>
+			<Left>1210</Left>
 			<BackColor>12632256</BackColor>
 			<DataKey>tst33</DataKey>
 			<Transparent>1</Transparent>
@@ -27155,7 +27999,7 @@
 			<Key>txt103</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>209</Top>
+			<Top>50</Top>
 			<Left>981</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27171,7 +28015,7 @@
 			<Key>txt388</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>259</Top>
+			<Top>100</Top>
 			<Left>982</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27187,7 +28031,7 @@
 			<Key>txt389</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>310</Top>
+			<Top>151</Top>
 			<Left>980</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27203,7 +28047,7 @@
 			<Key>txt390</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>359</Top>
+			<Top>200</Top>
 			<Left>980</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27219,7 +28063,7 @@
 			<Key>txt391</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>510</Top>
+			<Top>351</Top>
 			<Left>981</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27235,7 +28079,7 @@
 			<Key>txt392</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>460</Top>
+			<Top>301</Top>
 			<Left>980</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27251,7 +28095,7 @@
 			<Key>txt393</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>410</Top>
+			<Top>251</Top>
 			<Left>980</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27267,7 +28111,7 @@
 			<Key>txt394</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>261</Top>
+			<Top>203</Top>
 			<Left>635</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27283,7 +28127,7 @@
 			<Key>txt395</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>409</Top>
+			<Top>351</Top>
 			<Left>635</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27299,7 +28143,7 @@
 			<Key>txt396</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>458</Top>
+			<Top>400</Top>
 			<Left>634</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27315,7 +28159,7 @@
 			<Key>txt397</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>510</Top>
+			<Top>452</Top>
 			<Left>633</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27331,8 +28175,8 @@
 			<Key>txt398</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>157</Top>
-			<Left>978</Left>
+			<Top>504</Top>
+			<Left>633</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
@@ -27347,7 +28191,7 @@
 			<Key>txt399</Key>
 			<Width>30</Width>
 			<Height>20</Height>
-			<Top>310</Top>
+			<Top>252</Top>
 			<Left>634</Left>
 			<BackColor>12632256</BackColor>
 			<Transparent>1</Transparent>
@@ -27356,6 +28200,319 @@
 			<FontName>Consolas</FontName>
 			<FontItalic>True</FontItalic>
 			<Caption>&#x00B1;1</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt400</Key>
+			<Width>190</Width>
+			<Height>180</Height>
+			<Top>130</Top>
+			<Left>1100</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Global Control</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<LED>
+			<Key>led83</Key>
+			<Width>40</Width>
+			<Height>30</Height>
+			<Top>83</Top>
+			<Left>669</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>appSig_steps_isPassed</Description>
+				<Equation>{appSig_steps_isPassed :sig32-index(63)}</Equation>
+			</SignalSpec>
+		</LED>
+		<TextDisplay>
+			<Key>txt401</Key>
+			<Width>56</Width>
+			<Height>22</Height>
+			<Top>93</Top>
+			<Left>619</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>LIN-ION</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt402</Key>
+			<Width>292</Width>
+			<Height>46</Height>
+			<Top>377</Top>
+			<Left>767</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>39. Hign Pressure</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt403</Key>
+			<Width>90</Width>
+			<Height>20</Height>
+			<Top>397</Top>
+			<Left>777</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_steps_currPhyValueStr</Description>
+				<Equation>{appSig_steps_currPhyValueStr :sig57-index(32)}</Equation>
+				<EvaluateAsText>True</EvaluateAsText>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt404</Key>
+			<Width>90</Width>
+			<Height>20</Height>
+			<Top>397</Top>
+			<Left>887</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_steps_targetRawValue</Description>
+				<Equation>{appSig_steps_targetRawValue :sig31-index(32)}/10</Equation>
+				<Format>0</Format>
+				<UseCustomFormatting>True</UseCustomFormatting>
+			</SignalSpec>
+		</TextDisplay>
+		<LED>
+			<Key>led84</Key>
+			<Width>40</Width>
+			<Height>30</Height>
+			<Top>387</Top>
+			<Left>1017</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>appSig_steps_isPassed</Description>
+				<Equation>{appSig_steps_isPassed :sig32-index(32)}</Equation>
+			</SignalSpec>
+		</LED>
+		<TextDisplay>
+			<Key>txt405</Key>
+			<Width>292</Width>
+			<Height>46</Height>
+			<Top>427</Top>
+			<Left>767</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>40. Low Pressure</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt406</Key>
+			<Width>90</Width>
+			<Height>20</Height>
+			<Top>447</Top>
+			<Left>777</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_steps_currPhyValueStr</Description>
+				<Equation>{appSig_steps_currPhyValueStr :sig57-index(33)}</Equation>
+				<EvaluateAsText>True</EvaluateAsText>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt407</Key>
+			<Width>90</Width>
+			<Height>20</Height>
+			<Top>447</Top>
+			<Left>887</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_steps_targetRawValue</Description>
+				<Equation>{appSig_steps_targetRawValue :sig31-index(33)}*10</Equation>
+			</SignalSpec>
+		</TextDisplay>
+		<LED>
+			<Key>led85</Key>
+			<Width>40</Width>
+			<Height>30</Height>
+			<Top>437</Top>
+			<Left>1017</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>appSig_steps_isPassed</Description>
+				<Equation>{appSig_steps_isPassed :sig32-index(33)}</Equation>
+			</SignalSpec>
+		</LED>
+		<TextDisplay>
+			<Key>txt408</Key>
+			<Width>292</Width>
+			<Height>46</Height>
+			<Top>477</Top>
+			<Left>767</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>5</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>41. OAT</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt409</Key>
+			<Width>90</Width>
+			<Height>20</Height>
+			<Top>497</Top>
+			<Left>777</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>1</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_steps_currPhyValueStr</Description>
+				<Equation>{appSig_steps_currPhyValueStr :sig57-index(34)}</Equation>
+				<EvaluateAsText>True</EvaluateAsText>
+			</SignalSpec>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt410</Key>
+			<Width>90</Width>
+			<Height>20</Height>
+			<Top>497</Top>
+			<Left>887</Left>
+			<BackColor>11194325</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>0</Caption>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_steps_targetRawValue</Description>
+				<Equation>{appSig_steps_targetRawValue :sig31-index(34)}*100/255</Equation>
+				<Format>0</Format>
+				<UseCustomFormatting>True</UseCustomFormatting>
+			</SignalSpec>
+		</TextDisplay>
+		<LED>
+			<Key>led86</Key>
+			<Width>40</Width>
+			<Height>30</Height>
+			<Top>487</Top>
+			<Left>1017</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>appSig_steps_isPassed</Description>
+				<Equation>{appSig_steps_isPassed :sig32-index(34)}</Equation>
+			</SignalSpec>
+		</LED>
+		<TextDisplay>
+			<Key>txt411</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>497</Top>
+			<Left>980</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;2</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt412</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>447</Top>
+			<Left>980</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;10</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt413</Key>
+			<Width>30</Width>
+			<Height>20</Height>
+			<Top>397</Top>
+			<Left>980</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<FontItalic>True</FontItalic>
+			<Caption>&#x00B1;2</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -28292,6 +29449,237 @@
 			</SignalSpec>
 		</TextDisplay>
 	</Dialog>
+	<Dialog>
+		<Caption>SAPATest</Caption>
+		<Key>dia9</Key>
+		<TextDisplay>
+			<Key>txt10</Key>
+			<Width>433</Width>
+			<Height>321</Height>
+			<Top>48</Top>
+			<Left>71</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>SAPA Config</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt11</Key>
+			<Width>131</Width>
+			<Height>21</Height>
+			<Top>80</Top>
+			<Left>99</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Send and Key</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt31</Key>
+			<Width>60</Width>
+			<Height>16</Height>
+			<Top>180</Top>
+			<Left>99</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Seed</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextEntry>
+			<Key>txe0</Key>
+			<Width>230</Width>
+			<Height>60</Height>
+			<Top>110</Top>
+			<Left>100</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<SignalSpec>
+				<Description>{appSig_sapaWrite_SeedKey :sig150-index(0)}</Description>
+				<Equation>{appSig_sapaWrite_SeedKey :sig150-index(0)}</Equation>
+				<EvaluateAsText>True</EvaluateAsText>
+				<SetValueDescription>{appSig_sapaWrite_SeedKey :sig150-index(0)}</SetValueDescription>
+				<SetValueKey>{appSig_sapaWrite_SeedKey :sig150-index(0)}</SetValueKey>
+			</SignalSpec>
+			<setvalue>A116354143380001</setvalue>
+		</TextEntry>
+		<TextEntry>
+			<Key>txe2</Key>
+			<Width>230</Width>
+			<Height>60</Height>
+			<Top>210</Top>
+			<Left>100</Left>
+			<BackColor>16777215</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<SignalSpec>
+				<Description>{appSig_sapaWrite_Seed :sig152-index(0)}</Description>
+				<Equation>{appSig_sapaWrite_Seed :sig152-index(0)}</Equation>
+				<EvaluateAsText>True</EvaluateAsText>
+				<SetValueDescription>{appSig_sapaWrite_Seed :sig152-index(0)}</SetValueDescription>
+				<SetValueKey>{appSig_sapaWrite_Seed :sig152-index(0)}</SetValueKey>
+			</SignalSpec>
+			<setvalue>26211289</setvalue>
+		</TextEntry>
+		<FblockButton>
+			<Key>fbb0</Key>
+			<Width>99</Width>
+			<Height>40</Height>
+			<Top>123</Top>
+			<Left>385</Left>
+			<BackColor>12632256</BackColor>
+			<DataKey>tst77</DataKey>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Write</OnText>
+			<OffText>Write</OffText>
+			<Value>1</Value>
+		</FblockButton>
+		<TextDisplay>
+			<Key>txt49</Key>
+			<Width>488</Width>
+			<Height>321</Height>
+			<Top>49</Top>
+			<Left>542</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>4</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>SAPA Read</Caption>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt50</Key>
+			<Width>108</Width>
+			<Height>25</Height>
+			<Top>180</Top>
+			<Left>580</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>Seed Value</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+		</TextDisplay>
+		<TextDisplay>
+			<Key>txt51</Key>
+			<Width>230</Width>
+			<Height>60</Height>
+			<Top>210</Top>
+			<Left>580</Left>
+			<BackColor>11194069</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>6</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption>A117082143380050</Caption>
+			<Alignment>0</Alignment>
+			<ShowCaption>1</ShowCaption>
+			<SignalSpec>
+				<Description>appSig_sapaRead_Seed</Description>
+				<Equation>{appSig_sapaRead_Seed :sig154-index(0)}</Equation>
+				<EvaluateAsText>True</EvaluateAsText>
+			</SignalSpec>
+		</TextDisplay>
+		<LED>
+			<Key>led15</Key>
+			<Width>54</Width>
+			<Height>40</Height>
+			<Top>210</Top>
+			<Left>860</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<Caption></Caption>
+			<ShowCaption>0</ShowCaption>
+			<LEDOnColor>65280</LEDOnColor>
+			<LEDOffColor>255</LEDOffColor>
+			<SignalSpec>
+				<Description>appSig_sapaReadSteps_isPassed</Description>
+				<Equation>{appSig_sapaReadSteps_isPassed :sig156-index(0)}</Equation>
+			</SignalSpec>
+		</LED>
+		<FblockButton>
+			<Key>fbb3</Key>
+			<Width>99</Width>
+			<Height>40</Height>
+			<Top>173</Top>
+			<Left>385</Left>
+			<BackColor>12632256</BackColor>
+			<DataKey>tst33</DataKey>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Save</OnText>
+			<OffText>Save</OffText>
+			<Value>1</Value>
+		</FblockButton>
+		<OnOffButton>
+			<Key>ofb0</Key>
+			<Width>99</Width>
+			<Height>40</Height>
+			<Top>73</Top>
+			<Left>385</Left>
+			<BackColor>12632256</BackColor>
+			<Transparent>0</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Unlock</OnText>
+			<OffText>Lock</OffText>
+			<OnOffType>1</OnOffType>
+			<Value>1</Value>
+			<SignalSpec>
+				<Description>{appSig_sapaWrite_lock :sig157-index(0)}</Description>
+				<Equation>{appSig_sapaWrite_lock :sig157-index(0)}</Equation>
+				<SetValueDescription>{appSig_sapaWrite_lock :sig157-index(0)}</SetValueDescription>
+				<SetValueKey>{appSig_sapaWrite_lock :sig157-index(0)}</SetValueKey>
+			</SignalSpec>
+		</OnOffButton>
+		<FblockButton>
+			<Key>fbb1</Key>
+			<Width>99</Width>
+			<Height>40</Height>
+			<Top>73</Top>
+			<Left>921</Left>
+			<BackColor>8421631</BackColor>
+			<DataKey>tst76</DataKey>
+			<Transparent>1</Transparent>
+			<BorderStyle>0</BorderStyle>
+			<FontSize>10</FontSize>
+			<FontName>Consolas</FontName>
+			<ShowCaption>0</ShowCaption>
+			<OnText>Read</OnText>
+			<OffText>Read</OffText>
+			<Value>1</Value>
+		</FblockButton>
+	</Dialog>
 </Dialogs>
 <J1939AddressManager>
 	<ClaimAtStartup>1</ClaimAtStartup>
@@ -28310,8 +29698,8 @@
 		<Description>Desktop 1</Description>
 		<Key>0</Key>
 		<ICONIndex>51</ICONIndex>
-		<LayoutString>QVFET0NLCAAAAAABAAAABAAAAGcFAADsAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAYAAAAAAACA1Hq4Ru70SIM1fakJBnUaAcsFAAADAAAAV8KLDLae80qZv5fVMTlbaAkAAABVAAAARgUAAMwCAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQkAAABuAAAARgUAAMwCAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADCQAAAG4AAABGBQAAzAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAECQAAAG4AAABGBQAAzAIAAAAAAAAAAAAAAAgAAABUeCBQYW5lbAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowAAAM0AAADfAwAAyQEAAAwBAABQAQAAWAIAACwBAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoAAAAAAAAAGWIXlh1autLtl7HwvSvAAgJAAAAbgAAAEYFAADMAgAAAAAAAAAAAAAAEwAAAEFwcGxpY2F0aW9uIFNpZ25hbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAAAAAABliF5YdWrrS7Zex8L0rwAJCQAAAG4AAABGBQAAzAIAAAAAAAAAAAAAAAgAAABOZXR3b3JrcwAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAClAAAAAAAAAGWIXlh1autLtl7HwvSvAAoJAAAAbgAAAEYFAADMAgAAAAAAAAAAAAAAEAAAAEMgQ29kZSBJbnRlcmZhY2UAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwAFCQAAAG4AAABGBQAAzAIAAAAAAAAAAAAAAA8AAABGdW5jdGlvbiBCbG9ja3MAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAAAAQAAvAAAABkDAADIAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApQAAAAAAAABliF5YdWrrS7Zex8L0rwACCQAAAG4AAABGBQAAzAIAAAAAAAAAAAAAABAAAABHcmFwaGljYWwgUGFuZWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYgAAAD0FAABeAgAAvAEAAHwAAAA3AwAAswEAAAAAAAAAAAFliF5YdWrrS7Zex8L0rwAFAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</LayoutString>
-		<LayoutStringChecksum>-730778108</LayoutStringChecksum>
+		<LayoutString>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</LayoutString>
+		<LayoutStringChecksum>1156527582</LayoutStringChecksum>
 		<DesktopForms>
 			<DesktopForm>
 				<FormKey>1</FormKey>
@@ -28326,17 +29714,17 @@
 			<DesktopForm>
 				<FormKey>4</FormKey>
 				<Key>2</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPFNpZ25hbHNQYW5lbFdpZHRoPjUzMTwvU2lnbmFsc1BhbmVsV2lkdGg+DQo8U2VsZWN0ZWRQcm90b2NvbD4xPC9TZWxlY3RlZFByb3RvY29sPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPFNpZ25hbHNQYW5lbFdpZHRoPjUyNzwvU2lnbmFsc1BhbmVsV2lkdGg+DQo8U2VsZWN0ZWRQcm90b2NvbD4xPC9TZWxlY3RlZFByb3RvY29sPg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>5</FormKey>
 				<Key>3</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0NjI8L0N1cnJlbnRGQmxvY2tLZXk+DQo8Q3VycmVudFNwbGl0U2l6ZT4zMDg8L0N1cnJlbnRTcGxpdFNpemU+DQo8U2NyaXB0R3JpZD4NCgk8TnVtT2ZDb2xzPjY8L051bU9mQ29scz4NCgk8TnVtT2ZSb3dzPjM5PC9OdW1PZlJvd3M+DQoJPENvbFNlbD40PC9Db2xTZWw+DQoJPFJvd1NlbD4xPC9Sb3dTZWw+DQoJPENPTD4NCgkJPENvbEluZGV4PjA8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MTwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjI8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MzwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NDwvQ29sSW5kZXg+DQoJCTxXaWR0aD45MTIwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NTwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCjwvU2NyaXB0R3JpZD4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0Nzc8L0N1cnJlbnRGQmxvY2tLZXk+DQo8Q3VycmVudFNwbGl0U2l6ZT4zMDg8L0N1cnJlbnRTcGxpdFNpemU+DQo8U2NyaXB0R3JpZD4NCgk8TnVtT2ZDb2xzPjY8L051bU9mQ29scz4NCgk8TnVtT2ZSb3dzPjM5PC9OdW1PZlJvd3M+DQoJPENvbFNlbD40PC9Db2xTZWw+DQoJPFJvd1NlbD42PC9Sb3dTZWw+DQoJPENPTD4NCgkJPENvbEluZGV4PjA8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MTwvQ29sSW5kZXg+DQoJCTxXaWR0aD42MDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjI8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+MzwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NDwvQ29sSW5kZXg+DQoJCTxXaWR0aD45MTIwPC9XaWR0aD4NCgk8L0NPTD4NCgk8Q09MPg0KCQk8Q29sSW5kZXg+NTwvQ29sSW5kZXg+DQoJCTxXaWR0aD4zMDAwPC9XaWR0aD4NCgk8L0NPTD4NCjwvU2NyaXB0R3JpZD4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>2</FormKey>
 				<Key>4</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRWaWV3PjU8L0N1cnJlbnRWaWV3Pg0KPExvY2tDb250cm9scz5UcnVlPC9Mb2NrQ29udHJvbHM+DQo8U2hvd1Rvb2xiYXI+RmFsc2U8L1Nob3dUb29sYmFyPg0KPFNob3dQcm9wZXJ0aWVzPkZhbHNlPC9TaG93UHJvcGVydGllcz4NCjwvRGVza3RvcERhdGE+DQo=</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRWaWV3PjY8L0N1cnJlbnRWaWV3Pg0KPC9EZXNrdG9wRGF0YT4NCg==</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>8</FormKey>
@@ -28372,7 +29760,7 @@
 	<ICSForm>
 		<FormType>1</FormType>
 		<Key>3</Key>
-		<WindowStyle>0</WindowStyle>
+		<WindowStyle>5</WindowStyle>
 		<Caption>Messages Editor</Caption>
 	</ICSForm>
 	<ICSForm>
