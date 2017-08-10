@@ -621,6 +621,8 @@ void SpyAppSig_AS_appSig_mpiRead_bytesVPPS(double dValue);
 void SpyAppSig_AS_appSig_mpiWrite_BMPNAC(double dValue);
 void SpyAppSig_AS_appSig_mpiWrite_EMPNAC(double dValue);
 void SpyAppSig_AS_appSig_mpiWrite_MTC(double dValue);
+void SpyAppSig_AS_appSig_sapaWrite_bytesSeedKey(double dValue);
+void SpyAppSig_AS_appSig_sapaWrite_bytesSeed(double dValue);
 
 // Application Signals
 extern int AS_appSig_C_targetValueTypeMin_Index; // sig22
@@ -1159,13 +1161,17 @@ extern int AS_appSig_mpiRead_MTC_Index; // sig123
 #define AS_appSig_mpiRead_MTC_GetTextLen(szValue, len) AS_GetText(AS_appSig_mpiRead_MTC_Index, szValue, len)
 #define AS_appSig_mpiRead_MTC_SetTextLen(szValue, len) AS_SetText(AS_appSig_mpiRead_MTC_Index, szValue, len)
 
-extern int AS_appSig_C_mpiSubStepsDelay_Index; // sig124
-#define AS_appSig_C_mpiSubStepsDelay_Get() AS_Get(AS_appSig_C_mpiSubStepsDelay_Index)
-#define AS_appSig_C_mpiSubStepsDelay_Set(dValue) AS_Set(AS_appSig_C_mpiSubStepsDelay_Index, dValue)
+extern int AS_appSig_C_mpiWriteSubStepsDelay_Index; // sig124
+#define AS_appSig_C_mpiWriteSubStepsDelay_Get() AS_Get(AS_appSig_C_mpiWriteSubStepsDelay_Index)
+#define AS_appSig_C_mpiWriteSubStepsDelay_Set(dValue) AS_Set(AS_appSig_C_mpiWriteSubStepsDelay_Index, dValue)
 
-extern int AS_appSig_C_mpiStepsDelay_Index; // sig125
-#define AS_appSig_C_mpiStepsDelay_Get() AS_Get(AS_appSig_C_mpiStepsDelay_Index)
-#define AS_appSig_C_mpiStepsDelay_Set(dValue) AS_Set(AS_appSig_C_mpiStepsDelay_Index, dValue)
+extern int AS_appSig_C_mpiWriteSubStepDelay_MTC_Index; // sig148
+#define AS_appSig_C_mpiWriteSubStepDelay_MTC_Get() AS_Get(AS_appSig_C_mpiWriteSubStepDelay_MTC_Index)
+#define AS_appSig_C_mpiWriteSubStepDelay_MTC_Set(dValue) AS_Set(AS_appSig_C_mpiWriteSubStepDelay_MTC_Index, dValue)
+
+extern int AS_appSig_C_mpiWriteStepsDelay_Index; // sig125
+#define AS_appSig_C_mpiWriteStepsDelay_Get() AS_Get(AS_appSig_C_mpiWriteStepsDelay_Index)
+#define AS_appSig_C_mpiWriteStepsDelay_Set(dValue) AS_Set(AS_appSig_C_mpiWriteStepsDelay_Index, dValue)
 
 extern int AS_appSig_mpiRead_bytesECUID_Index; // sig126
 #define AS_appSig_mpiRead_bytesECUID_Get() AS_Get(AS_appSig_mpiRead_bytesECUID_Index)
@@ -1337,6 +1343,162 @@ extern int AS_appSig_mpiWrite_Model_Index; // sig144
 #define AS_appSig_mpiWrite_Model_Get() AS_Get(AS_appSig_mpiWrite_Model_Index)
 #define AS_appSig_mpiWrite_Model_Set(dValue) AS_Set(AS_appSig_mpiWrite_Model_Index, dValue)
 
+extern int AS_appSig_mpiWriteState_Index; // sig145
+#define AS_appSig_mpiWriteState_Get() AS_Get(AS_appSig_mpiWriteState_Index)
+#define AS_appSig_mpiWriteState_Set(dValue) AS_Set(AS_appSig_mpiWriteState_Index, dValue)
+#define AS_appSig_mpiWriteState_GetTextW(szValue) AS_GetTextW(AS_appSig_mpiWriteState_Index, szValue)
+#define AS_appSig_mpiWriteState_SetTextW(szValue) CM_GetSetValue(g_uiHandle, CM_GETSET_SET_APP_SIGNAL_TEXT, AS_appSig_mpiWriteState_Index, szValue)
+#define AS_appSig_mpiWriteState_GetText(szValue) AS_GetText(AS_appSig_mpiWriteState_Index, szValue, -1)
+#define AS_appSig_mpiWriteState_SetText(szValue) AS_SetText(AS_appSig_mpiWriteState_Index, szValue, -1)
+#define AS_appSig_mpiWriteState_GetTextLen(szValue, len) AS_GetText(AS_appSig_mpiWriteState_Index, szValue, len)
+#define AS_appSig_mpiWriteState_SetTextLen(szValue, len) AS_SetText(AS_appSig_mpiWriteState_Index, szValue, len)
+
+extern int AS_appSig_C_mpiReadStepsDelay_Index; // sig146
+#define AS_appSig_C_mpiReadStepsDelay_Get() AS_Get(AS_appSig_C_mpiReadStepsDelay_Index)
+#define AS_appSig_C_mpiReadStepsDelay_Set(dValue) AS_Set(AS_appSig_C_mpiReadStepsDelay_Index, dValue)
+
+extern int AS_appSig_C_mpiReadSubStepsDelay_Index; // sig147
+#define AS_appSig_C_mpiReadSubStepsDelay_Get() AS_Get(AS_appSig_C_mpiReadSubStepsDelay_Index)
+#define AS_appSig_C_mpiReadSubStepsDelay_Set(dValue) AS_Set(AS_appSig_C_mpiReadSubStepsDelay_Index, dValue)
+
+extern int AS_appSig_sapaWriteSteps_isPassed_Index; // sig167
+#define AS_appSig_sapaWriteSteps_isPassed_Get() AS_Get(AS_appSig_sapaWriteSteps_isPassed_Index)
+#define AS_appSig_sapaWriteSteps_isPassed_Set(dValue) AS_Set(AS_appSig_sapaWriteSteps_isPassed_Index, dValue)
+#define AS_appSig_sapaWriteSteps_isPassed_GetAt(offset) AS_GetAt(AS_appSig_sapaWriteSteps_isPassed_Index, offset)
+#define AS_appSig_sapaWriteSteps_isPassed_SetAt(offset, dValue) AS_SetAt(AS_appSig_sapaWriteSteps_isPassed_Index, offset, dValue)
+#define AS_appSig_sapaWriteSteps_isPassed_GetSize() AS_GetAt(AS_appSig_sapaWriteSteps_isPassed_Index, -1)
+#define AS_appSig_sapaWriteSteps_isPassed_SetSize(dValue) AS_SetAt(AS_appSig_sapaWriteSteps_isPassed_Index, -1, dValue)
+#define AS_appSig_sapaWriteSteps_isPassed_GetText(szValue) AS_GetText(AS_appSig_sapaWriteSteps_isPassed_Index, szValue, -1)
+#define AS_appSig_sapaWriteSteps_isPassed_SetText(szValue) AS_SetText(AS_appSig_sapaWriteSteps_isPassed_Index, szValue, -1)
+#define AS_appSig_sapaWriteSteps_isPassed_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaWriteSteps_isPassed_Index, szValue, len)
+#define AS_appSig_sapaWriteSteps_isPassed_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaWriteSteps_isPassed_Index, szValue, len)
+
+extern int AS_appSig_sapaWrite_SeedKey_Index; // sig150
+#define AS_appSig_sapaWrite_SeedKey_Get() AS_Get(AS_appSig_sapaWrite_SeedKey_Index)
+#define AS_appSig_sapaWrite_SeedKey_Set(dValue) AS_Set(AS_appSig_sapaWrite_SeedKey_Index, dValue)
+#define AS_appSig_sapaWrite_SeedKey_GetTextW(szValue) AS_GetTextW(AS_appSig_sapaWrite_SeedKey_Index, szValue)
+#define AS_appSig_sapaWrite_SeedKey_SetTextW(szValue) CM_GetSetValue(g_uiHandle, CM_GETSET_SET_APP_SIGNAL_TEXT, AS_appSig_sapaWrite_SeedKey_Index, szValue)
+#define AS_appSig_sapaWrite_SeedKey_GetText(szValue) AS_GetText(AS_appSig_sapaWrite_SeedKey_Index, szValue, -1)
+#define AS_appSig_sapaWrite_SeedKey_SetText(szValue) AS_SetText(AS_appSig_sapaWrite_SeedKey_Index, szValue, -1)
+#define AS_appSig_sapaWrite_SeedKey_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaWrite_SeedKey_Index, szValue, len)
+#define AS_appSig_sapaWrite_SeedKey_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaWrite_SeedKey_Index, szValue, len)
+
+extern int AS_appSig_sapaWrite_bytesSeedKey_Index; // sig151
+#define AS_appSig_sapaWrite_bytesSeedKey_Get() AS_Get(AS_appSig_sapaWrite_bytesSeedKey_Index)
+#define AS_appSig_sapaWrite_bytesSeedKey_Set(dValue) AS_Set(AS_appSig_sapaWrite_bytesSeedKey_Index, dValue)
+#define AS_appSig_sapaWrite_bytesSeedKey_GetAt(offset) AS_GetAt(AS_appSig_sapaWrite_bytesSeedKey_Index, offset)
+#define AS_appSig_sapaWrite_bytesSeedKey_SetAt(offset, dValue) AS_SetAt(AS_appSig_sapaWrite_bytesSeedKey_Index, offset, dValue)
+#define AS_appSig_sapaWrite_bytesSeedKey_GetSize() AS_GetAt(AS_appSig_sapaWrite_bytesSeedKey_Index, -1)
+#define AS_appSig_sapaWrite_bytesSeedKey_SetSize(dValue) AS_SetAt(AS_appSig_sapaWrite_bytesSeedKey_Index, -1, dValue)
+#define AS_appSig_sapaWrite_bytesSeedKey_GetText(szValue) AS_GetText(AS_appSig_sapaWrite_bytesSeedKey_Index, szValue, -1)
+#define AS_appSig_sapaWrite_bytesSeedKey_SetText(szValue) AS_SetText(AS_appSig_sapaWrite_bytesSeedKey_Index, szValue, -1)
+#define AS_appSig_sapaWrite_bytesSeedKey_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaWrite_bytesSeedKey_Index, szValue, len)
+#define AS_appSig_sapaWrite_bytesSeedKey_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaWrite_bytesSeedKey_Index, szValue, len)
+
+extern int AS_appSig_sapaWrite_Seed_Index; // sig152
+#define AS_appSig_sapaWrite_Seed_Get() AS_Get(AS_appSig_sapaWrite_Seed_Index)
+#define AS_appSig_sapaWrite_Seed_Set(dValue) AS_Set(AS_appSig_sapaWrite_Seed_Index, dValue)
+#define AS_appSig_sapaWrite_Seed_GetTextW(szValue) AS_GetTextW(AS_appSig_sapaWrite_Seed_Index, szValue)
+#define AS_appSig_sapaWrite_Seed_SetTextW(szValue) CM_GetSetValue(g_uiHandle, CM_GETSET_SET_APP_SIGNAL_TEXT, AS_appSig_sapaWrite_Seed_Index, szValue)
+#define AS_appSig_sapaWrite_Seed_GetText(szValue) AS_GetText(AS_appSig_sapaWrite_Seed_Index, szValue, -1)
+#define AS_appSig_sapaWrite_Seed_SetText(szValue) AS_SetText(AS_appSig_sapaWrite_Seed_Index, szValue, -1)
+#define AS_appSig_sapaWrite_Seed_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaWrite_Seed_Index, szValue, len)
+#define AS_appSig_sapaWrite_Seed_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaWrite_Seed_Index, szValue, len)
+
+extern int AS_appSig_sapaWrite_bytesSeed_Index; // sig153
+#define AS_appSig_sapaWrite_bytesSeed_Get() AS_Get(AS_appSig_sapaWrite_bytesSeed_Index)
+#define AS_appSig_sapaWrite_bytesSeed_Set(dValue) AS_Set(AS_appSig_sapaWrite_bytesSeed_Index, dValue)
+#define AS_appSig_sapaWrite_bytesSeed_GetAt(offset) AS_GetAt(AS_appSig_sapaWrite_bytesSeed_Index, offset)
+#define AS_appSig_sapaWrite_bytesSeed_SetAt(offset, dValue) AS_SetAt(AS_appSig_sapaWrite_bytesSeed_Index, offset, dValue)
+#define AS_appSig_sapaWrite_bytesSeed_GetSize() AS_GetAt(AS_appSig_sapaWrite_bytesSeed_Index, -1)
+#define AS_appSig_sapaWrite_bytesSeed_SetSize(dValue) AS_SetAt(AS_appSig_sapaWrite_bytesSeed_Index, -1, dValue)
+#define AS_appSig_sapaWrite_bytesSeed_GetText(szValue) AS_GetText(AS_appSig_sapaWrite_bytesSeed_Index, szValue, -1)
+#define AS_appSig_sapaWrite_bytesSeed_SetText(szValue) AS_SetText(AS_appSig_sapaWrite_bytesSeed_Index, szValue, -1)
+#define AS_appSig_sapaWrite_bytesSeed_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaWrite_bytesSeed_Index, szValue, len)
+#define AS_appSig_sapaWrite_bytesSeed_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaWrite_bytesSeed_Index, szValue, len)
+
+extern int AS_appSig_sapaRead_Seed_Index; // sig154
+#define AS_appSig_sapaRead_Seed_Get() AS_Get(AS_appSig_sapaRead_Seed_Index)
+#define AS_appSig_sapaRead_Seed_Set(dValue) AS_Set(AS_appSig_sapaRead_Seed_Index, dValue)
+#define AS_appSig_sapaRead_Seed_GetTextW(szValue) AS_GetTextW(AS_appSig_sapaRead_Seed_Index, szValue)
+#define AS_appSig_sapaRead_Seed_SetTextW(szValue) CM_GetSetValue(g_uiHandle, CM_GETSET_SET_APP_SIGNAL_TEXT, AS_appSig_sapaRead_Seed_Index, szValue)
+#define AS_appSig_sapaRead_Seed_GetText(szValue) AS_GetText(AS_appSig_sapaRead_Seed_Index, szValue, -1)
+#define AS_appSig_sapaRead_Seed_SetText(szValue) AS_SetText(AS_appSig_sapaRead_Seed_Index, szValue, -1)
+#define AS_appSig_sapaRead_Seed_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaRead_Seed_Index, szValue, len)
+#define AS_appSig_sapaRead_Seed_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaRead_Seed_Index, szValue, len)
+
+extern int AS_appSig_sapaRead_bytesSeed_Index; // sig155
+#define AS_appSig_sapaRead_bytesSeed_Get() AS_Get(AS_appSig_sapaRead_bytesSeed_Index)
+#define AS_appSig_sapaRead_bytesSeed_Set(dValue) AS_Set(AS_appSig_sapaRead_bytesSeed_Index, dValue)
+#define AS_appSig_sapaRead_bytesSeed_GetAt(offset) AS_GetAt(AS_appSig_sapaRead_bytesSeed_Index, offset)
+#define AS_appSig_sapaRead_bytesSeed_SetAt(offset, dValue) AS_SetAt(AS_appSig_sapaRead_bytesSeed_Index, offset, dValue)
+#define AS_appSig_sapaRead_bytesSeed_GetSize() AS_GetAt(AS_appSig_sapaRead_bytesSeed_Index, -1)
+#define AS_appSig_sapaRead_bytesSeed_SetSize(dValue) AS_SetAt(AS_appSig_sapaRead_bytesSeed_Index, -1, dValue)
+#define AS_appSig_sapaRead_bytesSeed_GetText(szValue) AS_GetText(AS_appSig_sapaRead_bytesSeed_Index, szValue, -1)
+#define AS_appSig_sapaRead_bytesSeed_SetText(szValue) AS_SetText(AS_appSig_sapaRead_bytesSeed_Index, szValue, -1)
+#define AS_appSig_sapaRead_bytesSeed_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaRead_bytesSeed_Index, szValue, len)
+#define AS_appSig_sapaRead_bytesSeed_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaRead_bytesSeed_Index, szValue, len)
+
+extern int AS_appSig_sapaReadSteps_isPassed_Index; // sig156
+#define AS_appSig_sapaReadSteps_isPassed_Get() AS_Get(AS_appSig_sapaReadSteps_isPassed_Index)
+#define AS_appSig_sapaReadSteps_isPassed_Set(dValue) AS_Set(AS_appSig_sapaReadSteps_isPassed_Index, dValue)
+#define AS_appSig_sapaReadSteps_isPassed_GetAt(offset) AS_GetAt(AS_appSig_sapaReadSteps_isPassed_Index, offset)
+#define AS_appSig_sapaReadSteps_isPassed_SetAt(offset, dValue) AS_SetAt(AS_appSig_sapaReadSteps_isPassed_Index, offset, dValue)
+#define AS_appSig_sapaReadSteps_isPassed_GetSize() AS_GetAt(AS_appSig_sapaReadSteps_isPassed_Index, -1)
+#define AS_appSig_sapaReadSteps_isPassed_SetSize(dValue) AS_SetAt(AS_appSig_sapaReadSteps_isPassed_Index, -1, dValue)
+#define AS_appSig_sapaReadSteps_isPassed_GetText(szValue) AS_GetText(AS_appSig_sapaReadSteps_isPassed_Index, szValue, -1)
+#define AS_appSig_sapaReadSteps_isPassed_SetText(szValue) AS_SetText(AS_appSig_sapaReadSteps_isPassed_Index, szValue, -1)
+#define AS_appSig_sapaReadSteps_isPassed_GetTextLen(szValue, len) AS_GetText(AS_appSig_sapaReadSteps_isPassed_Index, szValue, len)
+#define AS_appSig_sapaReadSteps_isPassed_SetTextLen(szValue, len) AS_SetText(AS_appSig_sapaReadSteps_isPassed_Index, szValue, len)
+
+extern int AS_appSig_sapaWrite_lock_Index; // sig157
+#define AS_appSig_sapaWrite_lock_Get() AS_Get(AS_appSig_sapaWrite_lock_Index)
+#define AS_appSig_sapaWrite_lock_Set(dValue) AS_Set(AS_appSig_sapaWrite_lock_Index, dValue)
+
+extern int AS_appSig_C_sapaWriteStepsDelay_Index; // sig169
+#define AS_appSig_C_sapaWriteStepsDelay_Get() AS_Get(AS_appSig_C_sapaWriteStepsDelay_Index)
+#define AS_appSig_C_sapaWriteStepsDelay_Set(dValue) AS_Set(AS_appSig_C_sapaWriteStepsDelay_Index, dValue)
+
+extern int AS_appSig_C_sapaWriteSubStepDelay_SeedKey_Index; // sig168
+#define AS_appSig_C_sapaWriteSubStepDelay_SeedKey_Get() AS_Get(AS_appSig_C_sapaWriteSubStepDelay_SeedKey_Index)
+#define AS_appSig_C_sapaWriteSubStepDelay_SeedKey_Set(dValue) AS_Set(AS_appSig_C_sapaWriteSubStepDelay_SeedKey_Index, dValue)
+
+extern int AS_appSig_C_step39_targetRawValueMin_Index; // sig158
+#define AS_appSig_C_step39_targetRawValueMin_Get() AS_Get(AS_appSig_C_step39_targetRawValueMin_Index)
+#define AS_appSig_C_step39_targetRawValueMin_Set(dValue) AS_Set(AS_appSig_C_step39_targetRawValueMin_Index, dValue)
+
+extern int AS_appSig_C_step39_targetRawValueNormal_Index; // sig159
+#define AS_appSig_C_step39_targetRawValueNormal_Get() AS_Get(AS_appSig_C_step39_targetRawValueNormal_Index)
+#define AS_appSig_C_step39_targetRawValueNormal_Set(dValue) AS_Set(AS_appSig_C_step39_targetRawValueNormal_Index, dValue)
+
+extern int AS_appSig_C_step39_targetRawValueMax_Index; // sig160
+#define AS_appSig_C_step39_targetRawValueMax_Get() AS_Get(AS_appSig_C_step39_targetRawValueMax_Index)
+#define AS_appSig_C_step39_targetRawValueMax_Set(dValue) AS_Set(AS_appSig_C_step39_targetRawValueMax_Index, dValue)
+
+extern int AS_appSig_C_step40_targetRawValueMin_Index; // sig161
+#define AS_appSig_C_step40_targetRawValueMin_Get() AS_Get(AS_appSig_C_step40_targetRawValueMin_Index)
+#define AS_appSig_C_step40_targetRawValueMin_Set(dValue) AS_Set(AS_appSig_C_step40_targetRawValueMin_Index, dValue)
+
+extern int AS_appSig_C_step40_targetRawValueNormal_Index; // sig162
+#define AS_appSig_C_step40_targetRawValueNormal_Get() AS_Get(AS_appSig_C_step40_targetRawValueNormal_Index)
+#define AS_appSig_C_step40_targetRawValueNormal_Set(dValue) AS_Set(AS_appSig_C_step40_targetRawValueNormal_Index, dValue)
+
+extern int AS_appSig_C_step40_targetRawValueMax_Index; // sig163
+#define AS_appSig_C_step40_targetRawValueMax_Get() AS_Get(AS_appSig_C_step40_targetRawValueMax_Index)
+#define AS_appSig_C_step40_targetRawValueMax_Set(dValue) AS_Set(AS_appSig_C_step40_targetRawValueMax_Index, dValue)
+
+extern int AS_appSig_step39_currPhyValue_Index; // sig164
+#define AS_appSig_step39_currPhyValue_Get() AS_Get(AS_appSig_step39_currPhyValue_Index)
+#define AS_appSig_step39_currPhyValue_Set(dValue) AS_Set(AS_appSig_step39_currPhyValue_Index, dValue)
+
+extern int AS_appSig_step40_currPhyValue_Index; // sig165
+#define AS_appSig_step40_currPhyValue_Get() AS_Get(AS_appSig_step40_currPhyValue_Index)
+#define AS_appSig_step40_currPhyValue_Set(dValue) AS_Set(AS_appSig_step40_currPhyValue_Index, dValue)
+
+extern int AS_appSig_step41_currPhyValue_Index; // sig166
+#define AS_appSig_step41_currPhyValue_Get() AS_Get(AS_appSig_step41_currPhyValue_Index)
+#define AS_appSig_step41_currPhyValue_Set(dValue) AS_Set(AS_appSig_step41_currPhyValue_Index, dValue)
+
 extern int DG_$22_Read_Data_By_PID_Index;
 void DG_$22_Read_Data_By_PID_Start();
 void DG_$22_Read_Data_By_PID_Stop();
@@ -1389,6 +1551,22 @@ void FB_fsMain_saveSettings_Save();
 double FB_fsMain_saveSettings_IsRunning();
 double FB_fsMain_saveSettings_IsTriggered();
 double FB_fsMain_saveSettings_NumCollected();
+extern int FB_fsMain_subPeriodicMsgOn_Index;
+void FB_fsMain_subPeriodicMsgOn_Start();
+void FB_fsMain_subPeriodicMsgOn_Stop();
+void FB_fsMain_subPeriodicMsgOn_Trigger();
+void FB_fsMain_subPeriodicMsgOn_Save();
+double FB_fsMain_subPeriodicMsgOn_IsRunning();
+double FB_fsMain_subPeriodicMsgOn_IsTriggered();
+double FB_fsMain_subPeriodicMsgOn_NumCollected();
+extern int FB_fsMain_subPeriodicMsgOff_Index;
+void FB_fsMain_subPeriodicMsgOff_Start();
+void FB_fsMain_subPeriodicMsgOff_Stop();
+void FB_fsMain_subPeriodicMsgOff_Trigger();
+void FB_fsMain_subPeriodicMsgOff_Save();
+double FB_fsMain_subPeriodicMsgOff_IsRunning();
+double FB_fsMain_subPeriodicMsgOff_IsTriggered();
+double FB_fsMain_subPeriodicMsgOff_NumCollected();
 extern int FB_fs_resetCurrValuesAutoTest_Index;
 void FB_fs_resetCurrValuesAutoTest_Start();
 void FB_fs_resetCurrValuesAutoTest_Stop();
@@ -1469,6 +1647,14 @@ void FB_fs_step10_Execute_Save();
 double FB_fs_step10_Execute_IsRunning();
 double FB_fs_step10_Execute_IsTriggered();
 double FB_fs_step10_Execute_NumCollected();
+extern int FB_fs_step_10_1_Execute_Index;
+void FB_fs_step_10_1_Execute_Start();
+void FB_fs_step_10_1_Execute_Stop();
+void FB_fs_step_10_1_Execute_Trigger();
+void FB_fs_step_10_1_Execute_Save();
+double FB_fs_step_10_1_Execute_IsRunning();
+double FB_fs_step_10_1_Execute_IsTriggered();
+double FB_fs_step_10_1_Execute_NumCollected();
 extern int FB_fs_step15_sendOnce_Index;
 void FB_fs_step15_sendOnce_Start();
 void FB_fs_step15_sendOnce_Stop();
@@ -1661,6 +1847,30 @@ void FB_fs_step38_sendOnce_Save();
 double FB_fs_step38_sendOnce_IsRunning();
 double FB_fs_step38_sendOnce_IsTriggered();
 double FB_fs_step38_sendOnce_NumCollected();
+extern int FB_fs_step39_sendOnce_Index;
+void FB_fs_step39_sendOnce_Start();
+void FB_fs_step39_sendOnce_Stop();
+void FB_fs_step39_sendOnce_Trigger();
+void FB_fs_step39_sendOnce_Save();
+double FB_fs_step39_sendOnce_IsRunning();
+double FB_fs_step39_sendOnce_IsTriggered();
+double FB_fs_step39_sendOnce_NumCollected();
+extern int FB_fs_step40_sendOnce_Index;
+void FB_fs_step40_sendOnce_Start();
+void FB_fs_step40_sendOnce_Stop();
+void FB_fs_step40_sendOnce_Trigger();
+void FB_fs_step40_sendOnce_Save();
+double FB_fs_step40_sendOnce_IsRunning();
+double FB_fs_step40_sendOnce_IsTriggered();
+double FB_fs_step40_sendOnce_NumCollected();
+extern int FB_fs_step41_sendOnce_Index;
+void FB_fs_step41_sendOnce_Start();
+void FB_fs_step41_sendOnce_Stop();
+void FB_fs_step41_sendOnce_Trigger();
+void FB_fs_step41_sendOnce_Save();
+double FB_fs_step41_sendOnce_IsRunning();
+double FB_fs_step41_sendOnce_IsTriggered();
+double FB_fs_step41_sendOnce_NumCollected();
 extern int FB_fs_step343536_sendOnce_Index;
 void FB_fs_step343536_sendOnce_Start();
 void FB_fs_step343536_sendOnce_Stop();
@@ -1885,6 +2095,62 @@ void FB_mpiWrite_sub_stepModel_Save();
 double FB_mpiWrite_sub_stepModel_IsRunning();
 double FB_mpiWrite_sub_stepModel_IsTriggered();
 double FB_mpiWrite_sub_stepModel_NumCollected();
+extern int FB_sapa_mainWrite_Index;
+void FB_sapa_mainWrite_Start();
+void FB_sapa_mainWrite_Stop();
+void FB_sapa_mainWrite_Trigger();
+void FB_sapa_mainWrite_Save();
+double FB_sapa_mainWrite_IsRunning();
+double FB_sapa_mainWrite_IsTriggered();
+double FB_sapa_mainWrite_NumCollected();
+extern int FB_sapa_mainRead_Index;
+void FB_sapa_mainRead_Start();
+void FB_sapa_mainRead_Stop();
+void FB_sapa_mainRead_Trigger();
+void FB_sapa_mainRead_Save();
+double FB_sapa_mainRead_IsRunning();
+double FB_sapa_mainRead_IsTriggered();
+double FB_sapa_mainRead_NumCollected();
+extern int FB_sapaRead_resetValues_Index;
+void FB_sapaRead_resetValues_Start();
+void FB_sapaRead_resetValues_Stop();
+void FB_sapaRead_resetValues_Trigger();
+void FB_sapaRead_resetValues_Save();
+double FB_sapaRead_resetValues_IsRunning();
+double FB_sapaRead_resetValues_IsTriggered();
+double FB_sapaRead_resetValues_NumCollected();
+extern int FB_sapaWrite_sub_step1_Index;
+void FB_sapaWrite_sub_step1_Start();
+void FB_sapaWrite_sub_step1_Stop();
+void FB_sapaWrite_sub_step1_Trigger();
+void FB_sapaWrite_sub_step1_Save();
+double FB_sapaWrite_sub_step1_IsRunning();
+double FB_sapaWrite_sub_step1_IsTriggered();
+double FB_sapaWrite_sub_step1_NumCollected();
+extern int FB_sapaWrite_sub_step2_Index;
+void FB_sapaWrite_sub_step2_Start();
+void FB_sapaWrite_sub_step2_Stop();
+void FB_sapaWrite_sub_step2_Trigger();
+void FB_sapaWrite_sub_step2_Save();
+double FB_sapaWrite_sub_step2_IsRunning();
+double FB_sapaWrite_sub_step2_IsTriggered();
+double FB_sapaWrite_sub_step2_NumCollected();
+extern int FB_sapaRead_sub_step1_Index;
+void FB_sapaRead_sub_step1_Start();
+void FB_sapaRead_sub_step1_Stop();
+void FB_sapaRead_sub_step1_Trigger();
+void FB_sapaRead_sub_step1_Save();
+double FB_sapaRead_sub_step1_IsRunning();
+double FB_sapaRead_sub_step1_IsTriggered();
+double FB_sapaRead_sub_step1_NumCollected();
+extern int FB_sapaRead_sub_step2_Index;
+void FB_sapaRead_sub_step2_Start();
+void FB_sapaRead_sub_step2_Stop();
+void FB_sapaRead_sub_step2_Trigger();
+void FB_sapaRead_sub_step2_Save();
+double FB_sapaRead_sub_step2_IsRunning();
+double FB_sapaRead_sub_step2_IsTriggered();
+double FB_sapaRead_sub_step2_NumCollected();
 
 // Messages
 
@@ -3462,6 +3728,188 @@ int TX_mpiWrite_diagRequest_stepModel_1_HS_CAN_Transmit_raw(TX_mpiWrite_diagRequ
 int TX_mpiWrite_diagRequest_stepModel_1_HS_CAN_TransmitFast();
 #define TX_mpiWrite_diagRequest_stepModel_1_HS_CAN_ClearStats() \
     CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_mpiWrite_diagRequest_stepModel_1_HS_CAN_Index, 0)
+extern int TX_step7_1_message_1_122_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step7_1_message_1_122_HS_CAN;
+
+
+void TX_step7_1_message_1_122_HS_CAN_Init(TX_step7_1_message_1_122_HS_CAN * pMsg);
+int TX_step7_1_message_1_122_HS_CAN_Transmit(TX_step7_1_message_1_122_HS_CAN * pMsg);
+int TX_step7_1_message_1_122_HS_CAN_Transmit_raw(TX_step7_1_message_1_122_HS_CAN * pMsg);
+int TX_step7_1_message_1_122_HS_CAN_TransmitFast();
+#define TX_step7_1_message_1_122_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step7_1_message_1_122_HS_CAN_Index, 0)
+extern int TX_step7_1_message_2_4c1_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step7_1_message_2_4c1_HS_CAN;
+
+
+void TX_step7_1_message_2_4c1_HS_CAN_Init(TX_step7_1_message_2_4c1_HS_CAN * pMsg);
+int TX_step7_1_message_2_4c1_HS_CAN_Transmit(TX_step7_1_message_2_4c1_HS_CAN * pMsg);
+int TX_step7_1_message_2_4c1_HS_CAN_Transmit_raw(TX_step7_1_message_2_4c1_HS_CAN * pMsg);
+int TX_step7_1_message_2_4c1_HS_CAN_TransmitFast();
+#define TX_step7_1_message_2_4c1_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step7_1_message_2_4c1_HS_CAN_Index, 0)
+extern int TX_step7_1_message_3_190_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step7_1_message_3_190_HS_CAN;
+
+
+void TX_step7_1_message_3_190_HS_CAN_Init(TX_step7_1_message_3_190_HS_CAN * pMsg);
+int TX_step7_1_message_3_190_HS_CAN_Transmit(TX_step7_1_message_3_190_HS_CAN * pMsg);
+int TX_step7_1_message_3_190_HS_CAN_Transmit_raw(TX_step7_1_message_3_190_HS_CAN * pMsg);
+int TX_step7_1_message_3_190_HS_CAN_TransmitFast();
+#define TX_step7_1_message_3_190_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step7_1_message_3_190_HS_CAN_Index, 0)
+extern int TX_step7_1_message_4_371_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step7_1_message_4_371_HS_CAN;
+
+
+void TX_step7_1_message_4_371_HS_CAN_Init(TX_step7_1_message_4_371_HS_CAN * pMsg);
+int TX_step7_1_message_4_371_HS_CAN_Transmit(TX_step7_1_message_4_371_HS_CAN * pMsg);
+int TX_step7_1_message_4_371_HS_CAN_Transmit_raw(TX_step7_1_message_4_371_HS_CAN * pMsg);
+int TX_step7_1_message_4_371_HS_CAN_TransmitFast();
+#define TX_step7_1_message_4_371_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step7_1_message_4_371_HS_CAN_Index, 0)
+extern int TX_step7_1_message_5_3c5_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step7_1_message_5_3c5_HS_CAN;
+
+
+void TX_step7_1_message_5_3c5_HS_CAN_Init(TX_step7_1_message_5_3c5_HS_CAN * pMsg);
+int TX_step7_1_message_5_3c5_HS_CAN_Transmit(TX_step7_1_message_5_3c5_HS_CAN * pMsg);
+int TX_step7_1_message_5_3c5_HS_CAN_Transmit_raw(TX_step7_1_message_5_3c5_HS_CAN * pMsg);
+int TX_step7_1_message_5_3c5_HS_CAN_TransmitFast();
+#define TX_step7_1_message_5_3c5_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step7_1_message_5_3c5_HS_CAN_Index, 0)
+extern int TX_step39_diagRequest2_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step39_diagRequest2_HS_CAN;
+
+
+void TX_step39_diagRequest2_HS_CAN_Init(TX_step39_diagRequest2_HS_CAN * pMsg);
+int TX_step39_diagRequest2_HS_CAN_Transmit(TX_step39_diagRequest2_HS_CAN * pMsg);
+int TX_step39_diagRequest2_HS_CAN_Transmit_raw(TX_step39_diagRequest2_HS_CAN * pMsg);
+int TX_step39_diagRequest2_HS_CAN_TransmitFast();
+#define TX_step39_diagRequest2_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step39_diagRequest2_HS_CAN_Index, 0)
+extern int TX_step40_diagRequest2_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step40_diagRequest2_HS_CAN;
+
+
+void TX_step40_diagRequest2_HS_CAN_Init(TX_step40_diagRequest2_HS_CAN * pMsg);
+int TX_step40_diagRequest2_HS_CAN_Transmit(TX_step40_diagRequest2_HS_CAN * pMsg);
+int TX_step40_diagRequest2_HS_CAN_Transmit_raw(TX_step40_diagRequest2_HS_CAN * pMsg);
+int TX_step40_diagRequest2_HS_CAN_TransmitFast();
+#define TX_step40_diagRequest2_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step40_diagRequest2_HS_CAN_Index, 0)
+extern int TX_step41_diagRequest2_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_step41_diagRequest2_HS_CAN;
+
+
+void TX_step41_diagRequest2_HS_CAN_Init(TX_step41_diagRequest2_HS_CAN * pMsg);
+int TX_step41_diagRequest2_HS_CAN_Transmit(TX_step41_diagRequest2_HS_CAN * pMsg);
+int TX_step41_diagRequest2_HS_CAN_Transmit_raw(TX_step41_diagRequest2_HS_CAN * pMsg);
+int TX_step41_diagRequest2_HS_CAN_TransmitFast();
+#define TX_step41_diagRequest2_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step41_diagRequest2_HS_CAN_Index, 0)
+extern int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_sapaWrite_diagRequest_step2_1_HS_CAN;
+
+
+void TX_sapaWrite_diagRequest_step2_1_HS_CAN_Init(TX_sapaWrite_diagRequest_step2_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Transmit(TX_sapaWrite_diagRequest_step2_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_step2_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_TransmitFast();
+#define TX_sapaWrite_diagRequest_step2_1_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index, 0)
+extern int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_sapaWrite_diagRequest_constructive_1_HS_CAN;
+
+
+void TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Transmit(TX_sapaWrite_diagRequest_constructive_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_constructive_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_TransmitFast();
+#define TX_sapaWrite_diagRequest_constructive_1_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index, 0)
+extern int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_sapaWrite_diagRequest_constructive_2_HS_CAN;
+
+
+void TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_2_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Transmit(TX_sapaWrite_diagRequest_constructive_2_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_constructive_2_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_TransmitFast();
+#define TX_sapaWrite_diagRequest_constructive_2_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index, 0)
+extern int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_sapaWrite_diagRequest_constructive_3_HS_CAN;
+
+
+void TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_3_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Transmit(TX_sapaWrite_diagRequest_constructive_3_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_constructive_3_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_TransmitFast();
+#define TX_sapaWrite_diagRequest_constructive_3_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index, 0)
+extern int TX_sapaRead_diagRequest_step2_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_sapaRead_diagRequest_step2_HS_CAN;
+
+
+void TX_sapaRead_diagRequest_step2_HS_CAN_Init(TX_sapaRead_diagRequest_step2_HS_CAN * pMsg);
+int TX_sapaRead_diagRequest_step2_HS_CAN_Transmit(TX_sapaRead_diagRequest_step2_HS_CAN * pMsg);
+int TX_sapaRead_diagRequest_step2_HS_CAN_Transmit_raw(TX_sapaRead_diagRequest_step2_HS_CAN * pMsg);
+int TX_sapaRead_diagRequest_step2_HS_CAN_TransmitFast();
+#define TX_sapaRead_diagRequest_step2_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaRead_diagRequest_step2_HS_CAN_Index, 0)
 extern int MG_step8_14_Climate_Control_General_Status_HS_CAN_Index;
 typedef struct {
     GenericMessage MessageData; /// Message Data
@@ -3717,6 +4165,19 @@ int MG_step9_PCRM005_LIN2__neoVI_3G__Transmit(MG_step9_PCRM005_LIN2__neoVI_3G_ *
 int MG_step9_PCRM005_LIN2__neoVI_3G__Transmit_raw(MG_step9_PCRM005_LIN2__neoVI_3G_ * pMsg);
 #define MG_step9_PCRM005_LIN2__neoVI_3G__ClearStats() \
     CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, MG_step9_PCRM005_LIN2__neoVI_3G__Index, 0)
+extern int MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} MG_step10_1_PCRM006_1_LIN3__neoVI_3G_;
+
+
+void MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Init(MG_step10_1_PCRM006_1_LIN3__neoVI_3G_ * pMsg);
+int MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Transmit(MG_step10_1_PCRM006_1_LIN3__neoVI_3G_ * pMsg);
+int MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Transmit_raw(MG_step10_1_PCRM006_1_LIN3__neoVI_3G_ * pMsg);
+#define MG_step10_1_PCRM006_1_LIN3__neoVI_3G__ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Index, 0)
 extern int DB_Report_Message_neoVI_Index;
 typedef struct {
     GenericMessage MessageData; /// Message Data
@@ -4939,6 +5400,838 @@ int DB_Trigger_neoVI_UpdateBytesFromRawSignals(DB_Trigger_neoVI * pMsg);
     (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Trigger_neoVI_Index, 2, dPhysicalValue);
 #define DB_Trigger_neoVI_ClearStats() \
     CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Trigger_neoVI_Index, 0)
+extern int DB_Exterior_Lighting_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double AdvFrntLghtSysEnbld; /// Min: 0 Max: 1 Units: 
+    BYTE AdvFrntLghtSysEnbld_raw;
+    double AutLghtCtrl; /// Min: 0 Max: 1 Units: 
+    BYTE AutLghtCtrl_raw;
+    double AutoBmSlctAllwd; /// Min: 0 Max: 1 Units: 
+    BYTE AutoBmSlctAllwd_raw;
+    double AutoLtsActIO; /// Min: 0 Max: 1 Units: 
+    BYTE AutoLtsActIO_raw;
+    double AutoLtsInactIO; /// Min: 0 Max: 1 Units: 
+    BYTE AutoLtsInactIO_raw;
+    double BrkLtsAtv; /// Min: 0 Max: 1 Units: 
+    BYTE BrkLtsAtv_raw;
+    double DRLAct; /// Min: 0 Max: 1 Units: 
+    BYTE DRLAct_raw;
+    double DispNtSchmAtv; /// Min: 0 Max: 1 Units: 
+    BYTE DispNtSchmAtv_raw;
+    double FlToPsSwAtv; /// Min: 0 Max: 1 Units: 
+    BYTE FlToPsSwAtv_raw;
+    double FrFogLmpsAct; /// Min: 0 Max: 1 Units: 
+    BYTE FrFogLmpsAct_raw;
+    double FrFgLtIO; /// Min: 0 Max: 1 Units: 
+    BYTE FrFgLtIO_raw;
+    double HazSwAtv; /// Min: 0 Max: 1 Units: 
+    BYTE HazSwAtv_raw;
+    double HdlmpBmSelectStat; /// Min: 0 Max: 3 Units: 
+    BYTE HdlmpBmSelectStat_raw;
+    double HighBmAct; /// Min: 0 Max: 1 Units: 
+    BYTE HighBmAct_raw;
+    double HiBmIO; /// Min: 0 Max: 1 Units: 
+    BYTE HiBmIO_raw;
+    double HiBmReqd; /// Min: 0 Max: 1 Units: 
+    BYTE HiBmReqd_raw;
+    double IntDimDspLvl; /// Min: 0 Max: 127 Units: 
+    BYTE IntDimDspLvl_raw;
+    double IntDimLvl; /// Min: 0 Max: 127 Units: 
+    BYTE IntDimLvl_raw;
+    double IntDimNtPnlAtv; /// Min: 0 Max: 1 Units: 
+    BYTE IntDimNtPnlAtv_raw;
+    double LftTrnLmpAtv; /// Min: 0 Max: 3 Units: 
+    BYTE LftTrnLmpAtv_raw;
+    double LowBmAct; /// Min: 0 Max: 1 Units: 
+    BYTE LowBmAct_raw;
+    double MainLghtSw; /// Min: 0 Max: 3 Units: 
+    BYTE MainLghtSw_raw;
+    double OtsdAmbtLtLvlStat; /// Min: 0 Max: 3 Units: 
+    BYTE OtsdAmbtLtLvlStat_raw;
+    double OtsdAmbtLtLvlStatV; /// Min: 0 Max: 1 Units: 
+    BYTE OtsdAmbtLtLvlStatV_raw;
+    double PrkLtIO; /// Min: 0 Max: 1 Units: 
+    BYTE PrkLtIO_raw;
+    double PrkLtLeftIO; /// Min: 0 Max: 1 Units: 
+    BYTE PrkLtLeftIO_raw;
+    double PrkLtRightIO; /// Min: 0 Max: 1 Units: 
+    BYTE PrkLtRightIO_raw;
+    double RrFogLmpsAct; /// Min: 0 Max: 1 Units: 
+    BYTE RrFogLmpsAct_raw;
+    double RrFgLtIO; /// Min: 0 Max: 1 Units: 
+    BYTE RrFgLtIO_raw;
+    double RevLmpAtv; /// Min: 0 Max: 1 Units: 
+    BYTE RevLmpAtv_raw;
+    double RtTrnLmpAtv; /// Min: 0 Max: 3 Units: 
+    BYTE RtTrnLmpAtv_raw;
+    double TrnSwAct; /// Min: 0 Max: 3 Units: 
+    BYTE TrnSwAct_raw;
+} DB_Exterior_Lighting_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_Exterior_Lighting_HS_CAN_$_AdvFrntLghtSysEnbld_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_AdvFrntLghtSysEnbld_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_AutLghtCtrl_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_AutLghtCtrl_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_AutoBmSlctAllwd_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_AutoBmSlctAllwd_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_AutoLtsActIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_AutoLtsActIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_AutoLtsInactIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_AutoLtsInactIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_BrkLtsAtv_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_BrkLtsAtv_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_DRLAct_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_DRLAct_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_DispNtSchmAtv_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_DispNtSchmAtv_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_FlToPsSwAtv_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_FlToPsSwAtv_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_FrFogLmpsAct_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_FrFogLmpsAct_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_FrFgLtIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_FrFgLtIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_HazSwAtv_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_HazSwAtv_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_HdlmpBmSelectStat_$$_Unknown 0
+#define DB_Exterior_Lighting_HS_CAN_$_HdlmpBmSelectStat_$$_Low_Beams 1
+#define DB_Exterior_Lighting_HS_CAN_$_HdlmpBmSelectStat_$$_High_Beams 2
+#define DB_Exterior_Lighting_HS_CAN_$_HighBmAct_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_HighBmAct_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_HiBmIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_HiBmIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_HiBmReqd_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_HiBmReqd_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_IntDimNtPnlAtv_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_IntDimNtPnlAtv_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_LftTrnLmpAtv_$$_Off 0
+#define DB_Exterior_Lighting_HS_CAN_$_LftTrnLmpAtv_$$_On_without_telltale 1
+#define DB_Exterior_Lighting_HS_CAN_$_LftTrnLmpAtv_$$_On_with_telltale 2
+#define DB_Exterior_Lighting_HS_CAN_$_LowBmAct_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_LowBmAct_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_MainLghtSw_$$_AUTO 0
+#define DB_Exterior_Lighting_HS_CAN_$_MainLghtSw_$$_OFF 1
+#define DB_Exterior_Lighting_HS_CAN_$_MainLghtSw_$$_PARKLAMP 2
+#define DB_Exterior_Lighting_HS_CAN_$_MainLghtSw_$$_HEADLAMP 3
+#define DB_Exterior_Lighting_HS_CAN_$_OtsdAmbtLtLvlStat_$$_Unknown 0
+#define DB_Exterior_Lighting_HS_CAN_$_OtsdAmbtLtLvlStat_$$_Night 1
+#define DB_Exterior_Lighting_HS_CAN_$_OtsdAmbtLtLvlStat_$$_Day 2
+#define DB_Exterior_Lighting_HS_CAN_$_OtsdAmbtLtLvlStatV_$$_Valid 0
+#define DB_Exterior_Lighting_HS_CAN_$_OtsdAmbtLtLvlStatV_$$_Invalid 1
+#define DB_Exterior_Lighting_HS_CAN_$_PrkLtIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_PrkLtIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_PrkLtLeftIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_PrkLtLeftIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_PrkLtRightIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_PrkLtRightIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_RrFogLmpsAct_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_RrFogLmpsAct_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_RrFgLtIO_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_RrFgLtIO_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_RevLmpAtv_$$_False 0
+#define DB_Exterior_Lighting_HS_CAN_$_RevLmpAtv_$$_True 1
+#define DB_Exterior_Lighting_HS_CAN_$_RtTrnLmpAtv_$$_Off 0
+#define DB_Exterior_Lighting_HS_CAN_$_RtTrnLmpAtv_$$_On_without_telltale 1
+#define DB_Exterior_Lighting_HS_CAN_$_RtTrnLmpAtv_$$_On_with_telltale 2
+#define DB_Exterior_Lighting_HS_CAN_$_TrnSwAct_$$_No_Activation 0
+#define DB_Exterior_Lighting_HS_CAN_$_TrnSwAct_$$_Left 1
+#define DB_Exterior_Lighting_HS_CAN_$_TrnSwAct_$$_Right 2
+#pragma warning(default : 4005)
+
+void DB_Exterior_Lighting_HS_CAN_Init(DB_Exterior_Lighting_HS_CAN * pMsg);
+int DB_Exterior_Lighting_HS_CAN_Transmit(DB_Exterior_Lighting_HS_CAN * pMsg);
+int DB_Exterior_Lighting_HS_CAN_Transmit_raw(DB_Exterior_Lighting_HS_CAN * pMsg);
+int DB_Exterior_Lighting_HS_CAN_UpdateBytesFromSignals(DB_Exterior_Lighting_HS_CAN * pMsg);
+int DB_Exterior_Lighting_HS_CAN_UpdateBytesFromRawSignals(DB_Exterior_Lighting_HS_CAN * pMsg);
+#define DB_Exterior_Lighting_HS_CAN_AdvFrntLghtSysEnbld_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_AutLghtCtrl_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_AutoBmSlctAllwd_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_AutoLtsActIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_AutoLtsInactIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_BrkLtsAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 5, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_DRLAct_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 6, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_DispNtSchmAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 7, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_FlToPsSwAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 8, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_FrFogLmpsAct_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 9, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_FrFgLtIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 10, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_HazSwAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 11, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_HdlmpBmSelectStat_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 12, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_HighBmAct_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 13, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_HiBmIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 14, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_HiBmReqd_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 15, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_IntDimDspLvl_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 16, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_IntDimLvl_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 17, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_IntDimNtPnlAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 18, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_LftTrnLmpAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 19, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_LowBmAct_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 20, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_MainLghtSw_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 21, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_OtsdAmbtLtLvlStat_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 22, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_OtsdAmbtLtLvlStatV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 23, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_PrkLtIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 24, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_PrkLtLeftIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 25, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_PrkLtRightIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 26, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_RrFogLmpsAct_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 27, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_RrFgLtIO_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 28, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_RevLmpAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 29, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_RtTrnLmpAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 30, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_TrnSwAct_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, 31, dPhysicalValue);
+#define DB_Exterior_Lighting_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Exterior_Lighting_HS_CAN_Index, 0)
+extern int DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double DrvHCSMIndReq; /// Min: 0 Max: 3 Units: 
+    BYTE DrvHCSMIndReq_raw;
+    double DrvHCSMInd1; /// Min: 0 Max: 1 Units: 
+    BYTE DrvHCSMInd1_raw;
+    double DrvHCSMInd2; /// Min: 0 Max: 1 Units: 
+    BYTE DrvHCSMInd2_raw;
+    double DrvHCSMInd3; /// Min: 0 Max: 1 Units: 
+    BYTE DrvHCSMInd3_raw;
+    double PassHCSMIndReq; /// Min: 0 Max: 3 Units: 
+    BYTE PassHCSMIndReq_raw;
+    double PassHCSMInd1; /// Min: 0 Max: 1 Units: 
+    BYTE PassHCSMInd1_raw;
+    double PassHCSMInd2; /// Min: 0 Max: 1 Units: 
+    BYTE PassHCSMInd2_raw;
+    double PassHCSMInd3; /// Min: 0 Max: 1 Units: 
+    BYTE PassHCSMInd3_raw;
+} DB_Front_Seat_Heat_Cool_Control_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMIndReq_$$_Off 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMIndReq_$$_Continuous_Indication 1
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMIndReq_$$_Flash_Rate__1_Indication 2
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMIndReq_$$_Flash_Rate__2_Indication 3
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMInd1_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMInd1_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMInd2_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMInd2_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMInd3_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_DrvHCSMInd3_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMIndReq_$$_Off 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMIndReq_$$_Continuous_Indication 1
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMIndReq_$$_Flash_Rate__1_Indication 2
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMIndReq_$$_Flash_Rate__2_Indication 3
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMInd1_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMInd1_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMInd2_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMInd2_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMInd3_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_$_PassHCSMInd3_$$_True 1
+#pragma warning(default : 4005)
+
+void DB_Front_Seat_Heat_Cool_Control_HS_CAN_Init(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_Transmit(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_Transmit_raw(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_UpdateBytesFromSignals(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_UpdateBytesFromRawSignals(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_DrvHCSMIndReq_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_DrvHCSMInd1_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_DrvHCSMInd2_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_DrvHCSMInd3_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_PassHCSMIndReq_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_PassHCSMInd1_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 5, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_PassHCSMInd2_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 6, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_PassHCSMInd3_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 7, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Control_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, 0)
+extern int DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double OtsAirTmp; /// Min: -40 Max: 87.5 Units: degC
+    BYTE OtsAirTmp_raw;
+    double OtsAirTmpCrVal; /// Min: -40 Max: 87.5 Units: degC
+    BYTE OtsAirTmpCrVal_raw;
+    double OtsAirTmpCrValMsk; /// Min: 0 Max: 1 Units: 
+    BYTE OtsAirTmpCrValMsk_raw;
+    double OtsAirTmpCrValV; /// Min: 0 Max: 1 Units: 
+    BYTE OtsAirTmpCrValV_raw;
+    double EngInltSpcfcHmdty; /// Min: 0 Max: 4.999989 Units: %water
+    BYTE EngInltSpcfcHmdty_raw;
+    double EngInltSpcfcHmdtyM; /// Min: 0 Max: 1 Units: 
+    BYTE EngInltSpcfcHmdtyM_raw;
+    double EngInltSpcfcHmdtyV; /// Min: 0 Max: 1 Units: 
+    BYTE EngInltSpcfcHmdtyV_raw;
+    double OtsAirTmpV; /// Min: 0 Max: 1 Units: 
+    BYTE OtsAirTmpV_raw;
+} DB_PPEI_Engine_Environmental_Stat_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_OtsAirTmpCrValMsk_$$_Don_t_Use_Data 0
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_OtsAirTmpCrValMsk_$$_Use_Data 1
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_OtsAirTmpCrValV_$$_Valid 0
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_OtsAirTmpCrValV_$$_Invalid 1
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_EngInltSpcfcHmdtyM_$$_Don_t_Use_Data 0
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_EngInltSpcfcHmdtyM_$$_Use_Data 1
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_EngInltSpcfcHmdtyV_$$_Valid 0
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_EngInltSpcfcHmdtyV_$$_Invalid 1
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_OtsAirTmpV_$$_Valid 0
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_$_OtsAirTmpV_$$_Invalid 1
+#pragma warning(default : 4005)
+
+void DB_PPEI_Engine_Environmental_Stat_HS_CAN_Init(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg);
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_Transmit(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg);
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_Transmit_raw(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg);
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_UpdateBytesFromSignals(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg);
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_UpdateBytesFromRawSignals(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_OtsAirTmp_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_OtsAirTmpCrVal_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_OtsAirTmpCrValMsk_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_OtsAirTmpCrValV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_EngInltSpcfcHmdty_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_EngInltSpcfcHmdtyM_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 5, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_EngInltSpcfcHmdtyV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 6, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_OtsAirTmpV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 7, dPhysicalValue);
+#define DB_PPEI_Engine_Environmental_Stat_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, 0)
+extern int DB_Instrument_Panel_Sensor_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double IPSnsrSolrAnglFltd; /// Min: 0 Max: 1 Units: 
+    BYTE IPSnsrSolrAnglFltd_raw;
+    double IPSnsrRwSolrIntFltd; /// Min: 0 Max: 1 Units: 
+    BYTE IPSnsrRwSolrIntFltd_raw;
+    double IPSnsrRwSolrInt; /// Min: 0 Max: 765 Units: W/m2
+    BYTE IPSnsrRwSolrInt_raw;
+    double IPSnsrSolrAzmthAngl; /// Min: -180 Max: 330 Units: deg
+    BYTE IPSnsrSolrAzmthAngl_raw;
+    double IPSnsrSolrElvtnAngl; /// Min: 0 Max: 255 Units: deg
+    BYTE IPSnsrSolrElvtnAngl_raw;
+} DB_Instrument_Panel_Sensor_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_Instrument_Panel_Sensor_HS_CAN_$_IPSnsrSolrAnglFltd_$$_False 0
+#define DB_Instrument_Panel_Sensor_HS_CAN_$_IPSnsrSolrAnglFltd_$$_True 1
+#define DB_Instrument_Panel_Sensor_HS_CAN_$_IPSnsrRwSolrIntFltd_$$_False 0
+#define DB_Instrument_Panel_Sensor_HS_CAN_$_IPSnsrRwSolrIntFltd_$$_True 1
+#pragma warning(default : 4005)
+
+void DB_Instrument_Panel_Sensor_HS_CAN_Init(DB_Instrument_Panel_Sensor_HS_CAN * pMsg);
+int DB_Instrument_Panel_Sensor_HS_CAN_Transmit(DB_Instrument_Panel_Sensor_HS_CAN * pMsg);
+int DB_Instrument_Panel_Sensor_HS_CAN_Transmit_raw(DB_Instrument_Panel_Sensor_HS_CAN * pMsg);
+int DB_Instrument_Panel_Sensor_HS_CAN_UpdateBytesFromSignals(DB_Instrument_Panel_Sensor_HS_CAN * pMsg);
+int DB_Instrument_Panel_Sensor_HS_CAN_UpdateBytesFromRawSignals(DB_Instrument_Panel_Sensor_HS_CAN * pMsg);
+#define DB_Instrument_Panel_Sensor_HS_CAN_IPSnsrSolrAnglFltd_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Instrument_Panel_Sensor_HS_CAN_IPSnsrRwSolrIntFltd_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_Instrument_Panel_Sensor_HS_CAN_IPSnsrRwSolrInt_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_Instrument_Panel_Sensor_HS_CAN_IPSnsrSolrAzmthAngl_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_Instrument_Panel_Sensor_HS_CAN_IPSnsrSolrElvtnAngl_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_Instrument_Panel_Sensor_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Instrument_Panel_Sensor_HS_CAN_Index, 0)
+extern int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double DistRollCntAvgDrvn; /// Min: 0 Max: 1023.875 Units: m
+    WORD DistRollCntAvgDrvn_raw;
+    double DstRolCntAvgDrnRstOc; /// Min: 0 Max: 1 Units: 
+    BYTE DstRolCntAvgDrnRstOc_raw;
+    double DistRollCntAvgDrvnSrc; /// Min: 0 Max: 1 Units: 
+    BYTE DistRollCntAvgDrvnSrc_raw;
+    double DistRollCntAvgDrvnV; /// Min: 0 Max: 1 Units: 
+    BYTE DistRollCntAvgDrvnV_raw;
+    double DstRolCntAvgNonDrvn; /// Min: 0 Max: 1023.875 Units: m
+    WORD DstRolCntAvgNonDrvn_raw;
+    double DstRolCntAvNDrRstOc; /// Min: 0 Max: 1 Units: 
+    BYTE DstRolCntAvNDrRstOc_raw;
+    double DstRolCntAvgNonDrvnV; /// Min: 0 Max: 1 Units: 
+    BYTE DstRolCntAvgNonDrvnV_raw;
+    double VehSpdAvgDrvn; /// Min: 0 Max: 511.984375 Units: km/h
+    WORD VehSpdAvgDrvn_raw;
+    double VehSpdAvgDrvnSrc; /// Min: 0 Max: 1 Units: 
+    BYTE VehSpdAvgDrvnSrc_raw;
+    double VehSpdAvgDrvnV; /// Min: 0 Max: 1 Units: 
+    BYTE VehSpdAvgDrvnV_raw;
+    double VehSpdAvgNDrvn; /// Min: 0 Max: 511.984375 Units: km/h
+    WORD VehSpdAvgNDrvn_raw;
+    double VehSpdAvgNDrvnV; /// Min: 0 Max: 1 Units: 
+    BYTE VehSpdAvgNDrvnV_raw;
+} DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DstRolCntAvgDrnRstOc_$$_False 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DstRolCntAvgDrnRstOc_$$_True 1
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DistRollCntAvgDrvnSrc_$$_Transmission_Output_Speed 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DistRollCntAvgDrvnSrc_$$_Wheel_Speed 1
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DistRollCntAvgDrvnV_$$_Valid 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DistRollCntAvgDrvnV_$$_Invalid 1
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DstRolCntAvNDrRstOc_$$_False 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DstRolCntAvNDrRstOc_$$_True 1
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DstRolCntAvgNonDrvnV_$$_Valid 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_DstRolCntAvgNonDrvnV_$$_Invalid 1
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_VehSpdAvgDrvnSrc_$$_Transmission_Output_Speed 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_VehSpdAvgDrvnSrc_$$_Wheel_Speed 1
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_VehSpdAvgDrvnV_$$_Valid 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_VehSpdAvgDrvnV_$$_Invalid 1
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_VehSpdAvgNDrvnV_$$_Valid 0
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_$_VehSpdAvgNDrvnV_$$_Invalid 1
+#pragma warning(default : 4005)
+
+void DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Init(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg);
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Transmit(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg);
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Transmit_raw(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg);
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_UpdateBytesFromSignals(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg);
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_UpdateBytesFromRawSignals(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_DistRollCntAvgDrvn_PhysicalToRaw(dPhysicalValue) \
+    (WORD )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_DstRolCntAvgDrnRstOc_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_DistRollCntAvgDrvnSrc_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_DistRollCntAvgDrvnV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_DstRolCntAvgNonDrvn_PhysicalToRaw(dPhysicalValue) \
+    (WORD )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_DstRolCntAvNDrRstOc_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 5, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_DstRolCntAvgNonDrvnV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 6, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_VehSpdAvgDrvn_PhysicalToRaw(dPhysicalValue) \
+    (WORD )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 7, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_VehSpdAvgDrvnSrc_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 8, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_VehSpdAvgDrvnV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 9, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_VehSpdAvgNDrvn_PhysicalToRaw(dPhysicalValue) \
+    (WORD )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 10, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_VehSpdAvgNDrvnV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 11, dPhysicalValue);
+#define DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, 0)
+extern int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index;
+typedef struct {
+    GenericLongMessage MessageData; /// Diagnostic Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double DgnInf; /// Min: 0 Max: 1.84467440737096e+19 Units: 
+    uint64 DgnInf_raw;
+} DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN;
+
+
+void DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Init(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg);
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Transmit(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg);
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Transmit_raw(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg);
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_UpdateBytesFromSignals(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg);
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_UpdateBytesFromRawSignals(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg);
+#define DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_DgnInf_PhysicalToRaw(dPhysicalValue) \
+    (uint64 )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, 0)
+extern int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index;
+typedef struct {
+    GenericLongMessage MessageData; /// Diagnostic Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double DgnInf; /// Min: 0 Max: 1.84467440737096e+19 Units: 
+    uint64 DgnInf_raw;
+} DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN;
+
+
+void DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit_raw(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromSignals(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromRawSignals(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+#define DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_DgnInf_PhysicalToRaw(dPhysicalValue) \
+    (uint64 )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, 0)
+extern int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index;
+typedef struct {
+    GenericLongMessage MessageData; /// Diagnostic Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double DgnInf; /// Min: 0 Max: 1.84467440737096e+19 Units: 
+    uint64 DgnInf_raw;
+} DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN;
+
+
+void DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit_raw(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromSignals(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromRawSignals(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg);
+#define DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_DgnInf_PhysicalToRaw(dPhysicalValue) \
+    (uint64 )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, 0)
+extern int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double DrvHCSeatSw1Act; /// Min: 0 Max: 1 Units: 
+    BYTE DrvHCSeatSw1Act_raw;
+    double DrvHCSeatSw2Act; /// Min: 0 Max: 1 Units: 
+    BYTE DrvHCSeatSw2Act_raw;
+    double DrvHCSeatSw3Act; /// Min: 0 Max: 1 Units: 
+    BYTE DrvHCSeatSw3Act_raw;
+    double PassHCSeatSw1Act; /// Min: 0 Max: 1 Units: 
+    BYTE PassHCSeatSw1Act_raw;
+    double PassHCSeatSw2Act; /// Min: 0 Max: 1 Units: 
+    BYTE PassHCSeatSw2Act_raw;
+    double PassHCSeatSw3Act; /// Min: 0 Max: 1 Units: 
+    BYTE PassHCSeatSw3Act_raw;
+} DB_Front_Seat_Heat_Cool_Switches_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_DrvHCSeatSw1Act_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_DrvHCSeatSw1Act_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_DrvHCSeatSw2Act_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_DrvHCSeatSw2Act_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_DrvHCSeatSw3Act_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_DrvHCSeatSw3Act_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_PassHCSeatSw1Act_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_PassHCSeatSw1Act_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_PassHCSeatSw2Act_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_PassHCSeatSw2Act_$$_True 1
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_PassHCSeatSw3Act_$$_False 0
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_$_PassHCSeatSw3Act_$$_True 1
+#pragma warning(default : 4005)
+
+void DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Init(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Transmit(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Transmit_raw(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_UpdateBytesFromSignals(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg);
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_UpdateBytesFromRawSignals(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg);
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_DrvHCSeatSw1Act_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_DrvHCSeatSw2Act_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_DrvHCSeatSw3Act_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_PassHCSeatSw1Act_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_PassHCSeatSw2Act_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_PassHCSeatSw3Act_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, 5, dPhysicalValue);
+#define DB_Front_Seat_Heat_Cool_Switches_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, 0)
+extern int DB_Auxiliary_Heater_Status_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double AuxHtrAtv; /// Min: 0 Max: 1 Units: 
+    BYTE AuxHtrAtv_raw;
+    double CCClntCrcFlwRtReq; /// Min: 0 Max: 100.000035 Units: %
+    BYTE CCClntCrcFlwRtReq_raw;
+    double HtrCoreInltClntTmpCalc; /// Min: -40 Max: 215 Units: degC
+    BYTE HtrCoreInltClntTmpCalc_raw;
+    double HtrCoreInltClntTmpCalcV; /// Min: 0 Max: 1 Units: 
+    BYTE HtrCoreInltClntTmpCalcV_raw;
+} DB_Auxiliary_Heater_Status_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_Auxiliary_Heater_Status_HS_CAN_$_AuxHtrAtv_$$_False 0
+#define DB_Auxiliary_Heater_Status_HS_CAN_$_AuxHtrAtv_$$_True 1
+#define DB_Auxiliary_Heater_Status_HS_CAN_$_HtrCoreInltClntTmpCalcV_$$_Valid 0
+#define DB_Auxiliary_Heater_Status_HS_CAN_$_HtrCoreInltClntTmpCalcV_$$_Invalid 1
+#pragma warning(default : 4005)
+
+void DB_Auxiliary_Heater_Status_HS_CAN_Init(DB_Auxiliary_Heater_Status_HS_CAN * pMsg);
+int DB_Auxiliary_Heater_Status_HS_CAN_Transmit(DB_Auxiliary_Heater_Status_HS_CAN * pMsg);
+int DB_Auxiliary_Heater_Status_HS_CAN_Transmit_raw(DB_Auxiliary_Heater_Status_HS_CAN * pMsg);
+int DB_Auxiliary_Heater_Status_HS_CAN_UpdateBytesFromSignals(DB_Auxiliary_Heater_Status_HS_CAN * pMsg);
+int DB_Auxiliary_Heater_Status_HS_CAN_UpdateBytesFromRawSignals(DB_Auxiliary_Heater_Status_HS_CAN * pMsg);
+#define DB_Auxiliary_Heater_Status_HS_CAN_AuxHtrAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Auxiliary_Heater_Status_HS_CAN_CCClntCrcFlwRtReq_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_Auxiliary_Heater_Status_HS_CAN_HtrCoreInltClntTmpCalc_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_Auxiliary_Heater_Status_HS_CAN_HtrCoreInltClntTmpCalcV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_Auxiliary_Heater_Status_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Auxiliary_Heater_Status_HS_CAN_Index, 0)
+extern int DB_Rear_Window_Defog_Status_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double RrWndDfgOn; /// Min: 0 Max: 1 Units: 
+    BYTE RrWndDfgOn_raw;
+} DB_Rear_Window_Defog_Status_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_Rear_Window_Defog_Status_HS_CAN_$_RrWndDfgOn_$$_False 0
+#define DB_Rear_Window_Defog_Status_HS_CAN_$_RrWndDfgOn_$$_True 1
+#pragma warning(default : 4005)
+
+void DB_Rear_Window_Defog_Status_HS_CAN_Init(DB_Rear_Window_Defog_Status_HS_CAN * pMsg);
+int DB_Rear_Window_Defog_Status_HS_CAN_Transmit(DB_Rear_Window_Defog_Status_HS_CAN * pMsg);
+int DB_Rear_Window_Defog_Status_HS_CAN_Transmit_raw(DB_Rear_Window_Defog_Status_HS_CAN * pMsg);
+int DB_Rear_Window_Defog_Status_HS_CAN_UpdateBytesFromSignals(DB_Rear_Window_Defog_Status_HS_CAN * pMsg);
+int DB_Rear_Window_Defog_Status_HS_CAN_UpdateBytesFromRawSignals(DB_Rear_Window_Defog_Status_HS_CAN * pMsg);
+#define DB_Rear_Window_Defog_Status_HS_CAN_RrWndDfgOn_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Rear_Window_Defog_Status_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Rear_Window_Defog_Status_HS_CAN_Index, 0)
+extern int DB_PPEI_Engine_General_Status_1_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double AccActPos; /// Min: 0 Max: 100.000035 Units: %
+    BYTE AccActPos_raw;
+    double AccActPosV; /// Min: 0 Max: 1 Units: 
+    BYTE AccActPosV_raw;
+    double CrsCntAtv; /// Min: 0 Max: 1 Units: 
+    BYTE CrsCntAtv_raw;
+    double CrsCntEnbld; /// Min: 0 Max: 1 Units: 
+    BYTE CrsCntEnbld_raw;
+    double Eng12vStrtrMtrCmmdOn; /// Min: 0 Max: 1 Units: 
+    BYTE Eng12vStrtrMtrCmmdOn_raw;
+    double EngCntrlRunCrnkTrmSt; /// Min: 0 Max: 1 Units: 
+    BYTE EngCntrlRunCrnkTrmSt_raw;
+    double EngIdlAtv; /// Min: 0 Max: 1 Units: 
+    BYTE EngIdlAtv_raw;
+    double EngAirIntBstPr; /// Min: -128 Max: 127 Units: kPaG
+    BYTE EngAirIntBstPr_raw;
+    double EngAirIntBstPrV; /// Min: 0 Max: 1 Units: 
+    BYTE EngAirIntBstPrV_raw;
+    double EngRunAtv; /// Min: 0 Max: 1 Units: 
+    BYTE EngRunAtv_raw;
+    double EngSpd; /// Min: 0 Max: 16383.75 Units: rpm
+    WORD EngSpd_raw;
+    double EngSpdStat; /// Min: 0 Max: 3 Units: 
+    BYTE EngSpdStat_raw;
+    double PT_BrkPedDscrtInpStat; /// Min: 0 Max: 1 Units: 
+    BYTE PT_BrkPedDscrtInpStat_raw;
+    double PT_BrkPedDscrtInpStatV; /// Min: 0 Max: 1 Units: 
+    BYTE PT_BrkPedDscrtInpStatV_raw;
+    double PTCrnkAbrted; /// Min: 0 Max: 1 Units: 
+    BYTE PTCrnkAbrted_raw;
+    double PT_CrnkAct; /// Min: 0 Max: 1 Units: 
+    BYTE PT_CrnkAct_raw;
+    double PTRunAbrt; /// Min: 0 Max: 1 Units: 
+    BYTE PTRunAbrt_raw;
+    double RmVhStrtEngRng; /// Min: 0 Max: 1 Units: 
+    BYTE RmVhStrtEngRng_raw;
+    double SpdLmtrSpdWrngEnbld; /// Min: 0 Max: 1 Units: 
+    BYTE SpdLmtrSpdWrngEnbld_raw;
+} DB_PPEI_Engine_General_Status_1_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_AccActPosV_$$_Valid 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_AccActPosV_$$_Invalid 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_CrsCntAtv_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_CrsCntAtv_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_CrsCntEnbld_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_CrsCntEnbld_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_Eng12vStrtrMtrCmmdOn_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_Eng12vStrtrMtrCmmdOn_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngCntrlRunCrnkTrmSt_$$_Inactive 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngCntrlRunCrnkTrmSt_$$_Active 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngIdlAtv_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngIdlAtv_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngAirIntBstPrV_$$_Valid 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngAirIntBstPrV_$$_Invalid 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngRunAtv_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngRunAtv_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngSpdStat_$$_Normal_Operation 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngSpdStat_$$_Degraded_Operation 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_EngSpdStat_$$_Invalid 3
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PT_BrkPedDscrtInpStat_$$_Brake_Not_Applied 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PT_BrkPedDscrtInpStat_$$_Brake_Applied 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PT_BrkPedDscrtInpStatV_$$_Valid 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PT_BrkPedDscrtInpStatV_$$_Invalid 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PTCrnkAbrted_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PTCrnkAbrted_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PT_CrnkAct_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PT_CrnkAct_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PTRunAbrt_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_PTRunAbrt_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_RmVhStrtEngRng_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_RmVhStrtEngRng_$$_True 1
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_SpdLmtrSpdWrngEnbld_$$_False 0
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_$_SpdLmtrSpdWrngEnbld_$$_True 1
+#pragma warning(default : 4005)
+
+void DB_PPEI_Engine_General_Status_1_HS_CAN_Init(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg);
+int DB_PPEI_Engine_General_Status_1_HS_CAN_Transmit(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg);
+int DB_PPEI_Engine_General_Status_1_HS_CAN_Transmit_raw(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg);
+int DB_PPEI_Engine_General_Status_1_HS_CAN_UpdateBytesFromSignals(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg);
+int DB_PPEI_Engine_General_Status_1_HS_CAN_UpdateBytesFromRawSignals(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_AccActPos_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_AccActPosV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_CrsCntAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_CrsCntEnbld_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_Eng12vStrtrMtrCmmdOn_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_EngCntrlRunCrnkTrmSt_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 5, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_EngIdlAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 6, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_EngAirIntBstPr_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 7, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_EngAirIntBstPrV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 8, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_EngRunAtv_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 9, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_EngSpd_PhysicalToRaw(dPhysicalValue) \
+    (WORD )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 10, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_EngSpdStat_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 11, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_PT_BrkPedDscrtInpStat_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 12, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_PT_BrkPedDscrtInpStatV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 13, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_PTCrnkAbrted_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 14, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_PT_CrnkAct_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 15, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_PTRunAbrt_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 16, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_RmVhStrtEngRng_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 17, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_SpdLmtrSpdWrngEnbld_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 18, dPhysicalValue);
+#define DB_PPEI_Engine_General_Status_1_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, 0)
+extern int DB_Climate_Control_General_Status_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double ACCmpsrFldOn; /// Min: 0 Max: 1 Units: 
+    BYTE ACCmpsrFldOn_raw;
+    double ACCompModReq; /// Min: 0 Max: 3 Units: 
+    BYTE ACCompModReq_raw;
+    double ACCompNormLd; /// Min: 0 Max: 25.5 Units: l/min
+    BYTE ACCompNormLd_raw;
+    double ACCompNormLdV; /// Min: 0 Max: 1 Units: 
+    BYTE ACCompNormLdV_raw;
+    double ACCmEngRunReq; /// Min: 0 Max: 1 Units: 
+    BYTE ACCmEngRunReq_raw;
+    double ClmtCtrlTrgtTemp; /// Min: -10 Max: 92.3 Units: degC
+    WORD ClmtCtrlTrgtTemp_raw;
+} DB_Climate_Control_General_Status_HS_CAN;
+
+#pragma warning(disable : 4005)
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCmpsrFldOn_$$_False 0
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCmpsrFldOn_$$_True 1
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCompModReq_$$_Disengage_Immediately 0
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCompModReq_$$_Disengage 1
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCompModReq_$$_Engage 2
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCompModReq_$$_No_Action 3
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCompNormLdV_$$_Valid 0
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCompNormLdV_$$_Invalid 1
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCmEngRunReq_$$_No_Action 0
+#define DB_Climate_Control_General_Status_HS_CAN_$_ACCmEngRunReq_$$_Engine_Run_Requested 1
+#pragma warning(default : 4005)
+
+void DB_Climate_Control_General_Status_HS_CAN_Init(DB_Climate_Control_General_Status_HS_CAN * pMsg);
+int DB_Climate_Control_General_Status_HS_CAN_Transmit(DB_Climate_Control_General_Status_HS_CAN * pMsg);
+int DB_Climate_Control_General_Status_HS_CAN_Transmit_raw(DB_Climate_Control_General_Status_HS_CAN * pMsg);
+int DB_Climate_Control_General_Status_HS_CAN_UpdateBytesFromSignals(DB_Climate_Control_General_Status_HS_CAN * pMsg);
+int DB_Climate_Control_General_Status_HS_CAN_UpdateBytesFromRawSignals(DB_Climate_Control_General_Status_HS_CAN * pMsg);
+#define DB_Climate_Control_General_Status_HS_CAN_ACCmpsrFldOn_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Climate_Control_General_Status_HS_CAN_ACCompModReq_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_Climate_Control_General_Status_HS_CAN_ACCompNormLd_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, 2, dPhysicalValue);
+#define DB_Climate_Control_General_Status_HS_CAN_ACCompNormLdV_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, 3, dPhysicalValue);
+#define DB_Climate_Control_General_Status_HS_CAN_ACCmEngRunReq_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, 4, dPhysicalValue);
+#define DB_Climate_Control_General_Status_HS_CAN_ClmtCtrlTrgtTemp_PhysicalToRaw(dPhysicalValue) \
+    (WORD )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, 5, dPhysicalValue);
+#define DB_Climate_Control_General_Status_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Climate_Control_General_Status_HS_CAN_Index, 0)
+extern int DB_Network_Management_BCM_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+    double SrcNodeID; /// Min: 0 Max: 255 Units: 
+    BYTE SrcNodeID_raw;
+    double UDat; /// Min: 0 Max: 281474976710655 Units: 
+    uint64 UDat_raw;
+} DB_Network_Management_BCM_HS_CAN;
+
+
+void DB_Network_Management_BCM_HS_CAN_Init(DB_Network_Management_BCM_HS_CAN * pMsg);
+int DB_Network_Management_BCM_HS_CAN_Transmit(DB_Network_Management_BCM_HS_CAN * pMsg);
+int DB_Network_Management_BCM_HS_CAN_Transmit_raw(DB_Network_Management_BCM_HS_CAN * pMsg);
+int DB_Network_Management_BCM_HS_CAN_UpdateBytesFromSignals(DB_Network_Management_BCM_HS_CAN * pMsg);
+int DB_Network_Management_BCM_HS_CAN_UpdateBytesFromRawSignals(DB_Network_Management_BCM_HS_CAN * pMsg);
+#define DB_Network_Management_BCM_HS_CAN_SrcNodeID_PhysicalToRaw(dPhysicalValue) \
+    (BYTE )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, 0, dPhysicalValue);
+#define DB_Network_Management_BCM_HS_CAN_UDat_PhysicalToRaw(dPhysicalValue) \
+    (uint64 )CM_SignalPhysicalToRaw(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, 1, dPhysicalValue);
+#define DB_Network_Management_BCM_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, DB_Network_Management_BCM_HS_CAN_Index, 0)
 void SpyAppSig_AS_appSig_mpiRead_bytesBMPNAC(double dNewValue);
 void SpyAppSig_AS_appSig_mpiRead_bytesDUNS(double dNewValue);
 void SpyAppSig_AS_appSig_mpiRead_bytesECUID(double dNewValue);
@@ -4948,5 +6241,7 @@ void SpyAppSig_AS_appSig_mpiRead_bytesVPPS(double dNewValue);
 void SpyAppSig_AS_appSig_mpiWrite_BMPNAC(double dNewValue);
 void SpyAppSig_AS_appSig_mpiWrite_EMPNAC(double dNewValue);
 void SpyAppSig_AS_appSig_mpiWrite_MTC(double dNewValue);
+void SpyAppSig_AS_appSig_sapaWrite_bytesSeedKey(double dNewValue);
+void SpyAppSig_AS_appSig_sapaWrite_bytesSeed(double dNewValue);
 
 #endif // VSPY_GENERATED_HEADER

@@ -1189,6 +1189,8 @@ void SpyAppSig_CallAllHandlers()
     SpyAppSig_AS_appSig_mpiWrite_BMPNAC(0.0);
     SpyAppSig_AS_appSig_mpiWrite_EMPNAC(0.0);
     SpyAppSig_AS_appSig_mpiWrite_MTC(0.0);
+    SpyAppSig_AS_appSig_sapaWrite_bytesSeedKey(0.0);
+    SpyAppSig_AS_appSig_sapaWrite_bytesSeed(0.0);
 }
 
 void __stdcall CM_AS_appSig_mpiRead_bytesBMPNAC()
@@ -1234,6 +1236,16 @@ void __stdcall CM_AS_appSig_mpiWrite_EMPNAC()
 void __stdcall CM_AS_appSig_mpiWrite_MTC()
 {
     SpyAppSig_AS_appSig_mpiWrite_MTC(AS_appSig_mpiWrite_MTC_Get());
+}
+
+void __stdcall CM_AS_appSig_sapaWrite_bytesSeedKey()
+{
+    SpyAppSig_AS_appSig_sapaWrite_bytesSeedKey(AS_appSig_sapaWrite_bytesSeedKey_Get());
+}
+
+void __stdcall CM_AS_appSig_sapaWrite_bytesSeed()
+{
+    SpyAppSig_AS_appSig_sapaWrite_bytesSeed(AS_appSig_sapaWrite_bytesSeed_Get());
 }
 
 void (* CM_RegisterCallback) (unsigned int uiHandle, unsigned short iValueType, unsigned short iIndex, void * pCallBackPointer) ;
@@ -1409,6 +1421,20 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_neoVI_Device_Status_2_neoVI",&DB_neoVI_Device_Status_2_neoVI_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Trace_Logger_Status_neoVI",&DB_Trace_Logger_Status_neoVI_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Trigger_neoVI",&DB_Trigger_neoVI_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Exterior_Lighting_HS_CAN",&DB_Exterior_Lighting_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Front_Seat_Heat_Cool_Control_HS_CAN",&DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_PPEI_Engine_Environmental_Stat_HS_CAN",&DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Instrument_Panel_Sensor_HS_CAN",&DB_Instrument_Panel_Sensor_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN",&DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN",&DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN",&DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN",&DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Front_Seat_Heat_Cool_Switches_HS_CAN",&DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Auxiliary_Heater_Status_HS_CAN",&DB_Auxiliary_Heater_Status_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Rear_Window_Defog_Status_HS_CAN",&DB_Rear_Window_Defog_Status_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_PPEI_Engine_General_Status_1_HS_CAN",&DB_PPEI_Engine_General_Status_1_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Climate_Control_General_Status_HS_CAN",&DB_Climate_Control_General_Status_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,1,L"DB_Network_Management_BCM_HS_CAN",&DB_Network_Management_BCM_HS_CAN_Index);
 
     // messages indexes
      CM_FindIndexForObjectFromName(g_uiHandle,2,L"MG_step8_14_Climate_Control_General_Status_HS_CAN",&MG_step8_14_Climate_Control_General_Status_HS_CAN_Index);
@@ -1422,6 +1448,7 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,2,L"MG_mpi_diagResponse_consFrame1_HS_CAN",&MG_mpi_diagResponse_consFrame1_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,2,L"MG_mpi_diagResponse_consFrame2_HS_CAN",&MG_mpi_diagResponse_consFrame2_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,2,L"MG_step9_PCRM005_LIN2__neoVI_3G_",&MG_step9_PCRM005_LIN2__neoVI_3G__Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,2,L"MG_step10_1_PCRM006_1_LIN3__neoVI_3G_",&MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Index);
 
     // tx messages indexes
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step1_Network_Management_BCM_HS_CAN",&TX_step1_Network_Management_BCM_HS_CAN_Index);
@@ -1484,6 +1511,19 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_mpiWrite_diagRequest_stepX_1_HS_CAN",&TX_mpiWrite_diagRequest_stepX_1_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_TestPresentMessage_HS_CAN",&TX_TestPresentMessage_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_mpiWrite_diagRequest_stepModel_1_HS_CAN",&TX_mpiWrite_diagRequest_stepModel_1_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step7_1_message_1_122_HS_CAN",&TX_step7_1_message_1_122_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step7_1_message_2_4c1_HS_CAN",&TX_step7_1_message_2_4c1_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step7_1_message_3_190_HS_CAN",&TX_step7_1_message_3_190_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step7_1_message_4_371_HS_CAN",&TX_step7_1_message_4_371_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step7_1_message_5_3c5_HS_CAN",&TX_step7_1_message_5_3c5_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step39_diagRequest2_HS_CAN",&TX_step39_diagRequest2_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step40_diagRequest2_HS_CAN",&TX_step40_diagRequest2_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step41_diagRequest2_HS_CAN",&TX_step41_diagRequest2_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_step2_1_HS_CAN",&TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_constructive_1_HS_CAN",&TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_constructive_2_HS_CAN",&TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_constructive_3_HS_CAN",&TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaRead_diagRequest_step2_HS_CAN",&TX_sapaRead_diagRequest_step2_HS_CAN_Index);
 
     // function block indexes
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fsMain_test",&FB_fsMain_test_Index);
@@ -1491,6 +1531,8 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fsMain_daemon",&FB_fsMain_daemon_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fsMain_loopStep32to38",&FB_fsMain_loopStep32to38_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fsMain_saveSettings",&FB_fsMain_saveSettings_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fsMain_subPeriodicMsgOn",&FB_fsMain_subPeriodicMsgOn_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fsMain_subPeriodicMsgOff",&FB_fsMain_subPeriodicMsgOff_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_resetCurrValuesAutoTest",&FB_fs_resetCurrValuesAutoTest_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_linkDetect",&FB_fs_linkDetect_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fsMain_autoTest",&FB_fsMain_autoTest_Index);
@@ -1501,6 +1543,7 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step8_Execute",&FB_fs_step8_Execute_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step9_Execute",&FB_fs_step9_Execute_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step10_Execute",&FB_fs_step10_Execute_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step_10_1_Execute",&FB_fs_step_10_1_Execute_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step15_sendOnce",&FB_fs_step15_sendOnce_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step16_sendOnce",&FB_fs_step16_sendOnce_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step17_sendOnce",&FB_fs_step17_sendOnce_Index);
@@ -1525,6 +1568,9 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step36_sendOnce",&FB_fs_step36_sendOnce_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step37_sendOnce",&FB_fs_step37_sendOnce_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step38_sendOnce",&FB_fs_step38_sendOnce_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step39_sendOnce",&FB_fs_step39_sendOnce_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step40_sendOnce",&FB_fs_step40_sendOnce_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step41_sendOnce",&FB_fs_step41_sendOnce_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step343536_sendOnce",&FB_fs_step343536_sendOnce_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_fs_step3738_sendOnce",&FB_fs_step3738_sendOnce_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_mpiWrite_mainMPIWrite",&FB_mpiWrite_mainMPIWrite_Index);
@@ -1553,6 +1599,13 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_mpiRead_sub_step9",&FB_mpiRead_sub_step9_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_mpiWrite_mainModelWrite",&FB_mpiWrite_mainModelWrite_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_mpiWrite_sub_stepModel",&FB_mpiWrite_sub_stepModel_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_sapa_mainWrite",&FB_sapa_mainWrite_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_sapa_mainRead",&FB_sapa_mainRead_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_sapaRead_resetValues",&FB_sapaRead_resetValues_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_sapaWrite_sub_step1",&FB_sapaWrite_sub_step1_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_sapaWrite_sub_step2",&FB_sapaWrite_sub_step2_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_sapaRead_sub_step1",&FB_sapaRead_sub_step1_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,4,L"FB_sapaRead_sub_step2",&FB_sapaRead_sub_step2_Index);
 
     // diagnostic job indexes
      CM_FindIndexForObjectFromName(g_uiHandle,6,L"DG_$22_Read_Data_By_PID",&DG_$22_Read_Data_By_PID_Index);
@@ -1653,8 +1706,9 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiWrite_bytesBMPNAC",&AS_appSig_mpiWrite_bytesBMPNAC_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiRead_bytesMTC",&AS_appSig_mpiRead_bytesMTC_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiRead_MTC",&AS_appSig_mpiRead_MTC_Index);
-     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_mpiSubStepsDelay",&AS_appSig_C_mpiSubStepsDelay_Index);
-     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_mpiStepsDelay",&AS_appSig_C_mpiStepsDelay_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_mpiWriteSubStepsDelay",&AS_appSig_C_mpiWriteSubStepsDelay_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_mpiWriteSubStepDelay_MTC",&AS_appSig_C_mpiWriteSubStepDelay_MTC_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_mpiWriteStepsDelay",&AS_appSig_C_mpiWriteStepsDelay_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiRead_bytesECUID",&AS_appSig_mpiRead_bytesECUID_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiRead_ECUID",&AS_appSig_mpiRead_ECUID_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiRead_EMPN",&AS_appSig_mpiRead_EMPN_Index);
@@ -1674,6 +1728,29 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiRead_ECUID_SNStr",&AS_appSig_mpiRead_ECUID_SNStr_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiRead_ECUID_BMPNStr",&AS_appSig_mpiRead_ECUID_BMPNStr_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiWrite_Model",&AS_appSig_mpiWrite_Model_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_mpiWriteState",&AS_appSig_mpiWriteState_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_mpiReadStepsDelay",&AS_appSig_C_mpiReadStepsDelay_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_mpiReadSubStepsDelay",&AS_appSig_C_mpiReadSubStepsDelay_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaWriteSteps_isPassed",&AS_appSig_sapaWriteSteps_isPassed_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaWrite_SeedKey",&AS_appSig_sapaWrite_SeedKey_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaWrite_bytesSeedKey",&AS_appSig_sapaWrite_bytesSeedKey_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaWrite_Seed",&AS_appSig_sapaWrite_Seed_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaWrite_bytesSeed",&AS_appSig_sapaWrite_bytesSeed_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaRead_Seed",&AS_appSig_sapaRead_Seed_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaRead_bytesSeed",&AS_appSig_sapaRead_bytesSeed_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaReadSteps_isPassed",&AS_appSig_sapaReadSteps_isPassed_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_sapaWrite_lock",&AS_appSig_sapaWrite_lock_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_sapaWriteStepsDelay",&AS_appSig_C_sapaWriteStepsDelay_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_sapaWriteSubStepDelay_SeedKey",&AS_appSig_C_sapaWriteSubStepDelay_SeedKey_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_step39_targetRawValueMin",&AS_appSig_C_step39_targetRawValueMin_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_step39_targetRawValueNormal",&AS_appSig_C_step39_targetRawValueNormal_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_step39_targetRawValueMax",&AS_appSig_C_step39_targetRawValueMax_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_step40_targetRawValueMin",&AS_appSig_C_step40_targetRawValueMin_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_step40_targetRawValueNormal",&AS_appSig_C_step40_targetRawValueNormal_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_C_step40_targetRawValueMax",&AS_appSig_C_step40_targetRawValueMax_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_step39_currPhyValue",&AS_appSig_step39_currPhyValue_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_step40_currPhyValue",&AS_appSig_step40_currPhyValue_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,5,L"AS_appSig_step41_currPhyValue",&AS_appSig_step41_currPhyValue_Index);
 
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiRead_bytesBMPNAC_Index,CM_AS_appSig_mpiRead_bytesBMPNAC);
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiRead_bytesDUNS_Index,CM_AS_appSig_mpiRead_bytesDUNS);
@@ -1684,6 +1761,8 @@ CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiRead_by
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiWrite_BMPNAC_Index,CM_AS_appSig_mpiWrite_BMPNAC);
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiWrite_EMPNAC_Index,CM_AS_appSig_mpiWrite_EMPNAC);
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiWrite_MTC_Index,CM_AS_appSig_mpiWrite_MTC);
+CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_sapaWrite_bytesSeedKey_Index,CM_AS_appSig_sapaWrite_bytesSeedKey);
+CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_sapaWrite_bytesSeed_Index,CM_AS_appSig_sapaWrite_bytesSeed);
 }
 void __stdcall CM_EveryMessage(int iNetwork, int iID, __int64 iTimeStampNanoSecondsHW, unsigned int iTimeStampMillisecondsOS,
 									  int iNumDataBytes, int iBitField, unsigned char *p_btData)
@@ -1874,27 +1953,51 @@ int AS_appSig_mpiWrite_bytesEMPNAC_Index = 91; // sig120
 int AS_appSig_mpiWrite_bytesBMPNAC_Index = 92; // sig121
 int AS_appSig_mpiRead_bytesMTC_Index = 93; // sig122
 int AS_appSig_mpiRead_MTC_Index = 94; // sig123
-int AS_appSig_C_mpiSubStepsDelay_Index = 95; // sig124
-int AS_appSig_C_mpiStepsDelay_Index = 96; // sig125
-int AS_appSig_mpiRead_bytesECUID_Index = 97; // sig126
-int AS_appSig_mpiRead_ECUID_Index = 98; // sig127
-int AS_appSig_mpiRead_EMPN_Index = 99; // sig128
-int AS_appSig_mpiRead_BMPN_Index = 100; // sig129
-int AS_appSig_mpiRead_bytesEMPNAC_Index = 101; // sig130
-int AS_appSig_mpiRead_bytesBMPNAC_Index = 102; // sig131
-int AS_appSig_mpiRead_bytesVPPS_Index = 103; // sig132
-int AS_appSig_mpiRead_bytesDUNS_Index = 104; // sig133
-int AS_appSig_mpiRead_VPPS_Index = 105; // sig134
-int AS_appSig_mpiRead_DUNS_Index = 106; // sig135
-int AS_appSig_mpiRead_EMPNAC_Index = 107; // sig136
-int AS_appSig_mpiRead_BMPNAC_Index = 108; // sig137
-int AS_appSig_mpiRead_ECUID_SN_Index = 109; // sig138
-int AS_appSig_mpiRead_ECUID_BMPN_Index = 110; // sig139
-int AS_appSig_mpiRead_EMPNStr_Index = 111; // sig140
-int AS_appSig_mpiRead_BMPNStr_Index = 112; // sig141
-int AS_appSig_mpiRead_ECUID_SNStr_Index = 113; // sig142
-int AS_appSig_mpiRead_ECUID_BMPNStr_Index = 114; // sig143
-int AS_appSig_mpiWrite_Model_Index = 115; // sig144
+int AS_appSig_C_mpiWriteSubStepsDelay_Index = 95; // sig124
+int AS_appSig_C_mpiWriteSubStepDelay_MTC_Index = 96; // sig148
+int AS_appSig_C_mpiWriteStepsDelay_Index = 97; // sig125
+int AS_appSig_mpiRead_bytesECUID_Index = 98; // sig126
+int AS_appSig_mpiRead_ECUID_Index = 99; // sig127
+int AS_appSig_mpiRead_EMPN_Index = 100; // sig128
+int AS_appSig_mpiRead_BMPN_Index = 101; // sig129
+int AS_appSig_mpiRead_bytesEMPNAC_Index = 102; // sig130
+int AS_appSig_mpiRead_bytesBMPNAC_Index = 103; // sig131
+int AS_appSig_mpiRead_bytesVPPS_Index = 104; // sig132
+int AS_appSig_mpiRead_bytesDUNS_Index = 105; // sig133
+int AS_appSig_mpiRead_VPPS_Index = 106; // sig134
+int AS_appSig_mpiRead_DUNS_Index = 107; // sig135
+int AS_appSig_mpiRead_EMPNAC_Index = 108; // sig136
+int AS_appSig_mpiRead_BMPNAC_Index = 109; // sig137
+int AS_appSig_mpiRead_ECUID_SN_Index = 110; // sig138
+int AS_appSig_mpiRead_ECUID_BMPN_Index = 111; // sig139
+int AS_appSig_mpiRead_EMPNStr_Index = 112; // sig140
+int AS_appSig_mpiRead_BMPNStr_Index = 113; // sig141
+int AS_appSig_mpiRead_ECUID_SNStr_Index = 114; // sig142
+int AS_appSig_mpiRead_ECUID_BMPNStr_Index = 115; // sig143
+int AS_appSig_mpiWrite_Model_Index = 116; // sig144
+int AS_appSig_mpiWriteState_Index = 117; // sig145
+int AS_appSig_C_mpiReadStepsDelay_Index = 118; // sig146
+int AS_appSig_C_mpiReadSubStepsDelay_Index = 119; // sig147
+int AS_appSig_sapaWriteSteps_isPassed_Index = 120; // sig167
+int AS_appSig_sapaWrite_SeedKey_Index = 121; // sig150
+int AS_appSig_sapaWrite_bytesSeedKey_Index = 122; // sig151
+int AS_appSig_sapaWrite_Seed_Index = 123; // sig152
+int AS_appSig_sapaWrite_bytesSeed_Index = 124; // sig153
+int AS_appSig_sapaRead_Seed_Index = 125; // sig154
+int AS_appSig_sapaRead_bytesSeed_Index = 126; // sig155
+int AS_appSig_sapaReadSteps_isPassed_Index = 127; // sig156
+int AS_appSig_sapaWrite_lock_Index = 128; // sig157
+int AS_appSig_C_sapaWriteStepsDelay_Index = 129; // sig169
+int AS_appSig_C_sapaWriteSubStepDelay_SeedKey_Index = 130; // sig168
+int AS_appSig_C_step39_targetRawValueMin_Index = 131; // sig158
+int AS_appSig_C_step39_targetRawValueNormal_Index = 132; // sig159
+int AS_appSig_C_step39_targetRawValueMax_Index = 133; // sig160
+int AS_appSig_C_step40_targetRawValueMin_Index = 134; // sig161
+int AS_appSig_C_step40_targetRawValueNormal_Index = 135; // sig162
+int AS_appSig_C_step40_targetRawValueMax_Index = 136; // sig163
+int AS_appSig_step39_currPhyValue_Index = 137; // sig164
+int AS_appSig_step40_currPhyValue_Index = 138; // sig165
+int AS_appSig_step41_currPhyValue_Index = 139; // sig166
 int DG_$22_Read_Data_By_PID_Index = 0;
 void DG_$22_Read_Data_By_PID_Start()
 {
@@ -2131,7 +2234,77 @@ double FB_fsMain_saveSettings_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fsMain_saveSettings_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_resetCurrValuesAutoTest_Index = 5;
+int FB_fsMain_subPeriodicMsgOn_Index = 5;
+void FB_fsMain_subPeriodicMsgOn_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fsMain_subPeriodicMsgOn_Index,NULL);
+}
+void FB_fsMain_subPeriodicMsgOn_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_fsMain_subPeriodicMsgOn_Index,NULL);
+}
+void FB_fsMain_subPeriodicMsgOn_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_fsMain_subPeriodicMsgOn_Index,NULL);
+}
+void FB_fsMain_subPeriodicMsgOn_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_fsMain_subPeriodicMsgOn_Index,NULL);
+}
+double FB_fsMain_subPeriodicMsgOn_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_fsMain_subPeriodicMsgOn_Index,&dTemp);
+    return dTemp;
+}
+double FB_fsMain_subPeriodicMsgOn_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_fsMain_subPeriodicMsgOn_Index,&dTemp);
+    return dTemp;
+}
+double FB_fsMain_subPeriodicMsgOn_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fsMain_subPeriodicMsgOn_Index,&dTemp);
+    return dTemp;
+}
+int FB_fsMain_subPeriodicMsgOff_Index = 6;
+void FB_fsMain_subPeriodicMsgOff_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fsMain_subPeriodicMsgOff_Index,NULL);
+}
+void FB_fsMain_subPeriodicMsgOff_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_fsMain_subPeriodicMsgOff_Index,NULL);
+}
+void FB_fsMain_subPeriodicMsgOff_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_fsMain_subPeriodicMsgOff_Index,NULL);
+}
+void FB_fsMain_subPeriodicMsgOff_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_fsMain_subPeriodicMsgOff_Index,NULL);
+}
+double FB_fsMain_subPeriodicMsgOff_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_fsMain_subPeriodicMsgOff_Index,&dTemp);
+    return dTemp;
+}
+double FB_fsMain_subPeriodicMsgOff_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_fsMain_subPeriodicMsgOff_Index,&dTemp);
+    return dTemp;
+}
+double FB_fsMain_subPeriodicMsgOff_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fsMain_subPeriodicMsgOff_Index,&dTemp);
+    return dTemp;
+}
+int FB_fs_resetCurrValuesAutoTest_Index = 7;
 void FB_fs_resetCurrValuesAutoTest_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_resetCurrValuesAutoTest_Index,NULL);
@@ -2166,7 +2339,7 @@ double FB_fs_resetCurrValuesAutoTest_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_resetCurrValuesAutoTest_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_linkDetect_Index = 6;
+int FB_fs_linkDetect_Index = 8;
 void FB_fs_linkDetect_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_linkDetect_Index,NULL);
@@ -2201,7 +2374,7 @@ double FB_fs_linkDetect_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_linkDetect_Index,&dTemp);
     return dTemp;
 }
-int FB_fsMain_autoTest_Index = 7;
+int FB_fsMain_autoTest_Index = 9;
 void FB_fsMain_autoTest_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fsMain_autoTest_Index,NULL);
@@ -2236,7 +2409,7 @@ double FB_fsMain_autoTest_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fsMain_autoTest_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_resetTargetValues_Index = 8;
+int FB_fs_resetTargetValues_Index = 10;
 void FB_fs_resetTargetValues_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_resetTargetValues_Index,NULL);
@@ -2271,7 +2444,7 @@ double FB_fs_resetTargetValues_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_resetTargetValues_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_resetCurrValues_Index = 9;
+int FB_fs_resetCurrValues_Index = 11;
 void FB_fs_resetCurrValues_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_resetCurrValues_Index,NULL);
@@ -2306,7 +2479,7 @@ double FB_fs_resetCurrValues_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_resetCurrValues_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_resetPassedFlags_Index = 10;
+int FB_fs_resetPassedFlags_Index = 12;
 void FB_fs_resetPassedFlags_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_resetPassedFlags_Index,NULL);
@@ -2341,7 +2514,7 @@ double FB_fs_resetPassedFlags_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_resetPassedFlags_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_periodicSteps32_38_Index = 11;
+int FB_fs_periodicSteps32_38_Index = 13;
 void FB_fs_periodicSteps32_38_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_periodicSteps32_38_Index,NULL);
@@ -2376,7 +2549,7 @@ double FB_fs_periodicSteps32_38_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_periodicSteps32_38_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step8_Execute_Index = 12;
+int FB_fs_step8_Execute_Index = 14;
 void FB_fs_step8_Execute_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step8_Execute_Index,NULL);
@@ -2411,7 +2584,7 @@ double FB_fs_step8_Execute_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step8_Execute_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step9_Execute_Index = 13;
+int FB_fs_step9_Execute_Index = 15;
 void FB_fs_step9_Execute_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step9_Execute_Index,NULL);
@@ -2446,7 +2619,7 @@ double FB_fs_step9_Execute_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step9_Execute_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step10_Execute_Index = 14;
+int FB_fs_step10_Execute_Index = 16;
 void FB_fs_step10_Execute_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step10_Execute_Index,NULL);
@@ -2481,7 +2654,42 @@ double FB_fs_step10_Execute_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step10_Execute_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step15_sendOnce_Index = 15;
+int FB_fs_step_10_1_Execute_Index = 17;
+void FB_fs_step_10_1_Execute_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step_10_1_Execute_Index,NULL);
+}
+void FB_fs_step_10_1_Execute_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_fs_step_10_1_Execute_Index,NULL);
+}
+void FB_fs_step_10_1_Execute_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_fs_step_10_1_Execute_Index,NULL);
+}
+void FB_fs_step_10_1_Execute_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_fs_step_10_1_Execute_Index,NULL);
+}
+double FB_fs_step_10_1_Execute_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_fs_step_10_1_Execute_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step_10_1_Execute_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_fs_step_10_1_Execute_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step_10_1_Execute_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step_10_1_Execute_Index,&dTemp);
+    return dTemp;
+}
+int FB_fs_step15_sendOnce_Index = 18;
 void FB_fs_step15_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step15_sendOnce_Index,NULL);
@@ -2516,7 +2724,7 @@ double FB_fs_step15_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step15_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step16_sendOnce_Index = 16;
+int FB_fs_step16_sendOnce_Index = 19;
 void FB_fs_step16_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step16_sendOnce_Index,NULL);
@@ -2551,7 +2759,7 @@ double FB_fs_step16_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step16_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step17_sendOnce_Index = 17;
+int FB_fs_step17_sendOnce_Index = 20;
 void FB_fs_step17_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step17_sendOnce_Index,NULL);
@@ -2586,7 +2794,7 @@ double FB_fs_step17_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step17_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step18_sendOnce_Index = 18;
+int FB_fs_step18_sendOnce_Index = 21;
 void FB_fs_step18_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step18_sendOnce_Index,NULL);
@@ -2621,7 +2829,7 @@ double FB_fs_step18_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step18_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step19_sendOnce_Index = 19;
+int FB_fs_step19_sendOnce_Index = 22;
 void FB_fs_step19_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step19_sendOnce_Index,NULL);
@@ -2656,7 +2864,7 @@ double FB_fs_step19_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step19_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step20_sendOnce_Index = 20;
+int FB_fs_step20_sendOnce_Index = 23;
 void FB_fs_step20_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step20_sendOnce_Index,NULL);
@@ -2691,7 +2899,7 @@ double FB_fs_step20_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step20_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step21_sendOnce_Index = 21;
+int FB_fs_step21_sendOnce_Index = 24;
 void FB_fs_step21_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step21_sendOnce_Index,NULL);
@@ -2726,7 +2934,7 @@ double FB_fs_step21_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step21_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step22_sendOnce_Index = 22;
+int FB_fs_step22_sendOnce_Index = 25;
 void FB_fs_step22_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step22_sendOnce_Index,NULL);
@@ -2761,7 +2969,7 @@ double FB_fs_step22_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step22_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step23_sendOnce_Index = 23;
+int FB_fs_step23_sendOnce_Index = 26;
 void FB_fs_step23_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step23_sendOnce_Index,NULL);
@@ -2796,7 +3004,7 @@ double FB_fs_step23_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step23_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step24_sendOnce_Index = 24;
+int FB_fs_step24_sendOnce_Index = 27;
 void FB_fs_step24_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step24_sendOnce_Index,NULL);
@@ -2831,7 +3039,7 @@ double FB_fs_step24_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step24_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step25_sendOnce_Index = 25;
+int FB_fs_step25_sendOnce_Index = 28;
 void FB_fs_step25_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step25_sendOnce_Index,NULL);
@@ -2866,7 +3074,7 @@ double FB_fs_step25_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step25_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step26_sendOnce_Index = 26;
+int FB_fs_step26_sendOnce_Index = 29;
 void FB_fs_step26_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step26_sendOnce_Index,NULL);
@@ -2901,7 +3109,7 @@ double FB_fs_step26_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step26_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step27_sendOnce_Index = 27;
+int FB_fs_step27_sendOnce_Index = 30;
 void FB_fs_step27_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step27_sendOnce_Index,NULL);
@@ -2936,7 +3144,7 @@ double FB_fs_step27_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step27_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step28_sendOnce_Index = 28;
+int FB_fs_step28_sendOnce_Index = 31;
 void FB_fs_step28_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step28_sendOnce_Index,NULL);
@@ -2971,7 +3179,7 @@ double FB_fs_step28_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step28_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step29_sendOnce_Index = 29;
+int FB_fs_step29_sendOnce_Index = 32;
 void FB_fs_step29_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step29_sendOnce_Index,NULL);
@@ -3006,7 +3214,7 @@ double FB_fs_step29_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step29_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step30_sendOnce_Index = 30;
+int FB_fs_step30_sendOnce_Index = 33;
 void FB_fs_step30_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step30_sendOnce_Index,NULL);
@@ -3041,7 +3249,7 @@ double FB_fs_step30_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step30_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step31_sendOnce_Index = 31;
+int FB_fs_step31_sendOnce_Index = 34;
 void FB_fs_step31_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step31_sendOnce_Index,NULL);
@@ -3076,7 +3284,7 @@ double FB_fs_step31_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step31_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step32_sendOnce_Index = 32;
+int FB_fs_step32_sendOnce_Index = 35;
 void FB_fs_step32_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step32_sendOnce_Index,NULL);
@@ -3111,7 +3319,7 @@ double FB_fs_step32_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step32_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step33_sendOnce_Index = 33;
+int FB_fs_step33_sendOnce_Index = 36;
 void FB_fs_step33_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step33_sendOnce_Index,NULL);
@@ -3146,7 +3354,7 @@ double FB_fs_step33_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step33_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step34_sendOnce_Index = 34;
+int FB_fs_step34_sendOnce_Index = 37;
 void FB_fs_step34_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step34_sendOnce_Index,NULL);
@@ -3181,7 +3389,7 @@ double FB_fs_step34_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step34_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step35_sendOnce_Index = 35;
+int FB_fs_step35_sendOnce_Index = 38;
 void FB_fs_step35_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step35_sendOnce_Index,NULL);
@@ -3216,7 +3424,7 @@ double FB_fs_step35_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step35_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step36_sendOnce_Index = 36;
+int FB_fs_step36_sendOnce_Index = 39;
 void FB_fs_step36_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step36_sendOnce_Index,NULL);
@@ -3251,7 +3459,7 @@ double FB_fs_step36_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step36_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step37_sendOnce_Index = 37;
+int FB_fs_step37_sendOnce_Index = 40;
 void FB_fs_step37_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step37_sendOnce_Index,NULL);
@@ -3286,7 +3494,7 @@ double FB_fs_step37_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step37_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step38_sendOnce_Index = 38;
+int FB_fs_step38_sendOnce_Index = 41;
 void FB_fs_step38_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step38_sendOnce_Index,NULL);
@@ -3321,7 +3529,112 @@ double FB_fs_step38_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step38_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step343536_sendOnce_Index = 39;
+int FB_fs_step39_sendOnce_Index = 42;
+void FB_fs_step39_sendOnce_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step39_sendOnce_Index,NULL);
+}
+void FB_fs_step39_sendOnce_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_fs_step39_sendOnce_Index,NULL);
+}
+void FB_fs_step39_sendOnce_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_fs_step39_sendOnce_Index,NULL);
+}
+void FB_fs_step39_sendOnce_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_fs_step39_sendOnce_Index,NULL);
+}
+double FB_fs_step39_sendOnce_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_fs_step39_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step39_sendOnce_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_fs_step39_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step39_sendOnce_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step39_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+int FB_fs_step40_sendOnce_Index = 43;
+void FB_fs_step40_sendOnce_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step40_sendOnce_Index,NULL);
+}
+void FB_fs_step40_sendOnce_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_fs_step40_sendOnce_Index,NULL);
+}
+void FB_fs_step40_sendOnce_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_fs_step40_sendOnce_Index,NULL);
+}
+void FB_fs_step40_sendOnce_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_fs_step40_sendOnce_Index,NULL);
+}
+double FB_fs_step40_sendOnce_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_fs_step40_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step40_sendOnce_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_fs_step40_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step40_sendOnce_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step40_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+int FB_fs_step41_sendOnce_Index = 44;
+void FB_fs_step41_sendOnce_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step41_sendOnce_Index,NULL);
+}
+void FB_fs_step41_sendOnce_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_fs_step41_sendOnce_Index,NULL);
+}
+void FB_fs_step41_sendOnce_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_fs_step41_sendOnce_Index,NULL);
+}
+void FB_fs_step41_sendOnce_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_fs_step41_sendOnce_Index,NULL);
+}
+double FB_fs_step41_sendOnce_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_fs_step41_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step41_sendOnce_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_fs_step41_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+double FB_fs_step41_sendOnce_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step41_sendOnce_Index,&dTemp);
+    return dTemp;
+}
+int FB_fs_step343536_sendOnce_Index = 45;
 void FB_fs_step343536_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step343536_sendOnce_Index,NULL);
@@ -3356,7 +3669,7 @@ double FB_fs_step343536_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step343536_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_fs_step3738_sendOnce_Index = 40;
+int FB_fs_step3738_sendOnce_Index = 46;
 void FB_fs_step3738_sendOnce_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_fs_step3738_sendOnce_Index,NULL);
@@ -3391,7 +3704,7 @@ double FB_fs_step3738_sendOnce_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_fs_step3738_sendOnce_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_mainMPIWrite_Index = 41;
+int FB_mpiWrite_mainMPIWrite_Index = 47;
 void FB_mpiWrite_mainMPIWrite_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_mainMPIWrite_Index,NULL);
@@ -3426,7 +3739,7 @@ double FB_mpiWrite_mainMPIWrite_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_mainMPIWrite_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_resetPassedFlags_Index = 42;
+int FB_mpiWrite_resetPassedFlags_Index = 48;
 void FB_mpiWrite_resetPassedFlags_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_resetPassedFlags_Index,NULL);
@@ -3461,7 +3774,7 @@ double FB_mpiWrite_resetPassedFlags_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_resetPassedFlags_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step1_Index = 43;
+int FB_mpiWrite_sub_step1_Index = 49;
 void FB_mpiWrite_sub_step1_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step1_Index,NULL);
@@ -3496,7 +3809,7 @@ double FB_mpiWrite_sub_step1_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step1_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_stepX_Str_Index = 44;
+int FB_mpiWrite_sub_stepX_Str_Index = 50;
 void FB_mpiWrite_sub_stepX_Str_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_stepX_Str_Index,NULL);
@@ -3531,7 +3844,7 @@ double FB_mpiWrite_sub_stepX_Str_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_stepX_Str_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_stepX_Number_Index = 45;
+int FB_mpiWrite_sub_stepX_Number_Index = 51;
 void FB_mpiWrite_sub_stepX_Number_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_stepX_Number_Index,NULL);
@@ -3566,7 +3879,7 @@ double FB_mpiWrite_sub_stepX_Number_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_stepX_Number_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step2_Index = 46;
+int FB_mpiWrite_sub_step2_Index = 52;
 void FB_mpiWrite_sub_step2_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step2_Index,NULL);
@@ -3601,7 +3914,7 @@ double FB_mpiWrite_sub_step2_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step2_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step3_Index = 47;
+int FB_mpiWrite_sub_step3_Index = 53;
 void FB_mpiWrite_sub_step3_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step3_Index,NULL);
@@ -3636,7 +3949,7 @@ double FB_mpiWrite_sub_step3_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step3_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step4_Index = 48;
+int FB_mpiWrite_sub_step4_Index = 54;
 void FB_mpiWrite_sub_step4_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step4_Index,NULL);
@@ -3671,7 +3984,7 @@ double FB_mpiWrite_sub_step4_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step4_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step5_Index = 49;
+int FB_mpiWrite_sub_step5_Index = 55;
 void FB_mpiWrite_sub_step5_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step5_Index,NULL);
@@ -3706,7 +4019,7 @@ double FB_mpiWrite_sub_step5_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step5_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step6_Index = 50;
+int FB_mpiWrite_sub_step6_Index = 56;
 void FB_mpiWrite_sub_step6_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step6_Index,NULL);
@@ -3741,7 +4054,7 @@ double FB_mpiWrite_sub_step6_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step6_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step7_Index = 51;
+int FB_mpiWrite_sub_step7_Index = 57;
 void FB_mpiWrite_sub_step7_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step7_Index,NULL);
@@ -3776,7 +4089,7 @@ double FB_mpiWrite_sub_step7_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step7_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_step8_Index = 52;
+int FB_mpiWrite_sub_step8_Index = 58;
 void FB_mpiWrite_sub_step8_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_step8_Index,NULL);
@@ -3811,7 +4124,7 @@ double FB_mpiWrite_sub_step8_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_step8_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_mainMPIRead_Index = 53;
+int FB_mpiRead_mainMPIRead_Index = 59;
 void FB_mpiRead_mainMPIRead_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_mainMPIRead_Index,NULL);
@@ -3846,7 +4159,7 @@ double FB_mpiRead_mainMPIRead_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_mainMPIRead_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_resetValues_Index = 54;
+int FB_mpiRead_resetValues_Index = 60;
 void FB_mpiRead_resetValues_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_resetValues_Index,NULL);
@@ -3881,7 +4194,7 @@ double FB_mpiRead_resetValues_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_resetValues_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_resetPassedFlags_Index = 55;
+int FB_mpiRead_resetPassedFlags_Index = 61;
 void FB_mpiRead_resetPassedFlags_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_resetPassedFlags_Index,NULL);
@@ -3916,7 +4229,7 @@ double FB_mpiRead_resetPassedFlags_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_resetPassedFlags_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step1_Index = 56;
+int FB_mpiRead_sub_step1_Index = 62;
 void FB_mpiRead_sub_step1_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step1_Index,NULL);
@@ -3951,7 +4264,7 @@ double FB_mpiRead_sub_step1_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step1_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step2_Index = 57;
+int FB_mpiRead_sub_step2_Index = 63;
 void FB_mpiRead_sub_step2_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step2_Index,NULL);
@@ -3986,7 +4299,7 @@ double FB_mpiRead_sub_step2_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step2_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step3_Index = 58;
+int FB_mpiRead_sub_step3_Index = 64;
 void FB_mpiRead_sub_step3_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step3_Index,NULL);
@@ -4021,7 +4334,7 @@ double FB_mpiRead_sub_step3_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step3_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step4_Index = 59;
+int FB_mpiRead_sub_step4_Index = 65;
 void FB_mpiRead_sub_step4_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step4_Index,NULL);
@@ -4056,7 +4369,7 @@ double FB_mpiRead_sub_step4_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step4_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step5_Index = 60;
+int FB_mpiRead_sub_step5_Index = 66;
 void FB_mpiRead_sub_step5_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step5_Index,NULL);
@@ -4091,7 +4404,7 @@ double FB_mpiRead_sub_step5_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step5_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step6_Index = 61;
+int FB_mpiRead_sub_step6_Index = 67;
 void FB_mpiRead_sub_step6_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step6_Index,NULL);
@@ -4126,7 +4439,7 @@ double FB_mpiRead_sub_step6_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step6_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step7_Index = 62;
+int FB_mpiRead_sub_step7_Index = 68;
 void FB_mpiRead_sub_step7_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step7_Index,NULL);
@@ -4161,7 +4474,7 @@ double FB_mpiRead_sub_step7_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step7_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step8_Index = 63;
+int FB_mpiRead_sub_step8_Index = 69;
 void FB_mpiRead_sub_step8_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step8_Index,NULL);
@@ -4196,7 +4509,7 @@ double FB_mpiRead_sub_step8_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step8_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiRead_sub_step9_Index = 64;
+int FB_mpiRead_sub_step9_Index = 70;
 void FB_mpiRead_sub_step9_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiRead_sub_step9_Index,NULL);
@@ -4231,7 +4544,7 @@ double FB_mpiRead_sub_step9_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiRead_sub_step9_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_mainModelWrite_Index = 65;
+int FB_mpiWrite_mainModelWrite_Index = 71;
 void FB_mpiWrite_mainModelWrite_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_mainModelWrite_Index,NULL);
@@ -4266,7 +4579,7 @@ double FB_mpiWrite_mainModelWrite_NumCollected()
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_mainModelWrite_Index,&dTemp);
     return dTemp;
 }
-int FB_mpiWrite_sub_stepModel_Index = 66;
+int FB_mpiWrite_sub_stepModel_Index = 72;
 void FB_mpiWrite_sub_stepModel_Start()
 {
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_mpiWrite_sub_stepModel_Index,NULL);
@@ -4299,6 +4612,251 @@ double FB_mpiWrite_sub_stepModel_NumCollected()
 {
     double dTemp;
     CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_mpiWrite_sub_stepModel_Index,&dTemp);
+    return dTemp;
+}
+int FB_sapa_mainWrite_Index = 73;
+void FB_sapa_mainWrite_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_sapa_mainWrite_Index,NULL);
+}
+void FB_sapa_mainWrite_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_sapa_mainWrite_Index,NULL);
+}
+void FB_sapa_mainWrite_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_sapa_mainWrite_Index,NULL);
+}
+void FB_sapa_mainWrite_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_sapa_mainWrite_Index,NULL);
+}
+double FB_sapa_mainWrite_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_sapa_mainWrite_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapa_mainWrite_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_sapa_mainWrite_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapa_mainWrite_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_sapa_mainWrite_Index,&dTemp);
+    return dTemp;
+}
+int FB_sapa_mainRead_Index = 74;
+void FB_sapa_mainRead_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_sapa_mainRead_Index,NULL);
+}
+void FB_sapa_mainRead_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_sapa_mainRead_Index,NULL);
+}
+void FB_sapa_mainRead_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_sapa_mainRead_Index,NULL);
+}
+void FB_sapa_mainRead_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_sapa_mainRead_Index,NULL);
+}
+double FB_sapa_mainRead_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_sapa_mainRead_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapa_mainRead_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_sapa_mainRead_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapa_mainRead_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_sapa_mainRead_Index,&dTemp);
+    return dTemp;
+}
+int FB_sapaRead_resetValues_Index = 75;
+void FB_sapaRead_resetValues_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_sapaRead_resetValues_Index,NULL);
+}
+void FB_sapaRead_resetValues_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_sapaRead_resetValues_Index,NULL);
+}
+void FB_sapaRead_resetValues_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_sapaRead_resetValues_Index,NULL);
+}
+void FB_sapaRead_resetValues_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_sapaRead_resetValues_Index,NULL);
+}
+double FB_sapaRead_resetValues_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_sapaRead_resetValues_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaRead_resetValues_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_sapaRead_resetValues_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaRead_resetValues_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_sapaRead_resetValues_Index,&dTemp);
+    return dTemp;
+}
+int FB_sapaWrite_sub_step1_Index = 76;
+void FB_sapaWrite_sub_step1_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_sapaWrite_sub_step1_Index,NULL);
+}
+void FB_sapaWrite_sub_step1_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_sapaWrite_sub_step1_Index,NULL);
+}
+void FB_sapaWrite_sub_step1_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_sapaWrite_sub_step1_Index,NULL);
+}
+void FB_sapaWrite_sub_step1_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_sapaWrite_sub_step1_Index,NULL);
+}
+double FB_sapaWrite_sub_step1_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_sapaWrite_sub_step1_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaWrite_sub_step1_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_sapaWrite_sub_step1_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaWrite_sub_step1_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_sapaWrite_sub_step1_Index,&dTemp);
+    return dTemp;
+}
+int FB_sapaWrite_sub_step2_Index = 77;
+void FB_sapaWrite_sub_step2_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_sapaWrite_sub_step2_Index,NULL);
+}
+void FB_sapaWrite_sub_step2_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_sapaWrite_sub_step2_Index,NULL);
+}
+void FB_sapaWrite_sub_step2_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_sapaWrite_sub_step2_Index,NULL);
+}
+void FB_sapaWrite_sub_step2_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_sapaWrite_sub_step2_Index,NULL);
+}
+double FB_sapaWrite_sub_step2_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_sapaWrite_sub_step2_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaWrite_sub_step2_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_sapaWrite_sub_step2_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaWrite_sub_step2_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_sapaWrite_sub_step2_Index,&dTemp);
+    return dTemp;
+}
+int FB_sapaRead_sub_step1_Index = 78;
+void FB_sapaRead_sub_step1_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_sapaRead_sub_step1_Index,NULL);
+}
+void FB_sapaRead_sub_step1_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_sapaRead_sub_step1_Index,NULL);
+}
+void FB_sapaRead_sub_step1_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_sapaRead_sub_step1_Index,NULL);
+}
+void FB_sapaRead_sub_step1_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_sapaRead_sub_step1_Index,NULL);
+}
+double FB_sapaRead_sub_step1_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_sapaRead_sub_step1_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaRead_sub_step1_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_sapaRead_sub_step1_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaRead_sub_step1_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_sapaRead_sub_step1_Index,&dTemp);
+    return dTemp;
+}
+int FB_sapaRead_sub_step2_Index = 79;
+void FB_sapaRead_sub_step2_Start()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_START,FB_sapaRead_sub_step2_Index,NULL);
+}
+void FB_sapaRead_sub_step2_Stop()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_STOP,FB_sapaRead_sub_step2_Index,NULL);
+}
+void FB_sapaRead_sub_step2_Trigger()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_TRIGGER,FB_sapaRead_sub_step2_Index,NULL);
+}
+void FB_sapaRead_sub_step2_Save()
+{
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_SAVE,FB_sapaRead_sub_step2_Index,NULL);
+}
+double FB_sapaRead_sub_step2_IsRunning()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISRUNNING,FB_sapaRead_sub_step2_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaRead_sub_step2_IsTriggered()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_ISTRIGGERED,FB_sapaRead_sub_step2_Index,&dTemp);
+    return dTemp;
+}
+double FB_sapaRead_sub_step2_NumCollected()
+{
+    double dTemp;
+    CM_GetSetValue(g_uiHandle,CM_GETSET_FBLOCK_GET_NUMCOLLECTED,FB_sapaRead_sub_step2_Index,&dTemp);
     return dTemp;
 }
 
@@ -7075,6 +7633,461 @@ int TX_mpiWrite_diagRequest_stepModel_1_HS_CAN_TransmitFast()
 }
 
 
+int TX_step7_1_message_1_122_HS_CAN_Index = 60;
+
+void TX_step7_1_message_1_122_HS_CAN_Init(TX_step7_1_message_1_122_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step7_1_message_1_122_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step7_1_message_1_122_HS_CAN_Transmit(TX_step7_1_message_1_122_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step7_1_message_1_122_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_1_122_HS_CAN_Transmit_raw(TX_step7_1_message_1_122_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step7_1_message_1_122_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_1_122_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step7_1_message_1_122_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_step7_1_message_2_4c1_HS_CAN_Index = 61;
+
+void TX_step7_1_message_2_4c1_HS_CAN_Init(TX_step7_1_message_2_4c1_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step7_1_message_2_4c1_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step7_1_message_2_4c1_HS_CAN_Transmit(TX_step7_1_message_2_4c1_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step7_1_message_2_4c1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_2_4c1_HS_CAN_Transmit_raw(TX_step7_1_message_2_4c1_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step7_1_message_2_4c1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_2_4c1_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step7_1_message_2_4c1_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_step7_1_message_3_190_HS_CAN_Index = 62;
+
+void TX_step7_1_message_3_190_HS_CAN_Init(TX_step7_1_message_3_190_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step7_1_message_3_190_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step7_1_message_3_190_HS_CAN_Transmit(TX_step7_1_message_3_190_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step7_1_message_3_190_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_3_190_HS_CAN_Transmit_raw(TX_step7_1_message_3_190_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step7_1_message_3_190_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_3_190_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step7_1_message_3_190_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_step7_1_message_4_371_HS_CAN_Index = 63;
+
+void TX_step7_1_message_4_371_HS_CAN_Init(TX_step7_1_message_4_371_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step7_1_message_4_371_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step7_1_message_4_371_HS_CAN_Transmit(TX_step7_1_message_4_371_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step7_1_message_4_371_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_4_371_HS_CAN_Transmit_raw(TX_step7_1_message_4_371_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step7_1_message_4_371_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_4_371_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step7_1_message_4_371_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_step7_1_message_5_3c5_HS_CAN_Index = 64;
+
+void TX_step7_1_message_5_3c5_HS_CAN_Init(TX_step7_1_message_5_3c5_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step7_1_message_5_3c5_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step7_1_message_5_3c5_HS_CAN_Transmit(TX_step7_1_message_5_3c5_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step7_1_message_5_3c5_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_5_3c5_HS_CAN_Transmit_raw(TX_step7_1_message_5_3c5_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step7_1_message_5_3c5_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step7_1_message_5_3c5_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step7_1_message_5_3c5_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_step39_diagRequest2_HS_CAN_Index = 65;
+
+void TX_step39_diagRequest2_HS_CAN_Init(TX_step39_diagRequest2_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step39_diagRequest2_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step39_diagRequest2_HS_CAN_Transmit(TX_step39_diagRequest2_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step39_diagRequest2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step39_diagRequest2_HS_CAN_Transmit_raw(TX_step39_diagRequest2_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step39_diagRequest2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step39_diagRequest2_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step39_diagRequest2_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_step40_diagRequest2_HS_CAN_Index = 66;
+
+void TX_step40_diagRequest2_HS_CAN_Init(TX_step40_diagRequest2_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step40_diagRequest2_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step40_diagRequest2_HS_CAN_Transmit(TX_step40_diagRequest2_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step40_diagRequest2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step40_diagRequest2_HS_CAN_Transmit_raw(TX_step40_diagRequest2_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step40_diagRequest2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step40_diagRequest2_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step40_diagRequest2_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_step41_diagRequest2_HS_CAN_Index = 67;
+
+void TX_step41_diagRequest2_HS_CAN_Init(TX_step41_diagRequest2_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_step41_diagRequest2_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_step41_diagRequest2_HS_CAN_Transmit(TX_step41_diagRequest2_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_step41_diagRequest2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step41_diagRequest2_HS_CAN_Transmit_raw(TX_step41_diagRequest2_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_step41_diagRequest2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_step41_diagRequest2_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_step41_diagRequest2_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index = 68;
+
+void TX_sapaWrite_diagRequest_step2_1_HS_CAN_Init(TX_sapaWrite_diagRequest_step2_1_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Transmit(TX_sapaWrite_diagRequest_step2_1_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_step2_1_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index = 69;
+
+void TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_1_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Transmit(TX_sapaWrite_diagRequest_constructive_1_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_constructive_1_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index = 70;
+
+void TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_2_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Transmit(TX_sapaWrite_diagRequest_constructive_2_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_constructive_2_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index = 71;
+
+void TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_3_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Transmit(TX_sapaWrite_diagRequest_constructive_3_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_constructive_3_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_sapaRead_diagRequest_step2_HS_CAN_Index = 72;
+
+void TX_sapaRead_diagRequest_step2_HS_CAN_Init(TX_sapaRead_diagRequest_step2_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_sapaRead_diagRequest_step2_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_sapaRead_diagRequest_step2_HS_CAN_Transmit(TX_sapaRead_diagRequest_step2_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_sapaRead_diagRequest_step2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaRead_diagRequest_step2_HS_CAN_Transmit_raw(TX_sapaRead_diagRequest_step2_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_sapaRead_diagRequest_step2_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaRead_diagRequest_step2_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_sapaRead_diagRequest_step2_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
 int MG_step8_14_Climate_Control_General_Status_HS_CAN_Index = 0;
 
 void MG_step8_14_Climate_Control_General_Status_HS_CAN_Init(MG_step8_14_Climate_Control_General_Status_HS_CAN * pMsg)
@@ -7647,6 +8660,35 @@ int MG_step9_PCRM005_LIN2__neoVI_3G__Transmit(MG_step9_PCRM005_LIN2__neoVI_3G_ *
 int MG_step9_PCRM005_LIN2__neoVI_3G__Transmit_raw(MG_step9_PCRM005_LIN2__neoVI_3G_ * pMsg)
 {
     return CM_TxFromRawSignals(g_uiHandle, 1, MG_step9_PCRM005_LIN2__neoVI_3G__Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+
+int MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Index = 11;
+
+void MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Init(MG_step10_1_PCRM006_1_LIN3__neoVI_3G_ * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 1, 
+    MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Transmit(MG_step10_1_PCRM006_1_LIN3__neoVI_3G_ * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 1, MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Transmit_raw(MG_step10_1_PCRM006_1_LIN3__neoVI_3G_ * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 1, MG_step10_1_PCRM006_1_LIN3__neoVI_3G__Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
 }
 
 
@@ -11162,5 +12204,1493 @@ int DB_Trigger_neoVI_UpdateBytesFromRawSignals(DB_Trigger_neoVI * pMsg)
     DB_Trigger_neoVI_LoadRawSignalValuesArray(pMsg, nRawValues);
 
     return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Trigger_neoVI_Index, nRawValues, 3, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Exterior_Lighting_HS_CAN_Index = 43;
+
+void DB_Exterior_Lighting_HS_CAN_Init(DB_Exterior_Lighting_HS_CAN * pMsg)
+{
+    double dValues[32] = {0.0};
+    uint64 nRawValues[32] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Exterior_Lighting_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 32, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->AdvFrntLghtSysEnbld = dValues[0];
+    pMsg->AutLghtCtrl = dValues[1];
+    pMsg->AutoBmSlctAllwd = dValues[2];
+    pMsg->AutoLtsActIO = dValues[3];
+    pMsg->AutoLtsInactIO = dValues[4];
+    pMsg->BrkLtsAtv = dValues[5];
+    pMsg->DRLAct = dValues[6];
+    pMsg->DispNtSchmAtv = dValues[7];
+    pMsg->FlToPsSwAtv = dValues[8];
+    pMsg->FrFogLmpsAct = dValues[9];
+    pMsg->FrFgLtIO = dValues[10];
+    pMsg->HazSwAtv = dValues[11];
+    pMsg->HdlmpBmSelectStat = dValues[12];
+    pMsg->HighBmAct = dValues[13];
+    pMsg->HiBmIO = dValues[14];
+    pMsg->HiBmReqd = dValues[15];
+    pMsg->IntDimDspLvl = dValues[16];
+    pMsg->IntDimLvl = dValues[17];
+    pMsg->IntDimNtPnlAtv = dValues[18];
+    pMsg->LftTrnLmpAtv = dValues[19];
+    pMsg->LowBmAct = dValues[20];
+    pMsg->MainLghtSw = dValues[21];
+    pMsg->OtsdAmbtLtLvlStat = dValues[22];
+    pMsg->OtsdAmbtLtLvlStatV = dValues[23];
+    pMsg->PrkLtIO = dValues[24];
+    pMsg->PrkLtLeftIO = dValues[25];
+    pMsg->PrkLtRightIO = dValues[26];
+    pMsg->RrFogLmpsAct = dValues[27];
+    pMsg->RrFgLtIO = dValues[28];
+    pMsg->RevLmpAtv = dValues[29];
+    pMsg->RtTrnLmpAtv = dValues[30];
+    pMsg->TrnSwAct = dValues[31];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, nRawValues, 32, &iActualSignalMaxCount);
+    pMsg->AdvFrntLghtSysEnbld_raw = (BYTE)nRawValues[0];
+    pMsg->AutLghtCtrl_raw = (BYTE)nRawValues[1];
+    pMsg->AutoBmSlctAllwd_raw = (BYTE)nRawValues[2];
+    pMsg->AutoLtsActIO_raw = (BYTE)nRawValues[3];
+    pMsg->AutoLtsInactIO_raw = (BYTE)nRawValues[4];
+    pMsg->BrkLtsAtv_raw = (BYTE)nRawValues[5];
+    pMsg->DRLAct_raw = (BYTE)nRawValues[6];
+    pMsg->DispNtSchmAtv_raw = (BYTE)nRawValues[7];
+    pMsg->FlToPsSwAtv_raw = (BYTE)nRawValues[8];
+    pMsg->FrFogLmpsAct_raw = (BYTE)nRawValues[9];
+    pMsg->FrFgLtIO_raw = (BYTE)nRawValues[10];
+    pMsg->HazSwAtv_raw = (BYTE)nRawValues[11];
+    pMsg->HdlmpBmSelectStat_raw = (BYTE)nRawValues[12];
+    pMsg->HighBmAct_raw = (BYTE)nRawValues[13];
+    pMsg->HiBmIO_raw = (BYTE)nRawValues[14];
+    pMsg->HiBmReqd_raw = (BYTE)nRawValues[15];
+    pMsg->IntDimDspLvl_raw = (BYTE)nRawValues[16];
+    pMsg->IntDimLvl_raw = (BYTE)nRawValues[17];
+    pMsg->IntDimNtPnlAtv_raw = (BYTE)nRawValues[18];
+    pMsg->LftTrnLmpAtv_raw = (BYTE)nRawValues[19];
+    pMsg->LowBmAct_raw = (BYTE)nRawValues[20];
+    pMsg->MainLghtSw_raw = (BYTE)nRawValues[21];
+    pMsg->OtsdAmbtLtLvlStat_raw = (BYTE)nRawValues[22];
+    pMsg->OtsdAmbtLtLvlStatV_raw = (BYTE)nRawValues[23];
+    pMsg->PrkLtIO_raw = (BYTE)nRawValues[24];
+    pMsg->PrkLtLeftIO_raw = (BYTE)nRawValues[25];
+    pMsg->PrkLtRightIO_raw = (BYTE)nRawValues[26];
+    pMsg->RrFogLmpsAct_raw = (BYTE)nRawValues[27];
+    pMsg->RrFgLtIO_raw = (BYTE)nRawValues[28];
+    pMsg->RevLmpAtv_raw = (BYTE)nRawValues[29];
+    pMsg->RtTrnLmpAtv_raw = (BYTE)nRawValues[30];
+    pMsg->TrnSwAct_raw = (BYTE)nRawValues[31];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Exterior_Lighting_HS_CAN_LoadSignalValuesArray(DB_Exterior_Lighting_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->AdvFrntLghtSysEnbld;
+    dArray[1] = pMsg->AutLghtCtrl;
+    dArray[2] = pMsg->AutoBmSlctAllwd;
+    dArray[3] = pMsg->AutoLtsActIO;
+    dArray[4] = pMsg->AutoLtsInactIO;
+    dArray[5] = pMsg->BrkLtsAtv;
+    dArray[6] = pMsg->DRLAct;
+    dArray[7] = pMsg->DispNtSchmAtv;
+    dArray[8] = pMsg->FlToPsSwAtv;
+    dArray[9] = pMsg->FrFogLmpsAct;
+    dArray[10] = pMsg->FrFgLtIO;
+    dArray[11] = pMsg->HazSwAtv;
+    dArray[12] = pMsg->HdlmpBmSelectStat;
+    dArray[13] = pMsg->HighBmAct;
+    dArray[14] = pMsg->HiBmIO;
+    dArray[15] = pMsg->HiBmReqd;
+    dArray[16] = pMsg->IntDimDspLvl;
+    dArray[17] = pMsg->IntDimLvl;
+    dArray[18] = pMsg->IntDimNtPnlAtv;
+    dArray[19] = pMsg->LftTrnLmpAtv;
+    dArray[20] = pMsg->LowBmAct;
+    dArray[21] = pMsg->MainLghtSw;
+    dArray[22] = pMsg->OtsdAmbtLtLvlStat;
+    dArray[23] = pMsg->OtsdAmbtLtLvlStatV;
+    dArray[24] = pMsg->PrkLtIO;
+    dArray[25] = pMsg->PrkLtLeftIO;
+    dArray[26] = pMsg->PrkLtRightIO;
+    dArray[27] = pMsg->RrFogLmpsAct;
+    dArray[28] = pMsg->RrFgLtIO;
+    dArray[29] = pMsg->RevLmpAtv;
+    dArray[30] = pMsg->RtTrnLmpAtv;
+    dArray[31] = pMsg->TrnSwAct;
+}
+
+void DB_Exterior_Lighting_HS_CAN_LoadRawSignalValuesArray(DB_Exterior_Lighting_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->AdvFrntLghtSysEnbld_raw;
+    nRawValues[1] = pMsg->AutLghtCtrl_raw;
+    nRawValues[2] = pMsg->AutoBmSlctAllwd_raw;
+    nRawValues[3] = pMsg->AutoLtsActIO_raw;
+    nRawValues[4] = pMsg->AutoLtsInactIO_raw;
+    nRawValues[5] = pMsg->BrkLtsAtv_raw;
+    nRawValues[6] = pMsg->DRLAct_raw;
+    nRawValues[7] = pMsg->DispNtSchmAtv_raw;
+    nRawValues[8] = pMsg->FlToPsSwAtv_raw;
+    nRawValues[9] = pMsg->FrFogLmpsAct_raw;
+    nRawValues[10] = pMsg->FrFgLtIO_raw;
+    nRawValues[11] = pMsg->HazSwAtv_raw;
+    nRawValues[12] = pMsg->HdlmpBmSelectStat_raw;
+    nRawValues[13] = pMsg->HighBmAct_raw;
+    nRawValues[14] = pMsg->HiBmIO_raw;
+    nRawValues[15] = pMsg->HiBmReqd_raw;
+    nRawValues[16] = pMsg->IntDimDspLvl_raw;
+    nRawValues[17] = pMsg->IntDimLvl_raw;
+    nRawValues[18] = pMsg->IntDimNtPnlAtv_raw;
+    nRawValues[19] = pMsg->LftTrnLmpAtv_raw;
+    nRawValues[20] = pMsg->LowBmAct_raw;
+    nRawValues[21] = pMsg->MainLghtSw_raw;
+    nRawValues[22] = pMsg->OtsdAmbtLtLvlStat_raw;
+    nRawValues[23] = pMsg->OtsdAmbtLtLvlStatV_raw;
+    nRawValues[24] = pMsg->PrkLtIO_raw;
+    nRawValues[25] = pMsg->PrkLtLeftIO_raw;
+    nRawValues[26] = pMsg->PrkLtRightIO_raw;
+    nRawValues[27] = pMsg->RrFogLmpsAct_raw;
+    nRawValues[28] = pMsg->RrFgLtIO_raw;
+    nRawValues[29] = pMsg->RevLmpAtv_raw;
+    nRawValues[30] = pMsg->RtTrnLmpAtv_raw;
+    nRawValues[31] = pMsg->TrnSwAct_raw;
+}
+
+int DB_Exterior_Lighting_HS_CAN_Transmit(DB_Exterior_Lighting_HS_CAN * pMsg)
+{
+    double dArray[32];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Exterior_Lighting_HS_CAN_Init(pMsg);
+    }
+
+    DB_Exterior_Lighting_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 32);
+}
+
+int DB_Exterior_Lighting_HS_CAN_Transmit_raw(DB_Exterior_Lighting_HS_CAN * pMsg)
+{
+    uint64 nRawValues[32];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Exterior_Lighting_HS_CAN_Init(pMsg);
+    }
+
+    DB_Exterior_Lighting_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 32);
+}
+
+int DB_Exterior_Lighting_HS_CAN_UpdateBytesFromSignals(DB_Exterior_Lighting_HS_CAN * pMsg)
+{
+    double dArray[32];
+
+    DB_Exterior_Lighting_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, dArray, 32, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Exterior_Lighting_HS_CAN_UpdateBytesFromRawSignals(DB_Exterior_Lighting_HS_CAN * pMsg)
+{
+    uint64 nRawValues[32];
+
+    DB_Exterior_Lighting_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Exterior_Lighting_HS_CAN_Index, nRawValues, 32, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index = 44;
+
+void DB_Front_Seat_Heat_Cool_Control_HS_CAN_Init(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg)
+{
+    double dValues[8] = {0.0};
+    uint64 nRawValues[8] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 8, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->DrvHCSMIndReq = dValues[0];
+    pMsg->DrvHCSMInd1 = dValues[1];
+    pMsg->DrvHCSMInd2 = dValues[2];
+    pMsg->DrvHCSMInd3 = dValues[3];
+    pMsg->PassHCSMIndReq = dValues[4];
+    pMsg->PassHCSMInd1 = dValues[5];
+    pMsg->PassHCSMInd2 = dValues[6];
+    pMsg->PassHCSMInd3 = dValues[7];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, nRawValues, 8, &iActualSignalMaxCount);
+    pMsg->DrvHCSMIndReq_raw = (BYTE)nRawValues[0];
+    pMsg->DrvHCSMInd1_raw = (BYTE)nRawValues[1];
+    pMsg->DrvHCSMInd2_raw = (BYTE)nRawValues[2];
+    pMsg->DrvHCSMInd3_raw = (BYTE)nRawValues[3];
+    pMsg->PassHCSMIndReq_raw = (BYTE)nRawValues[4];
+    pMsg->PassHCSMInd1_raw = (BYTE)nRawValues[5];
+    pMsg->PassHCSMInd2_raw = (BYTE)nRawValues[6];
+    pMsg->PassHCSMInd3_raw = (BYTE)nRawValues[7];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Front_Seat_Heat_Cool_Control_HS_CAN_LoadSignalValuesArray(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->DrvHCSMIndReq;
+    dArray[1] = pMsg->DrvHCSMInd1;
+    dArray[2] = pMsg->DrvHCSMInd2;
+    dArray[3] = pMsg->DrvHCSMInd3;
+    dArray[4] = pMsg->PassHCSMIndReq;
+    dArray[5] = pMsg->PassHCSMInd1;
+    dArray[6] = pMsg->PassHCSMInd2;
+    dArray[7] = pMsg->PassHCSMInd3;
+}
+
+void DB_Front_Seat_Heat_Cool_Control_HS_CAN_LoadRawSignalValuesArray(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->DrvHCSMIndReq_raw;
+    nRawValues[1] = pMsg->DrvHCSMInd1_raw;
+    nRawValues[2] = pMsg->DrvHCSMInd2_raw;
+    nRawValues[3] = pMsg->DrvHCSMInd3_raw;
+    nRawValues[4] = pMsg->PassHCSMIndReq_raw;
+    nRawValues[5] = pMsg->PassHCSMInd1_raw;
+    nRawValues[6] = pMsg->PassHCSMInd2_raw;
+    nRawValues[7] = pMsg->PassHCSMInd3_raw;
+}
+
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_Transmit(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg)
+{
+    double dArray[8];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Front_Seat_Heat_Cool_Control_HS_CAN_Init(pMsg);
+    }
+
+    DB_Front_Seat_Heat_Cool_Control_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 8);
+}
+
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_Transmit_raw(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg)
+{
+    uint64 nRawValues[8];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Front_Seat_Heat_Cool_Control_HS_CAN_Init(pMsg);
+    }
+
+    DB_Front_Seat_Heat_Cool_Control_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 8);
+}
+
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_UpdateBytesFromSignals(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg)
+{
+    double dArray[8];
+
+    DB_Front_Seat_Heat_Cool_Control_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, dArray, 8, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Front_Seat_Heat_Cool_Control_HS_CAN_UpdateBytesFromRawSignals(DB_Front_Seat_Heat_Cool_Control_HS_CAN * pMsg)
+{
+    uint64 nRawValues[8];
+
+    DB_Front_Seat_Heat_Cool_Control_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Control_HS_CAN_Index, nRawValues, 8, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index = 45;
+
+void DB_PPEI_Engine_Environmental_Stat_HS_CAN_Init(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg)
+{
+    double dValues[8] = {0.0};
+    uint64 nRawValues[8] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 8, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->OtsAirTmp = dValues[0];
+    pMsg->OtsAirTmpCrVal = dValues[1];
+    pMsg->OtsAirTmpCrValMsk = dValues[2];
+    pMsg->OtsAirTmpCrValV = dValues[3];
+    pMsg->EngInltSpcfcHmdty = dValues[4];
+    pMsg->EngInltSpcfcHmdtyM = dValues[5];
+    pMsg->EngInltSpcfcHmdtyV = dValues[6];
+    pMsg->OtsAirTmpV = dValues[7];
+    CM_MessageRawInit(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, nRawValues, 8, &iActualSignalMaxCount);
+    pMsg->OtsAirTmp_raw = (BYTE)nRawValues[0];
+    pMsg->OtsAirTmpCrVal_raw = (BYTE)nRawValues[1];
+    pMsg->OtsAirTmpCrValMsk_raw = (BYTE)nRawValues[2];
+    pMsg->OtsAirTmpCrValV_raw = (BYTE)nRawValues[3];
+    pMsg->EngInltSpcfcHmdty_raw = (BYTE)nRawValues[4];
+    pMsg->EngInltSpcfcHmdtyM_raw = (BYTE)nRawValues[5];
+    pMsg->EngInltSpcfcHmdtyV_raw = (BYTE)nRawValues[6];
+    pMsg->OtsAirTmpV_raw = (BYTE)nRawValues[7];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_PPEI_Engine_Environmental_Stat_HS_CAN_LoadSignalValuesArray(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->OtsAirTmp;
+    dArray[1] = pMsg->OtsAirTmpCrVal;
+    dArray[2] = pMsg->OtsAirTmpCrValMsk;
+    dArray[3] = pMsg->OtsAirTmpCrValV;
+    dArray[4] = pMsg->EngInltSpcfcHmdty;
+    dArray[5] = pMsg->EngInltSpcfcHmdtyM;
+    dArray[6] = pMsg->EngInltSpcfcHmdtyV;
+    dArray[7] = pMsg->OtsAirTmpV;
+}
+
+void DB_PPEI_Engine_Environmental_Stat_HS_CAN_LoadRawSignalValuesArray(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->OtsAirTmp_raw;
+    nRawValues[1] = pMsg->OtsAirTmpCrVal_raw;
+    nRawValues[2] = pMsg->OtsAirTmpCrValMsk_raw;
+    nRawValues[3] = pMsg->OtsAirTmpCrValV_raw;
+    nRawValues[4] = pMsg->EngInltSpcfcHmdty_raw;
+    nRawValues[5] = pMsg->EngInltSpcfcHmdtyM_raw;
+    nRawValues[6] = pMsg->EngInltSpcfcHmdtyV_raw;
+    nRawValues[7] = pMsg->OtsAirTmpV_raw;
+}
+
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_Transmit(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg)
+{
+    double dArray[8];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_PPEI_Engine_Environmental_Stat_HS_CAN_Init(pMsg);
+    }
+
+    DB_PPEI_Engine_Environmental_Stat_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 8);
+}
+
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_Transmit_raw(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg)
+{
+    uint64 nRawValues[8];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_PPEI_Engine_Environmental_Stat_HS_CAN_Init(pMsg);
+    }
+
+    DB_PPEI_Engine_Environmental_Stat_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 8);
+}
+
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_UpdateBytesFromSignals(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg)
+{
+    double dArray[8];
+
+    DB_PPEI_Engine_Environmental_Stat_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, dArray, 8, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_PPEI_Engine_Environmental_Stat_HS_CAN_UpdateBytesFromRawSignals(DB_PPEI_Engine_Environmental_Stat_HS_CAN * pMsg)
+{
+    uint64 nRawValues[8];
+
+    DB_PPEI_Engine_Environmental_Stat_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_PPEI_Engine_Environmental_Stat_HS_CAN_Index, nRawValues, 8, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Instrument_Panel_Sensor_HS_CAN_Index = 46;
+
+void DB_Instrument_Panel_Sensor_HS_CAN_Init(DB_Instrument_Panel_Sensor_HS_CAN * pMsg)
+{
+    double dValues[5] = {0.0};
+    uint64 nRawValues[5] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Instrument_Panel_Sensor_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 5, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->IPSnsrSolrAnglFltd = dValues[0];
+    pMsg->IPSnsrRwSolrIntFltd = dValues[1];
+    pMsg->IPSnsrRwSolrInt = dValues[2];
+    pMsg->IPSnsrSolrAzmthAngl = dValues[3];
+    pMsg->IPSnsrSolrElvtnAngl = dValues[4];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, nRawValues, 5, &iActualSignalMaxCount);
+    pMsg->IPSnsrSolrAnglFltd_raw = (BYTE)nRawValues[0];
+    pMsg->IPSnsrRwSolrIntFltd_raw = (BYTE)nRawValues[1];
+    pMsg->IPSnsrRwSolrInt_raw = (BYTE)nRawValues[2];
+    pMsg->IPSnsrSolrAzmthAngl_raw = (BYTE)nRawValues[3];
+    pMsg->IPSnsrSolrElvtnAngl_raw = (BYTE)nRawValues[4];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Instrument_Panel_Sensor_HS_CAN_LoadSignalValuesArray(DB_Instrument_Panel_Sensor_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->IPSnsrSolrAnglFltd;
+    dArray[1] = pMsg->IPSnsrRwSolrIntFltd;
+    dArray[2] = pMsg->IPSnsrRwSolrInt;
+    dArray[3] = pMsg->IPSnsrSolrAzmthAngl;
+    dArray[4] = pMsg->IPSnsrSolrElvtnAngl;
+}
+
+void DB_Instrument_Panel_Sensor_HS_CAN_LoadRawSignalValuesArray(DB_Instrument_Panel_Sensor_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->IPSnsrSolrAnglFltd_raw;
+    nRawValues[1] = pMsg->IPSnsrRwSolrIntFltd_raw;
+    nRawValues[2] = pMsg->IPSnsrRwSolrInt_raw;
+    nRawValues[3] = pMsg->IPSnsrSolrAzmthAngl_raw;
+    nRawValues[4] = pMsg->IPSnsrSolrElvtnAngl_raw;
+}
+
+int DB_Instrument_Panel_Sensor_HS_CAN_Transmit(DB_Instrument_Panel_Sensor_HS_CAN * pMsg)
+{
+    double dArray[5];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Instrument_Panel_Sensor_HS_CAN_Init(pMsg);
+    }
+
+    DB_Instrument_Panel_Sensor_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 5);
+}
+
+int DB_Instrument_Panel_Sensor_HS_CAN_Transmit_raw(DB_Instrument_Panel_Sensor_HS_CAN * pMsg)
+{
+    uint64 nRawValues[5];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Instrument_Panel_Sensor_HS_CAN_Init(pMsg);
+    }
+
+    DB_Instrument_Panel_Sensor_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 5);
+}
+
+int DB_Instrument_Panel_Sensor_HS_CAN_UpdateBytesFromSignals(DB_Instrument_Panel_Sensor_HS_CAN * pMsg)
+{
+    double dArray[5];
+
+    DB_Instrument_Panel_Sensor_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, dArray, 5, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Instrument_Panel_Sensor_HS_CAN_UpdateBytesFromRawSignals(DB_Instrument_Panel_Sensor_HS_CAN * pMsg)
+{
+    uint64 nRawValues[5];
+
+    DB_Instrument_Panel_Sensor_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Instrument_Panel_Sensor_HS_CAN_Index, nRawValues, 5, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index = 47;
+
+void DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Init(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg)
+{
+    double dValues[12] = {0.0};
+    uint64 nRawValues[12] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 12, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->DistRollCntAvgDrvn = dValues[0];
+    pMsg->DstRolCntAvgDrnRstOc = dValues[1];
+    pMsg->DistRollCntAvgDrvnSrc = dValues[2];
+    pMsg->DistRollCntAvgDrvnV = dValues[3];
+    pMsg->DstRolCntAvgNonDrvn = dValues[4];
+    pMsg->DstRolCntAvNDrRstOc = dValues[5];
+    pMsg->DstRolCntAvgNonDrvnV = dValues[6];
+    pMsg->VehSpdAvgDrvn = dValues[7];
+    pMsg->VehSpdAvgDrvnSrc = dValues[8];
+    pMsg->VehSpdAvgDrvnV = dValues[9];
+    pMsg->VehSpdAvgNDrvn = dValues[10];
+    pMsg->VehSpdAvgNDrvnV = dValues[11];
+    CM_MessageRawInit(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, nRawValues, 12, &iActualSignalMaxCount);
+    pMsg->DistRollCntAvgDrvn_raw = (WORD)nRawValues[0];
+    pMsg->DstRolCntAvgDrnRstOc_raw = (BYTE)nRawValues[1];
+    pMsg->DistRollCntAvgDrvnSrc_raw = (BYTE)nRawValues[2];
+    pMsg->DistRollCntAvgDrvnV_raw = (BYTE)nRawValues[3];
+    pMsg->DstRolCntAvgNonDrvn_raw = (WORD)nRawValues[4];
+    pMsg->DstRolCntAvNDrRstOc_raw = (BYTE)nRawValues[5];
+    pMsg->DstRolCntAvgNonDrvnV_raw = (BYTE)nRawValues[6];
+    pMsg->VehSpdAvgDrvn_raw = (WORD)nRawValues[7];
+    pMsg->VehSpdAvgDrvnSrc_raw = (BYTE)nRawValues[8];
+    pMsg->VehSpdAvgDrvnV_raw = (BYTE)nRawValues[9];
+    pMsg->VehSpdAvgNDrvn_raw = (WORD)nRawValues[10];
+    pMsg->VehSpdAvgNDrvnV_raw = (BYTE)nRawValues[11];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_LoadSignalValuesArray(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->DistRollCntAvgDrvn;
+    dArray[1] = pMsg->DstRolCntAvgDrnRstOc;
+    dArray[2] = pMsg->DistRollCntAvgDrvnSrc;
+    dArray[3] = pMsg->DistRollCntAvgDrvnV;
+    dArray[4] = pMsg->DstRolCntAvgNonDrvn;
+    dArray[5] = pMsg->DstRolCntAvNDrRstOc;
+    dArray[6] = pMsg->DstRolCntAvgNonDrvnV;
+    dArray[7] = pMsg->VehSpdAvgDrvn;
+    dArray[8] = pMsg->VehSpdAvgDrvnSrc;
+    dArray[9] = pMsg->VehSpdAvgDrvnV;
+    dArray[10] = pMsg->VehSpdAvgNDrvn;
+    dArray[11] = pMsg->VehSpdAvgNDrvnV;
+}
+
+void DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_LoadRawSignalValuesArray(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->DistRollCntAvgDrvn_raw;
+    nRawValues[1] = pMsg->DstRolCntAvgDrnRstOc_raw;
+    nRawValues[2] = pMsg->DistRollCntAvgDrvnSrc_raw;
+    nRawValues[3] = pMsg->DistRollCntAvgDrvnV_raw;
+    nRawValues[4] = pMsg->DstRolCntAvgNonDrvn_raw;
+    nRawValues[5] = pMsg->DstRolCntAvNDrRstOc_raw;
+    nRawValues[6] = pMsg->DstRolCntAvgNonDrvnV_raw;
+    nRawValues[7] = pMsg->VehSpdAvgDrvn_raw;
+    nRawValues[8] = pMsg->VehSpdAvgDrvnSrc_raw;
+    nRawValues[9] = pMsg->VehSpdAvgDrvnV_raw;
+    nRawValues[10] = pMsg->VehSpdAvgNDrvn_raw;
+    nRawValues[11] = pMsg->VehSpdAvgNDrvnV_raw;
+}
+
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Transmit(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg)
+{
+    double dArray[12];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Init(pMsg);
+    }
+
+    DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 12);
+}
+
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Transmit_raw(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg)
+{
+    uint64 nRawValues[12];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Init(pMsg);
+    }
+
+    DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 12);
+}
+
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_UpdateBytesFromSignals(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg)
+{
+    double dArray[12];
+
+    DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, dArray, 12, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_UpdateBytesFromRawSignals(DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN * pMsg)
+{
+    uint64 nRawValues[12];
+
+    DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_PPEI_Vehicle_Speed_and_Distanc_HS_CAN_Index, nRawValues, 12, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index = 48;
+
+void DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Init(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg)
+{
+    double dValues[1] = {0.0};
+    uint64 nRawValues[1] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 1, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->DgnInf = dValues[0];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, nRawValues, 1, &iActualSignalMaxCount);
+    pMsg->DgnInf_raw = (uint64)nRawValues[0];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_LoadSignalValuesArray(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->DgnInf;
+}
+
+void DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_LoadRawSignalValuesArray(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->DgnInf_raw;
+}
+
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Transmit(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg)
+{
+    double dArray[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Init(pMsg);
+    }
+
+    DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 1);
+}
+
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Transmit_raw(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Init(pMsg);
+    }
+
+    DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 1);
+}
+
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_UpdateBytesFromSignals(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg)
+{
+    double dArray[1];
+
+    DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, dArray, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_UpdateBytesFromRawSignals(DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+
+    DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Phy_USDT_Req_to_ECC_F_TestTool_HS_CAN_Index, nRawValues, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index = 49;
+
+void DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    double dValues[1] = {0.0};
+    uint64 nRawValues[1] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 1, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->DgnInf = dValues[0];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, nRawValues, 1, &iActualSignalMaxCount);
+    pMsg->DgnInf_raw = (uint64)nRawValues[0];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadSignalValuesArray(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->DgnInf;
+}
+
+void DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadRawSignalValuesArray(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->DgnInf_raw;
+}
+
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    double dArray[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(pMsg);
+    }
+
+    DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 1);
+}
+
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit_raw(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(pMsg);
+    }
+
+    DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 1);
+}
+
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromSignals(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    double dArray[1];
+
+    DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, dArray, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromRawSignals(DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+
+    DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Phy_USDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, nRawValues, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index = 50;
+
+void DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    double dValues[1] = {0.0};
+    uint64 nRawValues[1] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 1, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->DgnInf = dValues[0];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, nRawValues, 1, &iActualSignalMaxCount);
+    pMsg->DgnInf_raw = (uint64)nRawValues[0];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadSignalValuesArray(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->DgnInf;
+}
+
+void DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadRawSignalValuesArray(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->DgnInf_raw;
+}
+
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    double dArray[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(pMsg);
+    }
+
+    DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 1);
+}
+
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Transmit_raw(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Init(pMsg);
+    }
+
+    DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 1);
+}
+
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromSignals(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    double dArray[1];
+
+    DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, dArray, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_UpdateBytesFromRawSignals(DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+
+    DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Phy_UUDT_Resp_F_ECC_To_TestToo_HS_CAN_Index, nRawValues, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index = 51;
+
+void DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Init(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg)
+{
+    double dValues[6] = {0.0};
+    uint64 nRawValues[6] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 6, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->DrvHCSeatSw1Act = dValues[0];
+    pMsg->DrvHCSeatSw2Act = dValues[1];
+    pMsg->DrvHCSeatSw3Act = dValues[2];
+    pMsg->PassHCSeatSw1Act = dValues[3];
+    pMsg->PassHCSeatSw2Act = dValues[4];
+    pMsg->PassHCSeatSw3Act = dValues[5];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, nRawValues, 6, &iActualSignalMaxCount);
+    pMsg->DrvHCSeatSw1Act_raw = (BYTE)nRawValues[0];
+    pMsg->DrvHCSeatSw2Act_raw = (BYTE)nRawValues[1];
+    pMsg->DrvHCSeatSw3Act_raw = (BYTE)nRawValues[2];
+    pMsg->PassHCSeatSw1Act_raw = (BYTE)nRawValues[3];
+    pMsg->PassHCSeatSw2Act_raw = (BYTE)nRawValues[4];
+    pMsg->PassHCSeatSw3Act_raw = (BYTE)nRawValues[5];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Front_Seat_Heat_Cool_Switches_HS_CAN_LoadSignalValuesArray(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->DrvHCSeatSw1Act;
+    dArray[1] = pMsg->DrvHCSeatSw2Act;
+    dArray[2] = pMsg->DrvHCSeatSw3Act;
+    dArray[3] = pMsg->PassHCSeatSw1Act;
+    dArray[4] = pMsg->PassHCSeatSw2Act;
+    dArray[5] = pMsg->PassHCSeatSw3Act;
+}
+
+void DB_Front_Seat_Heat_Cool_Switches_HS_CAN_LoadRawSignalValuesArray(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->DrvHCSeatSw1Act_raw;
+    nRawValues[1] = pMsg->DrvHCSeatSw2Act_raw;
+    nRawValues[2] = pMsg->DrvHCSeatSw3Act_raw;
+    nRawValues[3] = pMsg->PassHCSeatSw1Act_raw;
+    nRawValues[4] = pMsg->PassHCSeatSw2Act_raw;
+    nRawValues[5] = pMsg->PassHCSeatSw3Act_raw;
+}
+
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Transmit(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg)
+{
+    double dArray[6];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Init(pMsg);
+    }
+
+    DB_Front_Seat_Heat_Cool_Switches_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 6);
+}
+
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Transmit_raw(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg)
+{
+    uint64 nRawValues[6];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Init(pMsg);
+    }
+
+    DB_Front_Seat_Heat_Cool_Switches_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 6);
+}
+
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_UpdateBytesFromSignals(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg)
+{
+    double dArray[6];
+
+    DB_Front_Seat_Heat_Cool_Switches_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, dArray, 6, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Front_Seat_Heat_Cool_Switches_HS_CAN_UpdateBytesFromRawSignals(DB_Front_Seat_Heat_Cool_Switches_HS_CAN * pMsg)
+{
+    uint64 nRawValues[6];
+
+    DB_Front_Seat_Heat_Cool_Switches_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Front_Seat_Heat_Cool_Switches_HS_CAN_Index, nRawValues, 6, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Auxiliary_Heater_Status_HS_CAN_Index = 52;
+
+void DB_Auxiliary_Heater_Status_HS_CAN_Init(DB_Auxiliary_Heater_Status_HS_CAN * pMsg)
+{
+    double dValues[4] = {0.0};
+    uint64 nRawValues[4] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Auxiliary_Heater_Status_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 4, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->AuxHtrAtv = dValues[0];
+    pMsg->CCClntCrcFlwRtReq = dValues[1];
+    pMsg->HtrCoreInltClntTmpCalc = dValues[2];
+    pMsg->HtrCoreInltClntTmpCalcV = dValues[3];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, nRawValues, 4, &iActualSignalMaxCount);
+    pMsg->AuxHtrAtv_raw = (BYTE)nRawValues[0];
+    pMsg->CCClntCrcFlwRtReq_raw = (BYTE)nRawValues[1];
+    pMsg->HtrCoreInltClntTmpCalc_raw = (BYTE)nRawValues[2];
+    pMsg->HtrCoreInltClntTmpCalcV_raw = (BYTE)nRawValues[3];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Auxiliary_Heater_Status_HS_CAN_LoadSignalValuesArray(DB_Auxiliary_Heater_Status_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->AuxHtrAtv;
+    dArray[1] = pMsg->CCClntCrcFlwRtReq;
+    dArray[2] = pMsg->HtrCoreInltClntTmpCalc;
+    dArray[3] = pMsg->HtrCoreInltClntTmpCalcV;
+}
+
+void DB_Auxiliary_Heater_Status_HS_CAN_LoadRawSignalValuesArray(DB_Auxiliary_Heater_Status_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->AuxHtrAtv_raw;
+    nRawValues[1] = pMsg->CCClntCrcFlwRtReq_raw;
+    nRawValues[2] = pMsg->HtrCoreInltClntTmpCalc_raw;
+    nRawValues[3] = pMsg->HtrCoreInltClntTmpCalcV_raw;
+}
+
+int DB_Auxiliary_Heater_Status_HS_CAN_Transmit(DB_Auxiliary_Heater_Status_HS_CAN * pMsg)
+{
+    double dArray[4];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Auxiliary_Heater_Status_HS_CAN_Init(pMsg);
+    }
+
+    DB_Auxiliary_Heater_Status_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 4);
+}
+
+int DB_Auxiliary_Heater_Status_HS_CAN_Transmit_raw(DB_Auxiliary_Heater_Status_HS_CAN * pMsg)
+{
+    uint64 nRawValues[4];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Auxiliary_Heater_Status_HS_CAN_Init(pMsg);
+    }
+
+    DB_Auxiliary_Heater_Status_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 4);
+}
+
+int DB_Auxiliary_Heater_Status_HS_CAN_UpdateBytesFromSignals(DB_Auxiliary_Heater_Status_HS_CAN * pMsg)
+{
+    double dArray[4];
+
+    DB_Auxiliary_Heater_Status_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, dArray, 4, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Auxiliary_Heater_Status_HS_CAN_UpdateBytesFromRawSignals(DB_Auxiliary_Heater_Status_HS_CAN * pMsg)
+{
+    uint64 nRawValues[4];
+
+    DB_Auxiliary_Heater_Status_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Auxiliary_Heater_Status_HS_CAN_Index, nRawValues, 4, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Rear_Window_Defog_Status_HS_CAN_Index = 53;
+
+void DB_Rear_Window_Defog_Status_HS_CAN_Init(DB_Rear_Window_Defog_Status_HS_CAN * pMsg)
+{
+    double dValues[1] = {0.0};
+    uint64 nRawValues[1] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Rear_Window_Defog_Status_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 1, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->RrWndDfgOn = dValues[0];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, nRawValues, 1, &iActualSignalMaxCount);
+    pMsg->RrWndDfgOn_raw = (BYTE)nRawValues[0];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Rear_Window_Defog_Status_HS_CAN_LoadSignalValuesArray(DB_Rear_Window_Defog_Status_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->RrWndDfgOn;
+}
+
+void DB_Rear_Window_Defog_Status_HS_CAN_LoadRawSignalValuesArray(DB_Rear_Window_Defog_Status_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->RrWndDfgOn_raw;
+}
+
+int DB_Rear_Window_Defog_Status_HS_CAN_Transmit(DB_Rear_Window_Defog_Status_HS_CAN * pMsg)
+{
+    double dArray[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Rear_Window_Defog_Status_HS_CAN_Init(pMsg);
+    }
+
+    DB_Rear_Window_Defog_Status_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 1);
+}
+
+int DB_Rear_Window_Defog_Status_HS_CAN_Transmit_raw(DB_Rear_Window_Defog_Status_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Rear_Window_Defog_Status_HS_CAN_Init(pMsg);
+    }
+
+    DB_Rear_Window_Defog_Status_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 1);
+}
+
+int DB_Rear_Window_Defog_Status_HS_CAN_UpdateBytesFromSignals(DB_Rear_Window_Defog_Status_HS_CAN * pMsg)
+{
+    double dArray[1];
+
+    DB_Rear_Window_Defog_Status_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, dArray, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Rear_Window_Defog_Status_HS_CAN_UpdateBytesFromRawSignals(DB_Rear_Window_Defog_Status_HS_CAN * pMsg)
+{
+    uint64 nRawValues[1];
+
+    DB_Rear_Window_Defog_Status_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Rear_Window_Defog_Status_HS_CAN_Index, nRawValues, 1, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_PPEI_Engine_General_Status_1_HS_CAN_Index = 54;
+
+void DB_PPEI_Engine_General_Status_1_HS_CAN_Init(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg)
+{
+    double dValues[19] = {0.0};
+    uint64 nRawValues[19] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_PPEI_Engine_General_Status_1_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 19, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->AccActPos = dValues[0];
+    pMsg->AccActPosV = dValues[1];
+    pMsg->CrsCntAtv = dValues[2];
+    pMsg->CrsCntEnbld = dValues[3];
+    pMsg->Eng12vStrtrMtrCmmdOn = dValues[4];
+    pMsg->EngCntrlRunCrnkTrmSt = dValues[5];
+    pMsg->EngIdlAtv = dValues[6];
+    pMsg->EngAirIntBstPr = dValues[7];
+    pMsg->EngAirIntBstPrV = dValues[8];
+    pMsg->EngRunAtv = dValues[9];
+    pMsg->EngSpd = dValues[10];
+    pMsg->EngSpdStat = dValues[11];
+    pMsg->PT_BrkPedDscrtInpStat = dValues[12];
+    pMsg->PT_BrkPedDscrtInpStatV = dValues[13];
+    pMsg->PTCrnkAbrted = dValues[14];
+    pMsg->PT_CrnkAct = dValues[15];
+    pMsg->PTRunAbrt = dValues[16];
+    pMsg->RmVhStrtEngRng = dValues[17];
+    pMsg->SpdLmtrSpdWrngEnbld = dValues[18];
+    CM_MessageRawInit(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, nRawValues, 19, &iActualSignalMaxCount);
+    pMsg->AccActPos_raw = (BYTE)nRawValues[0];
+    pMsg->AccActPosV_raw = (BYTE)nRawValues[1];
+    pMsg->CrsCntAtv_raw = (BYTE)nRawValues[2];
+    pMsg->CrsCntEnbld_raw = (BYTE)nRawValues[3];
+    pMsg->Eng12vStrtrMtrCmmdOn_raw = (BYTE)nRawValues[4];
+    pMsg->EngCntrlRunCrnkTrmSt_raw = (BYTE)nRawValues[5];
+    pMsg->EngIdlAtv_raw = (BYTE)nRawValues[6];
+    pMsg->EngAirIntBstPr_raw = (BYTE)nRawValues[7];
+    pMsg->EngAirIntBstPrV_raw = (BYTE)nRawValues[8];
+    pMsg->EngRunAtv_raw = (BYTE)nRawValues[9];
+    pMsg->EngSpd_raw = (WORD)nRawValues[10];
+    pMsg->EngSpdStat_raw = (BYTE)nRawValues[11];
+    pMsg->PT_BrkPedDscrtInpStat_raw = (BYTE)nRawValues[12];
+    pMsg->PT_BrkPedDscrtInpStatV_raw = (BYTE)nRawValues[13];
+    pMsg->PTCrnkAbrted_raw = (BYTE)nRawValues[14];
+    pMsg->PT_CrnkAct_raw = (BYTE)nRawValues[15];
+    pMsg->PTRunAbrt_raw = (BYTE)nRawValues[16];
+    pMsg->RmVhStrtEngRng_raw = (BYTE)nRawValues[17];
+    pMsg->SpdLmtrSpdWrngEnbld_raw = (BYTE)nRawValues[18];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_PPEI_Engine_General_Status_1_HS_CAN_LoadSignalValuesArray(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->AccActPos;
+    dArray[1] = pMsg->AccActPosV;
+    dArray[2] = pMsg->CrsCntAtv;
+    dArray[3] = pMsg->CrsCntEnbld;
+    dArray[4] = pMsg->Eng12vStrtrMtrCmmdOn;
+    dArray[5] = pMsg->EngCntrlRunCrnkTrmSt;
+    dArray[6] = pMsg->EngIdlAtv;
+    dArray[7] = pMsg->EngAirIntBstPr;
+    dArray[8] = pMsg->EngAirIntBstPrV;
+    dArray[9] = pMsg->EngRunAtv;
+    dArray[10] = pMsg->EngSpd;
+    dArray[11] = pMsg->EngSpdStat;
+    dArray[12] = pMsg->PT_BrkPedDscrtInpStat;
+    dArray[13] = pMsg->PT_BrkPedDscrtInpStatV;
+    dArray[14] = pMsg->PTCrnkAbrted;
+    dArray[15] = pMsg->PT_CrnkAct;
+    dArray[16] = pMsg->PTRunAbrt;
+    dArray[17] = pMsg->RmVhStrtEngRng;
+    dArray[18] = pMsg->SpdLmtrSpdWrngEnbld;
+}
+
+void DB_PPEI_Engine_General_Status_1_HS_CAN_LoadRawSignalValuesArray(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->AccActPos_raw;
+    nRawValues[1] = pMsg->AccActPosV_raw;
+    nRawValues[2] = pMsg->CrsCntAtv_raw;
+    nRawValues[3] = pMsg->CrsCntEnbld_raw;
+    nRawValues[4] = pMsg->Eng12vStrtrMtrCmmdOn_raw;
+    nRawValues[5] = pMsg->EngCntrlRunCrnkTrmSt_raw;
+    nRawValues[6] = pMsg->EngIdlAtv_raw;
+    nRawValues[7] = pMsg->EngAirIntBstPr_raw;
+    nRawValues[8] = pMsg->EngAirIntBstPrV_raw;
+    nRawValues[9] = pMsg->EngRunAtv_raw;
+    nRawValues[10] = pMsg->EngSpd_raw;
+    nRawValues[11] = pMsg->EngSpdStat_raw;
+    nRawValues[12] = pMsg->PT_BrkPedDscrtInpStat_raw;
+    nRawValues[13] = pMsg->PT_BrkPedDscrtInpStatV_raw;
+    nRawValues[14] = pMsg->PTCrnkAbrted_raw;
+    nRawValues[15] = pMsg->PT_CrnkAct_raw;
+    nRawValues[16] = pMsg->PTRunAbrt_raw;
+    nRawValues[17] = pMsg->RmVhStrtEngRng_raw;
+    nRawValues[18] = pMsg->SpdLmtrSpdWrngEnbld_raw;
+}
+
+int DB_PPEI_Engine_General_Status_1_HS_CAN_Transmit(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg)
+{
+    double dArray[19];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_PPEI_Engine_General_Status_1_HS_CAN_Init(pMsg);
+    }
+
+    DB_PPEI_Engine_General_Status_1_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 19);
+}
+
+int DB_PPEI_Engine_General_Status_1_HS_CAN_Transmit_raw(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg)
+{
+    uint64 nRawValues[19];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_PPEI_Engine_General_Status_1_HS_CAN_Init(pMsg);
+    }
+
+    DB_PPEI_Engine_General_Status_1_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 19);
+}
+
+int DB_PPEI_Engine_General_Status_1_HS_CAN_UpdateBytesFromSignals(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg)
+{
+    double dArray[19];
+
+    DB_PPEI_Engine_General_Status_1_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, dArray, 19, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_PPEI_Engine_General_Status_1_HS_CAN_UpdateBytesFromRawSignals(DB_PPEI_Engine_General_Status_1_HS_CAN * pMsg)
+{
+    uint64 nRawValues[19];
+
+    DB_PPEI_Engine_General_Status_1_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_PPEI_Engine_General_Status_1_HS_CAN_Index, nRawValues, 19, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Climate_Control_General_Status_HS_CAN_Index = 55;
+
+void DB_Climate_Control_General_Status_HS_CAN_Init(DB_Climate_Control_General_Status_HS_CAN * pMsg)
+{
+    double dValues[6] = {0.0};
+    uint64 nRawValues[6] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Climate_Control_General_Status_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 6, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->ACCmpsrFldOn = dValues[0];
+    pMsg->ACCompModReq = dValues[1];
+    pMsg->ACCompNormLd = dValues[2];
+    pMsg->ACCompNormLdV = dValues[3];
+    pMsg->ACCmEngRunReq = dValues[4];
+    pMsg->ClmtCtrlTrgtTemp = dValues[5];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, nRawValues, 6, &iActualSignalMaxCount);
+    pMsg->ACCmpsrFldOn_raw = (BYTE)nRawValues[0];
+    pMsg->ACCompModReq_raw = (BYTE)nRawValues[1];
+    pMsg->ACCompNormLd_raw = (BYTE)nRawValues[2];
+    pMsg->ACCompNormLdV_raw = (BYTE)nRawValues[3];
+    pMsg->ACCmEngRunReq_raw = (BYTE)nRawValues[4];
+    pMsg->ClmtCtrlTrgtTemp_raw = (WORD)nRawValues[5];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Climate_Control_General_Status_HS_CAN_LoadSignalValuesArray(DB_Climate_Control_General_Status_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->ACCmpsrFldOn;
+    dArray[1] = pMsg->ACCompModReq;
+    dArray[2] = pMsg->ACCompNormLd;
+    dArray[3] = pMsg->ACCompNormLdV;
+    dArray[4] = pMsg->ACCmEngRunReq;
+    dArray[5] = pMsg->ClmtCtrlTrgtTemp;
+}
+
+void DB_Climate_Control_General_Status_HS_CAN_LoadRawSignalValuesArray(DB_Climate_Control_General_Status_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->ACCmpsrFldOn_raw;
+    nRawValues[1] = pMsg->ACCompModReq_raw;
+    nRawValues[2] = pMsg->ACCompNormLd_raw;
+    nRawValues[3] = pMsg->ACCompNormLdV_raw;
+    nRawValues[4] = pMsg->ACCmEngRunReq_raw;
+    nRawValues[5] = pMsg->ClmtCtrlTrgtTemp_raw;
+}
+
+int DB_Climate_Control_General_Status_HS_CAN_Transmit(DB_Climate_Control_General_Status_HS_CAN * pMsg)
+{
+    double dArray[6];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Climate_Control_General_Status_HS_CAN_Init(pMsg);
+    }
+
+    DB_Climate_Control_General_Status_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 6);
+}
+
+int DB_Climate_Control_General_Status_HS_CAN_Transmit_raw(DB_Climate_Control_General_Status_HS_CAN * pMsg)
+{
+    uint64 nRawValues[6];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Climate_Control_General_Status_HS_CAN_Init(pMsg);
+    }
+
+    DB_Climate_Control_General_Status_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 6);
+}
+
+int DB_Climate_Control_General_Status_HS_CAN_UpdateBytesFromSignals(DB_Climate_Control_General_Status_HS_CAN * pMsg)
+{
+    double dArray[6];
+
+    DB_Climate_Control_General_Status_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, dArray, 6, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Climate_Control_General_Status_HS_CAN_UpdateBytesFromRawSignals(DB_Climate_Control_General_Status_HS_CAN * pMsg)
+{
+    uint64 nRawValues[6];
+
+    DB_Climate_Control_General_Status_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Climate_Control_General_Status_HS_CAN_Index, nRawValues, 6, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+
+int DB_Network_Management_BCM_HS_CAN_Index = 56;
+
+void DB_Network_Management_BCM_HS_CAN_Init(DB_Network_Management_BCM_HS_CAN * pMsg)
+{
+    double dValues[2] = {0.0};
+    uint64 nRawValues[2] = {0};
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 0, 
+    DB_Network_Management_BCM_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    &dValues[0], 2, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    pMsg->SrcNodeID = dValues[0];
+    pMsg->UDat = dValues[1];
+    CM_MessageRawInit(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, nRawValues, 2, &iActualSignalMaxCount);
+    pMsg->SrcNodeID_raw = (BYTE)nRawValues[0];
+    pMsg->UDat_raw = (uint64)nRawValues[1];
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+void DB_Network_Management_BCM_HS_CAN_LoadSignalValuesArray(DB_Network_Management_BCM_HS_CAN * pMsg, double *dArray)
+{
+    dArray[0] = pMsg->SrcNodeID;
+    dArray[1] = pMsg->UDat;
+}
+
+void DB_Network_Management_BCM_HS_CAN_LoadRawSignalValuesArray(DB_Network_Management_BCM_HS_CAN * pMsg, uint64 *nRawValues)
+{
+    nRawValues[0] = pMsg->SrcNodeID_raw;
+    nRawValues[1] = pMsg->UDat_raw;
+}
+
+int DB_Network_Management_BCM_HS_CAN_Transmit(DB_Network_Management_BCM_HS_CAN * pMsg)
+{
+    double dArray[2];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, pMsg->MessageData.iNumDataBytes))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Network_Management_BCM_HS_CAN_Init(pMsg);
+    }
+
+    DB_Network_Management_BCM_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_TxFromSignals(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, dArray, 2);
+}
+
+int DB_Network_Management_BCM_HS_CAN_Transmit_raw(DB_Network_Management_BCM_HS_CAN * pMsg)
+{
+    uint64 nRawValues[2];
+    if (memcmp(pMsg->MessageData.btData, pMsg->MessageData.btInitialData, sizeof(pMsg->MessageData.btData)))
+    {
+        CM_UpdateMessageSignalsFromBytes(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+        DB_Network_Management_BCM_HS_CAN_Init(pMsg);
+    }
+
+    DB_Network_Management_BCM_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_TxFromRawSignals(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, nRawValues, 2);
+}
+
+int DB_Network_Management_BCM_HS_CAN_UpdateBytesFromSignals(DB_Network_Management_BCM_HS_CAN * pMsg)
+{
+    double dArray[2];
+
+    DB_Network_Management_BCM_HS_CAN_LoadSignalValuesArray(pMsg, dArray);
+
+    return CM_UpdateBytesFromSignals(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, dArray, 2, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
+}
+
+int DB_Network_Management_BCM_HS_CAN_UpdateBytesFromRawSignals(DB_Network_Management_BCM_HS_CAN * pMsg)
+{
+    uint64 nRawValues[2];
+
+    DB_Network_Management_BCM_HS_CAN_LoadRawSignalValuesArray(pMsg, nRawValues);
+
+    return CM_UpdateBytesFromRawSignals(g_uiHandle, 0, DB_Network_Management_BCM_HS_CAN_Index, nRawValues, 2, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes);
 }
 
