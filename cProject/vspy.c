@@ -1191,6 +1191,7 @@ void SpyAppSig_CallAllHandlers()
     SpyAppSig_AS_appSig_mpiWrite_MTC(0.0);
     SpyAppSig_AS_appSig_sapaWrite_bytesSeedKey(0.0);
     SpyAppSig_AS_appSig_sapaWrite_bytesSeed(0.0);
+    SpyAppSig_AS_appSig_sapaRead_bytesSeed(0.0);
 }
 
 void __stdcall CM_AS_appSig_mpiRead_bytesBMPNAC()
@@ -1246,6 +1247,11 @@ void __stdcall CM_AS_appSig_sapaWrite_bytesSeedKey()
 void __stdcall CM_AS_appSig_sapaWrite_bytesSeed()
 {
     SpyAppSig_AS_appSig_sapaWrite_bytesSeed(AS_appSig_sapaWrite_bytesSeed_Get());
+}
+
+void __stdcall CM_AS_appSig_sapaRead_bytesSeed()
+{
+    SpyAppSig_AS_appSig_sapaRead_bytesSeed(AS_appSig_sapaRead_bytesSeed_Get());
 }
 
 void (* CM_RegisterCallback) (unsigned int uiHandle, unsigned short iValueType, unsigned short iIndex, void * pCallBackPointer) ;
@@ -1519,10 +1525,12 @@ void __stdcall CM_ExtensionInit(unsigned int uiHandle, struct stCallBackPointers
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step39_diagRequest2_HS_CAN",&TX_step39_diagRequest2_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step40_diagRequest2_HS_CAN",&TX_step40_diagRequest2_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_step41_diagRequest2_HS_CAN",&TX_step41_diagRequest2_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_step1_1_HS_CAN",&TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_step2_1_HS_CAN",&TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_constructive_1_HS_CAN",&TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_constructive_2_HS_CAN",&TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaWrite_diagRequest_constructive_3_HS_CAN",&TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index);
+     CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaRead_diagRequest_step1_1_HS_CAN",&TX_sapaRead_diagRequest_step1_1_HS_CAN_Index);
      CM_FindIndexForObjectFromName(g_uiHandle,3,L"TX_sapaRead_diagRequest_step2_HS_CAN",&TX_sapaRead_diagRequest_step2_HS_CAN_Index);
 
     // function block indexes
@@ -1763,6 +1771,7 @@ CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiWrite_E
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_mpiWrite_MTC_Index,CM_AS_appSig_mpiWrite_MTC);
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_sapaWrite_bytesSeedKey_Index,CM_AS_appSig_sapaWrite_bytesSeedKey);
 CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_sapaWrite_bytesSeed_Index,CM_AS_appSig_sapaWrite_bytesSeed);
+CM_RegisterCallback( g_uiHandle,CM_CALLBACKTYPE_APP_SIGNAL, AS_appSig_sapaRead_bytesSeed_Index,CM_AS_appSig_sapaRead_bytesSeed);
 }
 void __stdcall CM_EveryMessage(int iNetwork, int iID, __int64 iTimeStampNanoSecondsHW, unsigned int iTimeStampMillisecondsOS,
 									  int iNumDataBytes, int iBitField, unsigned char *p_btData)
@@ -7913,7 +7922,42 @@ int TX_step41_diagRequest2_HS_CAN_TransmitFast()
 }
 
 
-int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index = 68;
+int TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index = 68;
+
+void TX_sapaWrite_diagRequest_step1_1_HS_CAN_Init(TX_sapaWrite_diagRequest_step1_1_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_sapaWrite_diagRequest_step1_1_HS_CAN_Transmit(TX_sapaWrite_diagRequest_step1_1_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_step1_1_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_step1_1_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaWrite_diagRequest_step1_1_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index = 69;
 
 void TX_sapaWrite_diagRequest_step2_1_HS_CAN_Init(TX_sapaWrite_diagRequest_step2_1_HS_CAN * pMsg)
 {
@@ -7948,7 +7992,7 @@ int TX_sapaWrite_diagRequest_step2_1_HS_CAN_TransmitFast()
 }
 
 
-int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index = 69;
+int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Index = 70;
 
 void TX_sapaWrite_diagRequest_constructive_1_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_1_HS_CAN * pMsg)
 {
@@ -7983,7 +8027,7 @@ int TX_sapaWrite_diagRequest_constructive_1_HS_CAN_TransmitFast()
 }
 
 
-int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index = 70;
+int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Index = 71;
 
 void TX_sapaWrite_diagRequest_constructive_2_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_2_HS_CAN * pMsg)
 {
@@ -8018,7 +8062,7 @@ int TX_sapaWrite_diagRequest_constructive_2_HS_CAN_TransmitFast()
 }
 
 
-int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index = 71;
+int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index = 72;
 
 void TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Init(TX_sapaWrite_diagRequest_constructive_3_HS_CAN * pMsg)
 {
@@ -8053,7 +8097,42 @@ int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_TransmitFast()
 }
 
 
-int TX_sapaRead_diagRequest_step2_HS_CAN_Index = 72;
+int TX_sapaRead_diagRequest_step1_1_HS_CAN_Index = 73;
+
+void TX_sapaRead_diagRequest_step1_1_HS_CAN_Init(TX_sapaRead_diagRequest_step1_1_HS_CAN * pMsg)
+{
+    int iActualSignalMaxCount;
+
+    CM_MessageGenericInit(g_uiHandle, 2, 
+    TX_sapaRead_diagRequest_step1_1_HS_CAN_Index, &pMsg->Statistics, &pMsg->MessageData.iNetwork, 
+    &pMsg->MessageData.iNumDataBytes, sizeof(pMsg->MessageData.btData),
+    &pMsg->iDefaultPeriodMilliseconds, &pMsg->MessageData.iID,
+    &pMsg->MessageData.iBitField, &pMsg->MessageData.btData[0],
+    NULL, 0, // number of signals when vspy.h was generated
+    &iActualSignalMaxCount, &pMsg->MessageData.iTimeStampNanoSecondsHW, &pMsg->MessageData.iTimeStampMillisecondsOS);
+    memcpy(pMsg->MessageData.btInitialData, pMsg->MessageData.btData, sizeof(pMsg->MessageData.btData));
+    if (g_bUseExtendedIdBit && (pMsg->MessageData.iBitField & ATTR_CAN_29BIT_ID_FRAME))
+        pMsg->MessageData.iID = mkExtId(pMsg->MessageData.iID);
+}
+
+int TX_sapaRead_diagRequest_step1_1_HS_CAN_Transmit(TX_sapaRead_diagRequest_step1_1_HS_CAN * pMsg)
+{
+    return CM_TxFromSignals(g_uiHandle, 2, TX_sapaRead_diagRequest_step1_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaRead_diagRequest_step1_1_HS_CAN_Transmit_raw(TX_sapaRead_diagRequest_step1_1_HS_CAN * pMsg)
+{
+    return CM_TxFromRawSignals(g_uiHandle, 2, TX_sapaRead_diagRequest_step1_1_HS_CAN_Index, pMsg->MessageData.btData, pMsg->MessageData.iNumDataBytes, pMsg->MessageData.iNetwork, 0, 0);
+}
+
+int TX_sapaRead_diagRequest_step1_1_HS_CAN_TransmitFast()
+{
+    unsigned char bt_DefaultBytes[8] = {0};
+    return CM_TxFromSignals(g_uiHandle,4,TX_sapaRead_diagRequest_step1_1_HS_CAN_Index,bt_DefaultBytes,8,0,0,0);
+}
+
+
+int TX_sapaRead_diagRequest_step2_HS_CAN_Index = 74;
 
 void TX_sapaRead_diagRequest_step2_HS_CAN_Init(TX_sapaRead_diagRequest_step2_HS_CAN * pMsg)
 {

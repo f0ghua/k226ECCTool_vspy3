@@ -623,6 +623,7 @@ void SpyAppSig_AS_appSig_mpiWrite_EMPNAC(double dValue);
 void SpyAppSig_AS_appSig_mpiWrite_MTC(double dValue);
 void SpyAppSig_AS_appSig_sapaWrite_bytesSeedKey(double dValue);
 void SpyAppSig_AS_appSig_sapaWrite_bytesSeed(double dValue);
+void SpyAppSig_AS_appSig_sapaRead_bytesSeed(double dValue);
 
 // Application Signals
 extern int AS_appSig_C_targetValueTypeMin_Index; // sig22
@@ -3840,6 +3841,20 @@ int TX_step41_diagRequest2_HS_CAN_Transmit_raw(TX_step41_diagRequest2_HS_CAN * p
 int TX_step41_diagRequest2_HS_CAN_TransmitFast();
 #define TX_step41_diagRequest2_HS_CAN_ClearStats() \
     CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_step41_diagRequest2_HS_CAN_Index, 0)
+extern int TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_sapaWrite_diagRequest_step1_1_HS_CAN;
+
+
+void TX_sapaWrite_diagRequest_step1_1_HS_CAN_Init(TX_sapaWrite_diagRequest_step1_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_step1_1_HS_CAN_Transmit(TX_sapaWrite_diagRequest_step1_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_step1_1_HS_CAN_Transmit_raw(TX_sapaWrite_diagRequest_step1_1_HS_CAN * pMsg);
+int TX_sapaWrite_diagRequest_step1_1_HS_CAN_TransmitFast();
+#define TX_sapaWrite_diagRequest_step1_1_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaWrite_diagRequest_step1_1_HS_CAN_Index, 0)
 extern int TX_sapaWrite_diagRequest_step2_1_HS_CAN_Index;
 typedef struct {
     GenericMessage MessageData; /// Message Data
@@ -3896,6 +3911,20 @@ int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Transmit_raw(TX_sapaWrite_dia
 int TX_sapaWrite_diagRequest_constructive_3_HS_CAN_TransmitFast();
 #define TX_sapaWrite_diagRequest_constructive_3_HS_CAN_ClearStats() \
     CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaWrite_diagRequest_constructive_3_HS_CAN_Index, 0)
+extern int TX_sapaRead_diagRequest_step1_1_HS_CAN_Index;
+typedef struct {
+    GenericMessage MessageData; /// Message Data
+    MessageStats Statistics; /// Message Statistics
+    int iDefaultPeriodMilliseconds; /// Default Message Period
+} TX_sapaRead_diagRequest_step1_1_HS_CAN;
+
+
+void TX_sapaRead_diagRequest_step1_1_HS_CAN_Init(TX_sapaRead_diagRequest_step1_1_HS_CAN * pMsg);
+int TX_sapaRead_diagRequest_step1_1_HS_CAN_Transmit(TX_sapaRead_diagRequest_step1_1_HS_CAN * pMsg);
+int TX_sapaRead_diagRequest_step1_1_HS_CAN_Transmit_raw(TX_sapaRead_diagRequest_step1_1_HS_CAN * pMsg);
+int TX_sapaRead_diagRequest_step1_1_HS_CAN_TransmitFast();
+#define TX_sapaRead_diagRequest_step1_1_HS_CAN_ClearStats() \
+    CM_GetSetValue(g_uiHandle, CM_GETSET_TX_STATS_CLR, TX_sapaRead_diagRequest_step1_1_HS_CAN_Index, 0)
 extern int TX_sapaRead_diagRequest_step2_HS_CAN_Index;
 typedef struct {
     GenericMessage MessageData; /// Message Data
@@ -6243,5 +6272,6 @@ void SpyAppSig_AS_appSig_mpiWrite_EMPNAC(double dNewValue);
 void SpyAppSig_AS_appSig_mpiWrite_MTC(double dNewValue);
 void SpyAppSig_AS_appSig_sapaWrite_bytesSeedKey(double dNewValue);
 void SpyAppSig_AS_appSig_sapaWrite_bytesSeed(double dNewValue);
+void SpyAppSig_AS_appSig_sapaRead_bytesSeed(double dNewValue);
 
 #endif // VSPY_GENERATED_HEADER

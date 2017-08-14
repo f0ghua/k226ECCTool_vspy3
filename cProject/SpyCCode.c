@@ -364,3 +364,23 @@ void SpyAppSig_AS_appSig_sapaWrite_bytesSeed(double dNewValue)
     AS_appSig_sapaWrite_Seed_SetText(g_str_appSig_sapaWrite_Seed);   
 }
 
+char g_str_appSig_sapaRead_Seed[SAPA_STRLEN] = {0};
+void SpyAppSig_AS_appSig_sapaRead_bytesSeed(double dNewValue)
+{
+    // TODO: Add Event Code
+    int i = 0;
+
+	memset(g_str_appSig_sapaRead_Seed, 0, sizeof(g_str_appSig_sapaRead_Seed));
+/*
+    for (i = 0; i < SAPA_SEED_LENGTH; i++) {
+		printf("%d, %02X\n", i, (unsigned char)AS_appSig_sapaRead_bytesSeed_GetAt(i));
+    }
+*/	
+	sprintf(g_str_appSig_sapaRead_Seed, "%02X %02X %02X %02X %02X",
+		(unsigned char)AS_appSig_sapaRead_bytesSeed_GetAt(0),
+		(unsigned char)AS_appSig_sapaRead_bytesSeed_GetAt(1),
+		(unsigned char)AS_appSig_sapaRead_bytesSeed_GetAt(2),
+		(unsigned char)AS_appSig_sapaRead_bytesSeed_GetAt(3),
+		(unsigned char)AS_appSig_sapaRead_bytesSeed_GetAt(4));
+    AS_appSig_sapaRead_Seed_SetText(g_str_appSig_sapaRead_Seed);
+}
