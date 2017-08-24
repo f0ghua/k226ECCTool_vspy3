@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <VSpy3>
-<!--Created on: 8/14/2017 3:34:59 pm-->
+<!--Created on: 8/24/2017 5:17:44 pm-->
 <VersionCreatedWith>3.8.0.105</VersionCreatedWith>
 <SimulationEnabled>False</SimulationEnabled>
 <NumberJ1850HeaderBytes>3</NumberJ1850HeaderBytes>
@@ -995,33 +995,33 @@
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>110</SetValueDouble>
+		<SetValueDouble>120</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>90</SetValueDouble>
-		<SetValueDouble>169</SetValueDouble>
+		<SetValueDouble>168</SetValueDouble>
 		<SetValueDouble>1</SetValueDouble>
 		<SetValueDouble>65</SetValueDouble>
 		<SetValueDouble>65</SetValueDouble>
 		<SetValueDouble>64</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>252</SetValueDouble>
-		<SetValueDouble>216</SetValueDouble>
+		<SetValueDouble>251</SetValueDouble>
+		<SetValueDouble>214</SetValueDouble>
 		<SetValueDouble>248</SetValueDouble>
 		<SetValueDouble>247</SetValueDouble>
-		<SetValueDouble>512</SetValueDouble>
+		<SetValueDouble>510</SetValueDouble>
 		<SetValueDouble>10</SetValueDouble>
 		<SetValueDouble>128</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>125</SetValueDouble>
+		<SetValueDouble>76</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>1</SetValueDouble>
 		<SetValueDouble>1</SetValueDouble>
-		<SetValueDouble>100</SetValueDouble>
-		<SetValueDouble>100</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>0</SetValueDouble>
-		<SetValueDouble>63</SetValueDouble>
+		<SetValueDouble>99</SetValueDouble>
+		<SetValueDouble>32</SetValueDouble>
+		<SetValueDouble>122</SetValueDouble>
+		<SetValueDouble>161</SetValueDouble>
+		<SetValueDouble>65</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
 		<SetValueDouble>0</SetValueDouble>
@@ -1248,9 +1248,9 @@
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
 		<CalcSignalInterval>12</CalcSignalInterval>
-		<SetValueDouble>143</SetValueDouble>
+		<SetValueDouble>120</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>143</InitValue>
+		<InitValue>120</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1456,7 +1456,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1605,7 +1605,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>11.92802</SetValueDouble>
+		<SetValueDouble>11.85744</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1665,7 +1665,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>25.2</SetValueDouble>
+		<SetValueDouble>25.1</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1675,7 +1675,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>84.70588235294117</SetValueDouble>
+		<SetValueDouble>83.92156862745098</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1705,7 +1705,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>51.2</SetValueDouble>
+		<SetValueDouble>51</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1735,7 +1735,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>49.01960784313726</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1745,7 +1745,7 @@
 		<Format>0.0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>29.80392156862745</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1785,7 +1785,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>100</SetValueDouble>
+		<SetValueDouble>99</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1795,7 +1795,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>100</SetValueDouble>
+		<SetValueDouble>32</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -1823,7 +1823,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2340,6 +2340,7 @@
 		<ValueType>4</ValueType>
 		<SetValueEquation>123</SetValueEquation>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>0225A1A2J</SetValueString>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2348,7 +2349,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>26211289</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2357,7 +2358,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>26211289</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2478,6 +2479,7 @@
 		<ValueType>4</ValueType>
 		<SetValueEquation>N/A</SetValueEquation>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>3230100000000X</SetValueString>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2486,6 +2488,7 @@
 		<ValueType>4</ValueType>
 		<SetValueEquation>N/A</SetValueEquation>
 		<SetValueDouble>0</SetValueDouble>
+		<SetValueString>544930977</SetValueString>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2510,7 +2513,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>1</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
 		<AppSignalSave>True</AppSignalSave>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
@@ -2520,7 +2523,7 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>26211289</SetValueDouble>
+		<SetValueDouble>0</SetValueDouble>
 		<AppSignalSave>True</AppSignalSave>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
@@ -2528,27 +2531,27 @@
 		<Description>appSig_mpiRead_EMPNStr</Description>
 		<Key>sig140</Key>
 		<ValueType>4</ValueType>
-		<SetValueEquation>N/A</SetValueEquation>
+		<SetValueEquation>0</SetValueEquation>
 		<SetValueDouble>26211289</SetValueDouble>
-		<SetValueString>N/A</SetValueString>
+		<SetValueString>0</SetValueString>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
 		<Description>appSig_mpiRead_BMPNStr</Description>
 		<Key>sig141</Key>
 		<ValueType>4</ValueType>
-		<SetValueEquation>N/A</SetValueEquation>
+		<SetValueEquation>0</SetValueEquation>
 		<SetValueDouble>126211289</SetValueDouble>
-		<SetValueString>N/A</SetValueString>
+		<SetValueString>0</SetValueString>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
 		<Description>appSig_mpiRead_ECUID_SNStr</Description>
 		<Key>sig142</Key>
 		<ValueType>4</ValueType>
-		<SetValueEquation>N/A</SetValueEquation>
+		<SetValueEquation>0</SetValueEquation>
 		<SetValueDouble>8388607</SetValueDouble>
-		<SetValueString>N/A</SetValueString>
+		<SetValueString>0</SetValueString>
 		<AppSignalSave>True</AppSignalSave>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
@@ -2556,9 +2559,9 @@
 		<Description>appSig_mpiRead_ECUID_BMPNStr</Description>
 		<Key>sig143</Key>
 		<ValueType>4</ValueType>
-		<SetValueEquation>N/A</SetValueEquation>
+		<SetValueEquation>0</SetValueEquation>
 		<SetValueDouble>126211289</SetValueDouble>
-		<SetValueString>N/A</SetValueString>
+		<SetValueString>0</SetValueString>
 		<AppSignalSave>True</AppSignalSave>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
@@ -2731,7 +2734,7 @@
 		<ValueType>4</ValueType>
 		<SetValueEquation>1122334455</SetValueEquation>
 		<SetValueDouble>0</SetValueDouble>
-		<SetValueString>1122334455</SetValueString>
+		<SetValueString>FFFFFFFFFF</SetValueString>
 		<AppSignalSave>True</AppSignalSave>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
@@ -2758,7 +2761,7 @@
 		<ValueType>4</ValueType>
 		<SetValueEquation>N/A</SetValueEquation>
 		<SetValueDouble>0</SetValueDouble>
-		<SetValueString>11 22 33 44 55</SetValueString>
+		<SetValueString>FF FF FF FF FF</SetValueString>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2891,9 +2894,9 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>12</SetValueDouble>
+		<SetValueDouble>20</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>12</InitValue>
+		<InitValue>20</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2902,9 +2905,9 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>32</SetValueDouble>
+		<SetValueDouble>123</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>32</InitValue>
+		<InitValue>123</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2913,9 +2916,9 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>52</SetValueDouble>
+		<SetValueDouble>230</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>52</InitValue>
+		<InitValue>230</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2924,9 +2927,9 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>104</SetValueDouble>
+		<SetValueDouble>62</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>104</InitValue>
+		<InitValue>62</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2935,9 +2938,9 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>641</SetValueDouble>
+		<SetValueDouble>164</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>641</InitValue>
+		<InitValue>164</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2946,9 +2949,9 @@
 		<ValueType>1</ValueType>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>1178</SetValueDouble>
+		<SetValueDouble>267</SetValueDouble>
 		<EnableInitValue>True</EnableInitValue>
-		<InitValue>1178</InitValue>
+		<InitValue>267</InitValue>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2958,7 +2961,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>1708</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2968,7 +2971,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>0</SetValueDouble>
+		<SetValueDouble>439.53</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 	<Signal>
@@ -2978,7 +2981,7 @@
 		<Format>0</Format>
 		<UpperRange>0</UpperRange>
 		<LowerRange>0</LowerRange>
-		<SetValueDouble>23</SetValueDouble>
+		<SetValueDouble>25</SetValueDouble>
 		<SaveLastValue>True</SaveLastValue>
 	</Signal>
 </AppSignals>
@@ -3028,7 +3031,7 @@
 		<Key>0</Key>
 		<FormObjectKey>1</FormObjectKey>
 		<InScrollMode>True</InScrollMode>
-		<SpeedCustomIn3>True</SpeedCustomIn3>
+		<SpeedCustomIn1>True</SpeedCustomIn1>
 		<MonitorColumnSets>
 			<MonitorColumnSet>
 				<Description>(default)</Description>
@@ -5063,8 +5066,8 @@
 						</StateTable>
 						<UpperRange>1</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueEquation>False</SetValueEquation>
-						<SetValueDouble>0</SetValueDouble>
+						<SetValueEquation>True</SetValueEquation>
+						<SetValueDouble>1</SetValueDouble>
 						<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
@@ -5160,8 +5163,8 @@
 						</StateTable>
 						<UpperRange>1</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueEquation>False</SetValueEquation>
-						<SetValueDouble>0</SetValueDouble>
+						<SetValueEquation>True</SetValueEquation>
+						<SetValueDouble>1</SetValueDouble>
 						<StateEncodedPlusAnalogData>True</StateEncodedPlusAnalogData>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
@@ -5600,7 +5603,7 @@
 						<Format>0.0</Format>
 						<UpperRange>127</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueDouble>112.5100063586905</SetValueDouble>
+						<SetValueDouble>126.999931420037</SetValueDouble>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
 					<Signal>
@@ -5611,7 +5614,7 @@
 						<Format>0.0</Format>
 						<UpperRange>127</UpperRange>
 						<LowerRange>0</LowerRange>
-						<SetValueDouble>18.6266566082721</SetValueDouble>
+						<SetValueDouble>126.999931420037</SetValueDouble>
 						<SaveLastValue>True</SaveLastValue>
 					</Signal>
 					<Signal>
@@ -7589,9 +7592,9 @@
 				<Key>out51</Key>
 				<ByteString0>14DA99F1</ByteString0>
 				<ByteString1>21</ByteString1>
-				<ByteString2>BC</ByteString2>
-				<ByteString3>61</ByteString3>
-				<ByteString4>4E</ByteString4>
+				<ByteString2>0</ByteString2>
+				<ByteString3>0</ByteString3>
+				<ByteString4>0</ByteString4>
 				<XtdFrame>True</XtdFrame>
 				<NetworkKey>net0</NetworkKey>
 				<ExpectedLength>4</ExpectedLength>
@@ -12285,10 +12288,10 @@
 				<StepType>6</StepType>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
-					<Description>{appSig_steps_isPassed :sig32-index(10)}</Description>
+					<Description>{appSig_steps_isPassed :sig32-index(11)}</Description>
 					<Equation>0</Equation>
-					<SetValueDescription>{appSig_steps_isPassed :sig32-index(10)}</SetValueDescription>
-					<SetValueKey>{appSig_steps_isPassed :sig32-index(10)}</SetValueKey>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(11)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(11)}</SetValueKey>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -14458,9 +14461,21 @@
 				<StepStringValue2>txt</StepStringValue2>
 			</Step>
 			<Step>
+				<Key>stp19</Key>
+				<StepType>6</StepType>
+				<StepComment>this case is ignored </StepComment>
+				<StepStringValue2>txt</StepStringValue2>
+				<SignalSpec>
+					<Description>{appSig_steps_isPassed :sig32-index(24)}</Description>
+					<Equation>1</Equation>
+					<SetValueDescription>{appSig_steps_isPassed :sig32-index(24)}</SetValueDescription>
+					<SetValueKey>{appSig_steps_isPassed :sig32-index(24)}</SetValueKey>
+				</SignalSpec>
+			</Step>
+			<Step>
 				<Key>stp13</Key>
 				<StepType>15</StepType>
-				<StepLongValue>20</StepLongValue>
+				<StepLongValue>21</StepLongValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_steps_isPassed</Description>
@@ -17413,7 +17428,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>(({appSig_steps_currRawValue :sig30-index(39)}+1) &gt;= {appSig_steps_targetRawValue :sig31-index(39)}) and (({appSig_steps_currRawValue :sig30-index(39)}-1) &lt;= {appSig_steps_targetRawValue :sig31-index(39)})</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(39)}+2) &gt;= {appSig_steps_targetRawValue :sig31-index(39)}) and (({appSig_steps_currRawValue :sig30-index(39)}-2) &lt;= {appSig_steps_targetRawValue :sig31-index(39)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -17617,7 +17632,7 @@
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
 					<Description>appSig_step_currValue</Description>
-					<Equation>(({appSig_steps_currRawValue :sig30-index(40)}+3) &gt;= {appSig_steps_targetRawValue :sig31-index(40)}) and (({appSig_steps_currRawValue :sig30-index(40)}-3) &lt;= {appSig_steps_targetRawValue :sig31-index(40)})</Equation>
+					<Equation>(({appSig_steps_currRawValue :sig30-index(40)}+4) &gt;= {appSig_steps_targetRawValue :sig31-index(40)}) and (({appSig_steps_currRawValue :sig30-index(40)}-4) &lt;= {appSig_steps_targetRawValue :sig31-index(40)})</Equation>
 				</SignalSpec>
 			</Step>
 			<Step>
@@ -24313,7 +24328,7 @@
 			<Step>
 				<Key>stp0</Key>
 				<StepType>2</StepType>
-				<StepLongValue>10</StepLongValue>
+				<StepLongValue>500</StepLongValue>
 				<StepDoubleValue>1000</StepDoubleValue>
 				<StepStringValue2>txt</StepStringValue2>
 				<SignalSpec>
@@ -25953,7 +25968,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>18.6</Caption>
+			<Caption>100.0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>IntDimLvl (Value)</Description>
@@ -26229,7 +26244,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>Disengage</Caption>
+			<Caption>Engage</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -26282,7 +26297,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>0</Caption>
+			<Caption>125</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -26378,7 +26393,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>24</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>HS CAN (CAN Tx Err Count)</Description>
@@ -26395,7 +26410,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>0</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>137</Caption>
+			<Caption>90</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>HS CAN (Error Count)</Description>
@@ -26826,7 +26841,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>169</Caption>
+			<Caption>168</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -26906,7 +26921,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>110</Caption>
+			<Caption>120</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -27295,7 +27310,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>169</Caption>
+			<Caption>168</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -27362,7 +27377,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>169</Caption>
+			<Caption>168</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -27429,7 +27444,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>169</Caption>
+			<Caption>168</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -27496,7 +27511,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>169</Caption>
+			<Caption>168</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -27563,7 +27578,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>169</Caption>
+			<Caption>168</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -27630,7 +27645,7 @@
 			<Transparent>1</Transparent>
 			<BorderStyle>6</BorderStyle>
 			<FontName>Arial</FontName>
-			<Caption>216</Caption>
+			<Caption>214</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_steps_currRawValue</Description>
@@ -29590,7 +29605,7 @@
 			<BorderStyle>1</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>Disengage</Caption>
+			<Caption>Engage</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>ACCompModReq (Value)</Description>
@@ -30533,7 +30548,7 @@
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
 			<FontItalic>True</FontItalic>
-			<Caption>&#x00B1;3</Caption>
+			<Caption>&#x00B1;12</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -30549,7 +30564,7 @@
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
 			<FontItalic>True</FontItalic>
-			<Caption>&#x00B1;3</Caption>
+			<Caption>&#x00B1;28</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 		</TextDisplay>
@@ -30904,7 +30919,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>N/A</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_mpiRead_ECUID_SNStr</Description>
@@ -30958,7 +30973,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>N/A</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_mpiRead_EMPNStr</Description>
@@ -31012,7 +31027,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>N/A</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_mpiRead_BMPNStr</Description>
@@ -31174,7 +31189,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption></Caption>
+			<Caption>3230100000000X</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_mpiRead_VPPS</Description>
@@ -31228,7 +31243,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption></Caption>
+			<Caption>544930977</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_mpiRead_DUNS</Description>
@@ -31307,7 +31322,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>N/A</Caption>
+			<Caption>0</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_mpiRead_ECUID_BMPNStr</Description>
@@ -31326,7 +31341,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption></Caption>
+			<Caption>0225A1A2J</Caption>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
 				<Description>appSig_mpiRead_ECUID</Description>
@@ -31711,7 +31726,7 @@
 			<BorderStyle>6</BorderStyle>
 			<FontSize>10</FontSize>
 			<FontName>Consolas</FontName>
-			<Caption>11 22 33 44 55</Caption>
+			<Caption>FF FF FF FF FF</Caption>
 			<Alignment>0</Alignment>
 			<ShowCaption>1</ShowCaption>
 			<SignalSpec>
@@ -31739,8 +31754,8 @@
 		<Description>Desktop 1</Description>
 		<Key>0</Key>
 		<ICONIndex>51</ICONIndex>
-		<LayoutString>QVFET0NLCAAAAADAAAAAEgAAAMgEAACqAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwgQAAAAAAACA1Hq4Ru70SIM1fakJBnUaAYkEAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAABliF5YdWrrS7Zex8L0rwAIAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAABMAAABBcHBsaWNhdGlvbiBTaWduYWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA//////////9YAgAALAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKUAAAAAAAAAZYheWHVq60u2XsfC9K8ACgAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAQAAAAQyBDb2RlIEludGVyZmFjZQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkAAAAAAAAAGWIXlh1autLtl7HwvSvAAUAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAADwAAAEZ1bmN0aW9uIEJsb2NrcwAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGIAAAA9BQAAXgIAAAABAAC8AAAAGQMAAMgBAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAClAAAAAAAAAGWIXlh1autLtl7HwvSvAAIAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEAAAAEdyYXBoaWNhbCBQYW5lbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAC8AQAAfAAAADcDAACzAQAAAAAAAAAAAWWIXlh1autLtl7HwvSvAAUAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</LayoutString>
-		<LayoutStringChecksum>-1013372269</LayoutStringChecksum>
+		<LayoutString>QVFET0NLCAAAAABOAAAATgAAAFYEAADmAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwgQAAAAAAACA1Hq4Ru70SIM1fakJBnUaAYkEAAADAAAAV8KLDLae80qZv5fVMTlbaAAAAABJAAAAPQUAAMACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA///////////CAQAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAJ0AAAAAAAAAZYheWHVq60u2XsfC9K8AAQAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAIAAAATWVzc2FnZXMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAABliF5YdWrrS7Zex8L0rwADAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAAA8AAABNZXNzYWdlcyBFZGl0b3IAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////wgEAAMgAAAD//////////1gCAAAsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAABliF5YdWrrS7Zex8L0rwAIAAAAAGIAAAA9BQAAwAIAAAAAAAAAAAAAABMAAABBcHBsaWNhdGlvbiBTaWduYWxzAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////8IBAADIAAAA//////////9YAgAALAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKUAAAAAAAAAZYheWHVq60u2XsfC9K8ACgAAAABiAAAAPQUAAMACAAAAAAAAAAAAAAAQAAAAQyBDb2RlIEludGVyZmFjZQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////CAQAAyAAAAP//////////WAIAACwBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkAAAAAAAAAGWIXlh1autLtl7HwvSvAAUAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAADwAAAEZ1bmN0aW9uIEJsb2NrcwAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGIAAAA9BQAAXgIAAAABAAC8AAAAGQMAAMgBAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAClAAAAAAAAAGWIXlh1autLtl7HwvSvAAIAAAAAYgAAAD0FAADAAgAAAAAAAAAAAAAAEAAAAEdyYXBoaWNhbCBQYW5lbHMAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiAAAAPQUAAF4CAAC8AQAAfAAAADcDAACzAQAAAAAAAAAAAWWIXlh1autLtl7HwvSvAAUAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</LayoutString>
+		<LayoutStringChecksum>-1639109593</LayoutStringChecksum>
 		<DesktopForms>
 			<DesktopForm>
 				<FormKey>1</FormKey>
@@ -31755,7 +31770,7 @@
 			<DesktopForm>
 				<FormKey>5</FormKey>
 				<Key>2</Key>
-				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0ODY8L0N1cnJlbnRGQmxvY2tLZXk+DQo8Q3VycmVudFNwbGl0U2l6ZT4zNjg8L0N1cnJlbnRTcGxpdFNpemU+DQo8U2NyaXB0R3JpZD4NCgk8TnVtT2ZDb2xzPjY8L051bU9mQ29scz4NCgk8TnVtT2ZSb3dzPjE5PC9OdW1PZlJvd3M+DQoJPENvbFNlbD40PC9Db2xTZWw+DQoJPFJvd1NlbD4xNjwvUm93U2VsPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4wPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjE8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4yPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjM8L0NvbEluZGV4Pg0KCQk8V2lkdGg+MzAwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjQ8L0NvbEluZGV4Pg0KCQk8V2lkdGg+OTEyMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjU8L0NvbEluZGV4Pg0KCQk8V2lkdGg+MzAwMDwvV2lkdGg+DQoJPC9DT0w+DQo8L1NjcmlwdEdyaWQ+DQo8L0Rlc2t0b3BEYXRhPg0K</FormData>
+				<FormData>PERlc2t0b3BEYXRhPg0KPEN1cnJlbnRGQmxvY2tLZXk+dHN0ODE8L0N1cnJlbnRGQmxvY2tLZXk+DQo8Q3VycmVudFNwbGl0U2l6ZT4zNjg8L0N1cnJlbnRTcGxpdFNpemU+DQo8U2NyaXB0R3JpZD4NCgk8TnVtT2ZDb2xzPjY8L051bU9mQ29scz4NCgk8TnVtT2ZSb3dzPjIzPC9OdW1PZlJvd3M+DQoJPENvbFNlbD4zPC9Db2xTZWw+DQoJPFJvd1NlbD4xODwvUm93U2VsPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4wPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjE8L0NvbEluZGV4Pg0KCQk8V2lkdGg+NjA8L1dpZHRoPg0KCTwvQ09MPg0KCTxDT0w+DQoJCTxDb2xJbmRleD4yPC9Db2xJbmRleD4NCgkJPFdpZHRoPjYwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjM8L0NvbEluZGV4Pg0KCQk8V2lkdGg+MzAwMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjQ8L0NvbEluZGV4Pg0KCQk8V2lkdGg+OTEyMDwvV2lkdGg+DQoJPC9DT0w+DQoJPENPTD4NCgkJPENvbEluZGV4PjU8L0NvbEluZGV4Pg0KCQk8V2lkdGg+MzAwMDwvV2lkdGg+DQoJPC9DT0w+DQo8L1NjcmlwdEdyaWQ+DQo8L0Rlc2t0b3BEYXRhPg0K</FormData>
 			</DesktopForm>
 			<DesktopForm>
 				<FormKey>2</FormKey>
